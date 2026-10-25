@@ -101,7 +101,7 @@
     return lo <= b && hi >= a;
   }
   function yksOk(v) {
-    if (!state.f.yks) return true;
+    if (!YKS || !state.f.yks) return true;
     if (state.f.yks === "yüksek") return v === "yüksek";
     return v === "yüksek" || v === "orta";
   }
@@ -169,7 +169,7 @@
     const fc = f.replace(/ /g, "");
     return index
       .filter((e) => toks.every((t) => e.hay.includes(t) || e.compact.includes(t)))
-      .map((e) => ({ e, s: (e.hay.startsWith(f) || e.compact.startsWith(fc) ? 10 : 0) + (yksRank[e.yks] || 0) + (e.t === "p" ? 1 : 0) }))
+      .map((e) => ({ e, s: (e.hay.startsWith(f) || e.compact.startsWith(fc) ? 10 : 0) + (YKS ? yksRank[e.yks] || 0 : 0) + (e.t === "p" ? 1 : 0) }))
       .sort((a, b) => b.s - a.s || a.e.label.localeCompare(b.e.label, "tr"))
       .slice(0, 12).map((x) => x.e);
   }
@@ -211,7 +211,7 @@
     $$(".tabs [role=tab]").forEach((b) => b.addEventListener("click", () => showTab(b.dataset.tab)));
     $(".tabs").addEventListener("keydown", (e) => {
       if (!["ArrowRight", "ArrowLeft"].includes(e.key)) return;
-      const tabs = $$(".tabs [role=tab]"); const i = tabs.findIndex((t) => t.getAttribute("aria-selected") === "true");
+      const tabs = $$(".tabs [role=tab]").filter((t) => !t.hidden); const i = tabs.findIndex((t) => t.getAttribute("aria-selected") === "true");
       const n = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length]; n.focus(); showTab(n.dataset.tab);
     });
   }
@@ -436,7 +436,8 @@
   function renderAlive(vis) {
     const box = $("#alive");
     const head = state.year == null ? `${vis.length} kişi gösteriliyor` : `${state.year} yılında hayatta: ${vis.length} kişi`;
-    const list = vis.slice().sort((a, b) => (yksRank[b.yks_onemi] - yksRank[a.yks_onemi]) || (life(a).lo ?? 0) - (life(b).lo ?? 0));
+    const rank = (p) => (YKS ? yksRank[p.yks_onemi] : 0);
+    const list = vis.slice().sort((a, b) => (rank(b) - rank(a)) || (life(a).lo ?? 0) - (life(b).lo ?? 0));
     box.innerHTML = `<span class="small muted" style="align-self:center">${head}:</span>` + list.map((p) =>
       `<button type="button" class="chip${isHigh(p) ? " high" : ""}${state.sel && state.sel.id === p.id ? " sel" : ""}" data-go="${p.id}">${esc(p.ad)}</button>`).join("");
   }
@@ -566,7 +567,8 @@
   let net = null, nodesDS = null, edgesDS = null, netKey = "";
   function renderLegend() {
     $("#legend").innerHTML = Object.values(EDGE).map((e) => `<li><i class="${e.dash ? "dash" : ""}" style="border-top-color:${e.c}"></i>${esc(e.t)}</li>`).join("")
-      + '<li><i class="dot"></i>Kişi (renk: devlet grubu)</li><li><i class="sq"></i>Eser</li><li><i class="dot" style="background:var(--gold)"></i>YKS önemi yüksek (altın kenar)</li>';
+      + '<li><i class="dot"></i>Kişi (renk: devlet grubu)</li><li><i class="sq"></i>Eser</li>'
+      + (YKS ? '<li><i class="dot" style="background:var(--gold)"></i>YKS önemi yüksek (altın kenar)</li>' : "");
   }
   function renderNetwork() {
     if (typeof vis === "undefined") { $("#net-fallback").hidden = false; $("#network").hidden = true; return; }
@@ -787,10 +789,14 @@
 
   // ---------- Başlat ----------
   function init() {
-    if (!YKS) { document.body.classList.add("no-yks"); $("#tab-sinav").hidden = true; $(".yks-badge").hidden = true; }
+    if (!YKS) {
+      document.body.classList.add("no-yks");
+      $("#tab-sinav").hidden = true; $(".yks-badge").hidden = true; $("#f-yks").closest("label").hidden = true;
+    }
     $("#counts").textContent = `· ${people.length} kişi, ${works.length} eser, ${relations.length} ilişki`;
     initTheme(); initFilters(); initSearch(); initTabs(); initDetail(); initYear(); initTimeline(); initNetwork(); initExam();
     readHash();
+    if (!YKS && state.tab === "sinav") state.tab = "harita";
     showTab(state.tab);
     if (state.sel) openDetail();
     window.addEventListener("resize", relayout);

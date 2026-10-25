@@ -1,6 +1,6 @@
 # Türk-İslam Dünyası Kişiler ve Eserler Atlası
 
-750–1700 yılları arasında Türk devletlerinde yaşamış, onların himayesinde çalışmış ya da Türk-İslam kültürünü doğrudan etkilemiş **112 kişi**, **174 eser** ve **106 ilişki**. Dört görünüm var: harita, zaman çizelgesi, ilişki ağı ve YKS sınav kartları. Arayüz ve içerik Türkçedir.
+750–1700 yılları arasında Türk devletlerinde yaşamış, onların himayesinde çalışmış ya da Türk-İslam kültürünü doğrudan etkilemiş **112 kişi**, **174 eser** ve **106 ilişki**. Akademik ilgiye yönelik hazırlanmıştır. Üç görünüm var: harita, zaman çizelgesi ve ilişki ağı. Her kaydın kaynağı ve teyit durumu görünür. Arayüz ve içerik Türkçedir.
 
 ## Nasıl açılır
 
@@ -25,11 +25,11 @@ Bu komut, claude.ai Artifact olarak yayınlanabilecek bir sürüm üretir. Bu s�
 | Harita | Şehirlerde, orada bulunmuş kişi sayısına göre büyüyen işaretler. Bir kişi seçilince hayat güzergâhı numaralı duraklarla çizilir. Alttaki yıl kaydırıcısı o yılda hayatta olanları gösterir; **Oynat** zamanı 5'er yıl ilerletir. |
 | Zaman çizelgesi | Devlet gruplarına ayrılmış ömür çubukları. Arka plandaki renkli bantlar devlet dönemlerini, ◆ işaretleri eserleri gösterir. Kesikli çubuk, tarihin yaklaşık ya da tartışmalı olduğu anlamına gelir. |
 | İlişki ağı | Kişi (daire) ve eser (elmas) düğümleri. Kenar türleri renklidir ve göstergede açıklanır. Bir düğüme tıklayınca komşuları vurgulanır. |
-| Sınav kartları | Çevrilebilir eser kartları, sık karıştırılan 15 çift ve kısa test. Yanlış yaptığınız eserler sonraki sorularda daha sık gelir; ilerleme `localStorage`'da tutulur. |
+| Sınav kartları | Yalnızca `yks_modu: true` iken görünür (aşağıya bakın). Çevrilebilir eser kartları, sık karıştırılan 15 çift ve kısa test. |
 
 Ortak özellikler:
 
-- **Filtreler:** alan, devlet, dil, yüzyıl, YKS önemi.
+- **Filtreler:** alan, devlet, dil, yüzyıl (YKS modunda ayrıca YKS önemi).
 - **Arama:** aksanlı da aksansız da çalışır. Örneğin `divanu lugat`, `Dîvânu Lugâti't-Türk` ve `Divanü Lügati't-Türk` kaydını bulur; lakapla arama da olur (`muallim-i sani` yazınca Farabi çıkar).
 - **Detay paneli:** tarih kesinliği ve tartışmalı köken rozetleri, kaynak bağlantıları ve kaynakla teyit edilmemiş alanlar görünür. "Haritada / zaman çizelgesinde / ağda göster" düğmeleriyle görünümler arasında geçebilirsiniz.
 - **Tema:** açık/koyu tema düğmesi üç durum arasında döner: otomatik, açık, koyu.
@@ -131,7 +131,7 @@ Kurallar:
 `meta.json` içinde tanımlıdır:
 
 - `zaman_araligi`: zaman çizelgesi ve yıl kaydırıcısının sınırları (varsayılan 750–1700).
-- `yks_modu`: `false` yapılırsa YKS vurguları, rozetler ve Sınav sekmesi gizlenir.
+- `yks_modu`: varsayılan `false`. Bu durumda atlas akademik kullanım içindir: YKS vurguları, rozetleri, "YKS önemi" filtresi ve Sınav sekmesi gösterilmez. `true` yapılırsa sınav hazırlığı araçları (çevrilebilir kartlar, karıştırılan çiftler, kısa test) geri gelir. Kayıtlardaki `yks_onemi` alanı veride korunur.
 - `karistirilanlar`: karıştırılan eser çiftleri ve aralarındaki ayırt edici nokta.
 
 ## Doğrulama yaklaşımı ve bilinen belirsizlikler
@@ -152,6 +152,6 @@ Kurallar:
 - **Bilinçli yorumlar:**
   - Mimar Sinan'ın yapıları (Şehzade, Süleymaniye, Selimiye) eser olarak alındı ve dil alanına "Yok (mimari eser)" yazıldı.
   - Hükümdarlar himaye ilişkilerini gösterebilmek için kişi olarak eklendi.
-  - Divanü Lügati't-Türk Bağdat'ta yazılıp Abbasi halifesinin oğluna sunulduğu hâlde YKS'deki sınıflandırmaya uygun olarak Karahanlı dönemi eseri sayıldı; durum eserin `devlet_notu` alanında açıklanır.
+  - Divanü Lügati't-Türk Bağdat'ta yazılıp Abbasi halifesinin oğluna sunulduğu hâlde yazarı Karahanlı çevresinden olduğu ve literatürde genellikle böyle sınıflandırıldığı için Karahanlı dönemi eseri sayıldı; durum eserin `devlet_notu` alanında açıklanır.
   - Yüzyıl filtresi 1001–1100 gibi geleneksel yüzyıl sınırlarını kullanır.
   - Tarihi bilinmeyen kişilerin çubukları eser ve durak yıllarından tahmin edilir ve "tahmini" rozetiyle gösterilir.

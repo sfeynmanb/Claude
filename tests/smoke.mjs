@@ -106,29 +106,42 @@ try {
   ok(await page.locator("#legend li").count() >= 7, "Ağ göstergesi kenar türlerini listeliyor");
   if (shots) await page.screenshot({ path: path.join(shots, "4-ag.png") });
 
-  // Filtre
+  // Filtre (zaman çizelgesindeki çubuk sayısı üzerinden)
+  await page.click("#tab-zaman");
   await page.selectOption("#f-dil", "Farsça");
-  await page.click("#tab-sinav");
-  const farsCards = await page.locator("#cards .card").count();
-  ok(farsCards > 10 && farsCards < 60, `Dil filtresi (Farsça): ${farsCards} kart`);
+  const farsBars = await page.locator("#timeline .bar").count();
+  ok(farsBars > 10 && farsBars < 60, `Dil filtresi (Farsça): ${farsBars} kişi`);
   await page.click("#f-reset");
+  ok(await page.locator("#timeline .bar").count() === bars, "Filtre sıfırlandı");
 
-  // Sınav kartları
-  const cards = await page.locator("#cards .card").count();
-  ok(cards === 174, `Sınav kartları: ${cards}`);
-  await page.locator("#cards .card").first().click();
-  ok(await page.locator("#cards .card.flipped").count() === 1, "Kart çevrildi");
-  if (shots) await page.screenshot({ path: path.join(shots, "5-kartlar.png") });
-  await page.click('[data-sub="karistirilanlar"]');
-  ok(await page.locator(".pair").count() >= 3, `Karıştırılanlar: ${await page.locator(".pair").count()} çift`);
-  await page.click('[data-sub="test"]');
-  for (let i = 0; i < 3; i++) {
-    await page.locator("#quiz [data-opt]").first().click();
-    await page.click("#quiz-next");
+  const yks = await page.evaluate(() => JSON.parse(document.getElementById("atlas-data").textContent).meta.yks_modu !== false);
+  if (!yks) {
+    // YKS modu kapalı: sekme, filtre, rozet ve vurgular görünmemeli
+    ok(await page.locator("#tab-sinav").isHidden(), "YKS kapalı: Sınav sekmesi gizli");
+    ok(await page.locator("#f-yks").isHidden(), "YKS kapalı: YKS filtresi gizli");
+    await page.fill("#q", "kutadgu");
+    const visibleYks = await page.evaluate(() => document.body.innerText.includes("YKS"));
+    ok(!visibleYks, "YKS kapalı: sayfada 'YKS' yazısı görünmüyor");
+    ok(await page.locator("#timeline text", { hasText: "★" }).count() === 0, "YKS kapalı: zaman çizelgesinde yıldız yok");
+    await page.fill("#q", "");
+  } else {
+    await page.click("#tab-sinav");
+    const cards = await page.locator("#cards .card").count();
+    ok(cards === 174, `Sınav kartları: ${cards}`);
+    await page.locator("#cards .card").first().click();
+    ok(await page.locator("#cards .card.flipped").count() === 1, "Kart çevrildi");
+    if (shots) await page.screenshot({ path: path.join(shots, "5-kartlar.png") });
+    await page.click('[data-sub="karistirilanlar"]');
+    ok(await page.locator(".pair").count() >= 3, `Karıştırılanlar: ${await page.locator(".pair").count()} çift`);
+    await page.click('[data-sub="test"]');
+    for (let i = 0; i < 3; i++) {
+      await page.locator("#quiz [data-opt]").first().click();
+      await page.click("#quiz-next");
+    }
+    const saved = await page.evaluate(() => JSON.parse(localStorage.getItem("atlas.quiz.v1") || "null"));
+    ok(saved && saved.dogru + saved.yanlis === 3, "Test ilerlemesi localStorage'a kaydedildi");
+    if (shots) await page.screenshot({ path: path.join(shots, "6-test.png") });
   }
-  const saved = await page.evaluate(() => JSON.parse(localStorage.getItem("atlas.quiz.v1") || "null"));
-  ok(saved && saved.dogru + saved.yanlis === 3, "Test ilerlemesi localStorage'a kaydedildi");
-  if (shots) await page.screenshot({ path: path.join(shots, "6-test.png") });
 
   // Koyu tema
   await page.click("#theme-btn"); await page.click("#theme-btn");
@@ -142,6 +155,7 @@ try {
   // ---- Mobil (390 px) ----
   const m = await newPage(browser, { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
   for (const tab of ["harita", "zaman", "ag", "sinav"]) {
+    if (await m.page.locator(`#tab-${tab}`).isHidden()) continue;
     await m.page.click(`#tab-${tab}`);
     await m.page.waitForTimeout(tab === "ag" ? 1500 : 300);
     const sw = await m.page.evaluate(() => document.documentElement.scrollWidth);

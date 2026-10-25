@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Türk-İslam Atlası</title>
-<meta name="description" content="750–1700 arası Türk-İslam dünyasında kişiler ve eserler: harita, zaman çizelgesi ve ilişki ağı; her kayıt kaynağı ve teyit durumuyla.">
+<meta name="description" content="750–1900 arası Türk-İslam dünyasında kişiler ve eserler: harita, zaman çizelgesi ve ilişki ağı; her kayıt kaynağı ve teyit durumuyla.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
 <style>/*__STYLE__*/</style>
 </head>
@@ -13,7 +13,7 @@
 <header class="topbar">
   <div class="brand">
     <h1>Türk-İslam Atlası</h1>
-    <p class="sub">Kişiler ve eserler · 750–1700</p>
+    <p class="sub">Kişiler ve eserler · 750–1900</p>
   </div>
   <div class="search" role="search">
     <label for="q" class="sr-only">Kişi veya eser ara</label>
@@ -32,6 +32,7 @@
     <label>Alan<select id="f-alan"><option value="">Tümü</option></select></label>
     <label>Devlet<select id="f-devlet"><option value="">Tümü</option></select></label>
     <label>Dil<select id="f-dil"><option value="">Tümü</option></select></label>
+    <label>Eser türü<select id="f-tur"><option value="">Tümü</option></select></label>
     <label>Yüzyıl<select id="f-yuzyil"><option value="">Tümü</option></select></label>
     <label>YKS önemi<select id="f-yks">
       <option value="">Tümü</option>
@@ -59,7 +60,7 @@
     <div class="year-bar">
       <button id="play" type="button" class="btn" aria-label="Zamanı oynat">▶ Oynat</button>
       <label class="year-all"><input id="year-all" type="checkbox" checked> Tüm dönem</label>
-      <label class="year-range"><span class="sr-only">Yıl</span><input id="year" type="range" min="750" max="1700" step="1" value="1100" disabled></label>
+      <label class="year-range"><span class="sr-only">Yıl</span><input id="year" type="range" min="750" max="1920" step="1" value="1100" disabled></label>
       <output id="year-out" for="year">Tüm dönem</output>
     </div>
     <div class="map-extra">

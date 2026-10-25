@@ -16,11 +16,11 @@ DATA = ROOT / "data"
 REPORT = ROOT / "reports" / "validation.md"
 
 TOLERANS = 15  # yaklaşık/tartışmalı tarihlerde yıl toleransı
-ILISKI_TURLERI = {"hoca-öğrenci", "himaye", "etkiledi", "çağdaş-tartışma", "tercüme etti", "şerh yazdı"}
+ILISKI_TURLERI = {"hoca-öğrenci", "himaye", "etkiledi", "çağdaş-tartışma", "tercüme etti", "şerh yazdı", "yayımladı", "iş birliği"}
 KESINLIK = {"kesin", "yaklaşık", "tartışmalı"}
 YKS = {"yüksek", "orta", "düşük"}
-ENLEM = (0, 50)
-BOYLAM = (-10, 80)
+ENLEM = (0, 57)  # Endülüs ve Hicaz’dan İdil-Ural’a (Kazan 55.8)
+BOYLAM = (-10, 82)  # Endülüs’ten Kazak bozkırına (Semey 80.2)
 KISI_ZORUNLU = ["id", "ad", "tam_ad", "tarih_kesinligi", "koken", "devletler", "alanlar", "ozet", "katkilar", "yks_onemi", "kaynaklar"]
 ESER_ZORUNLU = ["id", "ad", "ad_sade", "dil", "tur", "konu", "onemi", "yks_onemi", "kaynaklar"]
 
@@ -114,11 +114,10 @@ def main():
             if lat is None or lon is None:
                 r.hata(k, f"{yer}: koordinat eksik")
                 continue
-            if not (ENLEM[0] <= lat <= ENLEM[1] and BOYLAM[0] <= lon <= BOYLAM[1]):
-                if durak.get("bolge_disi"):
-                    r.not_(k, f"{yer} ({lat}, {lon}) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli")
-                else:
-                    r.hata(k, f"{yer} ({lat}, {lon}) makul bölge dışında (enlem {ENLEM}, boylam {BOYLAM})")
+            if durak.get("bolge_disi"):
+                r.not_(k, f"{yer} ({lat}, {lon}) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli")
+            elif not (ENLEM[0] <= lat <= ENLEM[1] and BOYLAM[0] <= lon <= BOYLAM[1]):
+                r.hata(k, f"{yer} ({lat}, {lon}) makul bölge dışında (enlem {ENLEM}, boylam {BOYLAM})")
             for uc in ("yil_baslangic", "yil_bitis"):
                 y = durak.get(uc)
                 if y is None:

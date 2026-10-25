@@ -71,15 +71,28 @@
   }
   const aliveIn = (p, y) => { const l = life(p); return l.lo != null && l.lo <= y && y <= l.hi; };
 
+  const DIL_BATI = "Avrupa dilleri (Latince, Fransızca, Rusça)", DIL_YOK = "Dil yok (mimari, müzik, resim, kurum)";
   function dilKeys(w) {
     const s = w.dil || "";
+    if (/^Yok/.test(s)) return [DIL_YOK]; // "Yok (müzik eseri; Arapça güfte)" Arapça sayılmaz
     const out = [];
     if (/Türkçe/.test(s)) out.push("Türkçe");
     if (/Arapça/.test(s)) out.push("Arapça");
     if (/Farsça/.test(s)) out.push("Farsça");
-    if (!out.length) out.push("Dil yok (mimari)");
+    if (/Latince|Fransızca|Rusça/.test(s)) out.push(DIL_BATI);
+    if (!out.length) out.push(DIL_YOK);
     return out;
   }
+  // Eser türü kategorileri (filtre): serbest metin "tur" alanından ilk eşleşen kategori seçilir.
+  const TUR_KAT = [
+    ["Gazete ve dergi", /gazete|dergi/],
+    ["Kurum (okul, matbaa, kütüphane)", /^kurum/],
+    ["Belge (ferman, kanun, anayasa)", /^ferman|^kanun|^anayasa/],
+    ["Sanat (mimari, müzik, resim)", /^mimari eser|^beste|^nota sistemi|^tablo/],
+    ["Edebî eser", /divan|mesnevi|şiir|roman|tiyatro|destan|hikâye|antoloji|nasihatname|hiciv|hamse|mersiye|maktel|mevlid|manzum|tezkire|münşeat|hatırat|otobiyografi|düşünce yazıları/],
+  ];
+  const TUR_DIGER = "İlmî ve fikrî eser";
+  const turKat = (w) => (TUR_KAT.find(([, re]) => re.test(w.tur || "")) || [TUR_DIGER])[0];
   const centuryLabel = (c) => `${c}. yüzyıl (${(c - 1) * 100 + 1}–${c * 100})`;
   const yksRank = { "yüksek": 3, "orta": 2, "düşük": 1 };
   // YKS modu (meta.yks_modu): kapalıysa vurgu, rozet ve Sınav sekmesi gizlenir.
@@ -89,7 +102,7 @@
   // ---------- Durum ----------
   const state = {
     tab: "harita",
-    f: { alan: "", devlet: "", dil: "", yuzyil: "", yks: "" },
+    f: { alan: "", devlet: "", dil: "", tur: "", yuzyil: "", yks: "" },
     year: null,
     sel: null, // {type:'p'|'w', id}
   };
@@ -110,6 +123,7 @@
     if (f.alan && !p.alanlar.includes(f.alan)) return false;
     if (f.devlet && !p.devletler.some((d) => d === f.devlet || groupOf(d) === f.devlet)) return false;
     if (f.dil && !(worksBy.get(p.id) || []).some((w) => dilKeys(w).includes(f.dil))) return false;
+    if (f.tur && !(worksBy.get(p.id) || []).some((w) => turKat(w) === f.tur)) return false;
     if (f.yuzyil) { const l = life(p); if (!centuryOverlap(l.lo, l.hi, +f.yuzyil)) return false; }
     return yksOk(p.yks_onemi);
   }
@@ -119,6 +133,7 @@
     if (f.alan && !(a && a.alanlar.includes(f.alan))) return false;
     if (f.devlet && !(w.devlet === f.devlet || groupOf(w.devlet) === f.devlet)) return false;
     if (f.dil && !dilKeys(w).includes(f.dil)) return false;
+    if (f.tur && turKat(w) !== f.tur) return false;
     if (f.yuzyil) { const y = workYear(w); if (!y || !centuryOverlap(y.lo, y.hi, +f.yuzyil)) return false; }
     return yksOk(w.yks_onemi);
   }
@@ -137,9 +152,12 @@
       const og = document.createElement("optgroup"); og.label = "Diğer devlet ve beylikler";
       diger.forEach((d) => og.appendChild(new Option(d, d))); devSel.appendChild(og);
     }
-    ["Türkçe", "Arapça", "Farsça", "Dil yok (mimari)"].forEach((d) => $("#f-dil").add(new Option(d, d)));
-    for (let c = 8; c <= 17; c++) $("#f-yuzyil").add(new Option(centuryLabel(c), c));
-    const map = { alan: "#f-alan", devlet: "#f-devlet", dil: "#f-dil", yuzyil: "#f-yuzyil", yks: "#f-yks" };
+    ["Türkçe", "Arapça", "Farsça", DIL_BATI, DIL_YOK].forEach((d) => $("#f-dil").add(new Option(d, d)));
+    const turlar = count(works.map(turKat));
+    TUR_KAT.map(([k]) => k).concat(TUR_DIGER).forEach((k) => $("#f-tur").add(new Option(`${k} (${turlar.get(k) || 0})`, k)));
+    const [y0, y1] = meta.zaman_araligi;
+    for (let c = Math.floor(y0 / 100) + 1; c <= Math.ceil(y1 / 100); c++) $("#f-yuzyil").add(new Option(centuryLabel(c), c));
+    const map = { alan: "#f-alan", devlet: "#f-devlet", dil: "#f-dil", tur: "#f-tur", yuzyil: "#f-yuzyil", yks: "#f-yks" };
     Object.entries(map).forEach(([k, s]) => $(s).addEventListener("change", (e) => { state.f[k] = e.target.value; onFilter(); }));
     $("#f-reset").addEventListener("click", () => {
       Object.keys(state.f).forEach((k) => { state.f[k] = ""; $(map[k]).value = ""; });
@@ -250,7 +268,14 @@
   }
   const badgeYks = (v) => !YKS ? "" : v === "yüksek" ? '<span class="badge yks-yuksek">YKS: yüksek</span>' : v === "orta" ? '<span class="badge yks-orta">YKS: orta</span>' : '<span class="badge">YKS: düşük</span>';
   const relLabel = { "hoca-öğrenci": ["hocası", "öğrencisi"], "himaye": ["hamisi", "himaye ettiği"], "etkiledi": ["etkilendiği", "etkilediği"],
-    "çağdaş-tartışma": ["çağdaş / tartışma", "çağdaş / tartışma"], "tercüme etti": ["tercüme eden", "tercüme ettiği"], "şerh yazdı": ["şerh eden", "şerh ettiği"] };
+    "çağdaş-tartışma": ["çağdaş / tartışma", "çağdaş / tartışma"], "tercüme etti": ["tercüme eden", "tercüme ettiği"], "şerh yazdı": ["şerh eden", "şerh ettiği"],
+    "yayımladı": ["yayımlayan / basan", "yayımladığı / bastığı"], "iş birliği": ["birlikte çalıştığı", "birlikte çalıştığı"] };
+  const rolLabel = (w) => (w.rol ? w.rol[0].toLocaleUpperCase("tr") + w.rol.slice(1) : "Yazar");
+  // Sık karıştırılan eser çiftleri (meta.karistirilanlar) eser detayında da gösterilir.
+  function confusedHtml(id) {
+    const ps = meta.karistirilanlar.filter((c) => c.a === id || c.b === id);
+    return ps.length ? `<h3>Sık karıştırılan</h3><ul>${ps.map((c) => `<li>${linkTo(c.a === id ? c.b : c.a)}<br><span class="small muted">${esc(c.fark)}</span></li>`).join("")}</ul>` : "";
+  }
   const linkTo = (id) => `<button type="button" class="linklike" data-go="${esc(id)}">${esc(nameOf(id))}</button>`;
   function relationsHtml(id) {
     const rs = relsOf.get(id) || [];
@@ -287,7 +312,7 @@
       ${navButtons("p", p.id)}
       <p>${esc(p.ozet)}</p>
       <h3>Katkıları</h3><ul>${p.katkilar.map((k) => `<li>${esc(k)}</li>`).join("")}</ul>
-      <h3>Eserleri (${ws.length})</h3>${ws.length ? `<ul>${ws.map((w) => `<li>${linkTo(w.id)} <span class="small muted">${esc(yearText(w.yil))} · ${esc(w.dil)}</span></li>`).join("")}</ul>` : '<p class="muted small">Veri setinde eseri yok.</p>'}
+      <h3>Eserleri (${ws.length})</h3>${ws.length ? `<ul>${ws.map((w) => `<li>${linkTo(w.id)} <span class="small muted">${esc(yearText(w.yil))} · ${esc(w.dil)}${w.rol ? ` · ${esc(w.rol)}` : ""}</span></li>`).join("")}</ul>` : '<p class="muted small">Veri setinde eseri yok.</p>'}
       <h3>Güzergâh</h3>${p.duraklar.length ? `<ol>${p.duraklar.map((d) => `<li><b>${esc(d.sehir)}</b> <span class="small muted">${yearText(d.yil_baslangic)}–${yearText(d.yil_bitis)}</span> — ${esc(d.ne_yapti)}</li>`).join("")}</ol>` : '<p class="muted small">Bilinen durak yok.</p>'}
       <h3>İlişkiler</h3>${relationsHtml(p.id)}
       <h3>Kaynaklar</h3>${sourcesHtml(p.kaynaklar)}${teyitHtml(p)}`;
@@ -296,12 +321,12 @@
     const a = P.get(w.yazar_id);
     return `<h2>${esc(w.ad_sade)}</h2>
       <p class="alt">${esc(w.ad)}</p>
-      <div class="badges">${badgeYks(w.yks_onemi)}${w.dogrulanamadi ? '<span class="badge warn">doğrulanamadı</span>' : ""}${w.ilk_olma ? `<span class="badge">İlk: ${esc(w.ilk_olma)}</span>` : ""}</div>
+      <div class="badges">${badgeYks(w.yks_onemi)}${w.dogrulanamadi ? '<span class="badge warn">doğrulanamadı</span>' : ""}${w.ilk_olma ? `<span class="badge">İlk: ${esc(w.ilk_olma)}</span>` : ""}${w.olum_sonrasi_tamamlandi ? '<span class="badge">ölümünden sonra tamamlandı</span>' : ""}</div>
       <dl>
-        <dt>Yazar</dt><dd>${a ? linkTo(a.id) : "Anonim"}</dd>
+        <dt>${esc(rolLabel(w))}</dt><dd>${a ? linkTo(a.id) : "Anonim"}</dd>
         <dt>Yıl</dt><dd>${esc(yearText(w.yil))}${w.yil_notu ? ` <span class="small muted">— ${esc(w.yil_notu)}</span>` : ""}</dd>
         <dt>Dil</dt><dd>${esc(w.dil)}</dd>
-        <dt>Tür</dt><dd>${esc(w.tur)}</dd>
+        <dt>Tür</dt><dd>${esc(w.tur)} <span class="small muted">(${esc(turKat(w))})</span></dd>
         ${w.sunuldugu_kisi ? `<dt>Sunulduğu kişi</dt><dd>${esc(w.sunuldugu_kisi)}</dd>` : ""}
         ${w.yazildigi_yer ? `<dt>Yazıldığı yer</dt><dd>${esc(w.yazildigi_yer)}</dd>` : ""}
         <dt>Devlet</dt><dd>${esc(w.devlet)}${w.devlet_notu ? ` <span class="small muted">— ${esc(w.devlet_notu)}</span>` : ""}</dd>
@@ -309,6 +334,7 @@
       ${navButtons("w", w.id)}
       <h3>Konusu</h3><p>${esc(w.konu)}</p>
       <h3>Önemi</h3><p>${esc(w.onemi)}</p>
+      ${confusedHtml(w.id)}
       <h3>İlişkiler</h3>${relationsHtml(w.id)}
       <h3>Kaynaklar</h3>${sourcesHtml(w.kaynaklar)}${teyitHtml(w)}`;
   }
@@ -349,7 +375,7 @@
   function initMap() {
     if (map || typeof L === "undefined") return !!map;
     map = L.map("map", { zoomSnap: 0.5, minZoom: 2, maxZoom: 9, worldCopyJump: false, preferCanvas: false });
-    map.fitBounds([[20, -8], [48, 78]]);
+    map.fitBounds([[18, -10], [56, 80]]);
     landLayer = L.geoJSON(basemap, { interactive: false, style: landStyle }).addTo(map);
     map.attributionControl.setPrefix(false);
     map.attributionControl.addAttribution("Kıyılar: Natural Earth");
@@ -562,8 +588,11 @@
     "çağdaş-tartışma": { c: "#dc2626", t: "Çağdaş / tartışma" },
     "tercüme etti": { c: "#059669", t: "Tercüme etti" },
     "şerh yazdı": { c: "#0891b2", t: "Şerh yazdı" },
+    "yayımladı": { c: "#be185d", t: "Yayımladı / bastı" },
+    "iş birliği": { c: "#65a30d", t: "İş birliği" },
     "yazdı": { c: "#9ca3af", t: "Yazar → eser", dash: true },
   };
+  const UNDIRECTED = new Set(["çağdaş-tartışma", "iş birliği"]);
   let net = null, nodesDS = null, edgesDS = null, netKey = "";
   function renderLegend() {
     $("#legend").innerHTML = Object.values(EDGE).map((e) => `<li><i class="${e.dash ? "dash" : ""}" style="border-top-color:${e.c}"></i>${esc(e.t)}</li>`).join("")
@@ -593,7 +622,7 @@
     })));
     const edges = relations.filter((r) => ids.has(r.kaynak) && ids.has(r.hedef)).map((r, i) => ({
       id: `r${i}`, from: r.kaynak, to: r.hedef, color: { color: EDGE[r.tur].c, opacity: 0.85 }, width: 1.8,
-      arrows: r.tur === "çağdaş-tartışma" ? "" : "to", dashes: !!r.dogrulanamadi, title: `${r.tur}${r.not ? ": " + r.not : ""}`,
+      arrows: UNDIRECTED.has(r.tur) ? "" : "to", dashes: !!r.dogrulanamadi, title: `${r.tur}${r.not ? ": " + r.not : ""}`,
     }));
     if (auth) vw.forEach((w) => { if (w.yazar_id && ids.has(w.yazar_id)) edges.push({ id: `a-${w.id}`, from: w.yazar_id, to: w.id, color: { color: EDGE["yazdı"].c, opacity: 0.6 }, width: 1, dashes: true, arrows: "" }); });
     nodesDS = new vis.DataSet(nodes); edgesDS = new vis.DataSet(edges);
@@ -680,7 +709,7 @@
   const QTYPES = [
     { key: "yazar", q: (w) => `“${w.ad_sade}” kime aittir?`, ans: (w) => P.get(w.yazar_id)?.ad, pool: () => [...new Set(works.filter((x) => x.yazar_id).map((x) => P.get(x.yazar_id).ad))] },
     { key: "devlet", q: (w) => `“${w.ad_sade}” hangi devlet döneminde yazıldı?`, ans: (w) => w.devlet, pool: () => [...new Set(works.map((x) => x.devlet))] },
-    { key: "dil", q: (w) => `“${w.ad_sade}” hangi dilde yazıldı?`, ans: (w) => dilKeys(w)[0], pool: () => ["Türkçe", "Arapça", "Farsça"],
+    { key: "dil", q: (w) => `“${w.ad_sade}” hangi dilde yazıldı?`, ans: (w) => dilKeys(w)[0], pool: () => ["Türkçe", "Arapça", "Farsça", DIL_BATI],
       uygun: (w) => dilKeys(w).length === 1 },
   ];
   function quizPool() {

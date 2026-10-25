@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-KUTU = (-20.0, -2.0, 95.0, 60.0)  # batı, güney, doğu, kuzey
+KUTU = (-20.0, -2.0, 95.0, 63.0)  # batı, güney, doğu, kuzey (Petersburg 59.9)
 
 
 def decode_arcs(topo):

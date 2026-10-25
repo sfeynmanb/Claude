@@ -4,7 +4,7 @@
 Kullanım:  pip install networkx scipy matplotlib reportlab pypdf
            python3 scripts/network_pdf.py [çıktı.pdf]
 
-İçerik: kapak ve okuma kılavuzu, kronolojik ağ (A3), tam ağ (A2), her ilişki türü için ayrı ağ,
+İçerik: kapak ve okuma kılavuzu, kronolojik ağ (A2), tam ağ (A2), her ilişki türü için ayrı ağ,
 ilişkilerin tam listesi, kişi bazında bağlantı dizini, merkezîlik ölçüleri, yazar–eser listesi.
 """
 import io
@@ -58,7 +58,10 @@ TYPES = [  # (tür, renk, okunuş: kaynak → hedef)
     ("çağdaş-tartışma", "#dc2626", "Çağdaş / tartışma (yönsüz)"),
     ("tercüme etti", "#059669", "Mütercim → eser"),
     ("şerh yazdı", "#0891b2", "Şârih → şerh edilen eser"),
+    ("yayımladı", "#be185d", "Yayımlayan / basan → eser"),
+    ("iş birliği", "#65a30d", "İş birliği (yönsüz)"),
 ]
+UNDIRECTED = {"çağdaş-tartışma", "iş birliği"}
 TCOL = {t: c for t, c, _ in TYPES}
 TLAB = {t: lab for t, _, lab in TYPES}
 AUTH_COL = "#9ca3af"
@@ -165,14 +168,14 @@ def page_title(fig, title, sub):
 
 def fig_chronological(pdf):
     """Şekil 1: x = yıl, y = devlet grubu şeridi; her kişi ömür çizgisi + orta nokta."""
-    W_, H_ = 420 * MM, 297 * MM
+    W_, H_ = 594 * MM, 420 * MM
     fig = plt.figure(figsize=(W_, H_))
     page_title(fig, "Şekil 1 · Kronolojik ilişki ağı",
                f"{len(people)} kişinin tamamı, devlet grubuna göre şeritlerde. Yatay çizgi ömrü, nokta ömrün ortasını gösterir. "
                f"Oklar {len(person_edges)} kişi–kişi ilişkisini gösterir (eser üzerinden kurulan ilişkiler yazarına bağlanmıştır).")
     ax = fig.add_axes([0.105, 0.10, 0.885, 0.82])
     t0, t1 = meta["zaman_araligi"]
-    char_years = 4.6  # 6 pt etiket için bir karakterin yıl karşılığı (deneysel)
+    char_years = 3.3  # 6 pt etiket için bir karakterin yıl karşılığı (A2 genişliğinde, deneysel)
     rows, y = {}, 0
     lane_spans = []
     for g in meta["grup_sirasi"]:
@@ -218,7 +221,7 @@ def fig_chronological(pdf):
         (x1, y1), (x2, y2) = pos[e["a"]], pos[e["b"]]
         rad = 0.25 if x2 >= x1 else -0.25
         arrow = FancyArrowPatch((x1, y1), (x2, y2), connectionstyle=f"arc3,rad={rad}",
-                                arrowstyle="-" if e["tur"] == "çağdaş-tartışma" else "-|>", mutation_scale=7,
+                                arrowstyle="-" if e["tur"] in UNDIRECTED else "-|>", mutation_scale=7,
                                 color=TCOL[e["tur"]], lw=0.9, alpha=0.75, ls="--" if e["dogrulanamadi"] or e["via"] else "-",
                                 shrinkA=2, shrinkB=2, zorder=3)
         ax.add_patch(arrow)
@@ -257,7 +260,7 @@ def draw_graph(ax, nodes, pos, edges, fs=7.0, rad=0.12):
         t = d["tur"]
         col = AUTH_COL if t == "yazdı" else TCOL[t]
         ax.add_patch(FancyArrowPatch(pos[a], pos[b], connectionstyle=f"arc3,rad={rad}",
-                                     arrowstyle="-" if t in ("çağdaş-tartışma", "yazdı") else "-|>", mutation_scale=8 * k,
+                                     arrowstyle="-" if t in UNDIRECTED or t == "yazdı" else "-|>", mutation_scale=8 * k,
                                      color=col, lw=0.5 if t == "yazdı" else 1.1, alpha=0.6 if t == "yazdı" else 0.9,
                                      ls="--" if (t == "yazdı" or d.get("dog")) else "-", shrinkA=3.5 * k, shrinkB=3.5 * k, zorder=2))
     for n in nodes:
@@ -466,8 +469,8 @@ def build_rl(path, story, title):
 def cover_story(toc):
     s = [Spacer(1, 4 * mm), Paragraph("Türk-İslam Atlası", ST["muted"]),
          Paragraph("İlişki Ağı", ST["h1"]),
-         Paragraph("750–1700 yılları arasında Türk-İslam dünyasında kişiler ve eserler arasındaki hoca-öğrenci, himaye, "
-                   "etki, tartışma, tercüme ve şerh ilişkilerinin tam dökümü.", ST["p"]),
+         Paragraph(f"{meta['zaman_araligi'][0]}–1900 yılları arasında Türk-İslam dünyasında kişiler ve eserler arasındaki hoca-öğrenci, "
+                   "himaye, etki, tartışma, tercüme, şerh, yayın ve iş birliği ilişkilerinin tam dökümü.", ST["p"]),
          Spacer(1, 4 * mm)]
     n_auth = sum(1 for w in works if w["yazar_id"])
     stats = [["Kişi", str(len(people))], ["Eser", str(len(works))], ["İlişki", str(len(rels))],
@@ -528,9 +531,11 @@ def tables_story():
           Paragraph("Her kişinin bütün ilişkileri ve eserleri, alfabetik sırayla. Parantez içindeki sayı, kişi düzeyindeki toplam "
                     "ilişki sayısıdır (derece).", ST["p"])]
     labels_out = {"hoca-öğrenci": "Öğrencileri", "himaye": "Himaye ettikleri", "etkiledi": "Etkiledikleri",
-                  "çağdaş-tartışma": "Çağdaş/tartışma", "tercüme etti": "Tercüme ettikleri", "şerh yazdı": "Şerh ettikleri"}
+                  "çağdaş-tartışma": "Çağdaş/tartışma", "tercüme etti": "Tercüme ettikleri", "şerh yazdı": "Şerh ettikleri",
+                  "yayımladı": "Yayımladıkları", "iş birliği": "Birlikte çalıştıkları"}
     labels_in = {"hoca-öğrenci": "Hocaları", "himaye": "Hamileri", "etkiledi": "Etkilendikleri",
-                 "çağdaş-tartışma": "Çağdaş/tartışma", "tercüme etti": "Tercüme edenler", "şerh yazdı": "Şerh edenler"}
+                 "çağdaş-tartışma": "Çağdaş/tartışma", "tercüme etti": "Tercüme edenler", "şerh yazdı": "Şerh edenler",
+                 "yayımladı": "Yayımlayanlar", "iş birliği": "Birlikte çalıştıkları"}
     for p in sorted(people, key=lambda p: p["ad"].replace("İ", "I")):
         pid = p["id"]
         parts = defaultdict(list)
@@ -639,7 +644,7 @@ def main():
 
     def toc_for(cover_pages):
         base = cover_pages
-        toc = [("Şekil 1 · Kronolojik ilişki ağı (A3)", base + 1),
+        toc = [("Şekil 1 · Kronolojik ilişki ağı (A2)", base + 1),
                ("Şekil 2 · Tam ağ: kişiler, eserler, ilişkiler ve yazarlık (A2)", base + 2)]
         toc += [(f"Şekil {i} · {t} ilişkileri", base + i) for i, (t, _, _) in enumerate(TYPES, start=3)]
         tb = base + 2 + len(TYPES)
@@ -660,7 +665,7 @@ def main():
     for title, page in toc:
         writer.add_outline_item(title, page - 1)
     writer.add_metadata({"/Title": "Türk-İslam Atlası – İlişki Ağı", "/Author": "Türk-İslam Atlası",
-                         "/Subject": "750–1700 arası kişi ve eser ilişkileri"})
+                         "/Subject": "750–1900 arası kişi ve eser ilişkileri"})
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT, "wb") as f:
         writer.write(f)

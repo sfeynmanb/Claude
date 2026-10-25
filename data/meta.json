@@ -2,7 +2,7 @@
   "aciklama": "Kişiler zaman çizelgesinde devletler listesindeki İLK devletin grubuna yerleşir. Devlet dönemleri (zaman çizelgesi bantları), görünüm grupları ve YKS 'Karıştırılanlar' çiftleri. Kişi/eser verisi değildir.",
   "zaman_araligi": [
     750,
-    1700
+    1920
   ],
   "yks_modu": false,
   "devletler": [
@@ -103,6 +103,13 @@
       "bitis": 1920,
       "renk": "#2874a6",
       "turk": true
+    },
+    {
+      "ad": "Rus İmparatorluğu",
+      "baslangic": 1721,
+      "bitis": 1917,
+      "renk": "#1a5276",
+      "turk": false
     }
   ],
   "grup_sirasi": [
@@ -120,6 +127,7 @@
     "Osmanlı",
     "Babürlü",
     "Hive Hanlığı",
+    "Rus İmparatorluğu",
     "Diğer"
   ],
   "grup_eslemesi": {
@@ -146,7 +154,10 @@
     "Safevi": "Diğer",
     "Altın Orda": "Diğer",
     "Muzafferi": "Diğer",
-    "Nizârî İsmâilî": "Diğer"
+    "Nizârî İsmâilî": "Diğer",
+    "Karabağ Hanlığı": "Diğer",
+    "Türkmen boyları": "Diğer",
+    "Kırgız boyları": "Diğer"
   },
   "karistirilanlar": [
     {
@@ -223,6 +234,66 @@
       "a": "camiut-tevarih",
       "b": "tarih-i-cihangusa",
       "fark": "İkisi de İlhanlı döneminde Farsça yazıldı. Tarih-i Cihangüşa Ata Melik Cüveyni'nindir ve Moğol fetihlerini anlatır; Camiü't-Tevarih ise Reşidüddin'in Oğuz tarihini de içeren genel tarihidir."
+    },
+    {
+      "a": "tercuman-i-ahval",
+      "b": "tasvir-i-efkar",
+      "fark": "İkisi de Şinasi'yle anılan ilk özel gazetelerdendir. Tercüman-ı Ahval'i 1860'ta Agah Efendi çıkardı, mukaddimesini Şinasi yazdı; Tasvir-i Efkar'ı ise 1862'de Şinasi kendisi kurdu ve 1865'te Namık Kemal'e bıraktı."
+    },
+    {
+      "a": "tercuman-gazete",
+      "b": "tercuman-i-hakikat",
+      "fark": "Tercüman, Gaspıralı İsmail Bey'in 1883'te Bahçesaray'da (Kırım) çıkardığı Türkçe-Rusça gazetedir. Tercüman-ı Hakikat ise Ahmed Midhat Efendi'nin 1878'de İstanbul'da kurduğu gazetedir."
+    },
+    {
+      "a": "takvim-i-vekayi",
+      "b": "tercuman-i-ahval",
+      "fark": "Takvim-i Vekayi (1831) devletin çıkardığı ilk resmî Türkçe gazetedir. Tercüman-ı Ahval (1860) ise Türklerin çıkardığı ilk özel gazetedir."
+    },
+    {
+      "a": "ekinci",
+      "b": "tercuman-gazete",
+      "fark": "İkisi de Rusya Türklerinin gazetesidir. Ekinci, Zerdabi'nin Bakü'de 1875-1877 arasında çıkardığı ilk Türkçe gazetedir; Tercüman ise Gaspıralı'nın 1883'ten itibaren Bahçesaray'da yayımladığı gazetedir."
+    },
+    {
+      "a": "hurriyet-gazetesi",
+      "b": "muhbir",
+      "fark": "İkisi de Londra'da çıkan Yeni Osmanlı gazetesidir. Muhbir'i 1867'de Ali Suavi, Hürriyet'i 1868'de Namık Kemal ile Ziya Paşa çıkardı."
+    },
+    {
+      "a": "lehce-i-osmani",
+      "b": "kamus-i-turki",
+      "fark": "İkisi de Türkçe sözlüktür. Lehçe-i Osmani Ahmed Vefik Paşa'nındır (1876); Kamus-ı Türki ise Şemseddin Sami'nindir (1899-1901)."
+    },
+    {
+      "a": "kamus-i-turki",
+      "b": "kamusul-alam",
+      "fark": "İkisi de Şemseddin Sami'nindir. Kamusü'l-Alam (1889-1898) özel adlar ansiklopedisidir; Kamus-ı Türki (1899-1901) ise Türkçe sözlüktür."
+    },
+    {
+      "a": "taassuk-i-talat",
+      "b": "intibah",
+      "fark": "Taaşşuk-ı Talat ve Fitnat (Şemseddin Sami, 1872) ilk telif roman kabul edilir. İntibah ise Namık Kemal'in romanıdır ve psikolojik tahlile yönelen ilk örnek sayılır."
+    },
+    {
+      "a": "felatun-bey",
+      "b": "araba-sevdasi",
+      "fark": "İkisi de yanlış Batılılaşmayı işler. Felatun Bey ile Rakım Efendi Ahmed Midhat'ındır (1875) ve iki karakteri karşılaştırır; Araba Sevdası ise Recaizade'nindir (1896) ve Bihruz Bey'i realist bir üslupla hicveder."
+    },
+    {
+      "a": "tanzimat-fermani",
+      "b": "islahat-fermani",
+      "fark": "Tanzimat Fermanı 1839'da Gülhane'de Mustafa Reşid Paşa tarafından okundu. Islahat Fermanı ise 1856'da Kırım Savaşı sonrasında ilan edildi ve gayrimüslimlere eşit haklar tanımayı amaçladı."
+    },
+    {
+      "a": "vankulu-lugati",
+      "b": "cevheri-sihah",
+      "fark": "Es-Sıhah Cevheri'nin Arapça sözlüğüdür (X. yy). Vankulu Lügatı onun Türkçe tercümesidir ve 1729'da Müteferrika matbaasında basılan ilk kitaptır."
+    },
+    {
+      "a": "hayrabad",
+      "b": "husn-u-ask",
+      "fark": "Hayrabad Nabi'nin mesnevisidir. Hüsn ü Aşk ise Şeyh Galib'in, Hayrabad'ın aşırı övülmesine karşılık 1783'te yazdığı sembolik mesnevidir."
     }
   ]
 }

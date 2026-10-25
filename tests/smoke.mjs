@@ -60,6 +60,11 @@ try {
   const aliveTxt = await page.locator("#alive").innerText();
   ok(/1070 yılında hayatta/.test(aliveTxt) && aliveTxt.includes("Kaşgarlı Mahmud"), "Yıl 1070: Kaşgarlı Mahmud hayatta görünüyor");
   ok(!aliveTxt.includes("Mimar Sinan"), "Yıl 1070: Mimar Sinan görünmüyor");
+  // 1700-1900 genişlemesi: kaydırıcı 1920'ye uzanıyor, Tanzimat kişileri görünüyor
+  ok(await page.locator("#year").getAttribute("max") === "1920", "Yıl kaydırıcısı 1920'ye uzanıyor");
+  await page.locator("#year").evaluate((el) => { el.value = "1870"; el.dispatchEvent(new Event("input", { bubbles: true })); });
+  const alive1870 = await page.locator("#alive").innerText();
+  ok(alive1870.includes("Namık Kemal") && alive1870.includes("Ahmed Cevdet Paşa") && !alive1870.includes("Kaşgarlı Mahmud"), "Yıl 1870: Namık Kemal ve Cevdet Paşa hayatta, Kaşgarlı yok");
   await page.click("#play"); await page.waitForTimeout(700); await page.click("#play");
   const yr = +(await page.locator("#year-out").innerText());
   ok(yr > 1070, `Oynat düğmesi zamanı ilerletti (${yr})`);
@@ -78,7 +83,19 @@ try {
   ok(await page.locator("#detail").isVisible(), "Aramadan seçim detay panelini açtı");
   ok(/Yusuf Has Hacib/.test(await page.locator("#detail-body").innerText()), "Detay: Kutadgu Bilig yazarı görünüyor");
 
+  // Yeni kayıtlar: arama, rol etiketi, karıştırılan çift, yeni ilişki türü
+  await page.fill("#q", "muteferrika matbaasi");
+  await page.keyboard.press("Enter");
+  const mt = await page.locator("#detail-body").innerText();
+  ok(/Kurucu/.test(mt) && /İbrahim Müteferrika/.test(mt), "Müteferrika Matbaası: rol 'Kurucu' gösteriliyor");
+  await page.fill("#q", "vankulu lugati");
+  await page.keyboard.press("Enter");
+  const vt = await page.locator("#detail-body").innerText();
+  ok(/SIK KARIŞTIRILAN|Sık karıştırılan/.test(vt) && /yayımlayan/.test(vt), "Vankulu Lügatı: karıştırılan çift ve 'yayımlayan' ilişkisi görünüyor");
+
   // Detaydan kişiye, sonra haritada güzergâh
+  await page.fill("#q", "Kutadgu");
+  await page.keyboard.press("Enter");
   await page.click('#detail-body [data-go="yusuf-has-hacib"]');
   await page.click('#detail-body [data-nav="harita"]');
   const route = await page.locator("#route-info").innerText();
@@ -103,7 +120,8 @@ try {
   await page.waitForTimeout(2500);
   const netInfo = await page.evaluate(() => ({ canvas: !!document.querySelector("#network canvas") }));
   ok(netInfo.canvas, "Ağ çizildi (canvas)");
-  ok(await page.locator("#legend li").count() >= 7, "Ağ göstergesi kenar türlerini listeliyor");
+  ok(await page.locator("#legend li").count() >= 9, "Ağ göstergesi kenar türlerini listeliyor");
+  ok(/İş birliği/.test(await page.locator("#legend").innerText()), "Göstergede yeni 'İş birliği' türü var");
   if (shots) await page.screenshot({ path: path.join(shots, "4-ag.png") });
 
   // Filtre (zaman çizelgesindeki çubuk sayısı üzerinden)
@@ -113,6 +131,12 @@ try {
   ok(farsBars > 10 && farsBars < 60, `Dil filtresi (Farsça): ${farsBars} kişi`);
   await page.click("#f-reset");
   ok(await page.locator("#timeline .bar").count() === bars, "Filtre sıfırlandı");
+  await page.selectOption("#f-tur", "Gazete ve dergi");
+  const pressBars = await page.locator("#timeline .bar").count();
+  ok(pressBars >= 8 && pressBars <= 20, `Eser türü filtresi (gazete ve dergi): ${pressBars} kişi`);
+  await page.selectOption("#f-yuzyil", "19");
+  ok(await page.locator("#timeline .bar").count() <= pressBars, "Yüzyıl filtresinde XIX. yüzyıl seçilebiliyor");
+  await page.click("#f-reset");
 
   const yks = await page.evaluate(() => JSON.parse(document.getElementById("atlas-data").textContent).meta.yks_modu !== false);
   if (!yks) {
@@ -127,7 +151,8 @@ try {
   } else {
     await page.click("#tab-sinav");
     const cards = await page.locator("#cards .card").count();
-    ok(cards === 174, `Sınav kartları: ${cards}`);
+    const nWorks = await page.evaluate(() => JSON.parse(document.getElementById("atlas-data").textContent).works.length);
+    ok(cards === nWorks, `Sınav kartları: ${cards}`);
     await page.locator("#cards .card").first().click();
     ok(await page.locator("#cards .card.flipped").count() === 1, "Kart çevrildi");
     if (shots) await page.screenshot({ path: path.join(shots, "5-kartlar.png") });

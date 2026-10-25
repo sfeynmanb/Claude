@@ -1717,7 +1717,8 @@
     "teyitsiz_alanlar": [
       "yil"
     ],
-    "dogrulanamadi": false
+    "dogrulanamadi": false,
+    "rol": "mimar"
   },
   {
     "id": "suleymaniye",
@@ -1744,7 +1745,8 @@
     "teyitsiz_alanlar": [
       "yil"
     ],
-    "dogrulanamadi": false
+    "dogrulanamadi": false,
+    "rol": "mimar"
   },
   {
     "id": "selimiye",
@@ -1775,7 +1777,8 @@
     "teyitsiz_alanlar": [
       "yil"
     ],
-    "dogrulanamadi": false
+    "dogrulanamadi": false,
+    "rol": "mimar"
   },
   {
     "id": "sidretul-munteha",
@@ -4765,6 +4768,2007 @@
     ],
     "dogrulanamadi": false,
     "devlet_notu": "Yazıya geçirildiği dönem ve çevre tartışmalıdır (Akkoyunlu veya erken Osmanlı).",
+    "anonim": true
+  },
+  {
+    "id": "vankulu-lugati",
+    "ad": "Sıhâhu'l-Cevherî Tercümesi (Lügat-i Vankulu)",
+    "ad_sade": "Vankulu Lügatı",
+    "yazar_id": "vankulu",
+    "yil": null,
+    "yil_notu": "Vankulu'nun ölümünden (1592) önce tamamlandı. Müteferrika matbaasında 1141/1728-29'da iki cilt hâlinde basıldı (31 Ocak 1729); sonraki baskılar 1170, 1188 ve 1217-18.",
+    "dil": "Türkçe",
+    "tur": "sözlük (tercüme)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Cevherî'nin es-Sıhâh'ının Türkçe tercümesi; 28 bölüm, her bölümde 28 fasıl.",
+    "onemi": "Türkçe harflerle basılan ilk kitaptır.",
+    "ilk_olma": "Müteferrika matbaasında basılan ilk kitap (1729)",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Vankulu",
+        "url": "https://islamansiklopedisi.org.tr/vankulu"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Müteferrika Matbaası",
+        "url": "https://islamansiklopedisi.org.tr/muteferrika-matbaasi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "vesiletut-tibaa",
+    "ad": "Vesîletü't-tıbâa",
+    "ad_sade": "Vesiletü't-Tıbaa",
+    "yazar_id": "muteferrika",
+    "yil": 1726,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "risale",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Matbaanın yararlarını ve kitap basımının gerekliliğini anlatan risale.",
+    "onemi": "Matbaa izni için sunulan gerekçeyi içerir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İbrâhim Müteferrika",
+        "url": "https://islamansiklopedisi.org.tr/ibrahim-muteferrika"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "usulul-hikem",
+    "ad": "Usûlü'l-hikem fî nizâmi'l-ümem",
+    "ad_sade": "Usulü'l-Hikem",
+    "yazar_id": "muteferrika",
+    "yil": 1731,
+    "yil_notu": "TDV: 1731'de I. Mahmud'a sunuldu; 1732'de dokuzuncu kitap olarak basıldı.",
+    "dil": "Türkçe",
+    "tur": "siyasetname",
+    "sunuldugu_kisi": "I. Mahmud",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Devletlerin yönetim biçimleri, Avrupa ordularının düzeni ve Osmanlı'nın askerî ıslahat ihtiyacı.",
+    "onemi": "Avrupa'yı örnek alan askerî ıslahat önerilerinin ilk basılı metinlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İbrâhim Müteferrika",
+        "url": "https://islamansiklopedisi.org.tr/ibrahim-muteferrika"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "muteferrika-matbaasi",
+    "ad": "Müteferrika Matbaası (Dârü't-tıbâati'l-âmire)",
+    "ad_sade": "Müteferrika Matbaası",
+    "yazar_id": "muteferrika",
+    "yil": 1727,
+    "yil_notu": "TDV: Temmuz 1727'de III. Ahmed'in fermanı ve şeyhülislam fetvasıyla izin verildi; ilk kitap 31 Ocak 1729'da çıktı.",
+    "dil": "Yok (kurum)",
+    "tur": "kurum (matbaa)",
+    "sunuldugu_kisi": "III. Ahmed",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Arap harfli Türkçe kitap basan ilk Osmanlı matbaası; Yirmisekizçelebizâde Mehmed Said ile ortak kuruldu.",
+    "onemi": "17 eseri 23 cilt olarak bastı; Osmanlı'da basılı Türkçe kitabın başlangıcıdır.",
+    "ilk_olma": "Müslümanlarca kurulan ilk Türkçe matbaa",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Müteferrika Matbaası",
+        "url": "https://islamansiklopedisi.org.tr/muteferrika-matbaasi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "sefaretname-yirmisekiz",
+    "ad": "Fransa Sefâretnâmesi",
+    "ad_sade": "Yirmisekiz Mehmed Çelebi Sefaretnamesi",
+    "yazar_id": "yirmisekiz",
+    "yil": 1721,
+    "yil_notu": "Elçilik dönüşünde (1721) sunuldu; kesin yazım tarihi teyit edilmedi.",
+    "dil": "Türkçe",
+    "tur": "sefaretname",
+    "sunuldugu_kisi": "III. Ahmed",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Paris yolculuğu; Fransız sarayı, bahçeler, rasathane, opera ve fabrikalar.",
+    "onemi": "Lale Devri'nde Fransız zevkinin Osmanlı'ya taşınmasında etkili olduğu kabul edilir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Yirmisekiz Çelebi Mehmed Efendi",
+        "url": "https://islamansiklopedisi.org.tr/yirmisekiz-celebi-mehmed-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "nedim-divani",
+    "ad": "Dîvân-ı Nedîm",
+    "ad_sade": "Nedim Divanı",
+    "yazar_id": "nedim",
+    "yil": null,
+    "yil_notu": "TDV: bilinen en eski nüsha 1736 tarihlidir.",
+    "dil": "Türkçe",
+    "tur": "divan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Gazel, şarkı, kaside ve tarihler; Sadabad ve İstanbul hayatı.",
+    "onemi": "Şarkı türünün ve mahallîleşme akımının en tanınmış örneğidir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nedîm",
+        "url": "https://islamansiklopedisi.org.tr/nedim--divan-sairi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "camiud-duvel",
+    "ad": "Câmiu'd-düvel",
+    "ad_sade": "Camiü'd-Düvel",
+    "yazar_id": "muneccimbasi",
+    "yil": null,
+    "yil_notu": "Kara Mustafa Paşa'nın isteğiyle yazıldı; yaratılıştan 1670'lere kadar uzanır. Lale Devri'nde Nedim başkanlığında bir heyet Sahâifü'l-ahbâr adıyla Türkçeye çevirdi.",
+    "dil": "Arapça",
+    "tur": "genel tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "İslam devletleri ve Osmanlı tarihi dahil bir dünya tarihi.",
+    "onemi": "Birçok küçük hanedan hakkında başka yerde bulunmayan bilgiler içerir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Müneccimbaşı Ahmed Dede",
+        "url": "https://islamansiklopedisi.org.tr/muneccimbasi-ahmed-dede"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "hayriyye",
+    "ad": "Hayriyye",
+    "ad_sade": "Hayriye",
+    "yazar_id": "nabi",
+    "yil": 1701,
+    "yil_notu": "TDV: 1113/1701'de Halep'te yazıldı.",
+    "dil": "Türkçe",
+    "tur": "nasihatname (mesnevi)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Halep",
+    "devlet": "Osmanlı",
+    "konu": "Oğlu Ebülhayr Mehmed Çelebi için yazılmış öğütler; meslekler ve toplum hayatı.",
+    "onemi": "Hikemî şiirin en tanınmış örneğidir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hayriyye",
+        "url": "https://islamansiklopedisi.org.tr/hayriyye"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "hayrabad",
+    "ad": "Hayrâbâd",
+    "ad_sade": "Hayrabad",
+    "yazar_id": "nabi",
+    "yil": "~1705",
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "mesnevi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Halep",
+    "devlet": "Osmanlı",
+    "konu": "Attâr'a atfedilen bir hikâyeden yola çıkan aşk ve ahlak mesnevisi.",
+    "onemi": "Aşırı övülmesi Şeyh Galib'in Hüsn ü Aşk'ı yazmasına vesile oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hayrâbâd",
+        "url": "https://islamansiklopedisi.org.tr/hayrabad"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tarih-i-naima",
+    "ad": "Târih-i Naîmâ (Ravzatü'l-Hüseyn fî hulâsati ahbâri'l-hâfikayn)",
+    "ad_sade": "Naima Tarihi",
+    "yazar_id": "naima",
+    "yil": null,
+    "yil_notu": "1591-1660 olaylarını kapsar; yazım tarihi teyit edilmedi.",
+    "dil": "Türkçe",
+    "tur": "vakanüvis tarihi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "1591-1660 arası Osmanlı tarihi; mukaddimesinde İbn Haldun'dan esinlenen devlet görüşü.",
+    "onemi": "Osmanlı vakanüvis tarihlerinin ilk ve en etkili örneğidir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Naîmâ",
+        "url": "https://islamansiklopedisi.org.tr/naima"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tarih-i-rasid",
+    "ad": "Târîh-i Râşid",
+    "ad_sade": "Raşid Tarihi",
+    "yazar_id": "rasid",
+    "yil": "1714-1735",
+    "yil_notu": "Vakanüvisliği süresince yazıldı; 1153/1740-41'de Müteferrika matbaasında, 1282'de yeniden basıldı.",
+    "dil": "Türkçe",
+    "tur": "vakanüvis tarihi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "1660-1722 arası Osmanlı tarihi.",
+    "onemi": "Naîmâ'nın devamıdır; Lale Devri'ne kadar olayları kapsar.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Râşid Mehmed Efendi",
+        "url": "https://islamansiklopedisi.org.tr/rasid-mehmed-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "zeyl-i-fezleke",
+    "ad": "Zeyl-i Fezleke (Silahdar Tarihi)",
+    "ad_sade": "Silahdar Tarihi",
+    "yazar_id": "silahdar",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Kâtib Çelebi'nin Fezleke'sinin bıraktığı yerden 1695'e kadar Osmanlı tarihi.",
+    "onemi": "IV. Mehmed ve II. Süleyman dönemlerinin saray içinden tanıklığa dayanan temel kaynağıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Silahdar Mehmed Ağa",
+        "url": "https://islamansiklopedisi.org.tr/silahdar-mehmed-aga"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "nusretname",
+    "ad": "Nusretnâme",
+    "ad_sade": "Nusretname",
+    "yazar_id": "silahdar",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "II. Mustafa dönemi (1695-1703).",
+    "onemi": "Zeyl-i Fezleke'nin devamıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Silahdar Mehmed Ağa",
+        "url": "https://islamansiklopedisi.org.tr/silahdar-mehmed-aga"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "segah-tekbir",
+    "ad": "Segâh Tekbîr",
+    "ad_sade": "Segah Tekbir",
+    "yazar_id": "itri",
+    "yil": null,
+    "yil_notu": "Bestelenme tarihi bilinmiyor.",
+    "dil": "Yok (müzik eseri; Arapça güfte)",
+    "tur": "beste (dinî musiki)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Bayram namazları ve dinî törenlerde okunan tekbir.",
+    "onemi": "Türk dinî musikisinin en tanınmış eserlerindendir. Aidiyeti yaygın görüşe göre Itrî'ye aittir; Ezgi'nin Zâkirî'ye atfetmesi kabul görmez.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Itrî Efendi, Buhûrîzâde",
+        "url": "https://islamansiklopedisi.org.tr/itri-efendi-buhurizade"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tekbîr",
+        "url": "https://islamansiklopedisi.org.tr/tekbir"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazar_id"
+    ],
+    "dogrulanamadi": false,
+    "rol": "besteci"
+  },
+  {
+    "id": "kantemir-edvar",
+    "ad": "Kitâbu İlmi'l-mûsikî alâ vechi'l-hurûfât",
+    "ad_sade": "Kantemiroğlu Edvarı",
+    "yazar_id": "kantemir",
+    "yil": "~1700",
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "musiki nazariyatı ve nota külliyatı",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Makam ve usul nazariyatı; harf notasıyla yazılmış 350'yi aşkın peşrev ve semai.",
+    "onemi": "XVII. yüzyıl saz repertuvarının en önemli yazılı kaynağıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kantemiroğlu (Dimitrie Cantemir)",
+        "url": "https://islamansiklopedisi.org.tr/kantemiroglu-dimitrie-cantemir"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kantemir-osmanli-tarihi",
+    "ad": "Incrementa atque decrementa aulae othomanicae",
+    "ad_sade": "Kantemiroğlu Osmanlı Tarihi",
+    "yazar_id": "kantemir",
+    "yil": 1717,
+    "yil_notu": "TDV: İstanbul'da 1710'dan önce başlandı, 1717'de Rusya'da tamamlandı; İngilizce çevirisi 1734.",
+    "dil": "Latince",
+    "tur": "tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Moskova",
+    "devlet": "Rus İmparatorluğu",
+    "konu": "Osmanlı Devleti'nin yükselişi ve gerilemesi.",
+    "onemi": "XVIII-XIX. yüzyıl Avrupa'sında Osmanlı tarihi için temel başvuru kitabı oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kantemiroğlu (Dimitrie Cantemir)",
+        "url": "https://islamansiklopedisi.org.tr/kantemiroglu-dimitrie-cantemir"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "marifetname",
+    "ad": "Mârifetnâme",
+    "ad_sade": "Marifetname",
+    "yazar_id": "erzurumlu",
+    "yil": 1757,
+    "yil_notu": "TDV: girişte telifin 1170/1757'de tamamlandığı belirtilir.",
+    "dil": "Türkçe",
+    "tur": "ansiklopedik eser",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Erzurum",
+    "devlet": "Osmanlı",
+    "konu": "Din, ahlak, tasavvuf, anatomi, astronomi ve kozmografi; oğlu Seyyid Ahmed Naîmî için yazıldı.",
+    "onemi": "Osmanlı'da en çok okunan ansiklopedik eserlerdendir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mârifetnâme",
+        "url": "https://islamansiklopedisi.org.tr/marifetname"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "sefinetur-ragib",
+    "ad": "Sefînetü'r-Râgıb ve defînetü'l-matâlib",
+    "ad_sade": "Sefinetü'r-Ragıb",
+    "yazar_id": "ragib-pasa",
+    "yil": "1756-1763",
+    "yil_notu": "TDV: 1756'dan önce başlandı, sadrazamlığı (1757-1763) sırasında tamamlandı.",
+    "dil": "Arapça",
+    "tur": "mecmua (derleme)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Çeşitli ilimlerden seçilmiş bilgi ve metinler.",
+    "onemi": "XVIII. yüzyıl Osmanlı ilim zevkini yansıtır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Râgıb Paşa",
+        "url": "https://islamansiklopedisi.org.tr/ragib-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ragib-pasa-kutuphanesi",
+    "ad": "Râgıb Paşa Kütüphanesi",
+    "ad_sade": "Ragıp Paşa Kütüphanesi",
+    "yazar_id": "ragib-pasa",
+    "yil": 1762,
+    "yil_notu": null,
+    "dil": "Yok (kurum)",
+    "tur": "kurum (kütüphane)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Koska'da (Laleli) yaptırılan vakıf kütüphanesi.",
+    "onemi": "XVIII. yüzyılın en önemli vakıf kütüphanelerinden biridir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Râgıb Paşa",
+        "url": "https://islamansiklopedisi.org.tr/ragib-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "prusya-sefaretnamesi",
+    "ad": "Prusya Sefâretnâmesi",
+    "ad_sade": "Ahmed Resmi Berlin Sefaretnamesi",
+    "yazar_id": "ahmed-resmi",
+    "yil": 1763,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "sefaretname",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Berlin",
+    "devlet": "Osmanlı",
+    "konu": "Berlin'e (Prusya) elçilik yolculuğu ve gözlemler.",
+    "onemi": "Osmanlı-Prusya ilişkilerinin erken belgesidir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahmed Resmî Efendi",
+        "url": "https://islamansiklopedisi.org.tr/ahmed-resmi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "hulasatul-itibar",
+    "ad": "Hulâsatü'l-i'tibâr",
+    "ad_sade": "Hulasatü'l-İtibar",
+    "yazar_id": "ahmed-resmi",
+    "yil": 1781,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "tarih (siyasi değerlendirme)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "1768-1774 Osmanlı-Rus savaşının nedenleri ve yanlışları.",
+    "onemi": "Hammer tarafından Almancaya çevrildi (1809); barışçı ve eleştirel bakışıyla dikkat çeker.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahmed Resmî Efendi",
+        "url": "https://islamansiklopedisi.org.tr/ahmed-resmi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "husn-u-ask",
+    "ad": "Hüsn ü Aşk",
+    "ad_sade": "Hüsn ü Aşk",
+    "yazar_id": "seyh-galib",
+    "yil": 1783,
+    "yil_notu": "TDV: 1783'te, yaklaşık altı ayda yazıldı.",
+    "dil": "Türkçe",
+    "tur": "mesnevi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Hüsn (güzellik) ile Aşk'ın sembolik hikâyesi; 2041 beyit ve dört tardiyye.",
+    "onemi": "Klasik Türk edebiyatının son büyük tasavvufi mesnevisi sayılır.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hüsn ü Aşk",
+        "url": "https://islamansiklopedisi.org.tr/husn-u-ask"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "seyh-galib-divani",
+    "ad": "Dîvân-ı Şeyh Gâlib",
+    "ad_sade": "Şeyh Galib Divanı",
+    "yazar_id": "seyh-galib",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "divan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Gazeller, kasideler; III. Selim'e yazılmış şiirler.",
+    "onemi": "Sebk-i Hindî'nin Osmanlı'daki son büyük örneğidir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şeyh Gâlib",
+        "url": "https://islamansiklopedisi.org.tr/seyh-galib"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ratib-layihasi",
+    "ad": "Râtib Efendi Sefâretnâmesi (Büyük Lâyiha)",
+    "ad_sade": "Ratib Efendi Layihası",
+    "yazar_id": "ratib",
+    "yil": 1792,
+    "yil_notu": "Viyana elçiliği (1791-1792) dönüşünde sunuldu.",
+    "dil": "Türkçe",
+    "tur": "sefaretname (rapor)",
+    "sunuldugu_kisi": "III. Selim",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Avusturya'nın ordusu, maliyesi, eğitim ve idare kurumları; yaklaşık 490 sayfa.",
+    "onemi": "Nizâm-ı Cedîd ıslahatına örnek olan en ayrıntılı sefaret raporudur.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ebûbekir Râtib Efendi",
+        "url": "https://islamansiklopedisi.org.tr/ebubekir-ratib-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "gelenbevi-logaritma",
+    "ad": "Şerh-i Cedâvili'l-ensâb",
+    "ad_sade": "Gelenbevi Logaritma Şerhi",
+    "yazar_id": "gelenbevi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "matematik",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Logaritma cetvellerinin açıklaması ve kullanımı.",
+    "onemi": "Logaritmayı Osmanlı matematiğine tanıtan eserlerdendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Gelenbevî",
+        "url": "https://islamansiklopedisi.org.tr/gelenbevi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "muhendishane-i-berri",
+    "ad": "Mühendishâne-i Berrî-i Hümâyun",
+    "ad_sade": "Mühendishane-i Berri-i Hümayun",
+    "yazar_id": "selim-3",
+    "yil": 1795,
+    "yil_notu": "TDV: 1795'te Hasköy'de kuruldu; Mühendishâne-i Bahrî 1775'ten beri vardı.",
+    "dil": "Yok (kurum)",
+    "tur": "kurum (mühendislik okulu)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Kara ordusuna topçu ve istihkâm subayı yetiştiren mühendislik okulu.",
+    "onemi": "Bugünkü İstanbul Teknik Üniversitesi'nin kökeni sayılır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mühendishâne-i Berrî-i Hümâyun",
+        "url": "https://islamansiklopedisi.org.tr/muhendishane-i-berri-i-humayun"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "onemi"
+    ],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "hamparsum-notasi",
+    "ad": "Hamparsum Notası",
+    "ad_sade": "Hamparsum Notası",
+    "yazar_id": "hamparsum",
+    "yil": "1813-1815",
+    "yil_notu": null,
+    "dil": "Yok (nota sistemi)",
+    "tur": "nota sistemi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Ermeni kilise neumlarından geliştirilen, Türk musikisine uyarlanmış yazı sistemi.",
+    "onemi": "XIX. yüzyıl boyunca klasik repertuvarın kayda geçirilmesinde en çok kullanılan nota oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Limonciyan, Hamparsum",
+        "url": "https://islamansiklopedisi.org.tr/limonciyan-hamparsum"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nota",
+        "url": "https://islamansiklopedisi.org.tr/nota"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "geliştiren"
+  },
+  {
+    "id": "miratul-ebdan",
+    "ad": "Mir'âtü'l-ebdân fî teşrîhi a'zâi'l-insân",
+    "ad_sade": "Miratü'l-Ebdan",
+    "yazar_id": "sanizade",
+    "yil": 1820,
+    "yil_notu": "TDV: 1235/1820'de basıldı.",
+    "dil": "Türkçe",
+    "tur": "tıp (anatomi)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "İnsan anatomisi; Hamse-i Şânîzâde'nin ilk kitabı.",
+    "onemi": "Türkçe ilk modern anatomi kitabıdır.",
+    "ilk_olma": "Türkçe ilk modern anatomi kitabı",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şânîzâde Mehmed Atâullah Efendi",
+        "url": "https://islamansiklopedisi.org.tr/sanizade-mehmed-ataullah-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mecmua-i-ulum-i-riyaziyye",
+    "ad": "Mecmûa-i Ulûm-ı Riyâziyye",
+    "ad_sade": "Mecmua-i Ulum-ı Riyaziyye",
+    "yazar_id": "hoca-ishak",
+    "yil": "1831-1834",
+    "yil_notu": "TDV: dört cilt, 1247-1250 (1831-1834), İstanbul.",
+    "dil": "Türkçe",
+    "tur": "matematik ve fen",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Aritmetik, cebir, geometri, mekanik, fizik, kimya ve astronomi.",
+    "onemi": "Modern bilimleri Türkçede ilk kez düzenli biçimde sunan eserdir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İshak Efendi, Başhoca",
+        "url": "https://islamansiklopedisi.org.tr/ishak-efendi-bashoca"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tibhane-i-amire",
+    "ad": "Tıphâne-i Âmire",
+    "ad_sade": "Tıphane-i Amire",
+    "yazar_id": "behcet",
+    "yil": 1827,
+    "yil_notu": "TDV: 14 Mart 1827'de II. Mahmud döneminde açıldı.",
+    "dil": "Yok (kurum)",
+    "tur": "kurum (tıp okulu)",
+    "sunuldugu_kisi": "II. Mahmud",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Hekimbaşı Behçet Mustafa Efendi'nin girişimiyle açılan modern tıp okulu.",
+    "onemi": "Osmanlı'da modern tıp eğitiminin başlangıcıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tıbhâne-i Âmire",
+        "url": "https://islamansiklopedisi.org.tr/tibhane-i-amire"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "takvim-i-vekayi",
+    "ad": "Takvîm-i Vekāyi",
+    "ad_sade": "Takvim-i Vekayi",
+    "yazar_id": "mahmud-2",
+    "yil": 1831,
+    "yil_notu": "TDV: ilk sayı 1 Kasım 1831.",
+    "dil": "Türkçe",
+    "tur": "gazete (resmî)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Devletin resmî haberleri ve kararları.",
+    "onemi": "İlk Türkçe resmî gazetedir.",
+    "ilk_olma": "İlk Türkçe (resmî) gazete",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Takvîm-i Vekāyi",
+        "url": "https://islamansiklopedisi.org.tr/takvim-i-vekayi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "dede-efendi-ayinleri",
+    "ad": "Mevlevî Âyinleri (Dede Efendi)",
+    "ad_sade": "Dede Efendi Mevlevi Ayinleri",
+    "yazar_id": "dede-efendi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Yok (müzik eseri; Farsça güfte)",
+    "tur": "beste (Mevlevî âyini)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Sema törenlerinde icra edilen büyük formlu dinî besteler.",
+    "onemi": "Mevlevî âyin geleneğinin zirvesi kabul edilir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İsmâil Dede Efendi, Hamâmîzâde",
+        "url": "https://islamansiklopedisi.org.tr/ismail-dede-efendi-hamamizade"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu",
+      "dil"
+    ],
+    "dogrulanamadi": false,
+    "rol": "besteci"
+  },
+  {
+    "id": "tanzimat-fermani",
+    "ad": "Gülhane Hatt-ı Hümâyunu (Tanzimat Fermanı)",
+    "ad_sade": "Tanzimat Fermanı",
+    "yazar_id": "resid-pasa",
+    "yil": 1839,
+    "yil_notu": "TDV: 3 Kasım 1839'da Gülhane'de okundu.",
+    "dil": "Türkçe",
+    "tur": "ferman",
+    "sunuldugu_kisi": "Abdülmecid",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Can, mal ve namus güvenliği; vergide ve askerlikte düzen; kanun önünde eşitlik.",
+    "onemi": "Osmanlı'da Tanzimat dönemini başlatan belgedir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tanzimat",
+        "url": "https://islamansiklopedisi.org.tr/tanzimat"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mustafa Reşid Paşa",
+        "url": "https://islamansiklopedisi.org.tr/mustafa-resid-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "hazırlayan"
+  },
+  {
+    "id": "islahat-fermani",
+    "ad": "Islahat Fermanı",
+    "ad_sade": "Islahat Fermanı",
+    "yazar_id": "ali-pasa",
+    "yil": 1856,
+    "yil_notu": "TDV: 18 Şubat 1856'da Bâbıâli'de okundu. Metin Âlî Paşa, Fuad Paşa ve şeyhülislamın İngiliz, Fransız ve Avusturya elçileriyle görüşmeleriyle hazırlandı; hazırlayanlar konusunda TDV maddeleri farklı ayrıntılar verir.",
+    "dil": "Türkçe",
+    "tur": "ferman",
+    "sunuldugu_kisi": "Abdülmecid",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Gayrimüslim tebaaya Müslümanlarla eşit haklar; Kırım Savaşı sonrası diplomasi ortamında ilan edildi.",
+    "onemi": "Tanzimat'ın ikinci büyük belgesidir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Islahat Fermanı",
+        "url": "https://islamansiklopedisi.org.tr/islahat-fermani"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Âlî Paşa, Mehmed Emin",
+        "url": "https://islamansiklopedisi.org.tr/ali-pasa-mehmed-emin"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazar_id"
+    ],
+    "dogrulanamadi": false,
+    "rol": "sadrazam; hazırlık görüşmelerinde yer alan"
+  },
+  {
+    "id": "kavaid-i-osmaniye",
+    "ad": "Kavâid-i Osmâniyye",
+    "ad_sade": "Kavaid-i Osmaniye",
+    "yazar_id": "cevdet-pasa",
+    "yil": 1851,
+    "yil_notu": "TDV: Bursa'da Fuad Efendi ile birlikte hazırlandı ve Encümen-i Dâniş'in açılışında (1851) padişaha sunuldu; ilk baskı İstanbul 1281/1864-65. Kellgren'in Almanca çevirisi 1855.",
+    "dil": "Türkçe",
+    "tur": "gramer",
+    "sunuldugu_kisi": "Abdülmecid",
+    "yazildigi_yer": "Bursa",
+    "devlet": "Osmanlı",
+    "konu": "Osmanlı Türkçesinin grameri.",
+    "onemi": "TDV'ye göre Türkçede yayımlanan ilk gramer kitabıdır.",
+    "ilk_olma": "Türkçede yayımlanan ilk gramer kitabı (TDV)",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cevdet Paşa",
+        "url": "https://islamansiklopedisi.org.tr/cevdet-pasa"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Encümen-i Dâniş",
+        "url": "https://islamansiklopedisi.org.tr/encumen-i-danis"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tarih-i-cevdet",
+    "ad": "Târîh-i Cevdet (Tertîb-i Cedîd)",
+    "ad_sade": "Tarih-i Cevdet",
+    "yazar_id": "cevdet-pasa",
+    "yil": null,
+    "yil_notu": "12 cilt; 1774-1826 olaylarını kapsar.",
+    "dil": "Türkçe",
+    "tur": "tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Küçük Kaynarca'dan Yeniçeri Ocağı'nın kaldırılmasına kadar Osmanlı tarihi.",
+    "onemi": "XIX. yüzyıl Osmanlı tarih yazıcılığının en önemli eseridir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cevdet Paşa",
+        "url": "https://islamansiklopedisi.org.tr/cevdet-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mecelle",
+    "ad": "Mecelle-i Ahkâm-ı Adliyye",
+    "ad_sade": "Mecelle",
+    "yazar_id": "cevdet-pasa",
+    "yil": "1868-1876",
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "kanun (medeni hukuk)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Hanefî fıkhına dayanan borçlar ve eşya hukuku hükümlerinin maddeler hâlinde düzenlenmesi.",
+    "onemi": "İslam hukukunun ilk büyük kanunlaştırma örneğidir.",
+    "ilk_olma": "İslam medeni hukukunun ilk resmî kanunlaştırması",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mecelle",
+        "url": "https://islamansiklopedisi.org.tr/mecelle"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cevdet Paşa",
+        "url": "https://islamansiklopedisi.org.tr/cevdet-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "ilk_olma"
+    ],
+    "dogrulanamadi": false,
+    "rol": "hazırlayan (komisyon başkanı)"
+  },
+  {
+    "id": "sair-evlenmesi",
+    "ad": "Şair Evlenmesi",
+    "ad_sade": "Şair Evlenmesi",
+    "yazar_id": "sinasi",
+    "yil": 1860,
+    "yil_notu": "Tercümân-ı Ahvâl'de imzasız tefrika edildi.",
+    "dil": "Türkçe",
+    "tur": "tiyatro (komedi)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Görücü usulü evliliği hicveden tek perdelik komedi.",
+    "onemi": "İlk yerli Türk tiyatro eseri kabul edilir.",
+    "ilk_olma": "İlk yerli (Batılı tarzda) Türk tiyatro eseri",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şinâsi",
+        "url": "https://islamansiklopedisi.org.tr/sinasi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tercümân-ı Ahvâl",
+        "url": "https://islamansiklopedisi.org.tr/tercuman-i-ahval"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tercuman-i-ahval",
+    "ad": "Tercümân-ı Ahvâl",
+    "ad_sade": "Tercüman-ı Ahval",
+    "yazar_id": "sinasi",
+    "yil": 1860,
+    "yil_notu": "TDV: 22 Ekim 1860; sahibi Âgâh Efendi, mukaddimeyi Şinasi yazdı.",
+    "dil": "Türkçe",
+    "tur": "gazete",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Haber, siyaset ve edebiyat.",
+    "onemi": "Türklerin çıkardığı ilk özel gazetedir.",
+    "ilk_olma": "Türklerin çıkardığı ilk özel gazete",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tercümân-ı Ahvâl",
+        "url": "https://islamansiklopedisi.org.tr/tercuman-i-ahval"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "rol"
+    ],
+    "dogrulanamadi": false,
+    "rol": "ortak kurucu, mukaddime yazarı"
+  },
+  {
+    "id": "tasvir-i-efkar",
+    "ad": "Tasvîr-i Efkâr",
+    "ad_sade": "Tasvir-i Efkar",
+    "yazar_id": "sinasi",
+    "yil": 1862,
+    "yil_notu": "TDV: ilk sayı 27 Haziran 1862; 1865'te Nâmık Kemal devraldı.",
+    "dil": "Türkçe",
+    "tur": "gazete",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Fikir yazıları, edebiyat ve tefrikalar.",
+    "onemi": "Yeni Osmanlı düşüncesinin yayıldığı gazetelerdendir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tasvîr-i Efkâr",
+        "url": "https://islamansiklopedisi.org.tr/tasvir-i-efkar"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "vatan-yahut-silistre",
+    "ad": "Vatan yahut Silistre",
+    "ad_sade": "Vatan yahut Silistre",
+    "yazar_id": "namik-kemal",
+    "yil": 1873,
+    "yil_notu": "TDV: ilk temsil 1 Nisan 1873, Gedikpaşa Tiyatrosu.",
+    "dil": "Türkçe",
+    "tur": "tiyatro (dram)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "1854 Silistre savunması etrafında vatan sevgisi.",
+    "onemi": "Temsilinin uyandırdığı coşku Nâmık Kemal'in Magosa'ya sürgününe yol açtı.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nâmık Kemal",
+        "url": "https://islamansiklopedisi.org.tr/namik-kemal"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "intibah",
+    "ad": "İntibah (Sergüzeşt-i Ali Bey)",
+    "ad_sade": "İntibah",
+    "yazar_id": "namik-kemal",
+    "yil": 1876,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "roman",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Magosa",
+    "devlet": "Osmanlı",
+    "konu": "Ali Bey'in Mehpeyker'e tutkusu ve düşüşü.",
+    "onemi": "TDV: Nâmık Kemal'in ilk romanı; Türk romanında psikolojik tahlile yönelen ilk örnek.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nâmık Kemal",
+        "url": "https://islamansiklopedisi.org.tr/namik-kemal"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "hurriyet-gazetesi",
+    "ad": "Hürriyet (Londra)",
+    "ad_sade": "Hürriyet Gazetesi (1868)",
+    "yazar_id": "namik-kemal",
+    "yil": 1868,
+    "yil_notu": "TDV: ilk sayı 29 Haziran 1868 Londra; 63. sayıda (6 Eylül 1869) Nâmık Kemal ayrıldı, Ziya Paşa Cenevre'de sürdürdü.",
+    "dil": "Türkçe",
+    "tur": "gazete",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Londra",
+    "devlet": "Osmanlı",
+    "konu": "Meşrutiyet, hürriyet ve vatan fikirleri.",
+    "onemi": "Yeni Osmanlıların yurt dışındaki en etkili yayın organıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nâmık Kemal",
+        "url": "https://islamansiklopedisi.org.tr/namik-kemal"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Yeni Osmanlılar Cemiyeti",
+        "url": "https://islamansiklopedisi.org.tr/yeni-osmanlilar-cemiyeti"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "harabat",
+    "ad": "Harâbât",
+    "ad_sade": "Harabat",
+    "yazar_id": "ziya-pasa",
+    "yil": "1874-1876",
+    "yil_notu": "TDV: üç cilt, 1291-1292.",
+    "dil": "Türkçe",
+    "tur": "antoloji",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Türk, Arap ve Fars şiirinden seçmeler.",
+    "onemi": "Divan şiirine yönelmesi nedeniyle Nâmık Kemal'in Tahrîb-i Harâbât ile eleştirisine konu oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Harâbât",
+        "url": "https://islamansiklopedisi.org.tr/harabat--ziya-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "onemi"
+    ],
+    "dogrulanamadi": false,
+    "rol": "derleyen"
+  },
+  {
+    "id": "ziya-terkib-i-bend",
+    "ad": "Terkîb-i Bend (Ziyâ Paşa)",
+    "ad_sade": "Ziya Paşa Terkib-i Bendi",
+    "yazar_id": "ziya-pasa",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "şiir (terkîb-i bend)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Hayatın anlamı, kader ve toplum üzerine 12 bentlik hikemî şiir; Bağdatlı Rûhî'ye nazire.",
+    "onemi": "Tanzimat şiirinin en tanınmış örneklerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ziyâ Paşa",
+        "url": "https://islamansiklopedisi.org.tr/ziya-pasa--sair"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "muhbir",
+    "ad": "Muhbir",
+    "ad_sade": "Muhbir Gazetesi",
+    "yazar_id": "ali-suavi",
+    "yil": 1867,
+    "yil_notu": "TDV: Londra, 31 Ağustos 1867; Mustafa Fâzıl Paşa desteğiyle.",
+    "dil": "Türkçe",
+    "tur": "gazete",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Londra",
+    "devlet": "Osmanlı",
+    "konu": "Osmanlı yönetimini eleştiren sürgün gazetesi.",
+    "onemi": "Yeni Osmanlıların Avrupa'daki ilk yayın organıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ali Suâvî",
+        "url": "https://islamansiklopedisi.org.tr/ali-suavi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "onemi"
+    ],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "kanun-i-esasi",
+    "ad": "Kanûn-ı Esâsî",
+    "ad_sade": "Kanun-ı Esasi",
+    "yazar_id": "midhat-pasa",
+    "yil": 1876,
+    "yil_notu": "TDV: 23 Aralık 1876'da ilan edildi; 119 madde.",
+    "dil": "Türkçe",
+    "tur": "anayasa",
+    "sunuldugu_kisi": "II. Abdülhamid",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Meclis-i Umûmî (Âyan ve Mebusan), temel haklar ve padişahın yetkileri.",
+    "onemi": "Osmanlı'nın ilk anayasasıdır; I. Meşrutiyet'i başlattı.",
+    "ilk_olma": "İlk Osmanlı anayasası",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kanûn-ı Esâsî",
+        "url": "https://islamansiklopedisi.org.tr/kanun-i-esasi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Midhat Paşa",
+        "url": "https://islamansiklopedisi.org.tr/midhat-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "rol"
+    ],
+    "dogrulanamadi": false,
+    "rol": "hazırlayan (komisyon başkanı)"
+  },
+  {
+    "id": "felatun-bey",
+    "ad": "Felâtun Bey ile Râkım Efendi",
+    "ad_sade": "Felatun Bey ile Rakım Efendi",
+    "yazar_id": "ahmed-midhat",
+    "yil": 1875,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "roman",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Batılılaşmayı yanlış anlayan Felâtun ile çalışkan Râkım'ın karşılaştırması.",
+    "onemi": "Türk romanında 'alafranga züppe' tipinin ilk örneklerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Felâtun Bey ile Râkım Efendi",
+        "url": "https://islamansiklopedisi.org.tr/felatun-bey-ile-rakim-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "onemi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tercuman-i-hakikat",
+    "ad": "Tercümân-ı Hakîkat",
+    "ad_sade": "Tercüman-ı Hakikat",
+    "yazar_id": "ahmed-midhat",
+    "yil": 1878,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "gazete",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Haber, tefrika roman ve fikir yazıları.",
+    "onemi": "Türk basın tarihinin en uzun ömürlü gazetelerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahmed Midhat Efendi",
+        "url": "https://islamansiklopedisi.org.tr/ahmed-midhat-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "taassuk-i-talat",
+    "ad": "Taaşşuk-ı Talat ve Fitnat",
+    "ad_sade": "Taaşşuk-ı Talat ve Fitnat",
+    "yazar_id": "semseddin-sami",
+    "yil": 1872,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "roman",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Görücü usulü evlilik ve kadın-erkek ilişkileri etrafında trajik bir aşk.",
+    "onemi": "İlk telif Türk romanı kabul edilir.",
+    "ilk_olma": "İlk telif Türk romanı",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şemseddin Sâmi",
+        "url": "https://islamansiklopedisi.org.tr/semseddin-sami"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kamusul-alam",
+    "ad": "Kāmûsü'l-a'lâm",
+    "ad_sade": "Kamusü'l-Alam",
+    "yazar_id": "semseddin-sami",
+    "yil": "1889-1898",
+    "yil_notu": "TDV: altı cilt.",
+    "dil": "Türkçe",
+    "tur": "ansiklopedi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Tarih ve coğrafya özel adları ansiklopedisi.",
+    "onemi": "Türkçe ilk ansiklopedi sayılır.",
+    "ilk_olma": "İlk Türkçe ansiklopedi",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kāmûsü'l-A‘lâm",
+        "url": "https://islamansiklopedisi.org.tr/kamusul-alam"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kamus-i-turki",
+    "ad": "Kāmûs-ı Türkî",
+    "ad_sade": "Kamus-ı Türki",
+    "yazar_id": "semseddin-sami",
+    "yil": "1899-1901",
+    "yil_notu": "Basım tarihi 1317 (1899-1900) olarak verilir; iki cilt.",
+    "dil": "Türkçe",
+    "tur": "sözlük",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Türkçe sözlük; kelimelerin kökeni ve kullanımı.",
+    "onemi": "İlk planlı ve kapsamlı Türkçe sözlüklerdendir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şemseddin Sâmi",
+        "url": "https://islamansiklopedisi.org.tr/semseddin-sami"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "talim-i-edebiyat",
+    "ad": "Ta'lîm-i Edebiyyât",
+    "ad_sade": "Talim-i Edebiyat",
+    "yazar_id": "recaizade",
+    "yil": 1879,
+    "yil_notu": "TDV: ilk baskı 1879, taşbaskı.",
+    "dil": "Türkçe",
+    "tur": "edebiyat teorisi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Mekteb-i Mülkiyye'deki ders notları; Émile Lefranc'ın retoriğinden yararlanır.",
+    "onemi": "Batılı edebiyat anlayışını savunan ilk sistemli edebiyat kitabıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ta‘lîm-i Edebiyyât",
+        "url": "https://islamansiklopedisi.org.tr/talim-i-edebiyyat"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "araba-sevdasi",
+    "ad": "Araba Sevdası",
+    "ad_sade": "Araba Sevdası",
+    "yazar_id": "recaizade",
+    "yil": 1896,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "roman",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Alafranga züppe Bihruz Bey'in gülünç serüvenleri.",
+    "onemi": "Türk edebiyatında realist romanın ilk örneklerinden kabul edilir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Araba Sevdası",
+        "url": "https://islamansiklopedisi.org.tr/araba-sevdasi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "lehce-i-osmani",
+    "ad": "Lehce-i Osmânî",
+    "ad_sade": "Lehçe-i Osmani",
+    "yazar_id": "ahmed-vefik",
+    "yil": 1876,
+    "yil_notu": "TDV: 1293 (1876); ikinci baskı 1306.",
+    "dil": "Türkçe",
+    "tur": "sözlük",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Türkçe kelimelerin Çağatayca karşılıklarıyla verildiği sözlük; Arapça ve Farsça unsurlar ayrı bölümde.",
+    "onemi": "Türkçenin kendi kelime hazinesini ön plana çıkaran ilk sözlüklerdendir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Lehce-i Osmânî",
+        "url": "https://islamansiklopedisi.org.tr/lehce-i-osmani"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "moliere-uyarlamalari",
+    "ad": "Molière Külliyatı (Ahmed Vefik Paşa uyarlamaları)",
+    "ad_sade": "Ahmet Vefik Paşa Molière Uyarlamaları",
+    "yazar_id": "ahmed-vefik",
+    "yil": "1879-1882",
+    "yil_notu": "TDV: Bursa valiliği sırasında hazırlandı; 16 kitap.",
+    "dil": "Türkçe",
+    "tur": "tiyatro (uyarlama)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bursa",
+    "devlet": "Osmanlı",
+    "konu": "Tartüf, Zor Nikâhı, Azarya (Cimri) gibi Molière komedilerinin Türkçe uyarlamaları.",
+    "onemi": "Molière'i Türk sahnesine kazandıran en kapsamlı çalışmadır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahmed Vefik Paşa",
+        "url": "https://islamansiklopedisi.org.tr/ahmed-vefik-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "uyarlayan"
+  },
+  {
+    "id": "mecmua-i-funun",
+    "ad": "Mecmûa-i Fünûn",
+    "ad_sade": "Mecmua-i Fünun",
+    "yazar_id": "munif-pasa",
+    "yil": "1862-1867",
+    "yil_notu": "TDV: Temmuz 1862 - Haziran 1867, 47 sayı.",
+    "dil": "Türkçe",
+    "tur": "dergi (bilim)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Cemiyyet-i İlmiyye-i Osmâniyye'nin yayın organı; tarih, coğrafya, fen ve felsefe yazıları.",
+    "onemi": "İlk Türkçe bilim dergisi sayılır.",
+    "ilk_olma": "İlk Türkçe bilim dergisi",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mecmûa-i Fünûn",
+        "url": "https://islamansiklopedisi.org.tr/mecmua-i-funun"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "ilk_olma"
+    ],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "muhaverat-i-hikemiyye",
+    "ad": "Muhâverât-ı Hikemiyye",
+    "ad_sade": "Muhaverat-ı Hikemiyye",
+    "yazar_id": "munif-pasa",
+    "yil": "1859-1860",
+    "yil_notu": "TDV: İstanbul 1276.",
+    "dil": "Türkçe",
+    "tur": "felsefe (tercüme)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Voltaire, Fénelon ve Fontenelle'den seçilmiş felsefi diyaloglar.",
+    "onemi": "Aydınlanma düşünürlerinden Türkçeye yapılan ilk çeviriler arasındadır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Münif Mehmed Paşa",
+        "url": "https://islamansiklopedisi.org.tr/munif-mehmed-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "çeviren"
+  },
+  {
+    "id": "tarih-i-alem",
+    "ad": "Târîh-i Âlem",
+    "ad_sade": "Tarih-i Alem",
+    "yazar_id": "suleyman-husnu",
+    "yil": 1876,
+    "yil_notu": "TDV: 1293/1876, askerî okullar için ders kitabı.",
+    "dil": "Türkçe",
+    "tur": "tarih (ders kitabı)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Eski çağlardan itibaren dünya tarihi; Türk tarihine geniş yer ayırır.",
+    "onemi": "Türkçü çevrelerce önemsenen ilk tarih kitaplarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Süleyman Hüsnü Paşa",
+        "url": "https://islamansiklopedisi.org.tr/suleyman-husnu-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "les-turcs-anciens",
+    "ad": "Les Turcs anciens et modernes",
+    "ad_sade": "Eski ve Yeni Türkler",
+    "yazar_id": "mustafa-celaleddin",
+    "yil": 1869,
+    "yil_notu": null,
+    "dil": "Fransızca",
+    "tur": "tarih / etnoloji",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Türklerin kökeni ve Avrupa halklarıyla akrabalığı tezi.",
+    "onemi": "TDV Türkçülük maddesine göre Türkçülüğün erken kaynaklarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Türkçülük",
+        "url": "https://islamansiklopedisi.org.tr/turkculuk"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kaplumbaga-terbiyecisi",
+    "ad": "Kaplumbağa Terbiyecisi",
+    "ad_sade": "Kaplumbağa Terbiyecisi",
+    "yazar_id": "osman-hamdi",
+    "yil": 1906,
+    "yil_notu": "Tarih genel bilgiye dayanır (iki versiyonu vardır).",
+    "dil": "Yok (resim)",
+    "tur": "tablo",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Kaplumbağaları eğitmeye çalışan bir derviş kılığındaki figür.",
+    "onemi": "Türk resim sanatının en tanınmış eserlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Osman Hamdi Bey",
+        "url": "https://islamansiklopedisi.org.tr/osman-hamdi-bey"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "konu"
+    ],
+    "dogrulanamadi": false,
+    "rol": "ressam"
+  },
+  {
+    "id": "sanayi-i-nefise",
+    "ad": "Sanâyi-i Nefîse Mektebi",
+    "ad_sade": "Sanayi-i Nefise Mektebi",
+    "yazar_id": "osman-hamdi",
+    "yil": 1882,
+    "yil_notu": "TDV: 1882-83'te açıldı; Osman Hamdi 1882-1910 müdürü.",
+    "dil": "Yok (kurum)",
+    "tur": "kurum (güzel sanatlar okulu)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Resim, heykel, mimarlık ve hakkâklık eğitimi veren okul.",
+    "onemi": "Bugünkü Mimar Sinan Güzel Sanatlar Üniversitesi'nin kökenidir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sanâyi-i Nefîse Mektebi",
+        "url": "https://islamansiklopedisi.org.tr/sanayi-i-nefise-mektebi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "onemi"
+    ],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "mustefadul-ahbar",
+    "ad": "Müstefâdü'l-ahbâr fî ahvâli Kazan ve Bulgar",
+    "ad_sade": "Müstefadü'l-Ahbar",
+    "yazar_id": "mercani",
+    "yil": 1885,
+    "yil_notu": "TDV: Kazan 1885 (I. cilt), 1897 ve 1900 (II. cilt) baskıları.",
+    "dil": "Türkçe (Tatarca)",
+    "tur": "tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Kazan",
+    "devlet": "Rus İmparatorluğu",
+    "konu": "İdil Bulgarları ve Kazan Hanlığı'ndan itibaren Kazan Tatarlarının tarihi.",
+    "onemi": "Tatar milli tarih yazıcılığının temel eseridir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mercânî",
+        "url": "https://islamansiklopedisi.org.tr/mercani"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "lehce-i-tatari",
+    "ad": "Lehçe-i Tatarî",
+    "ad_sade": "Lehçe-i Tatari",
+    "yazar_id": "kayyum-nasiri",
+    "yil": "1895-1896",
+    "yil_notu": "TDV: Kazan, iki cilt.",
+    "dil": "Türkçe (Tatarca)",
+    "tur": "sözlük",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Kazan",
+    "devlet": "Rus İmparatorluğu",
+    "konu": "Tatarca kelimelerin açıklamalı sözlüğü.",
+    "onemi": "Modern Tatar edebî dilinin temel sözlüğüdür.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kayyûm Nâsırî",
+        "url": "https://islamansiklopedisi.org.tr/kayyum-nasiri"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "turk-tatar-grameri",
+    "ad": "Grammatika turetsko-tatarskago yazıka",
+    "ad_sade": "Türk-Tatar Dilinin Grameri",
+    "yazar_id": "kazim-bey",
+    "yil": 1839,
+    "yil_notu": "TDV: Kazan 1839; ikinci baskı 1846; Zenker'in Almanca çevirisi 1848.",
+    "dil": "Rusça",
+    "tur": "gramer",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Kazan",
+    "devlet": "Rus İmparatorluğu",
+    "konu": "Osmanlı Türkçesi ve Tatarca karşılaştırmalı grameri.",
+    "onemi": "XIX. yüzyıl Avrupa Türkolojisinin temel gramerlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mîrzâ Kâzım Bey",
+        "url": "https://islamansiklopedisi.org.tr/mirza-kazim-bey"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tercuman-gazete",
+    "ad": "Tercüman (Perevodçik)",
+    "ad_sade": "Tercüman Gazetesi",
+    "yazar_id": "gaspirali",
+    "yil": 1883,
+    "yil_notu": "TDV: izin 5(17) Ağustos 1882; ilk sayı 22 Nisan 1883, Bahçesaray.",
+    "dil": "Türkçe",
+    "tur": "gazete",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bahçesaray",
+    "devlet": "Rus İmparatorluğu",
+    "konu": "Türkçe-Rusça haftalık; eğitim, kültür ve Türk dünyası haberleri.",
+    "onemi": "Kırım'dan Türkistan'a okunan, ortak Türk yazı dilini hedefleyen gazetedir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tercüman",
+        "url": "https://islamansiklopedisi.org.tr/tercuman--gazete"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "usul-i-cedid-mektebi",
+    "ad": "Usûl-i Cedîd Mektebi (Bahçesaray)",
+    "ad_sade": "Usul-i Cedid Mektebi",
+    "yazar_id": "gaspirali",
+    "yil": 1884,
+    "yil_notu": null,
+    "dil": "Yok (kurum)",
+    "tur": "kurum (okul)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bahçesaray",
+    "devlet": "Rus İmparatorluğu",
+    "konu": "Ses usulüyle okuma-yazma öğreten yeni tip mektep.",
+    "onemi": "Cedîdcilik hareketinin eğitimdeki ilk somut adımıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Gaspıralı, İsmâil Bey",
+        "url": "https://islamansiklopedisi.org.tr/gaspirali-ismail-bey"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cedîdcilik",
+        "url": "https://islamansiklopedisi.org.tr/cedidcilik"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "vakif-siirleri",
+    "ad": "Vâkıf'ın şiirleri (koşma ve gerayllılar)",
+    "ad_sade": "Molla Penah Vakıf Şiirleri",
+    "yazar_id": "vakif",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe (Azerbaycan)",
+    "tur": "şiir (koşma, gerayllı)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Şuşa",
+    "devlet": "Karabağ Hanlığı",
+    "konu": "Aşk, tabiat ve yaşama sevinci; Vidâdî ile şiirleşmeler.",
+    "onemi": "Azerbaycan yazılı edebiyatında halk şiiri ölçülerinin yerleşmesini sağladı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Vâkıf, Molla Penâh",
+        "url": "https://islamansiklopedisi.org.tr/vakif-molla-penah"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "temsilat",
+    "ad": "Temsîlât",
+    "ad_sade": "Temsilat (Ahundzade Komedileri)",
+    "yazar_id": "ahundzade",
+    "yil": "1850-1855",
+    "yil_notu": "TDV: altı komedi 1850-1855 arasında yazıldı (ör. Lenkeran Hanının Veziri, 1851); külliyat Temsîlât adıyla toplandı.",
+    "dil": "Türkçe (Azerbaycan)",
+    "tur": "tiyatro (komedi)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Tiflis",
+    "devlet": "Rus İmparatorluğu",
+    "konu": "Batıl inançlar, yöneticilerin keyfîliği ve cimrilik gibi toplumsal kusurları hicveden komediler.",
+    "onemi": "Türk dünyasında Batılı tarzda yazılan ilk komediler arasındadır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahundzâde, Mirza Feth Ali",
+        "url": "https://islamansiklopedisi.org.tr/ahundzade-mirza-feth-ali"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ekinci",
+    "ad": "Ekinci",
+    "ad_sade": "Ekinci Gazetesi",
+    "yazar_id": "zerdabi",
+    "yil": "1875-1877",
+    "yil_notu": "TDV: 3 Ağustos (eski takvimle 22 Temmuz) 1875 - 11 Ekim 1877, Bakü; ayda iki kez, yaklaşık 400 nüsha.",
+    "dil": "Türkçe (Azerbaycan)",
+    "tur": "gazete",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bakü",
+    "devlet": "Rus İmparatorluğu",
+    "konu": "Tarım, eğitim ve toplumsal ıslahat.",
+    "onemi": "Rusya'da yayımlanan ilk Türkçe gazetedir.",
+    "ilk_olma": "Rusya'da ilk Türkçe gazete",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hasanbey Melikzâde Zerdâbî",
+        "url": "https://islamansiklopedisi.org.tr/hasanbey-melikzade-zerdabi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "rol": "kurucu"
+  },
+  {
+    "id": "mahtumkulu-divani",
+    "ad": "Mahtumkulu Divanı",
+    "ad_sade": "Mahtumkulu Divanı",
+    "yazar_id": "mahtumkulu",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe (Türkmen)",
+    "tur": "divan (halk şiiri ölçüleriyle)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Türkmen boyları",
+    "konu": "Türkmen boylarının birliği, ahlak, tasavvuf ve hayat; yaklaşık 500 şiir.",
+    "onemi": "Türkmen edebiyatının temel eseridir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mahtumkulu",
+        "url": "https://islamansiklopedisi.org.tr/mahtumkulu"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "firdevsul-ikbal",
+    "ad": "Firdevsü'l-ikbâl",
+    "ad_sade": "Firdevsü'l-İkbal",
+    "yazar_id": "munis",
+    "yil": null,
+    "yil_notu": "Mûnis Muhammed Rahim Han'ın isteğiyle başladı, ölümünde (1829) yarım kaldı; Âgehî 1839'da tamamlamakla görevlendirildi.",
+    "dil": "Türkçe (Çağatay)",
+    "tur": "tarih",
+    "sunuldugu_kisi": "Muhammed Rahim Han",
+    "yazildigi_yer": "Hîve",
+    "devlet": "Hive Hanlığı",
+    "konu": "Harezm ve Hive hanlarının (Kungrat hanedanı) tarihi.",
+    "onemi": "Hive Hanlığı tarihinin temel kaynağıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mûnis",
+        "url": "https://islamansiklopedisi.org.tr/munis"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Âgehî, Muhammed Rızâ",
+        "url": "https://islamansiklopedisi.org.tr/agehi-muhammed-riza"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu"
+    ],
+    "dogrulanamadi": false,
+    "olum_sonrasi_tamamlandi": true
+  },
+  {
+    "id": "kara-sozler",
+    "ad": "Kara Sözler (Gaklia)",
+    "ad_sade": "Kara Sözler",
+    "yazar_id": "abay",
+    "yil": "1890-1898",
+    "yil_notu": "TDV: 45 yazı, 1890-1898.",
+    "dil": "Türkçe (Kazak)",
+    "tur": "düşünce yazıları",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Semey (Semipalatinsk)",
+    "devlet": "Rus İmparatorluğu",
+    "konu": "Kazak toplumuna yönelik ahlak, eğitim ve felsefe üzerine öğütler.",
+    "onemi": "Kazak düzyazısının ve düşünce hayatının temel metinlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kunanbayev, Abay",
+        "url": "https://islamansiklopedisi.org.tr/kunanbayev-abay"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "manas",
+    "ad": "Manas Destanı",
+    "ad_sade": "Manas Destanı",
+    "yazar_id": null,
+    "yil": null,
+    "yil_notu": "Anonim sözlü destan. TDV: başlangıcı 840 civarına tarihlenir, XVI-XVII. yüzyıllarda eklemeler yapıldı; en eski anılışı XVI. yüzyıl Mecmûu't-tevârîh'tedir. Velihanov 1861'de bir bölümünü Rusçaya çevirerek bilim dünyasına tanıttı.",
+    "dil": "Türkçe (Kırgız)",
+    "tur": "destan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Kırgız boyları",
+    "konu": "Kırgızların kahramanı Manas ile oğlu ve torununun hayatı ve savaşları.",
+    "onemi": "TDV: mısra sayısı bakımından dünyanın en büyük destanıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Manas Destanı",
+        "url": "https://islamansiklopedisi.org.tr/manas-destani"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Velihanov, Çokan",
+        "url": "https://islamansiklopedisi.org.tr/velihanov-cokan"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
     "anonim": true
   }
 ]

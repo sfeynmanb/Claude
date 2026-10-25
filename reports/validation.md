@@ -6,18 +6,18 @@ _Oluşturma: 2026-10-25 · `python3 scripts/validate.py`_
 
 | | Sayı |
 |---|---:|
-| Kişi | 112 |
-| Eser | 174 |
-| İlişki | 106 |
-| Karıştırılan çift | 15 |
+| Kişi | 172 |
+| Eser | 248 |
+| İlişki | 175 |
+| Karıştırılan çift | 27 |
 | **Hata** | **0** |
 | Uyarı | 0 |
-| Not | 34 |
+| Not | 74 |
 | Kaynaksız kayıt | 0 |
-| `dogrulanamadi` işaretli kayıt | 7 |
-| Kendi bilgimize dayanan alan içeren kayıt | 226 |
+| `dogrulanamadi` işaretli kayıt | 16 |
+| Kendi bilgimize dayanan alan içeren kayıt | 313 |
 
-Kontroller: yazar kimlikleri, eser yılının yazarın ömrüyle uyumu (yaklaşık/tartışmalı tarihlerde ±15 yıl), ilişki kimlikleri ve türleri, hoca-öğrenci ömür çakışması, koordinatların bölge içinde olması (enlem 0–50, boylam -10–80), zorunlu alanlar, kaynak URL'leri, karıştırılan çiftler.
+Kontroller: yazar kimlikleri, eser yılının yazarın ömrüyle uyumu (yaklaşık/tartışmalı tarihlerde ±15 yıl), ilişki kimlikleri ve türleri, hoca-öğrenci ömür çakışması, koordinatların bölge içinde olması (enlem 0–57, boylam -10–82), zorunlu alanlar, kaynak URL'leri, karıştırılan çiftler.
 
 ## Hatalar (0)
 
@@ -27,12 +27,35 @@ _Yok._
 
 _Yok._
 
-## Notlar (34)
+## Notlar (74)
 
 - `kişi:edip-ahmet-yukneki` — doğum ve ölüm yılları bilinmiyor
 - `kişi:ibn-fadlan` — doğum ve ölüm yılları bilinmiyor
-- `kişi:ibn-fadlan` — Bulgar (İtil) (54.98, 49.04) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
 - `kişi:mercimek-ahmed` — doğum ve ölüm yılları bilinmiyor
+- `kişi:yirmisekiz` — Paris (48.86, 2.35) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:said-pasa` — Paris (48.86, 2.35) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:kantemir` — Moskova (55.76, 37.62) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:ahmed-resmi` — Viyana (48.21, 16.37) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:ahmed-resmi` — Berlin (52.52, 13.4) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:ratib` — Viyana (48.21, 16.37) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:resid-pasa` — Paris (48.86, 2.35) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:resid-pasa` — Londra (51.51, -0.13) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:ali-pasa` — Paris (48.86, 2.35) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:fuad-pasa` — Nis (Nice) (43.7, 7.27) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:sinasi` — Paris (48.86, 2.35) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:sinasi` — Paris (48.86, 2.35) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:namik-kemal` — Londra (51.51, -0.13) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:ziya-pasa` — Londra (51.51, -0.13) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:ziya-pasa` — Cenevre (46.2, 6.15) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:ali-suavi` — Londra (51.51, -0.13) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:ali-suavi` — Paris (48.86, 2.35) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:ahmed-vefik` — Paris (48.86, 2.35) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:osman-hamdi` — Paris (48.86, 2.35) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:kazim-bey` — Petersburg (59.94, 30.31) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:gaspirali` — Moskova (55.76, 37.62) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:gaspirali` — Paris (48.86, 2.35) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:zerdabi` — Moskova (55.76, 37.62) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
+- `kişi:velihanov` — Petersburg (59.94, 30.31) çalışma bölgesi dışında; bilerek 'bolge_disi' işaretli
 - `eser:hayyam-rubailer` — eser yılı belirtilmemiş
 - `eser:fihi-ma-fih` — eser yılı belirtilmemiş
 - `eser:makalat-haci-bektas` — eser yılı belirtilmemiş
@@ -63,15 +86,33 @@ _Yok._
 - `eser:muhibbi-divani` — eser yılı belirtilmemiş
 - `eser:avni-divani` — eser yılı belirtilmemiş
 - `eser:dede-korkut` — anonim eser (yazar_id yok)
+- `eser:vankulu-lugati` — eser yılı belirtilmemiş
+- `eser:nedim-divani` — eser yılı belirtilmemiş
+- `eser:camiud-duvel` — eser yılı belirtilmemiş
+- `eser:tarih-i-naima` — eser yılı belirtilmemiş
+- `eser:zeyl-i-fezleke` — eser yılı belirtilmemiş
+- `eser:nusretname` — eser yılı belirtilmemiş
+- `eser:segah-tekbir` — eser yılı belirtilmemiş
+- `eser:seyh-galib-divani` — eser yılı belirtilmemiş
+- `eser:gelenbevi-logaritma` — eser yılı belirtilmemiş
+- `eser:dede-efendi-ayinleri` — eser yılı belirtilmemiş
+- `eser:tarih-i-cevdet` — eser yılı belirtilmemiş
+- `eser:ziya-terkib-i-bend` — eser yılı belirtilmemiş
+- `eser:vakif-siirleri` — eser yılı belirtilmemiş
+- `eser:mahtumkulu-divani` — eser yılı belirtilmemiş
+- `eser:firdevsul-ikbal` — eser yılı belirtilmemiş
+- `eser:manas` — anonim eser (yazar_id yok)
+- `eser:manas` — eser yılı belirtilmemiş
 
 ## Kaynağı olmayan kayıtlar (0)
 
 _Yok; her kayıtta en az bir kaynak URL'si var._
 
-## `dogrulanamadi` işaretli kayıtlar (7)
+## `dogrulanamadi` işaretli kayıtlar (16)
 
 Bu kayıtlar tutuldu ama dayandıkları bilgi kaynakla teyit edilemedi; arayüzde uyarı etiketiyle gösterilir.
 
+- kişi: `mustafa-celaleddin`
 - eser: `cevahirun-nahv`
 - eser: `makalat-haci-bektas`
 - eser: `umdetul-hisab`
@@ -79,12 +120,20 @@ Bu kayıtlar tutuldu ama dayandıkları bilgi kaynakla teyit edilemedi; arayüzd
 - ilişki: `ahmet-yesevi→haci-bektas-veli (etkiledi)`
 - ilişki: `mevlana→sadreddin-konevi (çağdaş-tartışma)`
 - ilişki: `ahi-evran→haci-bektas-veli (çağdaş-tartışma)`
+- ilişki: `resid-pasa→ali-pasa (himaye)`
+- ilişki: `resid-pasa→fuad-pasa (himaye)`
+- ilişki: `resid-pasa→sinasi (himaye)`
+- ilişki: `midhat-pasa→ahmed-midhat (himaye)`
+- ilişki: `les-turcs-anciens→tarih-i-alem (etkiledi)`
+- ilişki: `namik-kemal→harabat (çağdaş-tartışma)`
+- ilişki: `kantemir→itri (çağdaş-tartışma)`
+- ilişki: `ahmed-vefik→koci-bey-risalesi (yayımladı)`
 
-## Kendi bilgimize dayanan, kaynakla teyit edilmemiş alanlar (226 kayıt)
+## Kendi bilgimize dayanan, kaynakla teyit edilmemiş alanlar (313 kayıt)
 
 TDV İslâm Ansiklopedisi sitesine bu ortamdan doğrudan erişilemedi. Her kayıttaki TDV URL'si ve temel tarihler web aramasıyla dönen TDV madde özetlerinden teyit edildi. Aşağıdaki alanlar ise bu özetlerde görülmedi; genel bilgiye dayanır ve TDV maddesinin tam metniyle karşılaştırılmalıdır.
 
-Alan bazında: `yil` (97), `duraklar` (86), `dogum` (55), `sunuldugu_kisi` (25), `yazildigi_yer` (23), `hami` (18), `koken` (14), `olum` (9), `konu` (6), `dil` (5), `ilk_olma` (4), `devlet` (4), `onemi` (2), `kisi_tdv_maddesi` (1), `tam_ad` (1)
+Alan bazında: `duraklar` (122), `yil` (104), `dogum` (69), `yazildigi_yer` (28), `sunuldugu_kisi` (26), `koken` (24), `hami` (23), `katkilar` (19), `konu` (17), `olum` (13), `dil` (8), `onemi` (7), `ilk_olma` (6), `devlet` (4), `ozet` (2), `yazar_id` (2), `rol` (2), `kisi_tdv_maddesi` (1), `tam_ad` (1)
 
 | Tür | Kimlik | Teyitsiz alanlar |
 |---|---|---|
@@ -191,6 +240,60 @@ Alan bazında: `yil` (97), `duraklar` (86), `dogum` (55), `sunuldugu_kisi` (25),
 | kişi | `mehmed-2` | dogum, duraklar |
 | kişi | `suleyman-1` | dogum, duraklar |
 | kişi | `murad-3` | dogum, olum, duraklar |
+| kişi | `vankulu` | duraklar |
+| kişi | `ahmed-3` | dogum, olum, katkilar |
+| kişi | `muteferrika` | dogum, koken, duraklar |
+| kişi | `yirmisekiz` | duraklar |
+| kişi | `said-pasa` | katkilar |
+| kişi | `nedim` | dogum, katkilar |
+| kişi | `nabi` | dogum, duraklar |
+| kişi | `naima` | duraklar, katkilar |
+| kişi | `silahdar` | katkilar |
+| kişi | `muneccimbasi` | hami, duraklar |
+| kişi | `itri` | dogum, katkilar |
+| kişi | `kantemir` | duraklar |
+| kişi | `fakirullah` | duraklar |
+| kişi | `erzurumlu` | duraklar, hami |
+| kişi | `ragib-pasa` | dogum, duraklar |
+| kişi | `ahmed-resmi` | dogum, koken, duraklar |
+| kişi | `selim-3` | katkilar |
+| kişi | `ratib` | dogum |
+| kişi | `gelenbevi` | duraklar |
+| kişi | `mahmud-2` | olum |
+| kişi | `sanizade` | dogum, katkilar |
+| kişi | `hoca-ishak` | dogum, koken |
+| kişi | `behcet` | katkilar |
+| kişi | `dede-efendi` | katkilar |
+| kişi | `resid-pasa` | duraklar |
+| kişi | `abdulmecid` | dogum |
+| kişi | `ali-pasa` | katkilar |
+| kişi | `fuad-pasa` | koken, duraklar |
+| kişi | `cevdet-pasa` | koken, hami, duraklar |
+| kişi | `sinasi` | hami, duraklar |
+| kişi | `namik-kemal` | duraklar |
+| kişi | `ziya-pasa` | duraklar, katkilar |
+| kişi | `ali-suavi` | duraklar, katkilar |
+| kişi | `midhat-pasa` | duraklar |
+| kişi | `abdulhamid-2` | duraklar, katkilar |
+| kişi | `ahmed-midhat` | hami, duraklar |
+| kişi | `semseddin-sami` | koken, duraklar |
+| kişi | `ahmed-vefik` | dogum, duraklar, ozet |
+| kişi | `munif-pasa` | olum, katkilar |
+| kişi | `suleyman-husnu` | ozet |
+| kişi | `mustafa-celaleddin` | dogum, olum, duraklar |
+| kişi | `osman-hamdi` | duraklar |
+| kişi | `kursavi` | duraklar |
+| kişi | `mercani` | duraklar, katkilar |
+| kişi | `kayyum-nasiri` | duraklar, katkilar |
+| kişi | `kazim-bey` | koken, katkilar |
+| kişi | `gaspirali` | duraklar |
+| kişi | `vakif` | duraklar |
+| kişi | `ahundzade` | duraklar, katkilar |
+| kişi | `zerdabi` | duraklar |
+| kişi | `mahtumkulu` | koken, duraklar |
+| kişi | `munis` | dogum, duraklar |
+| kişi | `velihanov` | koken, duraklar |
+| kişi | `abay` | koken |
 | eser | `harezmi-hisab` | yil |
 | eser | `harezmi-suretul-arz` | yil |
 | eser | `harezmi-zic` | yil |
@@ -314,3 +417,36 @@ Alan bazında: `yil` (97), `duraklar` (86), `dogum` (55), `sunuldugu_kisi` (25),
 | eser | `secere-i-terakime` | yil |
 | eser | `secere-i-turk` | yil |
 | eser | `dede-korkut` | yil, devlet |
+| eser | `sefaretname-yirmisekiz` | yil, sunuldugu_kisi |
+| eser | `hayrabad` | yil, konu |
+| eser | `tarih-i-naima` | konu |
+| eser | `tarih-i-rasid` | yil |
+| eser | `zeyl-i-fezleke` | konu |
+| eser | `segah-tekbir` | yazar_id |
+| eser | `kantemir-osmanli-tarihi` | yazildigi_yer |
+| eser | `sefinetur-ragib` | konu |
+| eser | `prusya-sefaretnamesi` | yazildigi_yer |
+| eser | `seyh-galib-divani` | konu |
+| eser | `gelenbevi-logaritma` | dil |
+| eser | `muhendishane-i-berri` | onemi |
+| eser | `mecmua-i-ulum-i-riyaziyye` | konu |
+| eser | `dede-efendi-ayinleri` | konu, dil |
+| eser | `islahat-fermani` | yazar_id |
+| eser | `mecelle` | ilk_olma |
+| eser | `tercuman-i-ahval` | rol |
+| eser | `intibah` | yil, yazildigi_yer |
+| eser | `harabat` | onemi |
+| eser | `muhbir` | onemi |
+| eser | `kanun-i-esasi` | rol |
+| eser | `felatun-bey` | onemi |
+| eser | `kamus-i-turki` | yil |
+| eser | `lehce-i-osmani` | konu |
+| eser | `mecmua-i-funun` | ilk_olma |
+| eser | `les-turcs-anciens` | yazildigi_yer |
+| eser | `kaplumbaga-terbiyecisi` | yil, konu |
+| eser | `sanayi-i-nefise` | onemi |
+| eser | `mustefadul-ahbar` | dil |
+| eser | `lehce-i-tatari` | yil |
+| eser | `turk-tatar-grameri` | konu |
+| eser | `vakif-siirleri` | yazildigi_yer |
+| eser | `firdevsul-ikbal` | konu |

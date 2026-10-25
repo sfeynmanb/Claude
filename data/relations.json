@@ -617,5 +617,427 @@
     "kaynak": "nizami-hamse",
     "hedef": "nevai-hamse",
     "tur": "etkiledi"
+  },
+  {
+    "kaynak": "ratib",
+    "hedef": "selim-3",
+    "tur": "hoca-öğrenci",
+    "not": "TDV: III. Selim'in yazı hocası."
+  },
+  {
+    "kaynak": "munis",
+    "hedef": "agehi",
+    "tur": "hoca-öğrenci",
+    "not": "TDV: Âgehî, Mûnis'in yeğeni ve öğrencisidir."
+  },
+  {
+    "kaynak": "fakirullah",
+    "hedef": "erzurumlu",
+    "tur": "hoca-öğrenci",
+    "not": "TDV: İbrahim Hakkı Tillo'da ona intisap etti ve ölümüne (1734) kadar yanında kaldı."
+  },
+  {
+    "kaynak": "ahmed-3",
+    "hedef": "damad-ibrahim",
+    "tur": "himaye",
+    "not": "Damadı; 1718'de sadrazam yaptı."
+  },
+  {
+    "kaynak": "ahmed-3",
+    "hedef": "muteferrika",
+    "tur": "himaye",
+    "not": "Temmuz 1727 fermanıyla matbaa izni verdi."
+  },
+  {
+    "kaynak": "ahmed-3",
+    "hedef": "yirmisekiz",
+    "tur": "himaye",
+    "not": "Paris elçiliğine gönderdi (1720)."
+  },
+  {
+    "kaynak": "damad-ibrahim",
+    "hedef": "yirmisekiz",
+    "tur": "himaye",
+    "not": "Elçiliği düzenleyen sadrazam."
+  },
+  {
+    "kaynak": "damad-ibrahim",
+    "hedef": "nedim",
+    "tur": "himaye",
+    "not": "Nedim, yaptırdığı yapılara tarihler düşürdü; Câmiu'd-düvel tercümesi onun desteğiyle yapıldı."
+  },
+  {
+    "kaynak": "damad-ibrahim",
+    "hedef": "rasid",
+    "tur": "himaye",
+    "not": "Tarihini onun emriyle yazdı."
+  },
+  {
+    "kaynak": "selim-3",
+    "hedef": "seyh-galib",
+    "tur": "himaye",
+    "not": "TDV: Galib, III. Selim'e yakınlığıyla bilinir; 1791'de Galata Mevlevîhânesi şeyhi oldu."
+  },
+  {
+    "kaynak": "selim-3",
+    "hedef": "ratib",
+    "tur": "himaye",
+    "not": "Viyana'ya elçi olarak gönderdi (1791)."
+  },
+  {
+    "kaynak": "selim-3",
+    "hedef": "hamparsum",
+    "tur": "himaye",
+    "not": "TDV: nota çalışması III. Selim'in teşvikiyle başladı."
+  },
+  {
+    "kaynak": "mahmud-2",
+    "hedef": "behcet",
+    "tur": "himaye",
+    "not": "Tıphâne-i Âmire'nin açılmasını destekledi (1827)."
+  },
+  {
+    "kaynak": "mahmud-2",
+    "hedef": "resid-pasa",
+    "tur": "himaye",
+    "not": "TDV: ıslahat fikirlerini teşvik etti."
+  },
+  {
+    "kaynak": "abdulmecid",
+    "hedef": "resid-pasa",
+    "tur": "himaye",
+    "not": "TDV: Tanzimat Fermanı'nın ilanını destekledi."
+  },
+  {
+    "kaynak": "resid-pasa",
+    "hedef": "ali-pasa",
+    "tur": "himaye",
+    "not": "Âli Paşa Reşid Paşa'nın yanında yetişen Tanzimat devlet adamlarındandır.",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "resid-pasa",
+    "hedef": "fuad-pasa",
+    "tur": "himaye",
+    "not": "Fuad Paşa Reşid Paşa'nın yanında yetişen Tanzimat devlet adamlarındandır.",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "resid-pasa",
+    "hedef": "sinasi",
+    "tur": "himaye",
+    "not": "Şinasi'nin Paris'e gönderilmesinde ve kariyerinde Reşid Paşa'nın desteği anılır.",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "midhat-pasa",
+    "hedef": "ahmed-midhat",
+    "tur": "himaye",
+    "not": "Ahmed Midhat, Midhat Paşa'nın Tuna valiliğinde Tuna gazetesinde çalıştı.",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "abdulhamid-2",
+    "hedef": "osman-hamdi",
+    "tur": "himaye",
+    "not": "1881'de Müze-i Hümâyun müdürlüğüne getirildi."
+  },
+  {
+    "kaynak": "ragib-pasa",
+    "hedef": "ahmed-resmi",
+    "tur": "himaye",
+    "not": "TDV: Râgıb Paşa'nın himaye edip yetiştirdiği devlet adamlarındandır; 1757'de onu Viyana'ya elçi gönderdi."
+  },
+  {
+    "kaynak": "resid-pasa",
+    "hedef": "cevdet-pasa",
+    "tur": "himaye",
+    "not": "TDV: Cevdet, Reşid Paşa'nın yakın çevresine girdi; hukuki konularda danışmanı oldu, kütüphanesinden yararlandı."
+  },
+  {
+    "kaynak": "selim-3",
+    "hedef": "dede-efendi",
+    "tur": "himaye",
+    "not": "TDV: bir şarkısını sarayda dinleyip takdir etti; haftalık saray fasıllarına hânende olarak aldı."
+  },
+  {
+    "kaynak": "mahmud-2",
+    "hedef": "dede-efendi",
+    "tur": "himaye",
+    "not": "TDV: 1812'de musâhib-i şehriyârî, sonra müezzinbaşı; en parlak dönemi II. Mahmud devridir."
+  },
+  {
+    "kaynak": "mahmud-2",
+    "hedef": "sanizade",
+    "tur": "himaye",
+    "not": "TDV: 3 Aralık 1819'da bizzat seçerek vakanüvis yaptı."
+  },
+  {
+    "kaynak": "mevlana",
+    "hedef": "seyh-galib",
+    "tur": "etkiledi",
+    "not": "Mevlevî geleneği; Galib bir Mevlevî şeyhidir."
+  },
+  {
+    "kaynak": "mevlana",
+    "hedef": "dede-efendi",
+    "tur": "etkiledi",
+    "not": "Mevlevî âyin geleneği; Dede Efendi Yenikapı Mevlevîhânesi'nde yetişti."
+  },
+  {
+    "kaynak": "hayrabad",
+    "hedef": "husn-u-ask",
+    "tur": "etkiledi",
+    "not": "TDV: Hayrâbâd'ın aşırı övülmesine karşılık Hüsn ü Aşk yazıldı."
+  },
+  {
+    "kaynak": "naima",
+    "hedef": "rasid",
+    "tur": "etkiledi",
+    "not": "Râşid, Naîmâ'nın bıraktığı yerden devam etti."
+  },
+  {
+    "kaynak": "katip-celebi",
+    "hedef": "zeyl-i-fezleke",
+    "tur": "etkiledi",
+    "not": "Zeyl-i Fezleke, Kâtib Çelebi'nin Fezleke'sinin devamıdır."
+  },
+  {
+    "kaynak": "zeyl-i-fezleke",
+    "hedef": "tarih-i-rasid",
+    "tur": "etkiledi",
+    "not": "TDV: Râşid, Silahdar'ı kaynak göstermeden kullandı."
+  },
+  {
+    "kaynak": "yirmisekiz",
+    "hedef": "said-pasa",
+    "tur": "etkiledi",
+    "not": "Babası; Paris elçiliğinde kethüdası olarak yanındaydı."
+  },
+  {
+    "kaynak": "ratib-layihasi",
+    "hedef": "muhendishane-i-berri",
+    "tur": "etkiledi",
+    "not": "Lâyiha Nizâm-ı Cedîd ıslahatlarına örnek oldu."
+  },
+  {
+    "kaynak": "sinasi",
+    "hedef": "namik-kemal",
+    "tur": "etkiledi",
+    "not": "TDV: 1865'te Tasvîr-i Efkâr'ı Nâmık Kemal'e bıraktı."
+  },
+  {
+    "kaynak": "kursavi",
+    "hedef": "mercani",
+    "tur": "etkiledi",
+    "not": "TDV: Mercânî Kursâvî'nin fikirlerini benimseyip savundu."
+  },
+  {
+    "kaynak": "namik-kemal",
+    "hedef": "recaizade",
+    "tur": "etkiledi",
+    "not": "TDV: Muhsin Bey'i Nâmık Kemal'in etkisiyle yazdı; 1867'de Tasvîr-i Efkâr'ı ona bıraktı; mektuplarıyla sanatına yön verdi."
+  },
+  {
+    "kaynak": "lehce-i-osmani",
+    "hedef": "kamus-i-turki",
+    "tur": "etkiledi",
+    "not": "TDV: Lehçe-i Osmânî, Kāmûs-ı Türkî'nin ana dayanağı oldu."
+  },
+  {
+    "kaynak": "ali-sir-nevai",
+    "hedef": "mahtumkulu",
+    "tur": "etkiledi",
+    "not": "TDV: Mahtumkulu Nevâî'yi okuyarak yetişti."
+  },
+  {
+    "kaynak": "fuzuli",
+    "hedef": "mahtumkulu",
+    "tur": "etkiledi",
+    "not": "TDV: Mahtumkulu Fuzûlî'yi okuyarak yetişti."
+  },
+  {
+    "kaynak": "ahmet-yesevi",
+    "hedef": "mahtumkulu",
+    "tur": "etkiledi",
+    "not": "TDV: halkı irşat eden derviş edası Yesevî tavrını yansıtır."
+  },
+  {
+    "kaynak": "ali-sir-nevai",
+    "hedef": "abay",
+    "tur": "etkiledi",
+    "not": "TDV: Abay, Nevâî gibi Doğu klasikleriyle tanışarak yetişti."
+  },
+  {
+    "kaynak": "fuzuli",
+    "hedef": "abay",
+    "tur": "etkiledi",
+    "not": "TDV: Abay, Fuzûlî gibi Doğu klasikleriyle tanışarak yetişti."
+  },
+  {
+    "kaynak": "ahundzade",
+    "hedef": "zerdabi",
+    "tur": "etkiledi",
+    "not": "TDV: Zerdâbî 1873'te Bakü'de Ahundzâde'nin komedisini sahneledi."
+  },
+  {
+    "kaynak": "les-turcs-anciens",
+    "hedef": "tarih-i-alem",
+    "tur": "etkiledi",
+    "not": "Erken Türkçülük çevrelerinde Türk tarihine ilgi.",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "abdulhamid-2",
+    "hedef": "midhat-pasa",
+    "tur": "çağdaş-tartışma",
+    "not": "Kanûn-ı Esâsî'nin ilanından sonra 113. maddeye dayanarak sürgün etti (1877); Yıldız Mahkemesi (1881)."
+  },
+  {
+    "kaynak": "namik-kemal",
+    "hedef": "harabat",
+    "tur": "çağdaş-tartışma",
+    "not": "Tahrîb-i Harâbât ile antolojinin divan şiirine yönelişini eleştirdi.",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "ali-suavi",
+    "hedef": "namik-kemal",
+    "tur": "çağdaş-tartışma",
+    "not": "TDV: Muhbir'in çizgisi ve cemiyet amblemi yüzünden ayrıldılar; Nâmık Kemal ile Ziyâ Bey ayrıca Hürriyet'i çıkardı (1868)."
+  },
+  {
+    "kaynak": "ali-suavi",
+    "hedef": "ziya-pasa",
+    "tur": "çağdaş-tartışma",
+    "not": "TDV: Muhbir'deki cemiyet amblemini kaldırması için 22 Mayıs 1868'de birlikte mektup yazdılar; Suâvî kabul etmedi."
+  },
+  {
+    "kaynak": "ahundzade",
+    "hedef": "munif-pasa",
+    "tur": "çağdaş-tartışma",
+    "not": "TDV: Ahundzâde Temmuz 1863'te alfabe teklifini sunmak için İstanbul'a geldi ve benzer görüşteki Münif ile görüştü; rapor Cemiyyet-i İlmiyye-i Osmâniyye'de ele alındı."
+  },
+  {
+    "kaynak": "kantemir",
+    "hedef": "ahmed-3",
+    "tur": "çağdaş-tartışma",
+    "not": "TDV: Boğdan voyvodası iken Prut Savaşı'nda (1711) Rus tarafına geçti; bunun üzerine III. Ahmed döneminde Boğdan'a Fenerli voyvodalar atanmaya başlandı."
+  },
+  {
+    "kaynak": "kantemir",
+    "hedef": "itri",
+    "tur": "çağdaş-tartışma",
+    "not": "TDV: Kantemiroğlu'nun eserlerinde andığı hânende Buhurcuzâde'nin Itrî olması muhtemeldir.",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "mercani",
+    "hedef": "kazim-bey",
+    "tur": "çağdaş-tartışma",
+    "not": "TDV: Mercânî'nin dostluk kurduğu şarkiyatçılar arasında Kâzım Bey de vardır."
+  },
+  {
+    "kaynak": "kayyum-nasiri",
+    "hedef": "gaspirali",
+    "tur": "çağdaş-tartışma",
+    "not": "TDV: Nâsırî usûl-i cedîd hareketinin öncülerindendi; ancak Ruslarla ilişkileri nedeniyle Gaspıralı'dan uzak durdu."
+  },
+  {
+    "kaynak": "kayyum-nasiri",
+    "hedef": "mercani",
+    "tur": "çağdaş-tartışma",
+    "not": "TDV: Nâsırî, Mercânî'nin Gılâletü'z-zamân'ına reddiye yazdı (1885)."
+  },
+  {
+    "kaynak": "muteferrika",
+    "hedef": "said-pasa",
+    "tur": "iş birliği",
+    "not": "TDV: matbaayı birlikte kurdular."
+  },
+  {
+    "kaynak": "cevdet-pasa",
+    "hedef": "fuad-pasa",
+    "tur": "iş birliği",
+    "not": "TDV: Kavâid-i Osmâniyye'yi Bursa'da birlikte hazırladılar."
+  },
+  {
+    "kaynak": "ali-pasa",
+    "hedef": "fuad-pasa",
+    "tur": "iş birliği",
+    "not": "TDV: yakın dost ve Tanzimat yönetiminde çalışma arkadaşı."
+  },
+  {
+    "kaynak": "namik-kemal",
+    "hedef": "ziya-pasa",
+    "tur": "iş birliği",
+    "not": "TDV: Hürriyet'i Londra'da birlikte çıkardılar (1868)."
+  },
+  {
+    "kaynak": "munis",
+    "hedef": "agehi",
+    "tur": "iş birliği",
+    "not": "Firdevsü'l-ikbâl'i Mûnis başladı, Âgehî tamamladı."
+  },
+  {
+    "kaynak": "vankulu",
+    "hedef": "cevheri-sihah",
+    "tur": "tercüme etti",
+    "not": "Sıhâh'ı Türkçeye çevirdi (Vankulu Lügatı)."
+  },
+  {
+    "kaynak": "nedim",
+    "hedef": "camiud-duvel",
+    "tur": "tercüme etti",
+    "not": "Heyet başkanı olarak; Türkçesi Sahâifü'l-ahbâr."
+  },
+  {
+    "kaynak": "ahmed-vefik",
+    "hedef": "secere-i-turk",
+    "tur": "tercüme etti",
+    "not": "TDV: Çağataycadan Osmanlıcaya çevirdi; Tasvîr-i Efkâr'da tefrika edildi."
+  },
+  {
+    "kaynak": "velihanov",
+    "hedef": "manas",
+    "tur": "tercüme etti",
+    "not": "TDV: bir bölümünü 1861'de Rusçaya çevirip yayımladı."
+  },
+  {
+    "kaynak": "muteferrika",
+    "hedef": "vankulu-lugati",
+    "tur": "yayımladı",
+    "not": "TDV: matbaanın ilk kitabı, 31 Ocak 1729."
+  },
+  {
+    "kaynak": "muteferrika",
+    "hedef": "cihannuma",
+    "tur": "yayımladı",
+    "not": "Kendi eklemeleriyle bastı (1732)."
+  },
+  {
+    "kaynak": "muteferrika",
+    "hedef": "tarih-i-rasid",
+    "tur": "yayımladı",
+    "not": "TDV: 1153/1740-41 baskısı."
+  },
+  {
+    "kaynak": "recaizade",
+    "hedef": "tasvir-i-efkar",
+    "tur": "yayımladı",
+    "not": "TDV: Nâmık Kemal'in Mayıs 1867'de Avrupa'ya gitmesinden sonra gazeteyi son sayısına (1868) kadar yönetti."
+  },
+  {
+    "kaynak": "ahmed-vefik",
+    "hedef": "koci-bey-risalesi",
+    "tur": "yayımladı",
+    "not": "Risalenin ilk neşrini yaptığı bildirilir.",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "zerdabi",
+    "hedef": "temsilat",
+    "tur": "yayımladı",
+    "not": "TDV: 1873'te Bakü'de bir komediyi sahneledi."
   }
 ]

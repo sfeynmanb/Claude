@@ -2894,8 +2894,7 @@
         "boylam": 49.04,
         "yil_baslangic": 922,
         "yil_bitis": 922,
-        "ne_yapti": "Almış Han'ın ülkesine ulaştı (12 Mayıs 922).",
-        "bolge_disi": true
+        "ne_yapti": "Almış Han'ın ülkesine ulaştı (12 Mayıs 922)."
       }
     ],
     "ozet": "Abbasi Halifesi Muktedir'in İtil Bulgar hükümdarına gönderdiği heyette kâtip ve danışman olarak yer aldı. Yolculuğu anlatan risalesi, Oğuz, Peçenek, Başkurt, Hazar ve Ruslar hakkında değerli bilgiler içerir. İtil Bulgar devleti hakkındaki en eski yazılı kaynaktır.",
@@ -7556,6 +7555,3971 @@
       "dogum",
       "olum",
       "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "vankulu",
+    "ad": "Vankulu",
+    "ad_akademik": "Vankulu",
+    "tam_ad": "Vankulu Mehmed b. Mustafa el-Vânî",
+    "lakap": null,
+    "dogum": null,
+    "olum": 1592,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1000/1592'de öldü. Doğum tarihi bilinmiyor.",
+    "koken": "Vanlı; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "dil",
+      "sözlükçülük"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1560,
+        "yil_bitis": 1592,
+        "ne_yapti": "Müderrislik ve kadılık yaptı; Cevherî'nin Sıhâh'ını Türkçeye çevirdi."
+      }
+    ],
+    "ozet": "Cevherî'nin es-Sıhâh adlı Arapça sözlüğünü Türkçeye çeviren Osmanlı âlimi. Çevirisi Vankulu Lügatı adıyla anılır. 1729'da İbrahim Müteferrika matbaasında basılan ilk kitap olunca XVIII. yüzyılın kilit metinlerinden biri oldu.",
+    "katkilar": [
+      "es-Sıhâh'ı 28 bölüm ve her bölümde 28 fasıl düzeninde Türkçeye aktardı.",
+      "Eseri Türkçe harflerle basılan ilk kitap oldu (1729)."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Vankulu",
+        "url": "https://islamansiklopedisi.org.tr/vankulu"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ahmed-3",
+    "ad": "III. Ahmed",
+    "ad_akademik": "III. Ahmed",
+    "tam_ad": "Sultan III. Ahmed b. IV. Mehmed",
+    "lakap": null,
+    "dogum": 1673,
+    "olum": 1736,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: saltanatı 1703-1730. Doğum (1673) ve ölüm (1736) yılları genel bilgiye dayanır.",
+    "koken": "Osmanlı hanedanı.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "siyaset",
+      "hat"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Edirne",
+        "enlem": 41.68,
+        "boylam": 26.56,
+        "yil_baslangic": 1703,
+        "yil_bitis": 1703,
+        "ne_yapti": "Edirne Vakası sonrasında tahta çıktı."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1703,
+        "yil_bitis": 1736,
+        "ne_yapti": "Lale Devri'nin hükümdarı; 1730 Patrona Halil isyanıyla tahttan indirildi, İstanbul'da öldü."
+      }
+    ],
+    "ozet": "Lale Devri'nin (1718-1730) Osmanlı padişahı. Damadı Nevşehirli İbrahim Paşa ile birlikte Paris'e elçi gönderdi, saray çevresinde yeni zevkleri himaye etti. 1727'de İbrahim Müteferrika'ya matbaa izni veren fermanı çıkardı.",
+    "katkilar": [
+      "Türkçe matbaa için izin fermanını verdi (Temmuz 1727).",
+      "Yirmisekiz Mehmed Çelebi'nin Paris elçiliğini (1720-1721) gönderdi.",
+      "Hattat olarak tanınır; Topkapı Sarayı'nda III. Ahmed Kütüphanesi'ni yaptırdı."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahmed III",
+        "url": "https://islamansiklopedisi.org.tr/ahmed-iii"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Lâle Devri",
+        "url": "https://islamansiklopedisi.org.tr/lale-devri"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "olum",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "damad-ibrahim",
+    "ad": "Nevşehirli Damat İbrahim Paşa",
+    "ad_akademik": "Nevşehirli Dâmâd İbrâhim Paşa",
+    "tam_ad": "Nevşehirli Dâmâd İbrâhim Paşa",
+    "lakap": null,
+    "dogum": "~1662",
+    "olum": 1730,
+    "tarih_kesinligi": "yaklaşık",
+    "tarih_notu": "TDV: tahminen 1073/1662'de Muşkara'da doğdu; 1730 Patrona Halil isyanında öldürüldü.",
+    "koken": "Muşkaralı (sonraki adıyla Nevşehir); babası Sipahi Ali Ağa. Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "III. Ahmed"
+    ],
+    "alanlar": [
+      "siyaset",
+      "devlet yönetimi"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Nevşehir (Muşkara)",
+        "enlem": 38.62,
+        "boylam": 34.71,
+        "yil_baslangic": 1662,
+        "yil_bitis": 1689,
+        "ne_yapti": "Doğdu; köy sonra kendisine hibe edildi, yaptırdığı külliye ile adı Nevşehir oldu."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1718,
+        "yil_bitis": 1730,
+        "ne_yapti": "Mayıs 1718'de sadrazam oldu; Lale Devri'ni yönetti; Patrona Halil isyanında öldürüldü."
+      }
+    ],
+    "ozet": "III. Ahmed'in damadı ve 1718-1730 arasında sadrazamı. Pasarofça Antlaşması (Temmuz 1718) ile başlayan barış yıllarında Sadabad gibi yapıları, tercüme heyetlerini ve Paris elçiliğini destekledi. Lale Devri onun sadaretiyle özdeşleşir.",
+    "katkilar": [
+      "Pasarofça Antlaşması'nı (1718) imzalayan yönetimin başında bulundu.",
+      "Müneccimbaşı'nın Câmiu'd-düvel'inin Nedim başkanlığındaki heyetçe tercümesini destekledi.",
+      "Doğduğu köyü külliye ile Nevşehir'e dönüştürdü."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Damad İbrâhim Paşa, Nevşehirli",
+        "url": "https://islamansiklopedisi.org.tr/damad-ibrahim-pasa-nevsehirli"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Lâle Devri",
+        "url": "https://islamansiklopedisi.org.tr/lale-devri"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "muteferrika",
+    "ad": "İbrahim Müteferrika",
+    "ad_akademik": "İbrâhim Müteferrika",
+    "tam_ad": "İbrâhim Müteferrika",
+    "lakap": null,
+    "dogum": "~1674",
+    "olum": 1747,
+    "tarih_kesinligi": "tartışmalı",
+    "tarih_notu": "TDV: ö. 1160/1747 (yaygın kanaat 1745). Doğum yaklaşık 1674, Kolozsvar; genel bilgiye dayanır.",
+    "koken": "Macar asıllı, Kolozsvarlı olduğu kabul edilir; sonradan Müslüman oldu.",
+    "koken_tartismali": true,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "III. Ahmed",
+      "I. Mahmud"
+    ],
+    "alanlar": [
+      "matbaacılık",
+      "coğrafya",
+      "siyaset",
+      "tercüme"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1692,
+        "yil_bitis": 1747,
+        "ne_yapti": "Müteferrika olarak saray hizmetinde bulundu; 1727 izniyle ilk Türkçe matbaayı kurdu; 17 kitap bastı."
+      }
+    ],
+    "ozet": "Osmanlı'da Arap harfli Türkçe kitap basan ilk matbaanın kurucusu. Vesîletü't-tıbâa risalesiyle (1726) matbaanın yararlarını anlattı; Yirmisekizçelebizâde Mehmed Said ile ortaklaşa kurduğu matbaada ilk kitap olarak Vankulu Lügatı'nı (Ocak 1729) bastı. Usûlü'l-hikem ile askerî ıslahat önerdi.",
+    "katkilar": [
+      "Türkçe matbaayı kurdu; 17 eseri 23 cilt olarak bastı.",
+      "Kâtib Çelebi'nin Cihannümâ'sını kendi eklemeleriyle yayımladı.",
+      "Usûlü'l-hikem'de (1731) Avrupa ordularının düzenini örnek gösterdi."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İbrâhim Müteferrika",
+        "url": "https://islamansiklopedisi.org.tr/ibrahim-muteferrika"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Müteferrika Matbaası",
+        "url": "https://islamansiklopedisi.org.tr/muteferrika-matbaasi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "koken",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "yirmisekiz",
+    "ad": "Yirmisekiz Mehmed Çelebi",
+    "ad_akademik": "Yirmisekiz Mehmed Çelebi Efendi",
+    "tam_ad": "Yirmisekiz Mehmed Çelebi Efendi",
+    "lakap": null,
+    "dogum": null,
+    "olum": 1732,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: ö. 1144/1731-32. Doğum tarihi bilinmiyor; Edirne doğumlu.",
+    "koken": "Edirneli; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "III. Ahmed",
+      "Damad İbrahim Paşa"
+    ],
+    "alanlar": [
+      "diplomasi",
+      "seyahat"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Edirne",
+        "enlem": 41.68,
+        "boylam": 26.56,
+        "yil_baslangic": 1670,
+        "yil_bitis": 1690,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "Paris",
+        "enlem": 48.86,
+        "boylam": 2.35,
+        "yil_baslangic": 1720,
+        "yil_bitis": 1721,
+        "ne_yapti": "Fransa'ya elçi olarak gitti; 21 Mart 1721'de Tuileries'de kabul edildi.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1721,
+        "yil_bitis": 1730,
+        "ne_yapti": "Dönüşünde sefaretnamesini sundu."
+      },
+      {
+        "sehir": "Magosa",
+        "enlem": 35.12,
+        "boylam": 33.94,
+        "yil_baslangic": 1731,
+        "yil_bitis": 1732,
+        "ne_yapti": "Kıbrıs'ta öldü."
+      }
+    ],
+    "ozet": "Lale Devri'nde Paris'e gönderilen Osmanlı elçisi. Fransa'da gördüğü saray, bahçe, rasathane ve tiyatroları anlattığı Sefâretnâme, Osmanlı yönetici çevresinin Avrupa'ya bakışını etkiledi. Oğlu Mehmed Said yolculukta yanındaydı.",
+    "katkilar": [
+      "Fransa Sefâretnâmesi'ni yazdı.",
+      "Paris'te Osmanlı'yı temsil eden ilk büyük elçiliklerden birini yürüttü (1720-1721)."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Yirmisekiz Çelebi Mehmed Efendi",
+        "url": "https://islamansiklopedisi.org.tr/yirmisekiz-celebi-mehmed-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "said-pasa",
+    "ad": "Yirmisekizçelebizade Mehmed Said Paşa",
+    "ad_akademik": "Yirmisekizçelebizâde Mehmed Saîd Paşa",
+    "tam_ad": "Mehmed Saîd Paşa b. Yirmisekiz Mehmed Çelebi",
+    "lakap": null,
+    "dogum": null,
+    "olum": 1761,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: ö. 1175/1761. İstanbul doğumlu; doğum yılı bilinmiyor.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "III. Ahmed",
+      "I. Mahmud"
+    ],
+    "alanlar": [
+      "matbaacılık",
+      "diplomasi",
+      "siyaset"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Paris",
+        "enlem": 48.86,
+        "boylam": 2.35,
+        "yil_baslangic": 1720,
+        "yil_bitis": 1721,
+        "ne_yapti": "Babasının kethüdası olarak elçilik heyetinde bulundu.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1721,
+        "yil_bitis": 1761,
+        "ne_yapti": "Müteferrika ile matbaayı kurdu; sonra sadrazamlığa kadar yükseldi."
+      }
+    ],
+    "ozet": "Yirmisekiz Mehmed Çelebi'nin oğlu; Paris dönüşü İbrahim Müteferrika ile birlikte Türkçe matbaanın kuruluşunda yer aldı. Daha sonra elçilik ve sadrazamlık görevlerinde bulundu.",
+    "katkilar": [
+      "Türkçe matbaanın kurucu ortaklarındandır.",
+      "İsveç ve Fransa elçiliklerinde bulundu; sadrazam oldu."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mehmed Said Paşa, Yirmisekizçelebizâde",
+        "url": "https://islamansiklopedisi.org.tr/mehmed-said-pasa-yirmisekizcelebizade"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "nedim",
+    "ad": "Nedim",
+    "ad_akademik": "Nedîm",
+    "tam_ad": "Ahmed Nedîm Efendi",
+    "lakap": null,
+    "dogum": "~1681",
+    "olum": 1730,
+    "tarih_kesinligi": "yaklaşık",
+    "tarih_notu": "TDV: ö. 1143/1730, Ekim 1730'dan önce. Doğum yaklaşık 1681 genel bilgiye dayanır.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "Damad İbrahim Paşa",
+      "III. Ahmed"
+    ],
+    "alanlar": [
+      "edebiyat",
+      "tarih",
+      "tercüme"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1681,
+        "yil_bitis": 1730,
+        "ne_yapti": "Doğdu; Lale Devri'nin saray ve sayfiye eğlencelerini şiirleştirdi; Patrona Halil isyanı günlerinde öldü."
+      }
+    ],
+    "ozet": "Lale Devri'nin şairi. Sadabad ve İstanbul'un gündelik hayatını, şarkı türünü ve yerli söyleyişi klasik şiire taşıdı. Damat İbrahim Paşa'nın himayesinde yapılarına tarih düşürdü ve Câmiu'd-düvel tercüme heyetine başkanlık etti.",
+    "katkilar": [
+      "Şarkı türünü divan şiirinde öne çıkardı.",
+      "Mahallîleşme akımının en önemli temsilcisi sayılır.",
+      "Câmiu'd-düvel'in Türkçe tercümesi Sahâifü'l-ahbâr'ı hazırlayan heyete başkanlık etti."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nedîm",
+        "url": "https://islamansiklopedisi.org.tr/nedim--divan-sairi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "nabi",
+    "ad": "Nabi",
+    "ad_akademik": "Nâbî",
+    "tam_ad": "Yûsuf Nâbî",
+    "lakap": null,
+    "dogum": 1642,
+    "olum": 1712,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: ö. 1124/1712. Urfa'da 1642 doğumu genel bilgiye dayanır.",
+    "koken": "Urfalı; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "edebiyat",
+      "ahlak"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Urfa",
+        "enlem": 37.16,
+        "boylam": 38.79,
+        "yil_baslangic": 1642,
+        "yil_bitis": 1665,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "Halep",
+        "enlem": 36.2,
+        "boylam": 37.16,
+        "yil_baslangic": 1685,
+        "yil_bitis": 1710,
+        "ne_yapti": "Uzun yıllar yaşadı; Hayriyye'yi burada yazdı (1701)."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1710,
+        "yil_bitis": 1712,
+        "ne_yapti": "Öldü."
+      }
+    ],
+    "ozet": "Hikemî (didaktik) şiirin en büyük temsilcisi. Oğlu için yazdığı Hayriyye nasihatnamesi ve Hayrâbâd mesnevisiyle tanınır. Hayrâbâd'ın aşırı övülmesine karşı Şeyh Galib'in Hüsn ü Aşk'ı yazması iki şairi birbirine bağlar.",
+    "katkilar": [
+      "Hikemî şiir tarzını sistemleştirdi.",
+      "Hayriyye ile Osmanlı toplum hayatına dair öğütleri manzum olarak verdi."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nâbî",
+        "url": "https://islamansiklopedisi.org.tr/nabi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hayriyye",
+        "url": "https://islamansiklopedisi.org.tr/hayriyye"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hayrâbâd",
+        "url": "https://islamansiklopedisi.org.tr/hayrabad"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "naima",
+    "ad": "Naima",
+    "ad_akademik": "Naîmâ",
+    "tam_ad": "Mustafa Naîmâ Efendi",
+    "lakap": null,
+    "dogum": "~1655",
+    "olum": 1716,
+    "tarih_kesinligi": "yaklaşık",
+    "tarih_notu": "TDV: Halep'te yaklaşık 1655'te doğdu; ö. 1128/1716.",
+    "koken": "Halepli; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "tarih"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Halep",
+        "enlem": 36.2,
+        "boylam": 37.16,
+        "yil_baslangic": 1655,
+        "yil_bitis": 1680,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1680,
+        "yil_bitis": 1715,
+        "ne_yapti": "Saray hizmetinde yetişti; ilk resmî vakanüvis olarak tarihini yazdı."
+      },
+      {
+        "sehir": "Patras",
+        "enlem": 38.25,
+        "boylam": 21.73,
+        "yil_baslangic": 1715,
+        "yil_bitis": 1716,
+        "ne_yapti": "Mora'da görevli iken öldü."
+      }
+    ],
+    "ozet": "Osmanlı vakanüvislik geleneğinin ilk büyük temsilcisi. Tarih-i Naîmâ (1591-1660 olaylarını kapsar) üslubu ve tarih felsefesiyle sonraki vakanüvislere örnek oldu. Râşid Mehmed Efendi onun bıraktığı yerden devam etti.",
+    "katkilar": [
+      "Osmanlı tarih yazıcılığında İbn Haldun'dan esinlenen toplum yorumunu kullandı.",
+      "Vakanüvislik makamının ilk temsilcisi kabul edilir."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Naîmâ",
+        "url": "https://islamansiklopedisi.org.tr/naima"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "rasid",
+    "ad": "Raşid Mehmed Efendi",
+    "ad_akademik": "Râşid Mehmed Efendi",
+    "tam_ad": "Râşid Mehmed Efendi",
+    "lakap": null,
+    "dogum": null,
+    "olum": 1735,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: ö. 1148/1735. Doğum tarihi bilinmiyor.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "Damad İbrahim Paşa"
+    ],
+    "alanlar": [
+      "tarih"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1714,
+        "yil_bitis": 1735,
+        "ne_yapti": "1714'te vakanüvis oldu; Damat İbrahim Paşa'nın emriyle tarihini yazdı."
+      }
+    ],
+    "ozet": "Naîmâ'dan sonra gelen Osmanlı vakanüvisi. Damat İbrahim Paşa'nın emriyle Naîmâ'nın bıraktığı yerden başlayarak 1660-1722 olaylarını yazdı. Eseri 1153'te (1740-41) Müteferrika matbaasında basıldı.",
+    "katkilar": [
+      "Tarih-i Râşid ile 1660-1722 dönemini kayda geçirdi."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Râşid Mehmed Efendi",
+        "url": "https://islamansiklopedisi.org.tr/rasid-mehmed-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "silahdar",
+    "ad": "Silahdar Fındıklılı Mehmed Ağa",
+    "ad_akademik": "Silahdar Fındıklılı Mehmed Ağa",
+    "tam_ad": "Silahdar Fındıklılı Mehmed Ağa",
+    "lakap": null,
+    "dogum": 1658,
+    "olum": "1723-1727",
+    "tarih_kesinligi": "tartışmalı",
+    "tarih_notu": "TDV: 8 Aralık 1658'de İstanbul Fındıklı'da doğdu. Ölüm 1136, 1138 veya 1139 (1723-1727) olarak verilir; mezar taşında 1139.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "II. Mustafa",
+      "III. Ahmed"
+    ],
+    "alanlar": [
+      "tarih"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1658,
+        "yil_bitis": 1727,
+        "ne_yapti": "Sarayda yetişti; 1703'te silahdar oldu; tarihlerini yazdı."
+      }
+    ],
+    "ozet": "Kâtib Çelebi'nin Fezleke'sine devam niteliğindeki Zeyl-i Fezleke ile II. Mustafa dönemini anlatan Nusretnâme'nin yazarı. Saray içinden tanıklığı nedeniyle eserleri dönemin temel kaynaklarındandır. Râşid onu kaynak göstermeden kullanmıştır.",
+    "katkilar": [
+      "Zeyl-i Fezleke ile 1654-1695 olaylarını yazdı.",
+      "Nusretnâme ile 1695-1703 dönemini kayda geçirdi."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Silahdar Mehmed Ağa",
+        "url": "https://islamansiklopedisi.org.tr/silahdar-mehmed-aga"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "muneccimbasi",
+    "ad": "Müneccimbaşı Ahmed Dede",
+    "ad_akademik": "Müneccimbaşı Ahmed Dede",
+    "tam_ad": "Ahmed b. Lutfullah es-Selânikî el-Mevlevî",
+    "lakap": null,
+    "dogum": "~1631",
+    "olum": 1702,
+    "tarih_kesinligi": "yaklaşık",
+    "tarih_notu": "TDV: yaklaşık 1631'de Selanik'te doğdu; 27 Şubat 1702'de Mekke'de öldü.",
+    "koken": "Selanikli; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "IV. Mehmed",
+      "Merzifonlu Kara Mustafa Paşa"
+    ],
+    "alanlar": [
+      "tarih",
+      "astronomi",
+      "tasavvuf"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Selanik",
+        "enlem": 40.64,
+        "boylam": 22.94,
+        "yil_baslangic": 1631,
+        "yil_bitis": 1650,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1650,
+        "yil_bitis": 1687,
+        "ne_yapti": "1668'de müneccimbaşı oldu."
+      },
+      {
+        "sehir": "Mekke",
+        "enlem": 21.42,
+        "boylam": 39.83,
+        "yil_baslangic": 1693,
+        "yil_bitis": 1702,
+        "ne_yapti": "Sürgün ve mücavir olarak yaşadı; öldü."
+      }
+    ],
+    "ozet": "IV. Mehmed'in müneccimbaşısı ve Mevlevî tarihçi. Kara Mustafa Paşa'nın isteğiyle yazdığı Arapça genel tarih Câmiu'd-düvel, yaratılıştan 1670'lere kadar uzanır. Eser, Lale Devri'nde Nedim başkanlığındaki heyetçe Türkçeye çevrildi.",
+    "katkilar": [
+      "Câmiu'd-düvel ile İslam ve Osmanlı tarihini kapsayan bir dünya tarihi yazdı."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Müneccimbaşı Ahmed Dede",
+        "url": "https://islamansiklopedisi.org.tr/muneccimbasi-ahmed-dede"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "hami",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "itri",
+    "ad": "Itri",
+    "ad_akademik": "Itrî",
+    "tam_ad": "Buhûrizâde Mustafa Itrî Efendi",
+    "lakap": null,
+    "dogum": "~1640",
+    "olum": "1711-1712",
+    "tarih_kesinligi": "yaklaşık",
+    "tarih_notu": "TDV: ö. 1123/1711 (veya 1712). Doğum yaklaşık 1640 genel bilgiye dayanır.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "IV. Mehmed"
+    ],
+    "alanlar": [
+      "müzik",
+      "edebiyat"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1640,
+        "yil_bitis": 1712,
+        "ne_yapti": "IV. Mehmed'in sarayında bestekâr ve hanende olarak bulundu."
+      }
+    ],
+    "ozet": "Klasik Türk musikisinin en büyük bestekârlarından. IV. Mehmed döneminde saray musikisinin önde gelen adıydı. Bayram namazlarında okunan Segâh Tekbîr yaygın görüşe göre ona aittir.",
+    "katkilar": [
+      "Klasik Türk musikisinde dinî ve din dışı formlarda örnek bestecilik yaptı.",
+      "Segâh Tekbîr, Salât-ı Ümmiyye gibi eserler kendisine atfedilir."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Itrî Efendi, Buhûrîzâde",
+        "url": "https://islamansiklopedisi.org.tr/itri-efendi-buhurizade"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tekbîr",
+        "url": "https://islamansiklopedisi.org.tr/tekbir"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kantemir",
+    "ad": "Kantemiroğlu",
+    "ad_akademik": "Kantemiroğlu (Dimitrie Cantemir)",
+    "tam_ad": "Dimitrie Cantemir",
+    "lakap": null,
+    "dogum": 1673,
+    "olum": 1723,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 26 Ekim 1673'te Silişteni'de (Vaslui) doğdu; 1723'te öldü.",
+    "koken": "Boğdan voyvodası Constantin Kantemir'in oğlu; Rumen (Ortodoks Hristiyan).",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı",
+      "Rus İmparatorluğu"
+    ],
+    "hami": [],
+    "alanlar": [
+      "müzik",
+      "tarih"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Yaş (Boğdan)",
+        "enlem": 47.16,
+        "boylam": 27.59,
+        "yil_baslangic": 1673,
+        "yil_bitis": 1688,
+        "ne_yapti": "Doğdu (Silişteni, Vaslui)."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1688,
+        "yil_bitis": 1710,
+        "ne_yapti": "1688-1691 ve sonraki yıllarda İstanbul'da bulundu; musiki eğitimi aldı."
+      },
+      {
+        "sehir": "Yaş (Boğdan)",
+        "enlem": 47.16,
+        "boylam": 27.59,
+        "yil_baslangic": 1710,
+        "yil_bitis": 1711,
+        "ne_yapti": "Kırım hanı Devlet Giray'ın desteğiyle 25 Kasım 1710'da Boğdan voyvodası oldu; Prut'ta Rusya'nın yanına geçti."
+      },
+      {
+        "sehir": "Moskova",
+        "enlem": 55.76,
+        "boylam": 37.62,
+        "yil_baslangic": 1711,
+        "yil_bitis": 1723,
+        "ne_yapti": "Prut sonrası Rusya'ya geçti; Osmanlı tarihini tamamladı.",
+        "bolge_disi": true
+      }
+    ],
+    "ozet": "Osmanlı sarayında yetişmiş Boğdan beyi, tarihçi ve musikişinas. Kitâbu İlmi'l-mûsikî alâ vechi'l-hurûfât'ta geliştirdiği harf notasıyla 350'yi aşkın peşrev ve semaiyi kaydetti. Latince Osmanlı tarihi Avrupa'da uzun süre temel kaynak oldu.",
+    "katkilar": [
+      "Harflerle yazılan bir nota sistemi geliştirdi.",
+      "XVII. yüzyıl saz eserlerini kayda geçirerek bugüne ulaştırdı.",
+      "Osmanlı'nın yükseliş ve çöküşüne dair Latince tarihi yazdı (İngilizcesi 1734)."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kantemiroğlu (Dimitrie Cantemir)",
+        "url": "https://islamansiklopedisi.org.tr/kantemiroglu-dimitrie-cantemir"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nota",
+        "url": "https://islamansiklopedisi.org.tr/nota"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false,
+    "devlet_notu": "Osmanlı'ya bağlı Boğdan'ın voyvodası; 1711 Prut Savaşı'nda Rusya'ya geçti."
+  },
+  {
+    "id": "fakirullah",
+    "ad": "İsmail Fakirullah",
+    "ad_akademik": "İsmâil Fakîrullah",
+    "tam_ad": "İsmâil Fakîrullah",
+    "lakap": null,
+    "dogum": null,
+    "olum": 1734,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1147/1734'te Tillo'da öldü. Doğum tarihi bilinmiyor.",
+    "koken": "Tillo (bugünkü Aydınlar, Siirt) çevresinde yaşadı.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "tasavvuf"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Tillo",
+        "enlem": 37.95,
+        "boylam": 42.01,
+        "yil_baslangic": 1700,
+        "yil_bitis": 1734,
+        "ne_yapti": "Mürşit olarak yaşadı; İbrahim Hakkı'yı yetiştirdi; öldü."
+      }
+    ],
+    "ozet": "Tillo'da yaşayan, bölgenin tanınmış mürşitlerinden sûfî. Erzurumlu İbrahim Hakkı hac yolunda Tillo'ya uğradığında ona intisap etti ve ölümüne (1734) kadar yanında kaldı. Türbesi bugün de ziyaret edilir; İbrahim Hakkı da onun kubbesi altına defnedildi.",
+    "katkilar": [
+      "Erzurumlu İbrahim Hakkı'nın şeyhi olarak Mârifetnâme müellifinin yetişmesinde belirleyici oldu."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fakîrullah",
+        "url": "https://islamansiklopedisi.org.tr/fakirullah"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "erzurumlu",
+    "ad": "Erzurumlu İbrahim Hakkı",
+    "ad_akademik": "İbrâhim Hakkı Erzurûmî",
+    "tam_ad": "İbrâhim Hakkı b. Osman Erzurûmî",
+    "lakap": null,
+    "dogum": 1703,
+    "olum": 1780,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 18 Mayıs 1703'te Hasankale'de doğdu; ö. 1194/1780.",
+    "koken": "Hasankaleli (Erzurum); Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "I. Mahmud"
+    ],
+    "alanlar": [
+      "tasavvuf",
+      "astronomi",
+      "ahlak",
+      "edebiyat"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Hasankale",
+        "enlem": 39.98,
+        "boylam": 41.68,
+        "yil_baslangic": 1703,
+        "yil_bitis": 1720,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "Tillo",
+        "enlem": 37.95,
+        "boylam": 42.01,
+        "yil_baslangic": 1720,
+        "yil_bitis": 1734,
+        "ne_yapti": "Hac yolunda Tillo'ya uğrayıp İsmâil Fakîrullah'a intisap etti; şeyhinin ölümüne (1734) kadar yanında kaldı."
+      },
+      {
+        "sehir": "Erzurum",
+        "enlem": 39.9,
+        "boylam": 41.27,
+        "yil_baslangic": 1734,
+        "yil_bitis": 1747,
+        "ne_yapti": "Erzurum'a döndü."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1747,
+        "yil_bitis": 1748,
+        "ne_yapti": "I. Mahmud'un sarayında bulundu; kütüphanelerden yararlandı."
+      },
+      {
+        "sehir": "Erzurum",
+        "enlem": 39.9,
+        "boylam": 41.27,
+        "yil_baslangic": 1748,
+        "yil_bitis": 1780,
+        "ne_yapti": "Müftülük ve telif; Mârifetnâme'yi tamamladı (1757)."
+      }
+    ],
+    "ozet": "Mârifetnâme ile tanınan sûfî âlim ve şair. Oğlu için yazdığı bu ansiklopedik eserde din, ahlak, anatomi ve astronomi bilgilerini bir araya getirdi; dönemin yeni astronomi bilgilerinden de söz etti. Tillo'daki şeyhi İsmâil Fakîrullah'a bağlılığıyla bilinir.",
+    "katkilar": [
+      "Mârifetnâme'yi (1757) Türkçe ansiklopedik bir eser olarak yazdı.",
+      "Tasavvufi şiirleri ve tefviz anlayışı geniş kitlelere ulaştı."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İbrâhim Hakkı Erzurûmî",
+        "url": "https://islamansiklopedisi.org.tr/ibrahim-hakki-erzurumi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mârifetnâme",
+        "url": "https://islamansiklopedisi.org.tr/marifetname"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar",
+      "hami"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ragib-pasa",
+    "ad": "Koca Ragıp Paşa",
+    "ad_akademik": "Koca Râgıb Paşa",
+    "tam_ad": "Mehmed Râgıb Paşa",
+    "lakap": null,
+    "dogum": 1698,
+    "olum": 1763,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: ö. 1176/1763. Doğum (1698) genel bilgiye dayanır.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "III. Osman",
+      "III. Mustafa"
+    ],
+    "alanlar": [
+      "siyaset",
+      "edebiyat"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1698,
+        "yil_bitis": 1744,
+        "ne_yapti": "Doğdu; kalemde yetişti."
+      },
+      {
+        "sehir": "Kahire",
+        "enlem": 30.04,
+        "boylam": 31.24,
+        "yil_baslangic": 1744,
+        "yil_bitis": 1748,
+        "ne_yapti": "Mısır valiliği."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1757,
+        "yil_bitis": 1763,
+        "ne_yapti": "Sadrazam (1757-1763); Koska'daki kütüphanesini kurdu (1762)."
+      }
+    ],
+    "ozet": "XVIII. yüzyılın kudretli sadrazamı ve hikemî tarzda şiirler yazan şair. Arapça derlemesi Sefînetü'r-Râgıb ve Laleli-Koska'da kurduğu kütüphane ile ilim çevresine katkıda bulundu.",
+    "katkilar": [
+      "Sefînetü'r-Râgıb'ı derledi.",
+      "Râgıb Paşa Kütüphanesi'ni kurdu (1762)."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Râgıb Paşa",
+        "url": "https://islamansiklopedisi.org.tr/ragib-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ahmed-resmi",
+    "ad": "Ahmed Resmi Efendi",
+    "ad_akademik": "Ahmed Resmî Efendi",
+    "tam_ad": "Ahmed Resmî Efendi",
+    "lakap": null,
+    "dogum": 1700,
+    "olum": 1783,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: ö. 1783. Resmo (Girit) doğumu ve 1700 yılı genel bilgiye dayanır.",
+    "koken": "Resmolu (Girit); Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "III. Mustafa"
+    ],
+    "alanlar": [
+      "diplomasi",
+      "tarih",
+      "siyaset"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Resmo (Girit)",
+        "enlem": 35.37,
+        "boylam": 24.47,
+        "yil_baslangic": 1700,
+        "yil_bitis": 1733,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "Viyana",
+        "enlem": 48.21,
+        "boylam": 16.37,
+        "yil_baslangic": 1757,
+        "yil_bitis": 1758,
+        "ne_yapti": "Elçi.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "Berlin",
+        "enlem": 52.52,
+        "boylam": 13.4,
+        "yil_baslangic": 1763,
+        "yil_bitis": 1764,
+        "ne_yapti": "Prusya elçisi.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1764,
+        "yil_bitis": 1783,
+        "ne_yapti": "Kalemlerde ve 1768-1774 savaşında görev aldı; öldü."
+      }
+    ],
+    "ozet": "Viyana ve Berlin elçilikleri yapan Osmanlı diplomatı ve tarihçisi. 1768-1774 Osmanlı-Rus savaşını eleştirel bir gözle değerlendirdiği Hulâsatü'l-i'tibâr, barış ve ıslahat düşüncesinin erken örneklerindendir.",
+    "katkilar": [
+      "Prusya Sefâretnâmesi'ni yazdı (1763).",
+      "Hulâsatü'l-i'tibâr ile savaş politikasını sorguladı (1781)."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahmed Resmî Efendi",
+        "url": "https://islamansiklopedisi.org.tr/ahmed-resmi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "koken",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "seyh-galib",
+    "ad": "Şeyh Galib",
+    "ad_akademik": "Şeyh Gâlib",
+    "tam_ad": "Mehmed Es‘ad Gâlib Dede",
+    "lakap": null,
+    "dogum": 1757,
+    "olum": 1799,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1171/1757'de İstanbul'da Yenikapı Mevlevîhânesi yakınında doğdu; ö. 1213/1799.",
+    "koken": "İstanbullu; Mevlevî bir aileden; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "III. Selim"
+    ],
+    "alanlar": [
+      "edebiyat",
+      "tasavvuf"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1757,
+        "yil_bitis": 1799,
+        "ne_yapti": "Doğdu; 1783'te Hüsn ü Aşk'ı yazdı; 1787'de dede oldu; 1791'den itibaren Galata Mevlevîhânesi şeyhi."
+      }
+    ],
+    "ozet": "Divan şiirinin son büyük şairi ve Mevlevî şeyhi. Nâbî'nin Hayrâbâd'ının aşırı övülmesine karşılık 26 yaşında altı ayda yazdığı Hüsn ü Aşk, sembolik bir tasavvuf mesnevisidir. III. Selim ile yakınlığı bilinir.",
+    "katkilar": [
+      "Hüsn ü Aşk'ı (1783, 2041 beyit) yazdı.",
+      "Sebk-i Hindî üslubunun Osmanlı'daki en güçlü temsilcisi oldu.",
+      "Galata Mevlevîhânesi şeyhi olarak III. Selim dönemi Mevlevî çevresine yön verdi."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şeyh Gâlib",
+        "url": "https://islamansiklopedisi.org.tr/seyh-galib"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hüsn ü Aşk",
+        "url": "https://islamansiklopedisi.org.tr/husn-u-ask"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Galata Mevlevîhânesi",
+        "url": "https://islamansiklopedisi.org.tr/galata-mevlevihanesi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "selim-3",
+    "ad": "III. Selim",
+    "ad_akademik": "III. Selim",
+    "tam_ad": "Sultan III. Selim b. III. Mustafa",
+    "lakap": "İlhâmî (mahlas)",
+    "dogum": 1761,
+    "olum": 1808,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 7 Nisan 1789'da 28 yaşında tahta çıktı; 28 Temmuz 1808'de öldürüldü. Doğum yılı buna göre 1761.",
+    "koken": "Osmanlı hanedanı.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "siyaset",
+      "müzik",
+      "edebiyat"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1761,
+        "yil_bitis": 1808,
+        "ne_yapti": "Doğdu; 1789-1807 padişah; Nizâm-ı Cedîd'i kurdu; Kabakçı isyanı sonrası öldürüldü."
+      }
+    ],
+    "ozet": "Nizâm-ı Cedîd adıyla Batı tarzı ordu ve maliye ıslahatını başlatan Osmanlı padişahı (1789-1807). Mühendishâne-i Berrî-i Hümâyun'u (1795) kurdu, Avrupa başkentlerinde daimî elçilikler açtı. Bestekâr ve İlhâmî mahlaslı şairdir; Şeyh Galib ve Hamparsum'u destekledi.",
+    "katkilar": [
+      "Nizâm-ı Cedîd ordusunu ve İrâd-ı Cedîd hazinesini kurdu.",
+      "Mühendishâne-i Berrî-i Hümâyun'u açtı (1795).",
+      "Suzidilara makamını oluşturdu; birçok eser besteledi."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Selim III",
+        "url": "https://islamansiklopedisi.org.tr/selim-iii"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nizâm-ı Cedîd",
+        "url": "https://islamansiklopedisi.org.tr/nizam-i-cedid"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ratib",
+    "ad": "Ebubekir Ratib Efendi",
+    "ad_akademik": "Ebûbekir Râtib Efendi",
+    "tam_ad": "Ebûbekir Râtib Efendi",
+    "lakap": null,
+    "dogum": "~1750",
+    "olum": 1799,
+    "tarih_kesinligi": "yaklaşık",
+    "tarih_notu": "TDV: ö. 1214/1799. Doğum yılı genel bilgiye dayanan yaklaşık değerdir.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "III. Selim"
+    ],
+    "alanlar": [
+      "diplomasi",
+      "siyaset"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1750,
+        "yil_bitis": 1791,
+        "ne_yapti": "Kalemlerde yetişti; III. Selim'in yazı hocası oldu."
+      },
+      {
+        "sehir": "Viyana",
+        "enlem": 48.21,
+        "boylam": 16.37,
+        "yil_baslangic": 1791,
+        "yil_bitis": 1792,
+        "ne_yapti": "227 gün süren elçilik; Avusturya kurumlarını inceledi.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1792,
+        "yil_bitis": 1799,
+        "ne_yapti": "Reisülküttap oldu."
+      }
+    ],
+    "ozet": "III. Selim'in Viyana'ya gönderdiği elçi. Avusturya'nın askerî ve sivil kurumlarını ayrıntılı biçimde anlattığı 490 sayfalık Büyük Lâyiha, Nizâm-ı Cedîd ıslahatına örnek oldu.",
+    "katkilar": [
+      "Büyük Lâyiha'yı (sefaret raporu) yazdı.",
+      "III. Selim'in yazı hocalığını yaptı."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ebûbekir Râtib Efendi",
+        "url": "https://islamansiklopedisi.org.tr/ebubekir-ratib-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "gelenbevi",
+    "ad": "Gelenbevi İsmail Efendi",
+    "ad_akademik": "Gelenbevî İsmâil Efendi",
+    "tam_ad": "İsmâil b. Mustafa el-Gelenbevî",
+    "lakap": null,
+    "dogum": 1730,
+    "olum": 1791,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1143/1730'da Gelenbe'de (Kırkağaç, Manisa) doğdu; ö. 1205/1791.",
+    "koken": "Gelenbeli; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "I. Abdülhamid"
+    ],
+    "alanlar": [
+      "matematik",
+      "mantık",
+      "kelam"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Gelenbe (Kırkağaç)",
+        "enlem": 39.17,
+        "boylam": 27.7,
+        "yil_baslangic": 1730,
+        "yil_bitis": 1745,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1745,
+        "yil_bitis": 1790,
+        "ne_yapti": "Fatih medreselerinde okudu; müderrislik ve 1784'te açılan mühendislik okulunda geometri hocalığı."
+      },
+      {
+        "sehir": "Yenişehir (Larissa)",
+        "enlem": 39.64,
+        "boylam": 22.42,
+        "yil_baslangic": 1790,
+        "yil_bitis": 1791,
+        "ne_yapti": "Kadılık görevinde öldü."
+      }
+    ],
+    "ozet": "XVIII. yüzyılın matematik ve mantıkta en tanınmış Osmanlı âlimi. Logaritmayı tanıtan Şerh-i Cedâvili'l-ensâb ve kesirli hesap üzerine eserler yazdı; mühendislik okulunda hocalık yaptı. Mantık eserleri medreselerde uzun süre okutuldu.",
+    "katkilar": [
+      "Logaritma cetvellerini açıklayan bir şerh yazdı.",
+      "Fransız mühendislerle birlikte açılan mühendislik okulunda geometri okuttu (1784)."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Gelenbevî",
+        "url": "https://islamansiklopedisi.org.tr/gelenbevi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "hamparsum",
+    "ad": "Hamparsum Limonciyan",
+    "ad_akademik": "Hamparsum Limonciyan",
+    "tam_ad": "Hamparsum Limonciyan",
+    "lakap": null,
+    "dogum": 1768,
+    "olum": 1839,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1768-1839.",
+    "koken": "İstanbullu Ermeni; Ermeni kilise musikisi geleneğinden.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "III. Selim"
+    ],
+    "alanlar": [
+      "müzik"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1768,
+        "yil_bitis": 1839,
+        "ne_yapti": "Kilise musikisi ve Türk musikisi eğitimi aldı; 1813-1815 arasında nota sistemini geliştirdi."
+      }
+    ],
+    "ozet": "Ermeni neumlarından yola çıkarak geliştirdiği Hamparsum notasıyla tanınan musikişinas. III. Selim'in teşvikiyle başladığı çalışma XIX. yüzyıl boyunca Türk musikisinde yaygın olarak kullanıldı ve pek çok eserin kaybolmadan kayda geçmesini sağladı.",
+    "katkilar": [
+      "Hamparsum notasını geliştirdi (1813-1815)."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Limonciyan, Hamparsum",
+        "url": "https://islamansiklopedisi.org.tr/limonciyan-hamparsum"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mahmud-2",
+    "ad": "II. Mahmud",
+    "ad_akademik": "II. Mahmud",
+    "tam_ad": "Sultan II. Mahmud b. I. Abdülhamid",
+    "lakap": "Adlî (mahlas)",
+    "dogum": 1785,
+    "olum": 1839,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 20 Temmuz 1785'te doğdu; 28 Temmuz 1808'de tahta çıktı; 1839'da öldü.",
+    "koken": "Osmanlı hanedanı.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "siyaset"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1785,
+        "yil_bitis": 1839,
+        "ne_yapti": "Doğdu; 1808-1839 padişah; Yeniçeri Ocağı'nı kaldırdı (1826)."
+      }
+    ],
+    "ozet": "Yeniçeri Ocağı'nı kaldırarak (17 Haziran 1826, Vak'a-i Hayriyye) merkezî ve Batılı tarzda bir devlet düzeninin yolunu açan padişah. Tıphâne-i Âmire'yi (1827) ve ilk resmî gazete Takvîm-i Vekāyi'i (1831) kurdurdu; Mustafa Reşid Paşa gibi ıslahatçıları yetiştirdi.",
+    "katkilar": [
+      "Yeniçeri Ocağı'nı kaldırıp Asâkir-i Mansûre-i Muhammediyye'yi kurdu (1826).",
+      "Takvîm-i Vekāyi'i çıkardı (1 Kasım 1831).",
+      "Tıphâne-i Âmire'yi açtırdı (1827)."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mahmud II",
+        "url": "https://islamansiklopedisi.org.tr/mahmud-ii--osmanli"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Vak'a-i Hayriyye",
+        "url": "https://islamansiklopedisi.org.tr/vaka-i-hayriyye"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Takvîm-i Vekāyi",
+        "url": "https://islamansiklopedisi.org.tr/takvim-i-vekayi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "olum"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "sanizade",
+    "ad": "Şanizade Ataullah Efendi",
+    "ad_akademik": "Şânîzâde Mehmed Atâullah Efendi",
+    "tam_ad": "Şânîzâde Mehmed Atâullah Efendi",
+    "lakap": null,
+    "dogum": 1769,
+    "olum": 1826,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: ö. 1826. Doğum (1769) genel bilgiye dayanır.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "II. Mahmud"
+    ],
+    "alanlar": [
+      "tıp",
+      "tarih",
+      "matematik",
+      "müzik"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1769,
+        "yil_bitis": 1826,
+        "ne_yapti": "Medrese ve tıp eğitimi aldı; 3 Aralık 1819'da II. Mahmud tarafından vakanüvis yapıldı; Mir'âtü'l-ebdân'ı yayımladı (1820)."
+      },
+      {
+        "sehir": "Tire",
+        "enlem": 38.09,
+        "boylam": 27.73,
+        "yil_baslangic": 1826,
+        "yil_bitis": 1826,
+        "ne_yapti": "1826'da Bektaşîlik suçlamasıyla arpalığı Tire'ye sürüldü; burada öldü."
+      }
+    ],
+    "ozet": "Avrupa tıbbını Türkçeye aktaran ilk büyük yazarlardan ve vakanüvis. Hamse-i Şânîzâde adıyla anılan tıp külliyatının ilk kitabı Mir'âtü'l-ebdân (1820), Türkçe ilk modern anatomi kitabıdır. Batı dillerini bilen çok yönlü bir âlimdi.",
+    "katkilar": [
+      "Modern anatomiyi Türkçe olarak sistemli biçimde ilk kez anlattı (Mir'âtü'l-ebdân, 1820).",
+      "Türkçe tıp terimlerinin önemli bir kısmını türetti.",
+      "Vakanüvis olarak 1808-1821 dönemini yazdı."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şânîzâde Mehmed Atâullah Efendi",
+        "url": "https://islamansiklopedisi.org.tr/sanizade-mehmed-ataullah-efendi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Beşiktaş Cem‘iyyet-i İlmiyyesi",
+        "url": "https://islamansiklopedisi.org.tr/besiktas-cemiyyet-i-ilmiyyesi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "hoca-ishak",
+    "ad": "Başhoca İshak Efendi",
+    "ad_akademik": "Başhoca İshak Efendi",
+    "tam_ad": "Hoca İshak Efendi",
+    "lakap": null,
+    "dogum": "~1774",
+    "olum": 1836,
+    "tarih_kesinligi": "yaklaşık",
+    "tarih_notu": "TDV: Şubat 1836'da İskenderiye'de öldü. Doğum yılı ve Arta doğumu genel bilgiye dayanır.",
+    "koken": "Yahudi asıllı, sonradan Müslüman olduğu bildirilir; Artalı.",
+    "koken_tartismali": true,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "II. Mahmud"
+    ],
+    "alanlar": [
+      "matematik",
+      "mühendislik",
+      "fizik"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Arta",
+        "enlem": 39.16,
+        "boylam": 20.99,
+        "yil_baslangic": 1774,
+        "yil_bitis": 1800,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "Medine",
+        "enlem": 24.47,
+        "boylam": 39.61,
+        "yil_baslangic": 1816,
+        "yil_bitis": 1816,
+        "ne_yapti": "Başhoca Tamânî'nin yardımcısı olarak kutsal yapıların onarımında görevlendirildi."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1816,
+        "yil_bitis": 1834,
+        "ne_yapti": "Divan tercümanlığı; 1830 sonunda Mühendishâne-i Berrî-i Hümâyun başhocası oldu; Mecmûa-i Ulûm-ı Riyâziyye'yi yayımladı."
+      },
+      {
+        "sehir": "Medine",
+        "enlem": 24.47,
+        "boylam": 39.61,
+        "yil_baslangic": 1834,
+        "yil_bitis": 1835,
+        "ne_yapti": "Yeniden onarım işleriyle gönderildi."
+      },
+      {
+        "sehir": "İskenderiye",
+        "enlem": 31.2,
+        "boylam": 29.92,
+        "yil_baslangic": 1836,
+        "yil_bitis": 1836,
+        "ne_yapti": "Dönüş yolculuğunda öldü (Şubat 1836)."
+      }
+    ],
+    "ozet": "Mühendishâne başhocası. Dört ciltlik Mecmûa-i Ulûm-ı Riyâziyye (1831-1834) ile matematik, fizik, kimya ve astronomideki modern bilgileri Türkçede ilk kez düzenli biçimde sundu. Türkçe bilim terminolojisinin kurucularından sayılır.",
+    "katkilar": [
+      "Mecmûa-i Ulûm-ı Riyâziyye'yi yazdı.",
+      "Mühendishâne'de modern matematik ve fizik öğretimini yerleştirdi."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İshak Efendi, Başhoca",
+        "url": "https://islamansiklopedisi.org.tr/ishak-efendi-bashoca"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "koken"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "behcet",
+    "ad": "Behçet Mustafa Efendi",
+    "ad_akademik": "Behçet Mustafa Efendi",
+    "tam_ad": "Behçet Mustafa Efendi",
+    "lakap": null,
+    "dogum": 1774,
+    "olum": 1834,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1774-1834.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "III. Selim",
+      "II. Mahmud"
+    ],
+    "alanlar": [
+      "tıp"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1774,
+        "yil_bitis": 1834,
+        "ne_yapti": "1803'te hekimbaşı oldu; 14 Mart 1827'de Tıphâne-i Âmire'nin açılmasını sağladı."
+      }
+    ],
+    "ozet": "Hekimbaşı ve modern Osmanlı tıp eğitiminin kurucusu. II. Mahmud'un desteğiyle Şehzadebaşı'nda açılan Tıphâne-i Âmire'nin (1827) kuruluşunda başrolü üstlendi.",
+    "katkilar": [
+      "Tıphâne-i Âmire'yi kurdu (1827).",
+      "Çiçek aşısı ve frengi üzerine risaleler yazdı."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Behçet Mustafa Efendi",
+        "url": "https://islamansiklopedisi.org.tr/behcet-mustafa-efendi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tıbhâne-i Âmire",
+        "url": "https://islamansiklopedisi.org.tr/tibhane-i-amire"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "dede-efendi",
+    "ad": "Dede Efendi",
+    "ad_akademik": "Hamâmîzâde İsmâil Dede Efendi",
+    "tam_ad": "Hamâmîzâde İsmâil Dede Efendi",
+    "lakap": null,
+    "dogum": 1778,
+    "olum": 1846,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 9 Ocak 1778'de İstanbul Şehzadebaşı'nda doğdu; 29 Kasım 1846'da hacda Mina'da öldü.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "III. Selim",
+      "II. Mahmud"
+    ],
+    "alanlar": [
+      "müzik",
+      "tasavvuf"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1778,
+        "yil_bitis": 1846,
+        "ne_yapti": "Yenikapı Mevlevîhânesi'nde yetişti; sarayda müezzinbaşı ve bestekâr olarak bulundu."
+      },
+      {
+        "sehir": "Mekke",
+        "enlem": 21.42,
+        "boylam": 39.83,
+        "yil_baslangic": 1846,
+        "yil_bitis": 1846,
+        "ne_yapti": "Hac sırasında koleradan öldü; Cennetü'l-muallâ'ya gömüldü."
+      }
+    ],
+    "ozet": "Klasik Türk musikisinin en büyük bestekârlarından; Mevlevî âyinleri ve saz-söz eserleriyle bu geleneğin zirvesi sayılır. Yenikapı Mevlevîhânesi'nde yetişti; III. Selim ve II. Mahmud saraylarında bulundu. Zekâî Dede başta olmak üzere birçok öğrenci yetiştirdi.",
+    "katkilar": [
+      "Mevlevî âyinleri besteledi.",
+      "Yeni makamlar (ör. Sabâbûselik, Neveser) oluşturduğu kabul edilir.",
+      "Öğrencileri aracılığıyla klasik repertuvarı sonraki kuşaklara aktardı."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İsmâil Dede Efendi, Hamâmîzâde",
+        "url": "https://islamansiklopedisi.org.tr/ismail-dede-efendi-hamamizade"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "resid-pasa",
+    "ad": "Mustafa Reşid Paşa",
+    "ad_akademik": "Mustafa Reşîd Paşa",
+    "tam_ad": "Koca Mustafa Reşîd Paşa",
+    "lakap": null,
+    "dogum": 1800,
+    "olum": 1858,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 13 Mart 1800'de İstanbul'da doğdu; 7 Ocak 1858'de öldü.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "II. Mahmud",
+      "Abdülmecid"
+    ],
+    "alanlar": [
+      "siyaset",
+      "diplomasi"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1800,
+        "yil_bitis": 1834,
+        "ne_yapti": "Doğdu; kalemde yetişti."
+      },
+      {
+        "sehir": "Paris",
+        "enlem": 48.86,
+        "boylam": 2.35,
+        "yil_baslangic": 1834,
+        "yil_bitis": 1836,
+        "ne_yapti": "Elçi.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "Londra",
+        "enlem": 51.51,
+        "boylam": -0.13,
+        "yil_baslangic": 1836,
+        "yil_bitis": 1839,
+        "ne_yapti": "Elçi; II. Mahmud'un ıslahat düşüncesini geliştirdi.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1839,
+        "yil_bitis": 1858,
+        "ne_yapti": "Gülhane'de Tanzimat Fermanı'nı okudu (3 Kasım 1839); altı kez sadrazam oldu."
+      }
+    ],
+    "ozet": "Tanzimat'ın mimarı sayılan Osmanlı devlet adamı. Paris ve Londra elçiliklerinden sonra hariciye nazırı olarak hazırladığı Tanzimat Fermanı'nı 3 Kasım 1839'da Gülhane'de okudu. Âli ve Fuad Paşaların yetişmesinde etkili oldu.",
+    "katkilar": [
+      "Tanzimat Fermanı'nı hazırlayıp ilan etti (1839).",
+      "Altı kez sadrazamlık yaptı (ilk kez 1846)."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mustafa Reşid Paşa",
+        "url": "https://islamansiklopedisi.org.tr/mustafa-resid-pasa"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tanzimat",
+        "url": "https://islamansiklopedisi.org.tr/tanzimat"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "abdulmecid",
+    "ad": "Abdülmecid",
+    "ad_akademik": "Abdülmecîd",
+    "tam_ad": "Sultan Abdülmecîd b. II. Mahmud",
+    "lakap": null,
+    "dogum": 1823,
+    "olum": 1861,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: saltanatı 1839-1861. Doğum (1823) genel bilgiye dayanır.",
+    "koken": "Osmanlı hanedanı.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "siyaset"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1823,
+        "yil_bitis": 1861,
+        "ne_yapti": "1839'da tahta çıktı; Tanzimat ve Islahat fermanları onun döneminde ilan edildi."
+      }
+    ],
+    "ozet": "Tanzimat Fermanı (1839) ve Islahat Fermanı (1856) dönemlerinin Osmanlı padişahı. Mustafa Reşid, Âli ve Fuad Paşalara dayanan ıslahat yönetimini destekledi; Encümen-i Dâniş (1851) gibi kurumlar onun döneminde açıldı.",
+    "katkilar": [
+      "Tanzimat ve Islahat fermanlarını onayladı.",
+      "Kırım Savaşı ve Paris Antlaşması (1856) dönemini yönetti."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Abdülmecid",
+        "url": "https://islamansiklopedisi.org.tr/abdulmecid"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Islahat Fermanı",
+        "url": "https://islamansiklopedisi.org.tr/islahat-fermani"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ali-pasa",
+    "ad": "Âli Paşa",
+    "ad_akademik": "Âlî Paşa",
+    "tam_ad": "Mehmed Emîn Âlî Paşa",
+    "lakap": null,
+    "dogum": 1814,
+    "olum": 1871,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1814'te İstanbul Mercan'da doğdu; 7 Eylül 1871'de öldü.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "Abdülmecid",
+      "Abdülaziz"
+    ],
+    "alanlar": [
+      "siyaset",
+      "diplomasi"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1814,
+        "yil_bitis": 1871,
+        "ne_yapti": "Divan-ı Hümayun tercümanlığından yükseldi; beş kez sadrazam (ilk 1852); Islahat Fermanı'nı destekledi."
+      },
+      {
+        "sehir": "Paris",
+        "enlem": 48.86,
+        "boylam": 2.35,
+        "yil_baslangic": 1856,
+        "yil_bitis": 1856,
+        "ne_yapti": "Paris Antlaşması'nı imzaladı.",
+        "bolge_disi": true
+      }
+    ],
+    "ozet": "Tanzimat'ın ikinci kuşağının önde gelen devlet adamı. Beş kez sadrazam, birçok kez hariciye nazırı oldu; 1856 Paris Antlaşması'nı imzaladı ve Islahat Fermanı'nı destekledi. Fuad Paşa'nın 1869'daki ölümünden sonra yönetime tek başına hâkim oldu.",
+    "katkilar": [
+      "Islahat Fermanı'nın (1856) hazırlanma sürecinde yer aldı.",
+      "Paris Antlaşması'nı (1856) imzaladı.",
+      "Vilayet düzenlemeleri ve Galatasaray Mekteb-i Sultânîsi'nin açılışında rol oynadı."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Âlî Paşa, Mehmed Emin",
+        "url": "https://islamansiklopedisi.org.tr/ali-pasa-mehmed-emin"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fuad-pasa",
+    "ad": "Keçecizade Fuad Paşa",
+    "ad_akademik": "Keçecizâde Fuad Paşa",
+    "tam_ad": "Keçecizâde Mehmed Fuad Paşa",
+    "lakap": null,
+    "dogum": 1815,
+    "olum": 1869,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1815-1869.",
+    "koken": "İstanbullu; şair Keçecizâde İzzet Molla'nın oğlu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "Abdülmecid",
+      "Abdülaziz"
+    ],
+    "alanlar": [
+      "siyaset",
+      "diplomasi",
+      "dil"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1815,
+        "yil_bitis": 1869,
+        "ne_yapti": "Tıp eğitiminden sonra tercüme odasından yükseldi; sadrazam ve hariciye nazırı oldu."
+      },
+      {
+        "sehir": "Bursa",
+        "enlem": 40.19,
+        "boylam": 29.06,
+        "yil_baslangic": 1850,
+        "yil_bitis": 1851,
+        "ne_yapti": "Cevdet Efendi ile Kavâid-i Osmâniyye'yi hazırladı."
+      },
+      {
+        "sehir": "Nis (Nice)",
+        "enlem": 43.7,
+        "boylam": 7.27,
+        "yil_baslangic": 1869,
+        "yil_bitis": 1869,
+        "ne_yapti": "Tedavi için gittiği Nis'te öldü.",
+        "bolge_disi": true
+      }
+    ],
+    "ozet": "Tanzimat'ın önde gelen devlet adamı ve Âli Paşa'nın yakın çalışma arkadaşı. Ahmed Cevdet ile birlikte Türkçenin ilk basılı gramerlerinden Kavâid-i Osmâniyye'yi hazırladı. Sadrazamlık ve hariciye nazırlıklarında bulundu.",
+    "katkilar": [
+      "Kavâid-i Osmâniyye'yi Cevdet Paşa ile birlikte yazdı.",
+      "Encümen-i Dâniş'in kurucu üyelerindendir."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fuad Paşa, Keçecizâde",
+        "url": "https://islamansiklopedisi.org.tr/fuad-pasa-kececizade"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Encümen-i Dâniş",
+        "url": "https://islamansiklopedisi.org.tr/encumen-i-danis"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "koken",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "cevdet-pasa",
+    "ad": "Ahmed Cevdet Paşa",
+    "ad_akademik": "Ahmed Cevdet Paşa",
+    "tam_ad": "Ahmed Cevdet Paşa",
+    "lakap": null,
+    "dogum": 1823,
+    "olum": 1895,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1823-1895. Lofça doğumu genel bilgiye dayanır.",
+    "koken": "Lofçalı (Bulgaristan); Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "Mustafa Reşid Paşa",
+      "Abdülmecid",
+      "II. Abdülhamid"
+    ],
+    "alanlar": [
+      "hukuk",
+      "tarih",
+      "dil",
+      "siyaset"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1839,
+        "yil_bitis": 1895,
+        "ne_yapti": "Medrese tahsili; Encümen-i Dâniş üyesi, vakanüvis, nazır; Mecelle Cemiyeti başkanı."
+      },
+      {
+        "sehir": "Bursa",
+        "enlem": 40.19,
+        "boylam": 29.06,
+        "yil_baslangic": 1850,
+        "yil_bitis": 1851,
+        "ne_yapti": "Fuad Efendi ile Kavâid-i Osmâniyye'yi hazırladı."
+      }
+    ],
+    "ozet": "XIX. yüzyıl Osmanlı'nın en büyük hukukçu ve tarihçisi. 1774-1826 dönemini anlatan 12 ciltlik Târih-i Cevdet'i yazdı; Hanefî hukukunu kanun maddeleri hâlinde düzenleyen Mecelle'yi hazırlayan komisyona başkanlık etti (1868-1876). Fuad Paşa ile Kavâid-i Osmâniyye'yi kaleme aldı.",
+    "katkilar": [
+      "Mecelle-i Ahkâm-ı Adliyye'yi hazırlayan cemiyete başkanlık etti.",
+      "Târih-i Cevdet'i yazdı.",
+      "Kavâid-i Osmâniyye ile Türkçenin basılan ilk gramerlerinden birini hazırladı."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cevdet Paşa",
+        "url": "https://islamansiklopedisi.org.tr/cevdet-pasa"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mecelle",
+        "url": "https://islamansiklopedisi.org.tr/mecelle"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "koken",
+      "hami",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "sinasi",
+    "ad": "Şinasi",
+    "ad_akademik": "İbrâhim Şinâsi",
+    "tam_ad": "İbrâhim Şinâsi Efendi",
+    "lakap": null,
+    "dogum": "1824-1826",
+    "olum": 1871,
+    "tarih_kesinligi": "tartışmalı",
+    "tarih_notu": "TDV: doğum yılı belgeye dayanmaz; 1824 veya 1826 öne çıkar. 13 Eylül 1871'de İstanbul'da öldü.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "Mustafa Reşid Paşa"
+    ],
+    "alanlar": [
+      "edebiyat",
+      "gazetecilik",
+      "dil"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1826,
+        "yil_bitis": 1849,
+        "ne_yapti": "Doğdu; Tophane Müşirliği kalemlerinde yetişti."
+      },
+      {
+        "sehir": "Paris",
+        "enlem": 48.86,
+        "boylam": 2.35,
+        "yil_baslangic": 1849,
+        "yil_bitis": 1854,
+        "ne_yapti": "Maliye eğitimi için gönderildi.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1854,
+        "yil_bitis": 1865,
+        "ne_yapti": "Tercümân-ı Ahvâl'e katıldı (1860), Tasvîr-i Efkâr'ı çıkardı (1862)."
+      },
+      {
+        "sehir": "Paris",
+        "enlem": 48.86,
+        "boylam": 2.35,
+        "yil_baslangic": 1865,
+        "yil_bitis": 1869,
+        "ne_yapti": "Paris'e gitti; Tasvîr-i Efkâr'ı Nâmık Kemal'e bıraktı.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1869,
+        "yil_bitis": 1871,
+        "ne_yapti": "Döndü; öldü."
+      }
+    ],
+    "ozet": "Yeni Türk edebiyatının ve özel gazeteciliğin öncüsü. Âgâh Efendi ile çıkardığı Tercümân-ı Ahvâl'in (22 Ekim 1860) mukaddimesini yazdı; Şair Evlenmesi bu gazetede tefrika edildi. 1862'de Tasvîr-i Efkâr'ı kurdu ve 1865'te gazeteyi Nâmık Kemal'e bıraktı.",
+    "katkilar": [
+      "Türk edebiyatının ilk yerli tiyatro eseri Şair Evlenmesi'ni yazdı (1860).",
+      "Tercümân-ı Ahvâl ve Tasvîr-i Efkâr ile özel gazeteciliği başlattı.",
+      "Noktalama işaretlerini ve sade dili savundu."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şinâsi",
+        "url": "https://islamansiklopedisi.org.tr/sinasi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tercümân-ı Ahvâl",
+        "url": "https://islamansiklopedisi.org.tr/tercuman-i-ahval"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tasvîr-i Efkâr",
+        "url": "https://islamansiklopedisi.org.tr/tasvir-i-efkar"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "hami",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "namik-kemal",
+    "ad": "Namık Kemal",
+    "ad_akademik": "Nâmık Kemal",
+    "tam_ad": "Mehmed Nâmık Kemal",
+    "lakap": null,
+    "dogum": 1840,
+    "olum": 1888,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 21 Aralık 1840'ta Tekirdağ'da doğdu; 2 Aralık 1888'de Sakız mutasarrıfı iken öldü; Gelibolu'ya defnedildi.",
+    "koken": "Tekirdağlı; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "edebiyat",
+      "gazetecilik",
+      "siyaset"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Tekirdağ",
+        "enlem": 40.98,
+        "boylam": 27.51,
+        "yil_baslangic": 1840,
+        "yil_bitis": 1850,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1857,
+        "yil_bitis": 1867,
+        "ne_yapti": "Şinasi'nin yanında Tasvîr-i Efkâr'da yazdı; 1865'te gazeteyi devraldı."
+      },
+      {
+        "sehir": "Londra",
+        "enlem": 51.51,
+        "boylam": -0.13,
+        "yil_baslangic": 1867,
+        "yil_bitis": 1870,
+        "ne_yapti": "Yeni Osmanlılarla birlikte Hürriyet gazetesini çıkardı (1868).",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1870,
+        "yil_bitis": 1873,
+        "ne_yapti": "Vatan yahut Silistre sahnelendi (1 Nisan 1873)."
+      },
+      {
+        "sehir": "Magosa",
+        "enlem": 35.12,
+        "boylam": 33.94,
+        "yil_baslangic": 1873,
+        "yil_bitis": 1876,
+        "ne_yapti": "Sürgün."
+      },
+      {
+        "sehir": "Midilli",
+        "enlem": 39.11,
+        "boylam": 26.55,
+        "yil_baslangic": 1879,
+        "yil_bitis": 1884,
+        "ne_yapti": "Mutasarrıf."
+      },
+      {
+        "sehir": "Sakız",
+        "enlem": 38.37,
+        "boylam": 26.14,
+        "yil_baslangic": 1887,
+        "yil_bitis": 1888,
+        "ne_yapti": "Mutasarrıf iken öldü."
+      }
+    ],
+    "ozet": "Vatan ve hürriyet şairi; Yeni Osmanlılar hareketinin en etkili kalemi. Londra'da Ziya Paşa ile Hürriyet gazetesini çıkardı; Vatan yahut Silistre oyunu (1873) sürgününe yol açtı. İntibah ile Türk edebiyatında psikolojik tahlile yönelen ilk romanı yazdı.",
+    "katkilar": [
+      "Vatan yahut Silistre ile vatanseverlik temasını sahneye taşıdı (1873).",
+      "İntibah'ı yazdı (ilk edebî roman denemelerinden).",
+      "Hürriyet gazetesiyle meşrutiyet fikrini savundu (1868-1869)."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nâmık Kemal",
+        "url": "https://islamansiklopedisi.org.tr/namik-kemal"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Yeni Osmanlılar Cemiyeti",
+        "url": "https://islamansiklopedisi.org.tr/yeni-osmanlilar-cemiyeti"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ziya-pasa",
+    "ad": "Ziya Paşa",
+    "ad_akademik": "Ziyâ Paşa",
+    "tam_ad": "Abdülhamîd Ziyâüddin Paşa",
+    "lakap": null,
+    "dogum": 1829,
+    "olum": 1880,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1829-1880.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "edebiyat",
+      "gazetecilik",
+      "siyaset"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1829,
+        "yil_bitis": 1867,
+        "ne_yapti": "Doğdu; saray mabeyn kâtipliği yaptı."
+      },
+      {
+        "sehir": "Londra",
+        "enlem": 51.51,
+        "boylam": -0.13,
+        "yil_baslangic": 1867,
+        "yil_bitis": 1869,
+        "ne_yapti": "Nâmık Kemal ile Hürriyet'i çıkardı.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "Cenevre",
+        "enlem": 46.2,
+        "boylam": 6.15,
+        "yil_baslangic": 1869,
+        "yil_bitis": 1870,
+        "ne_yapti": "Hürriyet'i burada sürdürdü.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1872,
+        "yil_bitis": 1876,
+        "ne_yapti": "Harâbât'ı yayımladı (1874-1876)."
+      },
+      {
+        "sehir": "Adana",
+        "enlem": 37.0,
+        "boylam": 35.32,
+        "yil_baslangic": 1878,
+        "yil_bitis": 1880,
+        "ne_yapti": "Vali iken öldü."
+      }
+    ],
+    "ozet": "Yeni Osmanlıların önde gelen şair ve yazarı. Nâmık Kemal ile Londra'da Hürriyet'i çıkardı; gazete onun yönetiminde Cenevre'de sürdü. Divan şiirinden derlediği üç ciltlik antoloji Harâbât ve Bağdatlı Rûhî'ye nazire Terkîb-i Bend'i ile tanınır.",
+    "katkilar": [
+      "Harâbât antolojisini derledi (1874-1876).",
+      "Terkîb-i Bend ve Terciî-i Bend ile hikemî şiirin Tanzimat'taki en güçlü örneklerini verdi.",
+      "Şiir ve İnşâ makalesiyle halk edebiyatını savundu."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ziyâ Paşa",
+        "url": "https://islamansiklopedisi.org.tr/ziya-pasa--sair"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Harâbât",
+        "url": "https://islamansiklopedisi.org.tr/harabat--ziya-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ali-suavi",
+    "ad": "Ali Suavi",
+    "ad_akademik": "Ali Suâvî",
+    "tam_ad": "Ali Suâvî Efendi",
+    "lakap": null,
+    "dogum": 1839,
+    "olum": 1878,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1839-1878; 20 Mayıs 1878 Çırağan Vakası'nda öldürüldü.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "Mustafa Fâzıl Paşa"
+    ],
+    "alanlar": [
+      "gazetecilik",
+      "siyaset",
+      "din bilimleri"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1839,
+        "yil_bitis": 1867,
+        "ne_yapti": "Doğdu; vaiz ve yazar."
+      },
+      {
+        "sehir": "Londra",
+        "enlem": 51.51,
+        "boylam": -0.13,
+        "yil_baslangic": 1867,
+        "yil_bitis": 1868,
+        "ne_yapti": "Muhbir'i çıkardı (31 Ağustos 1867).",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "Paris",
+        "enlem": 48.86,
+        "boylam": 2.35,
+        "yil_baslangic": 1868,
+        "yil_bitis": 1876,
+        "ne_yapti": "Ulûm gazetesini çıkardı.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1876,
+        "yil_bitis": 1878,
+        "ne_yapti": "V. Murad'ı yeniden tahta çıkarmak için Çırağan baskınını düzenledi; öldürüldü."
+      }
+    ],
+    "ozet": "Yeni Osmanlılar çevresinden gazeteci ve siyaset adamı. Mustafa Fâzıl Paşa'nın desteğiyle Londra'da Muhbir'i (1867) çıkardı. Türk tarihine ve diline ilgisiyle erken Türkçülük düşüncesine katkıda bulundu. 1878 Çırağan Vakası'nda öldürüldü.",
+    "katkilar": [
+      "Muhbir ve Ulûm gazeteleriyle sürgün basınını başlattı.",
+      "Türk adının ve Türk tarihinin önemini vurgulayan yazılar yazdı."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ali Suâvî",
+        "url": "https://islamansiklopedisi.org.tr/ali-suavi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Çırağan Vakası",
+        "url": "https://islamansiklopedisi.org.tr/ciragan-vakasi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "midhat-pasa",
+    "ad": "Midhat Paşa",
+    "ad_akademik": "Midhat Paşa",
+    "tam_ad": "Ahmed Şefik Midhat Paşa",
+    "lakap": null,
+    "dogum": 1822,
+    "olum": 1884,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: Ekim-Kasım 1822'de İstanbul'da doğdu; 7-8 Mayıs 1884 gecesi Tâif'te öldürüldü (aile rivayeti).",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "siyaset",
+      "devlet yönetimi"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1822,
+        "yil_bitis": 1864,
+        "ne_yapti": "Doğdu; kalemde yetişti."
+      },
+      {
+        "sehir": "Rusçuk",
+        "enlem": 43.85,
+        "boylam": 25.97,
+        "yil_baslangic": 1864,
+        "yil_bitis": 1868,
+        "ne_yapti": "Tuna valisi; Vilayet Nizamnamesi'ni ilk uyguladı; Tuna gazetesini çıkardı."
+      },
+      {
+        "sehir": "Bağdat",
+        "enlem": 33.31,
+        "boylam": 44.36,
+        "yil_baslangic": 1869,
+        "yil_bitis": 1872,
+        "ne_yapti": "Vali."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1872,
+        "yil_bitis": 1877,
+        "ne_yapti": "Sadrazam; Kanûn-ı Esâsî'nin hazırlanmasını yönetti (1876)."
+      },
+      {
+        "sehir": "Tâif",
+        "enlem": 21.27,
+        "boylam": 40.42,
+        "yil_baslangic": 1881,
+        "yil_bitis": 1884,
+        "ne_yapti": "Yıldız Mahkemesi sonrası sürgün; öldürüldü."
+      }
+    ],
+    "ozet": "Meşrutiyet'in ilanında başrol oynayan Osmanlı devlet adamı. Tuna valiliğinde memleket sandıklarıyla Ziraat Bankası'nın temellerini attı. 1876 Kanûn-ı Esâsî'si onun sadaretinde ilan edildi; 1877'de 113. madde gereğince sürgün edildi.",
+    "katkilar": [
+      "Kanûn-ı Esâsî'nin hazırlanmasına öncülük etti (1876).",
+      "Tuna vilayetinde memleket sandıklarını kurdu."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Midhat Paşa",
+        "url": "https://islamansiklopedisi.org.tr/midhat-pasa"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kanûn-ı Esâsî",
+        "url": "https://islamansiklopedisi.org.tr/kanun-i-esasi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "abdulhamid-2",
+    "ad": "II. Abdülhamid",
+    "ad_akademik": "II. Abdülhamîd",
+    "tam_ad": "Sultan II. Abdülhamîd b. Abdülmecîd",
+    "lakap": null,
+    "dogum": 1842,
+    "olum": 1918,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1842-1918; saltanatı 1876-1909.",
+    "koken": "Osmanlı hanedanı.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "siyaset",
+      "eğitim"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1842,
+        "yil_bitis": 1909,
+        "ne_yapti": "1876'da tahta çıktı; Kanûn-ı Esâsî'yi ilan etti, 1878'de meclisi kapattı."
+      },
+      {
+        "sehir": "Selanik",
+        "enlem": 40.64,
+        "boylam": 22.94,
+        "yil_baslangic": 1909,
+        "yil_bitis": 1912,
+        "ne_yapti": "Tahttan indirildikten sonra gönderildi."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1912,
+        "yil_bitis": 1918,
+        "ne_yapti": "Beylerbeyi Sarayı'nda öldü."
+      }
+    ],
+    "ozet": "1876-1909 arasında hüküm süren Osmanlı padişahı. Kanûn-ı Esâsî'yi ilan etti, ardından meclisi tatil ederek otuz yıl merkezî bir yönetim sürdürdü. Döneminde mekteplerin sayısı arttı; Sanâyi-i Nefîse Mektebi ve Müze-i Hümâyun gibi kurumlar gelişti.",
+    "katkilar": [
+      "Kanûn-ı Esâsî'yi ilan etti (1876).",
+      "Mülkiye, Tıbbiye ve Darülfünun gibi okulların yaygınlaşmasını destekledi.",
+      "Hicaz Demiryolu'nu yaptırdı."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Abdülhamid II",
+        "url": "https://islamansiklopedisi.org.tr/abdulhamid-ii"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ahmed-midhat",
+    "ad": "Ahmed Mithat Efendi",
+    "ad_akademik": "Ahmed Midhat Efendi",
+    "tam_ad": "Ahmed Midhat Efendi",
+    "lakap": "Hâce-i Evvel",
+    "dogum": 1844,
+    "olum": 1912,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1844-1912; İstanbul Tophane'de doğdu.",
+    "koken": "İstanbullu; annesi Kafkasya'dan göç etmiş bir aileden.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "Midhat Paşa"
+    ],
+    "alanlar": [
+      "edebiyat",
+      "gazetecilik",
+      "eğitim"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1844,
+        "yil_bitis": 1864,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "Rusçuk",
+        "enlem": 43.85,
+        "boylam": 25.97,
+        "yil_baslangic": 1864,
+        "yil_bitis": 1869,
+        "ne_yapti": "Midhat Paşa'nın yanında Tuna gazetesinde çalıştı."
+      },
+      {
+        "sehir": "Bağdat",
+        "enlem": 33.31,
+        "boylam": 44.36,
+        "yil_baslangic": 1869,
+        "yil_bitis": 1872,
+        "ne_yapti": "Zevrâ gazetesinde çalıştı."
+      },
+      {
+        "sehir": "Rodos",
+        "enlem": 36.43,
+        "boylam": 28.22,
+        "yil_baslangic": 1873,
+        "yil_bitis": 1876,
+        "ne_yapti": "Sürgün; romanlar yazdı."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1876,
+        "yil_bitis": 1912,
+        "ne_yapti": "Tercümân-ı Hakîkat'i çıkardı (1878); Felâtun Bey ile Râkım Efendi'yi yayımladı (1875)."
+      }
+    ],
+    "ozet": "Halkı okumaya alıştırmayı amaçlayan Tanzimat romancısı ve gazeteci; 'yazı makinesi' diye anılacak kadar üretken. Felâtun Bey ile Râkım Efendi'de Batılılaşmanın yanlış ve doğru örneklerini karşılaştırdı. Tercümân-ı Hakîkat basın tarihinin en uzun ömürlü gazetelerindendir.",
+    "katkilar": [
+      "Felâtun Bey ile Râkım Efendi'yi yazdı (1875).",
+      "Tercümân-ı Hakîkat'i kurdu (1878).",
+      "Kendi matbaasıyla yüzlerce kitap yayımladı."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahmed Midhat Efendi",
+        "url": "https://islamansiklopedisi.org.tr/ahmed-midhat-efendi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Felâtun Bey ile Râkım Efendi",
+        "url": "https://islamansiklopedisi.org.tr/felatun-bey-ile-rakim-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "hami",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "semseddin-sami",
+    "ad": "Şemsettin Sami",
+    "ad_akademik": "Şemseddin Sâmi",
+    "tam_ad": "Şemseddin Sâmi Fraşeri",
+    "lakap": null,
+    "dogum": 1850,
+    "olum": 1904,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1850-1904. Fraşer (Arnavutluk) doğumu genel bilgiye dayanır.",
+    "koken": "Fraşerli; Arnavut.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "dil",
+      "sözlükçülük",
+      "edebiyat",
+      "ansiklopedi"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Yanya",
+        "enlem": 39.67,
+        "boylam": 20.85,
+        "yil_baslangic": 1860,
+        "yil_bitis": 1871,
+        "ne_yapti": "Zosimea Rum lisesinde okudu."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1871,
+        "yil_bitis": 1904,
+        "ne_yapti": "Taaşşuk-ı Talat ve Fitnat'ı (1872), Kāmûsü'l-a'lâm'ı (1889-1898) ve Kāmûs-ı Türkî'yi yayımladı."
+      }
+    ],
+    "ozet": "Sözlükçü, ansiklopedist ve romancı. Taaşşuk-ı Talat ve Fitnat (1872) ilk telif Türk romanı kabul edilir. Altı ciltlik Kāmûsü'l-a'lâm ilk Türkçe ansiklopedi, Kāmûs-ı Türkî ise ilk planlı Türkçe sözlüktür. Arnavut dili ve kimliği için de çalıştı.",
+    "katkilar": [
+      "İlk telif romanı yazdı (1872).",
+      "İlk Türkçe ansiklopediyi hazırladı (Kāmûsü'l-a'lâm).",
+      "Kāmûs-ı Türkî ile Türkçenin kapsamlı sözlüğünü yazdı (1899-1901)."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şemseddin Sâmi",
+        "url": "https://islamansiklopedisi.org.tr/semseddin-sami"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kāmûsü'l-A‘lâm",
+        "url": "https://islamansiklopedisi.org.tr/kamusul-alam"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "koken",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "recaizade",
+    "ad": "Recaizade Mahmut Ekrem",
+    "ad_akademik": "Recâizâde Mahmud Ekrem",
+    "tam_ad": "Recâizâde Mahmud Ekrem",
+    "lakap": null,
+    "dogum": 1847,
+    "olum": 1914,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1 Mart 1847'de İstanbul Vaniköy'de doğdu; 31 Ocak 1914'te öldü.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "edebiyat",
+      "eğitim"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1847,
+        "yil_bitis": 1914,
+        "ne_yapti": "Doğdu; Mekteb-i Mülkiyye'de edebiyat okuttu; Ta'lîm-i Edebiyyât (1879) ve Araba Sevdası'nı (1896) yayımladı."
+      }
+    ],
+    "ozet": "Tanzimat'ın ikinci kuşağının öncüsü ve Servet-i Fünûn'a geçişi hazırlayan isim. Mülkiye'deki ders notlarından oluşan Ta'lîm-i Edebiyyât (1879) yeni bir edebiyat anlayışı getirdi. Araba Sevdası (1896) yanlış Batılılaşmayı hicveden realist bir romandır.",
+    "katkilar": [
+      "Ta'lîm-i Edebiyyât ile Batılı edebiyat teorisini Türkçeye taşıdı.",
+      "Araba Sevdası'nı yazdı.",
+      "Genç şairleri (Servet-i Fünûn kuşağı) destekledi."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Recâizâde Mahmud Ekrem",
+        "url": "https://islamansiklopedisi.org.tr/recaizade-mahmud-ekrem"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ta‘lîm-i Edebiyyât",
+        "url": "https://islamansiklopedisi.org.tr/talim-i-edebiyyat"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Araba Sevdası",
+        "url": "https://islamansiklopedisi.org.tr/araba-sevdasi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ahmed-vefik",
+    "ad": "Ahmet Vefik Paşa",
+    "ad_akademik": "Ahmed Vefik Paşa",
+    "tam_ad": "Ahmed Vefik Paşa",
+    "lakap": null,
+    "dogum": 1823,
+    "olum": 1891,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: ö. 1891. Doğum (1823) genel bilgiye dayanır.",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "dil",
+      "sözlükçülük",
+      "tarih",
+      "tiyatro",
+      "siyaset"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Paris",
+        "enlem": 48.86,
+        "boylam": 2.35,
+        "yil_baslangic": 1834,
+        "yil_bitis": 1837,
+        "ne_yapti": "Saint-Louis Lisesi'nde okudu.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1837,
+        "yil_bitis": 1879,
+        "ne_yapti": "Tercüme odası, elçilik, ilk Meclis-i Mebusan başkanlığı; Lehçe-i Osmânî (1876)."
+      },
+      {
+        "sehir": "Bursa",
+        "enlem": 40.19,
+        "boylam": 29.06,
+        "yil_baslangic": 1879,
+        "yil_bitis": 1882,
+        "ne_yapti": "Vali; tiyatro kurdu, Molière külliyatını Türkçeye uyarladı."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1882,
+        "yil_bitis": 1891,
+        "ne_yapti": "Rumelihisarı'nda yaşadı; öldü."
+      }
+    ],
+    "ozet": "Türkçülük düşüncesinin öncülerinden devlet adamı ve dil bilgini. Türkçenin ilk sözlüklerinden Lehçe-i Osmânî'yi (1876) yazdı, Ebulgazi'nin Şecere-i Türk'ünü Çağataycadan çevirdi. Bursa valiliğinde Molière'in oyunlarını Türkçeye uyarlayıp sahneledi. Sadrazamlık ve ilk Meclis-i Mebusan başkanlığı yaptı.",
+    "katkilar": [
+      "Lehçe-i Osmânî'yi hazırladı.",
+      "Şecere-i Türk'ü çevirdi.",
+      "Molière külliyatını (16 kitap) Türkçeye uyarladı ve Bursa'da tiyatro kurdu."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahmed Vefik Paşa",
+        "url": "https://islamansiklopedisi.org.tr/ahmed-vefik-pasa"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Lehce-i Osmânî",
+        "url": "https://islamansiklopedisi.org.tr/lehce-i-osmani"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "duraklar",
+      "ozet"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "munif-pasa",
+    "ad": "Münif Paşa",
+    "ad_akademik": "Münif Mehmed Paşa",
+    "tam_ad": "Münif Mehmed Paşa",
+    "lakap": null,
+    "dogum": "1824-1831",
+    "olum": 1910,
+    "tarih_kesinligi": "tartışmalı",
+    "tarih_notu": "TDV: doğum resmî biyografisinde 1246 (1830-31), başka kaynaklarda 1240 (1824-25). Ölüm 1910 genel bilgiye dayanır.",
+    "koken": "Antepli bir aileden; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "bilim",
+      "eğitim",
+      "tercüme",
+      "felsefe"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Kahire",
+        "enlem": 30.04,
+        "boylam": 31.24,
+        "yil_baslangic": 1835,
+        "yil_bitis": 1845,
+        "ne_yapti": "Babasıyla gitti; Kasr-ı Âlî Medresesi'nde okudu."
+      },
+      {
+        "sehir": "Dımaşk (Şam)",
+        "enlem": 33.51,
+        "boylam": 36.29,
+        "yil_baslangic": 1845,
+        "yil_bitis": 1850,
+        "ne_yapti": "Emeviyye Medresesi'nde tahsilini bitirdi (1850)."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1856,
+        "yil_bitis": 1910,
+        "ne_yapti": "Cemiyyet-i İlmiyye-i Osmâniyye'yi kurdu (1861); Mecmûa-i Fünûn'u çıkardı; Maarif nazırı oldu."
+      }
+    ],
+    "ozet": "Tanzimat dönemi bilim ve eğitim adamı. Kurucusu olduğu Cemiyyet-i İlmiyye-i Osmâniyye'nin yayın organı Mecmûa-i Fünûn (1862-1867), ilk Türkçe bilim dergisi sayılır. Voltaire, Fénelon ve Fontenelle'den seçmeleri Muhâverât-ı Hikemiyye adıyla çevirdi.",
+    "katkilar": [
+      "Mecmûa-i Fünûn'u çıkardı.",
+      "Muhâverât-ı Hikemiyye ile Aydınlanma düşünürlerinden ilk çevirileri yaptı.",
+      "Maarif nazırı olarak eğitim kurumlarının yaygınlaşmasına çalıştı."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Münif Mehmed Paşa",
+        "url": "https://islamansiklopedisi.org.tr/munif-mehmed-pasa"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mecmûa-i Fünûn",
+        "url": "https://islamansiklopedisi.org.tr/mecmua-i-funun"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cem‘iyyet-i İlmiyye-i Osmâniyye",
+        "url": "https://islamansiklopedisi.org.tr/cemiyyet-i-ilmiyye-i-osmaniyye"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "olum",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "suleyman-husnu",
+    "ad": "Süleyman Hüsnü Paşa",
+    "ad_akademik": "Süleyman Hüsnü Paşa",
+    "tam_ad": "Süleyman Hüsnü Paşa",
+    "lakap": null,
+    "dogum": 1838,
+    "olum": 1892,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1838 - 7 Ağustos 1892 (Bağdat).",
+    "koken": "İstanbullu; Türk.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "tarih",
+      "askerlik",
+      "dil"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1838,
+        "yil_bitis": 1877,
+        "ne_yapti": "Harbiye'de yetişti; 1874-1875'te Harbiye kumandanı; Târîh-i Âlem'i yazdı (1876)."
+      },
+      {
+        "sehir": "Bağdat",
+        "enlem": 33.31,
+        "boylam": 44.36,
+        "yil_baslangic": 1878,
+        "yil_bitis": 1892,
+        "ne_yapti": "1877-78 savaşı sonrası sürgün edildi; öldü."
+      }
+    ],
+    "ozet": "Asker, tarihçi ve erken Türkçülerden. Askerî okullar için yazdığı Târîh-i Âlem (1876) Türk tarihine geniş yer ayırmasıyla Türkçü çevrelerce önemsendi. Sade Türkçe gramer çalışmalarıyla da tanınır. 1876'da Abdülaziz'in tahttan indirilmesinde rol oynadı.",
+    "katkilar": [
+      "Târîh-i Âlem'de İslam öncesi Türk tarihini işledi.",
+      "Harbiye kumandanı olarak askerî eğitime katkıda bulundu."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Süleyman Hüsnü Paşa",
+        "url": "https://islamansiklopedisi.org.tr/suleyman-husnu-pasa"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Türkçülük",
+        "url": "https://islamansiklopedisi.org.tr/turkculuk"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "ozet"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mustafa-celaleddin",
+    "ad": "Mustafa Celalettin Paşa",
+    "ad_akademik": "Mustafa Celâleddin Paşa",
+    "tam_ad": "Mustafa Celâleddin Paşa (Konstanty Borzęcki)",
+    "lakap": null,
+    "dogum": 1826,
+    "olum": 1876,
+    "tarih_kesinligi": "tartışmalı",
+    "tarih_notu": "Kendi maddesi bulunamadı. TDV Türkçülük maddesi eserini (1869) anar; doğum ve ölüm yılları genel bilgiye dayanır.",
+    "koken": "Polonyalı (asıl adı Konstanty Borzęcki); 1848 sonrası Osmanlı'ya sığınan mülteci, sonradan Müslüman.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [],
+    "alanlar": [
+      "tarih",
+      "askerlik"
+    ],
+    "duraklar": [
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1849,
+        "yil_bitis": 1876,
+        "ne_yapti": "Osmanlı ordusunda subay; Les Turcs anciens et modernes'i yayımladı (1869)."
+      }
+    ],
+    "ozet": "1848 devrimlerinden sonra Osmanlı'ya sığınan Polonyalı subay. Fransızca yazdığı Les Turcs anciens et modernes (1869), Türklerin Avrupa ırklarıyla akrabalığını savunan tezleriyle Türkçülük düşüncesinin erken kaynaklarından sayılır.",
+    "katkilar": [
+      "Les Turcs anciens et modernes'i yazdı (1869)."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Türkçülük",
+        "url": "https://islamansiklopedisi.org.tr/turkculuk"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "olum",
+      "duraklar"
+    ],
+    "dogrulanamadi": true
+  },
+  {
+    "id": "osman-hamdi",
+    "ad": "Osman Hamdi Bey",
+    "ad_akademik": "Osman Hamdi Bey",
+    "tam_ad": "Osman Hamdi Bey",
+    "lakap": null,
+    "dogum": 1842,
+    "olum": 1910,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 30 Aralık 1842'de İstanbul'da doğdu; 24 Şubat 1910'da Kuruçeşme'de öldü.",
+    "koken": "İstanbullu; sadrazam İbrahim Edhem Paşa'nın oğlu.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Osmanlı"
+    ],
+    "hami": [
+      "II. Abdülhamid"
+    ],
+    "alanlar": [
+      "resim",
+      "arkeoloji",
+      "müzecilik",
+      "eğitim"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Paris",
+        "enlem": 48.86,
+        "boylam": 2.35,
+        "yil_baslangic": 1860,
+        "yil_bitis": 1869,
+        "ne_yapti": "Hukuk için gitti, resim eğitimi aldı.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "Bağdat",
+        "enlem": 33.31,
+        "boylam": 44.36,
+        "yil_baslangic": 1869,
+        "yil_bitis": 1871,
+        "ne_yapti": "Midhat Paşa'nın yanında görev yaptı."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1871,
+        "yil_bitis": 1910,
+        "ne_yapti": "1881'de Müze-i Hümâyun müdürü; Sanâyi-i Nefîse Mektebi'ni kurdu (1882); 1884 Âsâr-ı Atîka Nizamnamesi."
+      },
+      {
+        "sehir": "Sayda",
+        "enlem": 33.56,
+        "boylam": 35.37,
+        "yil_baslangic": 1887,
+        "yil_bitis": 1887,
+        "ne_yapti": "İskender Lahdi'nin çıkarıldığı kazıyı yönetti."
+      }
+    ],
+    "ozet": "Ressam, arkeolog ve müzeci. Müze-i Hümâyun'u (İstanbul Arkeoloji Müzeleri) modern bir kuruma dönüştürdü, Sanâyi-i Nefîse Mektebi'ni (1882) kurdu ve 1884 Âsâr-ı Atîka Nizamnamesi ile eski eserlerin yurt dışına çıkarılmasını sınırladı. Kaplumbağa Terbiyecisi en tanınmış tablosudur.",
+    "katkilar": [
+      "Sanâyi-i Nefîse Mektebi'ni kurdu ve 1882-1910 arasında yönetti.",
+      "Sayda kazısını (1887) yönetti.",
+      "Âsâr-ı Atîka Nizamnamesi'nin (1884) hazırlanmasında öncü oldu."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Osman Hamdi Bey",
+        "url": "https://islamansiklopedisi.org.tr/osman-hamdi-bey"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sanâyi-i Nefîse Mektebi",
+        "url": "https://islamansiklopedisi.org.tr/sanayi-i-nefise-mektebi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kursavi",
+    "ad": "Kursavi",
+    "ad_akademik": "Kursâvî",
+    "tam_ad": "Ebû Nasr Abdünnasîr b. İbrâhim el-Kursâvî",
+    "lakap": null,
+    "dogum": "~1776",
+    "olum": 1812,
+    "tarih_kesinligi": "yaklaşık",
+    "tarih_notu": "TDV: yaklaşık 1776'da Kursa'da doğdu; 1812'de İstanbul'da vebadan öldü.",
+    "koken": "Kazan yakınlarındaki Kursa köyünden; Tatar.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Rus İmparatorluğu"
+    ],
+    "hami": [],
+    "alanlar": [
+      "kelam",
+      "din bilimleri"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Kazan yakını (Kursa)",
+        "enlem": 56.05,
+        "boylam": 50.2,
+        "yil_baslangic": 1776,
+        "yil_bitis": 1795,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "Buhara",
+        "enlem": 39.77,
+        "boylam": 64.42,
+        "yil_baslangic": 1795,
+        "yil_bitis": 1808,
+        "ne_yapti": "Tahsil gördü; taklit karşıtı görüşleri yüzünden tepki çekti."
+      },
+      {
+        "sehir": "Kazan yakını (Kursa)",
+        "enlem": 56.05,
+        "boylam": 50.2,
+        "yil_baslangic": 1808,
+        "yil_bitis": 1811,
+        "ne_yapti": "Müderrislik yaptı."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1812,
+        "yil_bitis": 1812,
+        "ne_yapti": "Hac yolculuğunda vebadan öldü."
+      }
+    ],
+    "ozet": "İdil-Ural Müslümanları arasında içtihat kapısının açık olduğunu savunan ilk ıslahatçı âlimlerden. Buhara'daki kelam anlayışını eleştirdi; fikirleri yarım yüzyıl sonra Şehâbeddin Mercânî tarafından savunularak Tatar yenilikçiliğinin (cedîdcilik) temellerinden oldu.",
+    "katkilar": [
+      "Taklidi eleştirip doğrudan Kur'an ve sünnete dönüşü savundu.",
+      "Tatar dinî ıslahat düşüncesinin öncüsü oldu."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kursâvî",
+        "url": "https://islamansiklopedisi.org.tr/kursavi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mercani",
+    "ad": "Şehabettin Mercani",
+    "ad_akademik": "Şehâbeddin Mercânî",
+    "tam_ad": "Şehâbeddin b. Bahâeddin el-Mercânî",
+    "lakap": null,
+    "dogum": 1818,
+    "olum": 1889,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1818-1889.",
+    "koken": "Kazan yakınlarından; Tatar.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Rus İmparatorluğu"
+    ],
+    "hami": [],
+    "alanlar": [
+      "tarih",
+      "din bilimleri",
+      "eğitim"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Taşkışlak (Kazan yakını)",
+        "enlem": 55.6,
+        "boylam": 50.3,
+        "yil_baslangic": 1818,
+        "yil_bitis": 1838,
+        "ne_yapti": "Doğdu, ilk eğitimini aldı."
+      },
+      {
+        "sehir": "Buhara",
+        "enlem": 39.77,
+        "boylam": 64.42,
+        "yil_baslangic": 1838,
+        "yil_bitis": 1849,
+        "ne_yapti": "Buhara ve Semerkant'ta okudu; Kursâvî'nin fikirlerini benimsedi."
+      },
+      {
+        "sehir": "Kazan",
+        "enlem": 55.79,
+        "boylam": 49.12,
+        "yil_baslangic": 1850,
+        "yil_bitis": 1889,
+        "ne_yapti": "İmam ve müderris; Müstefâdü'l-ahbâr'ı yayımladı (1885, 1897-1900)."
+      }
+    ],
+    "ozet": "Kazan Tatarlarının en büyük âlim ve tarihçilerinden. Kursâvî'nin görüşlerini savunan eserleri ve Kazan'daki medresesiyle cedîdçi ıslahat hareketinin öncüsü oldu. Müstefâdü'l-ahbâr fî ahvâli Kazan ve Bulgar, İdil-Bulgar ve Kazan tarihini anlatan temel eserdir.",
+    "katkilar": [
+      "Müstefâdü'l-ahbâr ile Tatar tarih yazıcılığını başlattı.",
+      "Tenbîhü ebnâi'l-asr ile Kursâvî'nin görüşlerini savundu.",
+      "Medrese eğitimine tarih ve Rusça gibi dersleri eklemeyi savundu."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mercânî",
+        "url": "https://islamansiklopedisi.org.tr/mercani"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cedîdcilik",
+        "url": "https://islamansiklopedisi.org.tr/cedidcilik"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kayyum-nasiri",
+    "ad": "Kayyum Nasıri",
+    "ad_akademik": "Kayyûm Nâsırî",
+    "tam_ad": "Abdülkayyûm b. Abdünnâsır en-Nâsırî",
+    "lakap": null,
+    "dogum": 1825,
+    "olum": 1902,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1825-1902.",
+    "koken": "Kazan yakınlarından; Tatar.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Rus İmparatorluğu"
+    ],
+    "hami": [],
+    "alanlar": [
+      "dil",
+      "sözlükçülük",
+      "eğitim",
+      "folklor"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Kazan",
+        "enlem": 55.79,
+        "boylam": 49.12,
+        "yil_baslangic": 1825,
+        "yil_bitis": 1902,
+        "ne_yapti": "Kazan'da okudu ve öğretmenlik yaptı; Tatarca gramer ve sözlükler yayımladı."
+      }
+    ],
+    "ozet": "Modern Tatar edebî dilinin kurucusu sayılan dil bilgini ve eğitimci. Arapça ve Farsça unsurlardan arınmış, halkın konuştuğu Tatarcaya dayanan gramer ve sözlükler hazırladı; en önemlisi Lehçe-i Tatarî (1895-1896) sözlüğüdür.",
+    "katkilar": [
+      "Lehçe-i Tatarî'yi hazırladı.",
+      "Nahiv Kitabı (1860), Enmûzec (1891) ve Kavâid-i Kitâbet (1892) gibi gramerler yazdı.",
+      "Tatar halk edebiyatı ürünlerini derledi."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kayyûm Nâsırî",
+        "url": "https://islamansiklopedisi.org.tr/kayyum-nasiri"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kazim-bey",
+    "ad": "Mirza Kazım Bey",
+    "ad_akademik": "Mîrzâ Kâzım Bey",
+    "tam_ad": "Mîrzâ Muhammed Ali Kâzım Bey",
+    "lakap": null,
+    "dogum": 1802,
+    "olum": 1870,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1802-1870.",
+    "koken": "Reşt doğumlu, Derbentli bir aileden; Azerbaycan Türkü.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Rus İmparatorluğu"
+    ],
+    "hami": [],
+    "alanlar": [
+      "dil",
+      "doğu bilimi",
+      "tarih"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Kazan",
+        "enlem": 55.79,
+        "boylam": 49.12,
+        "yil_baslangic": 1826,
+        "yil_bitis": 1849,
+        "ne_yapti": "Kazan Üniversitesi'nde Doğu dilleri okuttu; Türk-Tatar gramerini yayımladı (1839)."
+      },
+      {
+        "sehir": "Petersburg",
+        "enlem": 59.94,
+        "boylam": 30.31,
+        "yil_baslangic": 1849,
+        "yil_bitis": 1870,
+        "ne_yapti": "Doğu Dilleri Fakültesi'nin kuruluşunda yer aldı ve dekanı oldu; Derbendnâme'yi yayımladı (1851).",
+        "bolge_disi": true
+      }
+    ],
+    "ozet": "Rusya'da Türkoloji ve Doğu bilimlerinin kurucularından. Kazan Üniversitesi'nde çeyrek yüzyıl ders verdi; Rusça yazdığı Türk-Tatar Dilinin Grameri (1839) Almancaya da çevrilerek (1848) Avrupa'da Türkoloji'nin temel kitaplarından oldu.",
+    "katkilar": [
+      "Türk-Tatar Dilinin Grameri'ni yazdı.",
+      "Derbendnâme'yi yayımlayıp İngilizceye çevirdi (1851).",
+      "Petersburg Doğu Dilleri Fakültesi'nin ilk dekanı oldu."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mîrzâ Kâzım Bey",
+        "url": "https://islamansiklopedisi.org.tr/mirza-kazim-bey"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "koken",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "gaspirali",
+    "ad": "İsmail Gaspıralı",
+    "ad_akademik": "Gaspıralı İsmâil Bey",
+    "tam_ad": "İsmâil Bey Gaspıralı (Gasprinski)",
+    "lakap": null,
+    "dogum": 1851,
+    "olum": 1914,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 21 Mart 1851'de Bahçesaray yakınındaki Avcıköy'de doğdu; 24 Eylül 1914'te öldü.",
+    "koken": "Kırım Tatarı.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Rus İmparatorluğu"
+    ],
+    "hami": [],
+    "alanlar": [
+      "gazetecilik",
+      "eğitim",
+      "siyaset"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Bahçesaray",
+        "enlem": 44.75,
+        "boylam": 33.86,
+        "yil_baslangic": 1851,
+        "yil_bitis": 1864,
+        "ne_yapti": "Doğdu (Avcıköy)."
+      },
+      {
+        "sehir": "Moskova",
+        "enlem": 55.76,
+        "boylam": 37.62,
+        "yil_baslangic": 1864,
+        "yil_bitis": 1867,
+        "ne_yapti": "Askerî okulda okudu.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "Paris",
+        "enlem": 48.86,
+        "boylam": 2.35,
+        "yil_baslangic": 1871,
+        "yil_bitis": 1874,
+        "ne_yapti": "Avrupa'da bulundu.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1874,
+        "yil_bitis": 1875,
+        "ne_yapti": "Osmanlı başkentini tanıdı."
+      },
+      {
+        "sehir": "Bahçesaray",
+        "enlem": 44.75,
+        "boylam": 33.86,
+        "yil_baslangic": 1878,
+        "yil_bitis": 1914,
+        "ne_yapti": "Belediye başkanlığı; Tercüman'ı çıkardı (1883); usûl-i cedîd mektebini açtı (1884)."
+      }
+    ],
+    "ozet": "Rusya Müslümanları arasında cedîdcilik hareketinin önderi. 'Dilde, fikirde, işte birlik' şiarıyla Bahçesaray'da çıkardığı Tercüman (1883), Kırım'dan Kazan'a ve Türkistan'a ortak bir Türk yazı dili yaymayı amaçladı. Usûl-i cedîd mektepleriyle eğitimde ses usulünü yaygınlaştırdı.",
+    "katkilar": [
+      "Tercüman gazetesini çıkardı (22 Nisan 1883).",
+      "Usûl-i cedîd mektebini açtı (1884).",
+      "Ortak Türk yazı dili fikrini savundu."
+    ],
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Gaspıralı, İsmâil Bey",
+        "url": "https://islamansiklopedisi.org.tr/gaspirali-ismail-bey"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tercüman",
+        "url": "https://islamansiklopedisi.org.tr/tercuman--gazete"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cedîdcilik",
+        "url": "https://islamansiklopedisi.org.tr/cedidcilik"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "vakif",
+    "ad": "Molla Penah Vakıf",
+    "ad_akademik": "Molla Penâh Vâkıf",
+    "tam_ad": "Molla Penâh Vâkıf",
+    "lakap": null,
+    "dogum": 1717,
+    "olum": 1797,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1717'de Kıraksalahlı'da (Kazak bölgesi) doğdu; 1797'de Şuşa'da öldürüldü.",
+    "koken": "Azerbaycan Türkü.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Karabağ Hanlığı"
+    ],
+    "hami": [
+      "Karabağ Hanı İbrahim Halil Han"
+    ],
+    "alanlar": [
+      "edebiyat",
+      "siyaset"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Gazah",
+        "enlem": 41.09,
+        "boylam": 45.37,
+        "yil_baslangic": 1717,
+        "yil_bitis": 1757,
+        "ne_yapti": "Doğdu, yetişti."
+      },
+      {
+        "sehir": "Şuşa",
+        "enlem": 39.76,
+        "boylam": 46.75,
+        "yil_baslangic": 1757,
+        "yil_bitis": 1797,
+        "ne_yapti": "Karabağ hanının veziri; 1795 Şuşa savunmasında bulundu; Cevanşir taraftarlarınca öldürüldü."
+      }
+    ],
+    "ozet": "Azerbaycan halk şiiri ölçüleri olan koşma ve gerayllıyı yazılı edebiyata taşıyan şair ve Karabağ Hanlığı veziri. Sade dili ve yaşama sevinciyle Azerbaycan edebiyatında yeni bir dönemi başlattı; dostu Vidâdî ile şiirleşmeleri meşhurdur.",
+    "katkilar": [
+      "Âşık tarzı şiiri divan geleneğine karşı öne çıkardı.",
+      "Karabağ Hanlığı'nın siyasetinde 27 yıl vezir olarak etkili oldu."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Vâkıf, Molla Penâh",
+        "url": "https://islamansiklopedisi.org.tr/vakif-molla-penah"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Vidâdî",
+        "url": "https://islamansiklopedisi.org.tr/vidadi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false,
+    "devlet_notu": "Kaçar ve Rus nüfuzu arasındaki Karabağ Hanlığı'nın veziri."
+  },
+  {
+    "id": "ahundzade",
+    "ad": "Mirza Fetali Ahundzade",
+    "ad_akademik": "Mîrzâ Feth Ali Ahundzâde",
+    "tam_ad": "Mîrzâ Feth Ali Ahundzâde (Ahundov)",
+    "lakap": null,
+    "dogum": 1812,
+    "olum": 1878,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: otobiyografisine göre 1812'de Şeki'de (Nuha) doğdu (1811 ve 1814 de verilir); 10 Mart 1878'de Tiflis'te öldü.",
+    "koken": "Azerbaycan Türkü.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Rus İmparatorluğu"
+    ],
+    "hami": [],
+    "alanlar": [
+      "edebiyat",
+      "tiyatro",
+      "dil",
+      "felsefe"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Şeki (Nuha)",
+        "enlem": 41.2,
+        "boylam": 47.17,
+        "yil_baslangic": 1812,
+        "yil_bitis": 1834,
+        "ne_yapti": "Doğdu; Gence'de okudu."
+      },
+      {
+        "sehir": "Tiflis",
+        "enlem": 41.72,
+        "boylam": 44.79,
+        "yil_baslangic": 1834,
+        "yil_bitis": 1878,
+        "ne_yapti": "Kafkasya genel valiliğinde Doğu dilleri tercümanı; altı komedisini (1850-1855) yazdı; öldü."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1863,
+        "yil_bitis": 1863,
+        "ne_yapti": "Alfabe ıslahı projesini Osmanlı Cemiyyet-i İlmiyyesi'ne sundu."
+      }
+    ],
+    "ozet": "Azerbaycan ve Türk dünyasında modern tiyatronun kurucusu. 1850-1855 arasında Batı tekniğiyle yazdığı altı komedi ve bir hikâye, Temsîlât adıyla toplandı. Arap harflerinin ıslahını, sonra Latin esaslı bir alfabeyi savundu.",
+    "katkilar": [
+      "Türk dünyasının ilk Batılı tarzda komedilerini yazdı.",
+      "Alfabe ıslahı projesini Osmanlı'ya sundu (1863).",
+      "Aldanmış Kevâkib ile ilk Azerbaycan hikâyelerinden birini yazdı."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahundzâde, Mirza Feth Ali",
+        "url": "https://islamansiklopedisi.org.tr/ahundzade-mirza-feth-ali"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar",
+      "katkilar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "zerdabi",
+    "ad": "Hasan Bey Zerdabi",
+    "ad_akademik": "Hasanbey Melikzâde Zerdâbî",
+    "tam_ad": "Hasan Bey Melikzâde Zerdâbî",
+    "lakap": null,
+    "dogum": 1842,
+    "olum": 1907,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1842-1907.",
+    "koken": "Zerdablı; Azerbaycan Türkü.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Rus İmparatorluğu"
+    ],
+    "hami": [],
+    "alanlar": [
+      "gazetecilik",
+      "eğitim"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Zerdab",
+        "enlem": 40.22,
+        "boylam": 47.71,
+        "yil_baslangic": 1842,
+        "yil_bitis": 1861,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "Moskova",
+        "enlem": 55.76,
+        "boylam": 37.62,
+        "yil_baslangic": 1861,
+        "yil_bitis": 1865,
+        "ne_yapti": "Üniversitede doğa bilimleri okudu.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "Bakü",
+        "enlem": 40.41,
+        "boylam": 49.87,
+        "yil_baslangic": 1869,
+        "yil_bitis": 1877,
+        "ne_yapti": "Öğretmenlik; 1873'te Ahundzâde'nin komedisini sahneledi; Ekinci'yi çıkardı (1875-1877)."
+      },
+      {
+        "sehir": "İstanbul",
+        "enlem": 41.01,
+        "boylam": 28.97,
+        "yil_baslangic": 1874,
+        "yil_bitis": 1874,
+        "ne_yapti": "Gazete için harf temin etti."
+      }
+    ],
+    "ozet": "Rusya'daki ilk Türkçe gazete Ekinci'nin (Bakü, 3 Ağustos 1875) kurucusu. Gazete ayda iki kez yaklaşık 400 nüsha çıktı; 1877-78 Osmanlı-Rus savaşında Türkiye lehine yayın yaptığı için kapatıldı. 1873'te Bakü'de Ahundzâde'nin bir komedisini sahneleyerek Azerbaycan tiyatrosunu başlattı.",
+    "katkilar": [
+      "Ekinci gazetesini çıkardı (1875-1877).",
+      "Bakü'de ilk Azerbaycan Türkçesi temsilini sahneledi (1873)."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hasanbey Melikzâde Zerdâbî",
+        "url": "https://islamansiklopedisi.org.tr/hasanbey-melikzade-zerdabi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mahtumkulu",
+    "ad": "Mahtumkulu",
+    "ad_akademik": "Mahtumkulu",
+    "tam_ad": "Mahtumkulu Firâgī",
+    "lakap": "Firâgī (mahlas)",
+    "dogum": 1733,
+    "olum": null,
+    "tarih_kesinligi": "tartışmalı",
+    "tarih_notu": "TDV: 1146/1733'te Hacıgovşan'da doğdu; 1197/1783'ten sonra öldü.",
+    "koken": "Türkmen (Gökleň boyu); babası şair Dövletmemmet Âzâdî.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Türkmen boyları"
+    ],
+    "hami": [],
+    "alanlar": [
+      "edebiyat",
+      "tasavvuf"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Hacıgovşan (Etrek-Gürgen)",
+        "enlem": 37.55,
+        "boylam": 55.1,
+        "yil_baslangic": 1733,
+        "yil_bitis": 1753,
+        "ne_yapti": "Doğdu; babasından okudu."
+      },
+      {
+        "sehir": "Buhara",
+        "enlem": 39.77,
+        "boylam": 64.42,
+        "yil_baslangic": 1753,
+        "yil_bitis": 1756,
+        "ne_yapti": "Medrese eğitimi."
+      },
+      {
+        "sehir": "Hîve",
+        "enlem": 41.38,
+        "boylam": 60.36,
+        "yil_baslangic": 1756,
+        "yil_bitis": 1760,
+        "ne_yapti": "Şirgazi Medresesi'nde okudu."
+      },
+      {
+        "sehir": "Hacıgovşan (Etrek-Gürgen)",
+        "enlem": 37.55,
+        "boylam": 55.1,
+        "yil_baslangic": 1760,
+        "yil_bitis": 1783,
+        "ne_yapti": "Türkmen boyları arasında yaşadı, şiirlerini yazdı."
+      }
+    ],
+    "ozet": "Türkmen edebiyatının en büyük şairi. Halk şiiri ölçüleri ve sade bir dille Türkmen boylarının birliğini, ahlak ve tasavvuf konularını işledi. Firâgī mahlasını kullandı; yaklaşık 500 şiirden oluşan divanı Türkmenler arasında bugün de yaygın olarak okunur.",
+    "katkilar": [
+      "Türkmen yazı dilini halk diline yaklaştırdı.",
+      "Türkmen boylarının birliği çağrısını şiirine taşıdı."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mahtumkulu",
+        "url": "https://islamansiklopedisi.org.tr/mahtumkulu"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "koken",
+      "duraklar"
+    ],
+    "dogrulanamadi": false,
+    "devlet_notu": "Etrek-Gürgen bölgesinde, İran ile Hive arasında yaşayan Türkmen boyları arasında."
+  },
+  {
+    "id": "munis",
+    "ad": "Munis",
+    "ad_akademik": "Mûnis",
+    "tam_ad": "Şîr Muhammed Mûnis Hârezmî",
+    "lakap": null,
+    "dogum": 1778,
+    "olum": 1829,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: ö. 1829. Doğum (1778) genel bilgiye dayanır.",
+    "koken": "Harezmli; Türk (Özbek).",
+    "koken_tartismali": false,
+    "devletler": [
+      "Hive Hanlığı"
+    ],
+    "hami": [
+      "Hive hanı Muhammed Rahim Han"
+    ],
+    "alanlar": [
+      "tarih",
+      "edebiyat"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Hîve",
+        "enlem": 41.38,
+        "boylam": 60.36,
+        "yil_baslangic": 1778,
+        "yil_bitis": 1829,
+        "ne_yapti": "Saray kâtibi ve mirab; Hive hanlarının tarihini yazmaya başladı."
+      }
+    ],
+    "ozet": "Hive Hanlığı'nın tarihçi ve şairi. Muhammed Rahim Han'ın isteğiyle Çağatay Türkçesiyle yazmaya başladığı Firdevsü'l-ikbâl, Harezm tarihinin temel kaynağıdır. Eser ölümünden sonra yeğeni ve öğrencisi Âgehî tarafından tamamlandı.",
+    "katkilar": [
+      "Firdevsü'l-ikbâl'i başlattı.",
+      "Çağatay Türkçesiyle divan şiiri yazdı."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mûnis",
+        "url": "https://islamansiklopedisi.org.tr/munis"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dogum",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "agehi",
+    "ad": "Agehi",
+    "ad_akademik": "Âgehî",
+    "tam_ad": "Muhammed Rızâ Mirab Âgehî",
+    "lakap": null,
+    "dogum": 1809,
+    "olum": 1874,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1809-1874.",
+    "koken": "Harezmli; Türk (Özbek).",
+    "koken_tartismali": false,
+    "devletler": [
+      "Hive Hanlığı"
+    ],
+    "hami": [
+      "Hive hanları"
+    ],
+    "alanlar": [
+      "tarih",
+      "edebiyat",
+      "tercüme"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Hîve",
+        "enlem": 41.38,
+        "boylam": 60.36,
+        "yil_baslangic": 1809,
+        "yil_bitis": 1874,
+        "ne_yapti": "1839'da Firdevsü'l-ikbâl'i tamamlamakla görevlendirildi; 1872'ye kadarki olayları yazdı."
+      }
+    ],
+    "ozet": "Mûnis'in yeğeni ve öğrencisi; Hive Hanlığı'nın son büyük tarihçi ve şairi. Firdevsü'l-ikbâl'i tamamladıktan sonra Hive tarihini 1872 Rus işgaline kadar sürdüren eserler yazdı ve Farsçadan birçok çeviri yaptı.",
+    "katkilar": [
+      "Firdevsü'l-ikbâl'i tamamladı.",
+      "Hive tarihini 1872'ye kadar kaydetti."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Âgehî, Muhammed Rızâ",
+        "url": "https://islamansiklopedisi.org.tr/agehi-muhammed-riza"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "velihanov",
+    "ad": "Çokan Velihanov",
+    "ad_akademik": "Çokan Velihanov",
+    "tam_ad": "Muhammed Hanefi (Çokan) Velihanov",
+    "lakap": null,
+    "dogum": 1835,
+    "olum": 1865,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1865'te 29 yaşında öldü; doğum buna göre 1835.",
+    "koken": "Kazak; Orta Cüz hanlarının soyundan.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Rus İmparatorluğu"
+    ],
+    "hami": [],
+    "alanlar": [
+      "etnografya",
+      "tarih",
+      "folklor",
+      "seyahat"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Kostanay (Küntiymes)",
+        "enlem": 53.21,
+        "boylam": 63.62,
+        "yil_baslangic": 1835,
+        "yil_bitis": 1847,
+        "ne_yapti": "Doğdu."
+      },
+      {
+        "sehir": "Omsk",
+        "enlem": 54.99,
+        "boylam": 73.37,
+        "yil_baslangic": 1847,
+        "yil_bitis": 1853,
+        "ne_yapti": "Sibirya Kadet Kolordusu'nda okudu."
+      },
+      {
+        "sehir": "Kâşgar",
+        "enlem": 39.47,
+        "boylam": 75.99,
+        "yil_baslangic": 1858,
+        "yil_bitis": 1859,
+        "ne_yapti": "Gizli bir seferle Kâşgar'a gitti; bölgeyi inceledi."
+      },
+      {
+        "sehir": "Petersburg",
+        "enlem": 59.94,
+        "boylam": 30.31,
+        "yil_baslangic": 1859,
+        "yil_bitis": 1861,
+        "ne_yapti": "Rus Coğrafya Cemiyeti çevresinde çalıştı.",
+        "bolge_disi": true
+      },
+      {
+        "sehir": "Kostanay (Küntiymes)",
+        "enlem": 53.21,
+        "boylam": 63.62,
+        "yil_baslangic": 1861,
+        "yil_bitis": 1865,
+        "ne_yapti": "Bozkıra döndü; öldü."
+      }
+    ],
+    "ozet": "Kazak bilim adamı, etnograf ve gezgin. 1858-59'da gizlice gittiği Kâşgar hakkındaki raporları Doğu Türkistan'ı Avrupa'ya tanıttı. Manas destanının bir bölümünü derleyip 1861'de Rusçaya çevirerek yayımlayan ilk araştırmacıdır.",
+    "katkilar": [
+      "Manas destanından bir bölümü derleyip Rusçaya çevirdi.",
+      "Doğu Türkistan ve Kazak bozkırı üzerine etnografik çalışmalar yaptı."
+    ],
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Velihanov, Çokan",
+        "url": "https://islamansiklopedisi.org.tr/velihanov-cokan"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "koken",
+      "duraklar"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "abay",
+    "ad": "Abay Kunanbayev",
+    "ad_akademik": "Abay Kunanbayev",
+    "tam_ad": "İbrahim (Abay) Kunanbayulı",
+    "lakap": null,
+    "dogum": 1845,
+    "olum": 1904,
+    "tarih_kesinligi": "kesin",
+    "tarih_notu": "TDV: 1845'te doğdu; 6 Temmuz 1904'te Semey bölgesinde öldü.",
+    "koken": "Kazak; Orta Cüz Tobıktı boyundan.",
+    "koken_tartismali": false,
+    "devletler": [
+      "Rus İmparatorluğu"
+    ],
+    "hami": [],
+    "alanlar": [
+      "edebiyat",
+      "felsefe",
+      "tercüme"
+    ],
+    "duraklar": [
+      {
+        "sehir": "Semey (Semipalatinsk)",
+        "enlem": 50.41,
+        "boylam": 80.23,
+        "yil_baslangic": 1845,
+        "yil_bitis": 1904,
+        "ne_yapti": "Doğdu; Semey'de medresede ve Rus okulunda okudu; şiirlerini ve Kara Sözler'i yazdı."
+      }
+    ],
+    "ozet": "Modern Kazak yazılı edebiyatının kurucusu sayılan şair ve düşünür. 1886'dan itibaren şiirlerini kendi adıyla yayımladı; 1890-1898 arasında yazdığı 45 kısa yazıdan oluşan Kara Sözler (Gaklia), Kazak toplumuna yönelik ahlaki ve felsefi öğütler içerir.",
+    "katkilar": [
+      "Kara Sözler ile Kazak düzyazısında düşünce yazısının öncüsü oldu.",
+      "TDV: Krılov'un manzum hikâyelerinden ve Puşkin'in Evgeni Onegin'inden bir kısmını Kazakçaya çevirdi; bu çevirilere yaptığı besteler halk arasında yayıldı.",
+      "Nizâmî, Nevâî, Fuzûlî ve Sa'dî gibi Doğu klasiklerini okuyarak yetişti."
+    ],
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kunanbayev, Abay",
+        "url": "https://islamansiklopedisi.org.tr/kunanbayev-abay"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "koken"
     ],
     "dogrulanamadi": false
   }

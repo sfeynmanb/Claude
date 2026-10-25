@@ -10,6 +10,14 @@
 - **Zaman çizelgesi**, **sınav kartları**, **arama** ve **detay paneli** çevrimdışı da çalışır.
 - Harita altlığı (Natural Earth kıyı çizgileri) dosyaya gömülüdür. İsterseniz "İnternet altlığı" kutusuyla CARTO/OSM karolarını açabilirsiniz.
 
+### Site olarak yayınlama
+
+```bash
+python3 scripts/build.py --artifact site.html
+```
+
+Bu komut, claude.ai Artifact olarak yayınlanabilecek bir sürüm üretir. Bu sürümde Leaflet stili sayfaya gömülüdür, çünkü platform harici stil dosyasına izin vermiyor. Aynı nedenle harita karoları da engelli olduğundan "İnternet altlığı" seçeneği bu sürümde yoktur. Depodaki `index.html` ise olduğu gibi herhangi bir statik barındırmaya (örneğin GitHub Pages) konabilir.
+
 ## Görünümler
 
 | Sekme | Ne gösterir |

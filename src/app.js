@@ -355,8 +355,11 @@
     map.attributionControl.addAttribution("Kıyılar: Natural Earth");
     cityLayer = L.layerGroup().addTo(map);
     routeLayer = L.layerGroup().addTo(map);
-    $("#tiles").addEventListener("change", (e) => { setTiles(e.target.checked); store.set("atlas.tiles", e.target.checked); });
-    if (store.get("atlas.tiles", false)) { $("#tiles").checked = true; setTiles(true); }
+    const tiles = $("#tiles"); // site sürümünde yok (karolar CSP ile engelli)
+    if (tiles) {
+      tiles.addEventListener("change", (e) => { setTiles(e.target.checked); store.set("atlas.tiles", e.target.checked); });
+      if (store.get("atlas.tiles", false)) { tiles.checked = true; setTiles(true); }
+    }
     return true;
   }
   const landStyle = () => ({ fillColor: css("--land"), fillOpacity: 1, color: css("--coast"), weight: 0.7 });
@@ -746,27 +749,40 @@
   }
 
   // ---------- Tema ----------
+  // "auto" modunda sayfayı barındıran ortamın (ör. claude.ai görüntüleyicisi) koyduğu data-theme korunur.
   const THEMES = ["auto", "light", "dark"];
-  function applyTheme(t) {
-    const root = document.documentElement;
-    if (t === "auto") delete root.dataset.theme; else root.dataset.theme = t;
-    const dark = t === "dark" || (t === "auto" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-    root.dataset.resolved = dark ? "dark" : "light";
-    $("#theme-btn").title = `Tema: ${{ auto: "otomatik", light: "açık", dark: "koyu" }[t]}`;
+  const root = document.documentElement;
+  let hostTheme = root.dataset.theme || null;
+  let theme = "auto";
+  const resolve = () => {
+    const eff = theme === "auto" ? hostTheme : theme;
+    return eff === "dark" || (!eff && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  };
+  function setThemeAttrs() {
+    if (theme === "auto") { if (hostTheme) root.dataset.theme = hostTheme; else delete root.dataset.theme; }
+    else root.dataset.theme = theme;
+    root.dataset.resolved = resolve();
+    $("#theme-btn").title = `Tema: ${{ auto: "otomatik", light: "açık", dark: "koyu" }[theme]}`;
+  }
+  function applyTheme() {
+    setThemeAttrs();
     if (landLayer) landLayer.setStyle(landStyle());
     if (tileLayer) setTiles(true);
     netKey = "";
     renderAll();
   }
   function initTheme() {
-    let t = store.get("atlas.theme", "auto");
-    if (!THEMES.includes(t)) t = "auto";
-    $("#theme-btn").addEventListener("click", () => { t = THEMES[(THEMES.indexOf(t) + 1) % 3]; store.set("atlas.theme", t); applyTheme(t); });
-    try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { if (t === "auto") applyTheme(t); }); } catch (e) { /* eski tarayıcı */ }
-    const root = document.documentElement;
-    if (t !== "auto") root.dataset.theme = t;
-    root.dataset.resolved = (t === "dark" || (t === "auto" && window.matchMedia("(prefers-color-scheme: dark)").matches)) ? "dark" : "light";
-    $("#theme-btn").title = `Tema: ${{ auto: "otomatik", light: "açık", dark: "koyu" }[t]}`;
+    theme = store.get("atlas.theme", "auto");
+    if (!THEMES.includes(theme)) theme = "auto";
+    $("#theme-btn").addEventListener("click", () => { theme = THEMES[(THEMES.indexOf(theme) + 1) % 3]; store.set("atlas.theme", theme); applyTheme(); });
+    try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { if (theme === "auto") applyTheme(); }); } catch (e) { /* eski tarayıcı */ }
+    new MutationObserver(() => {
+      // Yalnızca dışarıdan yapılan değişikliği izle (kendi yazdığımız değeri değil).
+      if (theme !== "auto" || root.dataset.theme === (hostTheme || undefined)) return;
+      hostTheme = root.dataset.theme || null;
+      applyTheme();
+    }).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+    setThemeAttrs();
   }
 
   // ---------- Başlat ----------

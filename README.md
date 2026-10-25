@@ -48,9 +48,10 @@ scripts/
   validate.py       veri doğrulama → reports/validation.md
   build.py          index.html üretir
   make_basemap.py   basemap.geojson'u yeniden üretir (normalde gerekmez)
+  network_pdf.py    ilişki ağı PDF'i → reports/iliski-agi.pdf
 src/                template.html, style.css, app.js
 tests/smoke.mjs     Playwright duman testi
-reports/validation.md
+reports/validation.md, reports/iliski-agi.pdf
 index.html          derlenmiş çıktı (bunu açın)
 ```
 
@@ -60,7 +61,18 @@ index.html          derlenmiş çıktı (bunu açın)
 python3 scripts/validate.py   # hata varsa çıkış kodu 1; rapor: reports/validation.md
 python3 scripts/build.py      # index.html'i yeniden üretir
 node tests/smoke.mjs shots/   # Playwright testi (isteğe bağlı ekran görüntüsü klasörü)
+python3 scripts/network_pdf.py   # ilişki ağı PDF'i → reports/iliski-agi.pdf
 ```
+
+`reports/iliski-agi.pdf` ilişki ağının basılabilir, tam dökümüdür (26 sayfa, vektörel şekiller, yer imleri). İçeriği:
+- Kronolojik ağ (A3) ve kişi-eser tam ağı (A2)
+- Her ilişki türü için ayrı katmanlı ağ
+- 106 ilişkinin notları ve teyit durumuyla tam listesi
+- Kişi bazında bağlantı dizini
+- Merkezîlik ölçüleri ve bağlı bileşenler
+- Yazar–eser listesi
+
+Üretmek için `pip install networkx scipy matplotlib reportlab pypdf` gerekir.
 
 Test, sayfayı Chromium'da açar. Dört görünümü, aramayı, filtreyi, testi ve 390 px genişlikte yatay kaydırma olmadığını kontrol eder; konsolda hata olmamalıdır. CDN'e erişimi olmayan bir ortamda, aynı kütüphane sürümleri yerel bir klasörden sunulabilir:
 

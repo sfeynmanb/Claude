@@ -13,16 +13,21 @@ import math
 import sys
 from collections import Counter, defaultdict
 from datetime import date
+from functools import lru_cache
 from pathlib import Path
 
 import matplotlib
 
 matplotlib.use("Agg")
+import matplotlib.patheffects as pe  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.text as mtext  # noqa: E402
 import networkx as nx  # noqa: E402
+import numpy as np  # noqa: E402
 from matplotlib.backends.backend_pdf import PdfPages  # noqa: E402
-from matplotlib.lines import Line2D  # noqa: E402
-from matplotlib.patches import FancyArrowPatch  # noqa: E402
+from matplotlib.font_manager import FontProperties  # noqa: E402
+from matplotlib.patches import FancyArrowPatch, Rectangle  # noqa: E402
+from matplotlib.textpath import TextToPath  # noqa: E402
 from pypdf import PdfReader, PdfWriter  # noqa: E402
 from reportlab.lib import colors  # noqa: E402
 from reportlab.lib.enums import TA_LEFT  # noqa: E402
@@ -152,169 +157,278 @@ MM = 1 / 25.4
 INK, MUTED, GRID = "#1f2328", "#6b645a", "#e4ded3"
 
 
-def legend_handles(include_auth=False):
-    hs = [Line2D([0], [0], color=c, lw=2, label=lab) for t, c, lab in TYPES]
-    if include_auth:
-        hs.append(Line2D([0], [0], color=AUTH_COL, lw=1, ls="--", label="Yazar → eser"))
-    hs.append(Line2D([0], [0], color=MUTED, lw=1.2, ls=(0, (2, 2)), label="Kesikli: kaynakla teyit edilemedi"))
-    return hs
+# Bütün şekiller milimetre koordinatında çizilir (eksen = sayfanın tamamı, y aşağı doğru artar).
+# Etiket genişlikleri yazı tipinden ölçülür; her şekil kaydedilmeden önce metin çakışmaları denetlenir.
+_TTP = TextToPath()
+PT_MM = 25.4 / 72
+FS_P, FS_W = 7.0, 6.2  # kişi ve eser etiketlerinin punto büyüklüğü
 
 
-def page_title(fig, title, sub):
-    h = fig.get_figheight() / MM
-    fig.text(0.02, 1 - 9 / h, title, fontsize=17, fontweight="bold", color=INK, va="top", family="DejaVu Serif")
-    fig.text(0.02, 1 - 18 / h, sub, fontsize=9, color=MUTED, va="top")
+@lru_cache(maxsize=None)
+def text_mm(s, fs, italic=False, bold=False):
+    """Metnin (genişlik, yükseklik) değeri, mm."""
+    fp = FontProperties(family="DejaVu Sans", size=fs, style="italic" if italic else "normal",
+                        weight="bold" if bold else "normal")
+    w, h, d = _TTP.get_text_width_height_descent(s, fp, ismath=False)
+    return w * PT_MM, (h + d) * PT_MM
 
 
-def fig_chronological(pdf):
-    """Şekil 1: x = yıl, y = devlet grubu şeridi; her kişi ömür çizgisi + orta nokta."""
-    W_, H_ = 594 * MM, 420 * MM
-    fig = plt.figure(figsize=(W_, H_))
-    page_title(fig, "Şekil 1 · Kronolojik ilişki ağı",
-               f"{len(people)} kişinin tamamı, devlet grubuna göre şeritlerde. Yatay çizgi ömrü, nokta ömrün ortasını gösterir. "
-               f"Oklar {len(person_edges)} kişi–kişi ilişkisini gösterir (eser üzerinden kurulan ilişkiler yazarına bağlanmıştır).")
-    ax = fig.add_axes([0.105, 0.10, 0.885, 0.82])
-    t0, t1 = meta["zaman_araligi"]
-    char_years = 3.3  # 6 pt etiket için bir karakterin yıl karşılığı (A2 genişliğinde, deneysel)
-    rows, y = {}, 0
-    lane_spans = []
-    for g in meta["grup_sirasi"]:
-        members = sorted([p for p in people if pgroup(p) == g], key=lambda p: LIFE[p["id"]][0])
-        if not members:
+AUDIT = []  # (şekil adı, çakışma sayısı)
+
+
+def audit(fig, label):
+    """Görünür bütün metinlerin kutularını karşılaştırır; çakışan ve sayfadan taşan metinleri sayar."""
+    fig.canvas.draw()
+    rnd = fig.canvas.get_renderer()
+    page = fig.bbox
+    items = []
+    for t in fig.findobj(mtext.Text):
+        if not t.get_visible() or not t.get_text().strip():
             continue
-        ends = []
-        top = y
-        for p in members:
-            lo, hi = LIFE[p["id"]]
-            need = hi + 6 + len(p["ad"]) * char_years
-            for k, e in enumerate(ends):
-                if e < lo - 4:
-                    ends[k] = need
-                    rows[p["id"]] = top + k
-                    break
-            else:
-                ends.append(need)
-                rows[p["id"]] = top + len(ends) - 1
-        y = top + len(ends)
-        lane_spans.append((g, top, y))
-        y += 0.9
-    total = y
-    for i, (g, a, b) in enumerate(lane_spans):
-        ax.axhspan(a - 0.55, b - 0.45, color=GCOL[g], alpha=0.10, lw=0)
+        bb = t.get_window_extent(rnd)
+        items.append((t.get_text(), bb))
+    bad = []
+    for i in range(len(items)):
+        a, A = items[i]
+        if A.x0 < page.x0 - 0.5 or A.x1 > page.x1 + 0.5 or A.y0 < page.y0 - 0.5 or A.y1 > page.y1 + 0.5:
+            bad.append((a, "sayfa dışı"))
+        for j in range(i + 1, len(items)):
+            b, B = items[j]
+            ix = min(A.x1, B.x1) - max(A.x0, B.x0)
+            iy = min(A.y1, B.y1) - max(A.y0, B.y0)
+            if ix > 0.5 and iy > 0.5:
+                bad.append((a, b))
+    AUDIT.append((label, len(items), bad))
+    return bad
+
+
+def page_fig(W_, H_):
+    fig = plt.figure(figsize=(W_ * MM, H_ * MM))
+    ax = fig.add_axes([0, 0, 1, 1])
+    ax.set_xlim(0, W_)
+    ax.set_ylim(H_, 0)
+    ax.set_axis_off()
+    return fig, ax
+
+
+def title_block(ax, W_, title, sub, side=12):
+    """Başlık ve alt yazı; alt yazı sayfa genişliğine göre satırlara bölünür. Döndürür: içeriğin başlayacağı y (mm)."""
+    ax.text(side, 9, title, fontsize=17, fontweight="bold", color=INK, va="top", family="DejaVu Serif")
+    lines, cur = [], ""
+    for word in sub.split():
+        cand = (cur + " " + word).strip()
+        if text_mm(cand, 9)[0] > W_ - 2 * side and cur:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = cand
+    lines.append(cur)
+    y = 19
+    for ln in lines:
+        ax.text(side, y, ln, fontsize=9, color=MUTED, va="top")
+        y += 4.4
+    return y + 3
+
+
+HALO = [pe.withStroke(linewidth=2.2, foreground="white")]
+
+
+def legend_rows(ax, x, y, items, maxw, fs=7.5):
+    """Göstergeyi elle çizer (çizgi örneği + metin), satıra sığmayanı alta alır. Döndürür: bitiş y."""
+    cx = x
+    for col, ls, lw, lab in items:
+        w = 9 + text_mm(lab, fs)[0] + 6
+        if cx + w > x + maxw and cx > x:
+            cx, y = x, y + 4.6
+        ax.plot([cx, cx + 7], [y, y], color=col, lw=lw, ls=ls, solid_capstyle="butt")
+        ax.text(cx + 9, y, lab, fontsize=fs, va="center", color=INK)
+        cx += w
+    return y + 3
+
+
+def type_legend_items(include_auth=False):
+    it = [(c, "-", 2, lab) for _, c, lab in TYPES]
+    if include_auth:
+        it.append((AUTH_COL, "--", 1, "Yazar → eser"))
+    it.append((MUTED, (0, (2, 2)), 1.2, "Kesikli: kaynakla teyit edilemedi"))
+    return it
+
+
+# ---------------------------------------------------------------- Şekil 1: dönemlere bölünmüş kronolojik ağ
+ERAS = [("1a", "750–1250", -10**6, 1250), ("1b", "1250–1700", 1250, 1700), ("1c", "1700–1920", 1700, 10**6)]
+
+
+def era_of(pid):
+    lo, hi = LIFE[pid]
+    m = (lo + hi) / 2
+    return next(k for k, _, a, b in ERAS if a <= m < b)
+
+
+def fig_chronological(pdf, key, span_label):
+    members = [p for p in people if era_of(p["id"]) == key]
+    ids = {p["id"] for p in members}
+    edges = [e for e in person_edges if e["a"] in ids and e["b"] in ids]
+    for W_, H_ in ((420, 297), (594, 420), (841, 594)):
+        left, right, bottom = 44, 10, 22
+        t0 = min(LIFE[i][0] for i in ids) - 8
+        t1 = max(LIFE[i][1] for i in ids)
+        aw = W_ - left - right
+        lab = {i: text_mm(P[i]["ad"], FS_P) for i in ids}
+        for _ in range(8):  # ölçek, en sağdaki etiket sayfaya sığana kadar
+            s_ = aw / (t1 - t0)
+            need = max(LIFE[i][1] + (2 + lab[i][0] + 2) / s_ for i in ids)
+            if need <= t1 + 0.5:
+                break
+            t1 = need
+        X = lambda yv: left + (yv - t0) * s_  # noqa: E731
+        rows, lanes, nrow = {}, [], 0
+        for g in meta["grup_sirasi"]:
+            ms = sorted([p for p in members if pgroup(p) == g], key=lambda p: LIFE[p["id"]][0])
+            if not ms:
+                continue
+            ends, top = [], nrow
+            for p in ms:
+                lo, hi = LIFE[p["id"]]
+                a0, a1 = X(lo) - 1.5, X(hi) + 2 + lab[p["id"]][0]
+                for k, e in enumerate(ends):
+                    if e + 2.5 < a0:
+                        ends[k] = a1
+                        rows[p["id"]] = top + k
+                        break
+                else:
+                    ends.append(a1)
+                    rows[p["id"]] = top + len(ends) - 1
+            nrow = top + len(ends)
+            lanes.append((g, top, nrow))
+        fig, ax = page_fig(W_, H_)
+        y0 = title_block(ax, W_, f"Şekil {key} · Kronolojik ilişki ağı, {span_label}",
+                         f"Ömrünün ortası bu döneme düşen {len(members)} kişi, devlet grubuna göre şeritlerde. Yatay çizgi ömrü, "
+                         f"nokta ömrün ortasını gösterir. Oklar bu sayfadaki kişiler arasındaki {len(edges)} ilişkidir "
+                         f"(eser üzerinden kurulanlar yazarına bağlanır ve kesikli çizilir). Başka dönem sayfasındaki kişilere "
+                         f"uzanan ilişkiler Tablo 1'de listelenir.") + 6
+        lane_gap = 2.6
+        pitch = (H_ - y0 - bottom - lane_gap * len(lanes)) / max(nrow, 1)
+        if pitch >= 4.2:
+            break
+        plt.close(fig)
+    pitch = min(pitch, 7.0)
+    Y, yy = {}, y0
+    lane_box = []
+    for g, a, b in lanes:
+        top = yy
+        for pid, r in rows.items():
+            if a <= r < b:
+                Y[pid] = top + (r - a + 0.5) * pitch
+        yy = top + (b - a) * pitch + lane_gap
+        lane_box.append((g, top, top + (b - a) * pitch))
+    plot_bottom = yy
+    # yıl ızgarası
+    for t in range(int(math.ceil(t0 / 50) * 50), int(t1) + 1, 50):
+        ax.plot([X(t), X(t)], [y0 - 2, plot_bottom], color=GRID, lw=0.6 if t % 100 == 0 else 0.4,
+                ls="-" if t % 100 == 0 else (0, (2, 3)), zorder=0)
+        if t % 100 == 0:
+            ax.text(X(t), y0 - 2.6, str(t), fontsize=7, color=MUTED, ha="center", va="bottom")
+    for g, a, b in lane_box:
+        ax.add_patch(Rectangle((left - 2, a - 0.8), W_ - right - left + 2, b - a + 1.6, color=GCOL[g], alpha=0.09, lw=0, zorder=0))
         if g in DYN:
             d = DYN[g]
-            ax.plot([max(d["baslangic"], t0), min(d["bitis"], t1)], [a - 0.5, a - 0.5], color=GCOL[g], lw=3, alpha=0.8,
-                    solid_capstyle="butt")
-        ax.text(t0 - 8, (a + b - 1) / 2, f"{g}\n({b - a} sıra)" if False else g, ha="right", va="center", fontsize=8,
-                fontweight="bold", color=GCOL[g] if g != "Diğer" else MUTED, family="DejaVu Serif")
+            xa, xb = X(max(d["baslangic"], t0)), X(min(d["bitis"], t1))
+            if xb > xa:
+                ax.plot([xa, xb], [a - 0.8, a - 0.8], color=GCOL[g], lw=2.4, alpha=0.8, solid_capstyle="butt", zorder=1)
+        gl = g if text_mm(g, 8, bold=True)[0] < left - 6 else g.replace(" ", "\n", 1)
+        ax.text(left - 4, (a + b) / 2, gl, ha="right", va="center", fontsize=8, fontweight="bold",
+                color=GCOL[g] if g != "Diğer" else MUTED, family="DejaVu Sans", linespacing=1.0)
     pos = {}
-    for p in people:
-        lo, hi = LIFE[p["id"]]
-        r = rows[p["id"]]
-        mid = (lo + hi) / 2
-        pos[p["id"]] = (mid, r)
+    for pid in ids:
+        lo, hi = LIFE[pid]
+        p = P[pid]
+        pos[pid] = (X((lo + hi) / 2), Y[pid])
         dashed = p["tarih_kesinligi"] != "kesin" or p["dogum"] is None or p["olum"] is None
-        ax.plot([lo, hi], [r, r], color=GCOL[pgroup(p)], lw=2.2, alpha=0.45, solid_capstyle="round",
-                ls=(0, (3, 1.5)) if dashed else "-")
-        ax.text(hi + 4, r, p["ad"], fontsize=6, va="center", color=INK)
-    for e in person_edges:
+        ax.plot([X(lo), X(hi)], [Y[pid], Y[pid]], color=GCOL[pgroup(p)], lw=2.4, alpha=0.5, solid_capstyle="round",
+                ls=(0, (3, 1.5)) if dashed else "-", zorder=2)
+        ax.text(X(hi) + 2, Y[pid], p["ad"], fontsize=FS_P, va="center", ha="left", color=INK, zorder=6, path_effects=HALO)
+    for e in edges:
         (x1, y1), (x2, y2) = pos[e["a"]], pos[e["b"]]
-        rad = 0.25 if x2 >= x1 else -0.25
-        arrow = FancyArrowPatch((x1, y1), (x2, y2), connectionstyle=f"arc3,rad={rad}",
-                                arrowstyle="-" if e["tur"] in UNDIRECTED else "-|>", mutation_scale=7,
-                                color=TCOL[e["tur"]], lw=0.9, alpha=0.75, ls="--" if e["dogrulanamadi"] or e["via"] else "-",
-                                shrinkA=2, shrinkB=2, zorder=3)
-        ax.add_patch(arrow)
-    for p in people:
-        x, r = pos[p["id"]]
-        ax.scatter([x], [r], s=10 + 4 * deg[p["id"]], color=GCOL[pgroup(p)], edgecolor="white", lw=0.5, zorder=4)
-    ax.set_xlim(t0 - 5, t1 + 40)
-    ax.set_ylim(total, -1.2)
-    ax.set_yticks([])
-    ax.set_xticks(range(800, t1 + 1, 50), [str(t) if t % 100 == 0 else "" for t in range(800, t1 + 1, 50)], fontsize=8, color=MUTED)
-    ax.grid(axis="x", color=GRID, lw=0.6)
-    for s in ("top", "right", "left"):
-        ax.spines[s].set_visible(False)
-    ax.spines["bottom"].set_color(GRID)
-    leg = fig.legend(handles=legend_handles() + [Line2D([0], [0], color=MUTED, lw=2, ls=(0, (3, 1.5)), alpha=0.6,
-                                                        label="Kesikli ömür: yaklaşık/tartışmalı ya da tahmini")],
-                     loc="lower left", bbox_to_anchor=(0.105, 0.032), ncol=5, fontsize=7.5, frameon=False)
-    for t in leg.get_texts():
-        t.set_color(INK)
-    fig.text(0.99, 0.045, "Nokta büyüklüğü = kişinin toplam ilişki sayısı (derece)", ha="right", fontsize=7, color=MUTED)
+        rad = 0.3 if x2 >= x1 else -0.3
+        ax.add_patch(FancyArrowPatch((x1, y1), (x2, y2), connectionstyle=f"arc3,rad={rad}",
+                                     arrowstyle="-" if e["tur"] in UNDIRECTED else "-|>", mutation_scale=8,
+                                     color=TCOL[e["tur"]], lw=0.9, alpha=0.8, ls="--" if e["dogrulanamadi"] or e["via"] else "-",
+                                     shrinkA=2, shrinkB=2, zorder=3))
+    for pid in ids:
+        x, y = pos[pid]
+        ax.scatter([x], [y], s=10 + 4 * deg[pid], color=GCOL[pgroup(P[pid])], edgecolor="white", lw=0.5, zorder=4)
+    items = type_legend_items() + [(MUTED, (0, (3, 1.5)), 2, "Kesikli ömür: yaklaşık, tartışmalı ya da tahmini")]
+    ly = legend_rows(ax, left, H_ - bottom + 6, items, W_ - left - right - 70)
+    ax.text(W_ - right, H_ - bottom + 6, "Nokta büyüklüğü = toplam ilişki sayısı", ha="right", va="center", fontsize=7, color=MUTED)
+    del ly
+    audit(fig, f"Şekil {key}")
     pdf.savefig(fig)
     plt.close(fig)
 
 
-CHAR_MM = 1.42  # 7 pt DejaVu Sans için ortalama karakter genişliği (mm)
+def cross_era_edges():
+    out = []
+    for e in person_edges:
+        ea, eb = era_of(e["a"]), era_of(e["b"])
+        if ea != eb:
+            out.append((e, ea, eb))
+    return out
 
 
-def label_of(n):
-    return P[n]["ad"] if n in P else W[n]["ad_sade"]
+# ---------------------------------------------------------------- düğüm-etiket kutuları ve çakışma giderme
+def node_box(n):
+    """Düğüm noktasına göre etiket kutusu: (x0, x1, y0, y1) mm. Etiket düğümün altına ortalanır."""
+    if n in P:
+        w, h = text_mm(P[n]["ad"], FS_P)
+        r = 1.6
+    else:
+        w, h = text_mm(W[n]["ad_sade"], FS_W, italic=True)
+        r = 1.2
+    hw = max(w / 2, r) + 0.8
+    return (-hw, hw, -r - 0.4, r + 0.8 + h + 0.6)
 
 
-def draw_graph(ax, nodes, pos, edges, fs=7.0, rad=0.12):
-    """pos: mm cinsinden (x, y); y aşağı doğru artar."""
-    k = fs / 7.0
-    for (a, b, d) in edges:
-        t = d["tur"]
-        col = AUTH_COL if t == "yazdı" else TCOL[t]
-        ax.add_patch(FancyArrowPatch(pos[a], pos[b], connectionstyle=f"arc3,rad={rad}",
-                                     arrowstyle="-" if t in UNDIRECTED or t == "yazdı" else "-|>", mutation_scale=8 * k,
-                                     color=col, lw=0.5 if t == "yazdı" else 1.1, alpha=0.6 if t == "yazdı" else 0.9,
-                                     ls="--" if (t == "yazdı" or d.get("dog")) else "-", shrinkA=3.5 * k, shrinkB=3.5 * k, zorder=2))
-    for n in nodes:
-        x, y = pos[n]
-        if n in P:
-            ax.scatter([x], [y], s=(18 + 5 * deg[n]) * k, color=GCOL[pgroup(P[n])], edgecolor="white", lw=0.6, zorder=3)
-            ax.text(x, y + 1.6 * k, P[n]["ad"], fontsize=fs, ha="center", va="top", color=INK, zorder=4,
-                    bbox=dict(boxstyle="round,pad=0.1", fc="white", ec="none", alpha=0.75))
-        else:
-            ax.scatter([x], [y], s=14 * k, marker="D", color="#efe9df", edgecolor=MUTED, lw=0.6, zorder=3)
-            ax.text(x, y + 1.3 * k, W[n]["ad_sade"], fontsize=fs * 0.82, ha="center", va="top", color=MUTED,
-                    style="italic", zorder=4)
-    ax.set_axis_off()
+def declutter(pos, margin=1.4, iters=4000):
+    """Kutular çakışmayana kadar düğümleri en kısa eksende iter (eksenlere hizalı dikdörtgen itmesi)."""
+    ids = list(pos)
+    if len(ids) < 2:
+        return pos
+    xy = np.array([pos[i] for i in ids], dtype=float)
+    bx = np.array([node_box(i) for i in ids])
+    rng = np.random.default_rng(3)
+    for _ in range(iters):
+        x0, x1 = xy[:, 0] + bx[:, 0], xy[:, 0] + bx[:, 1]
+        y0, y1 = xy[:, 1] + bx[:, 2], xy[:, 1] + bx[:, 3]
+        ox = np.minimum(x1[:, None], x1[None, :]) - np.maximum(x0[:, None], x0[None, :]) + margin
+        oy = np.minimum(y1[:, None], y1[None, :]) - np.maximum(y0[:, None], y0[None, :]) + margin
+        hit = (ox > 0) & (oy > 0)
+        np.fill_diagonal(hit, False)
+        if not hit.any():
+            break
+        cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+        dx = cx[:, None] - cx[None, :]
+        dy = cy[:, None] - cy[None, :]
+        dx[dx == 0] = rng.uniform(-0.1, 0.1, size=(dx == 0).sum())
+        dy[dy == 0] = rng.uniform(-0.1, 0.1, size=(dy == 0).sum())
+        alongx = ox < oy * 1.6  # yatay itme tercih edilir (etiketler geniş, alçak)
+        mx = np.where(hit & alongx, np.sign(dx) * ox / 2, 0).sum(axis=1)
+        my = np.where(hit & ~alongx, np.sign(dy) * oy / 2, 0).sum(axis=1)
+        xy[:, 0] += np.clip(mx, -6, 6) * 0.6
+        xy[:, 1] += np.clip(my, -6, 6) * 0.6
+    return {i: tuple(xy[k]) for k, i in enumerate(ids)}
 
 
-def layered(g, fs=7.0):
-    """Bir bileşen için katmanlı yerleşim: kaynaklar üstte. Döndürür: (pos_mm, genişlik, yükseklik)."""
-    cond = nx.condensation(g)
-    depth = {}
-    for c in nx.topological_sort(cond):
-        preds = list(cond.predecessors(c))
-        depth[c] = 1 + max(depth[q] for q in preds) if preds else 0
-    nd = {n: depth[cond.graph["mapping"][n]] for n in g.nodes}
-    layers = defaultdict(list)
-    for n in sorted(g.nodes, key=label_of):
-        layers[nd[n]].append(n)
-    und = g.to_undirected()
-    wid = lambda n: len(label_of(n)) * CHAR_MM * fs / 7.0 + 5  # noqa: E731
-    xs = {}
+def boxes_extent(pos):
+    xs0 = [pos[n][0] + node_box(n)[0] for n in pos]
+    xs1 = [pos[n][0] + node_box(n)[1] for n in pos]
+    ys0 = [pos[n][1] + node_box(n)[2] for n in pos]
+    ys1 = [pos[n][1] + node_box(n)[3] for n in pos]
+    return min(xs0), max(xs1), min(ys0), max(ys1)
 
-    def place():
-        for ns in layers.values():
-            x = 0
-            for n in ns:
-                w = wid(n)
-                xs[n] = x + w / 2
-                x += w + 2
 
-    place()
-    for _ in range(4):  # barisentrik sıralama: kesişmeleri azaltır
-        for L in sorted(layers):
-            ns = layers[L]
-            bc = {n: (sum(xs[m] for m in und.neighbors(n)) / und.degree(n)) if und.degree(n) else xs[n] for n in ns}
-            layers[L] = sorted(ns, key=lambda n: bc[n])
-        place()
-    widths = {L: sum(wid(n) + 2 for n in ns) - 2 for L, ns in layers.items()}
-    W_ = max(widths.values())
-    row = 15 * fs / 7.0
-    pos = {}
-    for L, ns in layers.items():
-        off = (W_ - widths[L]) / 2
-        for n in ns:
-            pos[n] = (xs[n] + off, L * row)
-    return pos, W_, (max(layers) * row) + 6
+def shift_to_origin(pos):
+    x0, x1, y0, y1 = boxes_extent(pos)
+    return {n: (x - x0, y - y0) for n, (x, y) in pos.items()}, x1 - x0, y1 - y0
 
 
 def shelf_pack(boxes, width, gap=8.0):
@@ -329,99 +443,171 @@ def shelf_pack(boxes, width, gap=8.0):
     return out, y + shelf
 
 
+def draw_graph(ax, nodes, pos, edges, rad=0.1):
+    """pos: mm; etiketler düğümün altında, beyaz zeminli; kenarlar altta kalır."""
+    for (a, b, d) in edges:
+        t = d["tur"]
+        col = AUTH_COL if t == "yazdı" else TCOL[t]
+        ax.add_patch(FancyArrowPatch(pos[a], pos[b], connectionstyle=f"arc3,rad={rad}",
+                                     arrowstyle="-" if t in UNDIRECTED or t == "yazdı" else "-|>", mutation_scale=8,
+                                     color=col, lw=0.5 if t == "yazdı" else 1.0, alpha=0.6 if t == "yazdı" else 0.9,
+                                     ls="--" if (t == "yazdı" or d.get("dog")) else "-", shrinkA=2.4, shrinkB=2.4, zorder=2))
+    for n in nodes:
+        x, y = pos[n]
+        if n in P:
+            ax.scatter([x], [y], s=16 + 3 * deg[n], color=GCOL[pgroup(P[n])], edgecolor="white", lw=0.6, zorder=3)
+            ax.text(x, y + 2.0, P[n]["ad"], fontsize=FS_P, ha="center", va="top", color=INK, zorder=5,
+                    bbox=dict(boxstyle="square,pad=0.12", fc="white", ec="none", alpha=0.85))
+        else:
+            ax.scatter([x], [y], s=13, marker="D", color="#efe9df", edgecolor=MUTED, lw=0.6, zorder=3)
+            ax.text(x, y + 1.6, W[n]["ad_sade"], fontsize=FS_W, ha="center", va="top", color=MUTED, style="italic", zorder=5,
+                    bbox=dict(boxstyle="square,pad=0.1", fc="white", ec="none", alpha=0.85))
+
+
+def fill_page(pos, x0, y0, avail_w, avail_h, cap=1.8):
+    """Paketlenmiş yerleşimi kullanılabilir alanı dolduracak biçimde büyütür. Yalnızca konumlar ölçeklenir,
+    yazı boyutu sabit kalır; düğümler birbirinden uzaklaştığı için yeni çakışma oluşmaz."""
+    ex = boxes_extent(pos)
+    w, h = ex[1] - x0, ex[3] - y0
+    f = max(1.0, min(cap, avail_w / max(w, 1), avail_h / max(h, 1)))
+    return {n: (x0 + (x - x0) * f, y0 + (y - y0) * f) for n, (x, y) in pos.items()}
+
+
+def tr_cap(s_):
+    return ("İ" if s_[0] == "i" else s_[0].upper()) + s_[1:]
+
+
+def choose_page(laid, top, side, bottom, gap):
+    for W_, H_ in ((420, 297), (594, 420), (841, 594), (1189, 841)):
+        packed, used = shelf_pack([(i, w, h) for i, _, w, h in laid], W_ - 2 * side, gap=gap)
+        if used <= H_ - top - bottom and max(w for _, _, w, _ in laid) <= W_ - 2 * side:
+            return W_, H_, packed
+    return W_, H_, packed
+
+
+# ---------------------------------------------------------------- Şekil 3–10: ilişki türleri, katmanlı
+def layered(g):
+    """Bir bileşen için katmanlı yerleşim: kaynaklar üstte; etiket genişlikleri ölçülür. Döndürür: pos (mm)."""
+    cond = nx.condensation(g)
+    depth = {}
+    for c in nx.topological_sort(cond):
+        preds = list(cond.predecessors(c))
+        depth[c] = 1 + max(depth[q] for q in preds) if preds else 0
+    nd = {n: depth[cond.graph["mapping"][n]] for n in g.nodes}
+    layers = defaultdict(list)
+    for n in sorted(g.nodes, key=lambda n: name(n)):
+        layers[nd[n]].append(n)
+    und = g.to_undirected()
+    wid = lambda n: node_box(n)[1] - node_box(n)[0]  # noqa: E731
+    xs = {}
+
+    def place():
+        for ns in layers.values():
+            x = 0
+            for n in ns:
+                w = wid(n)
+                xs[n] = x + w / 2
+                x += w + 3
+
+    place()
+    for _ in range(6):  # barisentrik sıralama: kesişmeleri azaltır
+        for L in sorted(layers):
+            ns = layers[L]
+            bc = {n: (sum(xs[m] for m in und.neighbors(n)) / und.degree(n)) if und.degree(n) else xs[n] for n in ns}
+            layers[L] = sorted(ns, key=lambda n: bc[n])
+        place()
+    widths = {L: sum(wid(n) + 3 for n in ns) - 3 for L, ns in layers.items()}
+    Wm = max(widths.values())
+    pos = {}
+    for L, ns in layers.items():
+        off = (Wm - widths[L]) / 2
+        for n in ns:
+            pos[n] = (xs[n] + off, L * 16.0)
+    return pos
+
+
 def fig_by_type(pdf, num, tur):
     es = [(r["kaynak"], r["hedef"], {"tur": tur, "dog": r.get("dogrulanamadi", False)}) for r in rels if r["tur"] == tur]
     g = nx.DiGraph()
     for a, b, d in es:
         g.add_edge(a, b, **d)
     comps = sorted(nx.weakly_connected_components(g), key=len, reverse=True)
-    fs = 7.0
     laid = []
     for i, c in enumerate(comps):
-        pos, w, h = layered(g.subgraph(c), fs)
-        laid.append((i, pos, w, h + 4))
-    top, side, bottom = 26, 12, 20
-    for W_, H_ in ((297, 210), (420, 297), (594, 420), (841, 594)):
-        packed, used = shelf_pack([(i, w, h) for i, _, w, h in laid], W_ - 2 * side, gap=12)
-        if used <= H_ - top - bottom:
-            break
-    fig = plt.figure(figsize=(W_ * MM, H_ * MM))
-    page_title(fig, f"Şekil {num} · {tur[0].upper() + tur[1:]} ilişkileri",
-               f"{len(es)} ilişki, {g.number_of_nodes()} düğüm, {len(comps)} bağlı bileşen. Okuma yönü: {TLAB[tur]} "
-               f"(kaynak üstte, hedef altta).")
-    ax = fig.add_axes([0, 0, 1, 1])
-    ax.set_xlim(0, W_)
-    ax.set_ylim(H_, 0)
+        p, w, h = shift_to_origin(layered(g.subgraph(c)))
+        laid.append((i, p, w, h))
+    side, bottom, gap = 12, 18, 10
+    top = 36
+    W_, H_, packed = choose_page(laid, top, side, bottom, gap)
+    fig, ax = page_fig(W_, H_)
+    top = title_block(ax, W_, f"Şekil {num} · {tr_cap(tur)} ilişkileri",
+                      f"{len(es)} ilişki, {g.number_of_nodes()} düğüm, {len(comps)} bağlı bileşen. Okuma yönü: {TLAB[tur]} "
+                      f"(kaynak üstte, hedef altta). Daire kişi, elmas eserdir.")
     pos = {}
     for i, p, w, h in laid:
         ox, oy = packed[i]
         for n, (x, y) in p.items():
-            pos[n] = (side + ox + x, top + 4 + oy + y)
-    draw_graph(ax, g.nodes, pos, [(a, b, d) for a, b, d in g.edges(data=True)], fs=fs, rad=0.0)
-    fig.legend(handles=[Line2D([0], [0], color=TCOL[tur], lw=2, label=TLAB[tur]),
-                        Line2D([0], [0], color=TCOL[tur], lw=1.2, ls="--", label="Kesikli: teyit edilemedi")],
-               loc="lower left", bbox_to_anchor=(side / W_, 11 / H_), ncol=2, fontsize=8, frameon=False)
+            pos[n] = (side + ox + x, top + oy + y)
+    pos = fill_page(pos, side, top, W_ - 2 * side, H_ - top - bottom, cap=1.5)
+    draw_graph(ax, g.nodes, pos, [(a, b, d) for a, b, d in g.edges(data=True)], rad=0.0)
+    legend_rows(ax, side, H_ - 12, [(TCOL[tur], "-", 2, TLAB[tur]), (TCOL[tur], "--", 1.2, "Kesikli: teyit edilemedi")], W_ - 2 * side)
+    audit(fig, f"Şekil {num}")
     pdf.savefig(fig)
     plt.close(fig)
 
 
+# ---------------------------------------------------------------- Şekil 2: ilişki ağı (kişiler + ilişkili eserler)
+def full_graph():
+    H = nx.MultiDiGraph()
+    rel_works = {n for r in rels for n in (r["kaynak"], r["hedef"]) if n in W}
+    for r in rels:
+        H.add_edge(r["kaynak"], r["hedef"], tur=r["tur"], dog=r.get("dogrulanamadi", False))
+    for wid_ in rel_works:
+        a = W[wid_]["yazar_id"]
+        if a:
+            H.add_edge(a, wid_, tur="yazdı", dog=False)
+    return H, rel_works
+
+
 def fig_full(pdf):
-    """Şekil 2: tüm kişiler ve eserler; ilişki ve yazarlık kenarları. Bileşenler büyüklüklerine göre paketlenir."""
-    W_, H_ = 594, 420
-    top, side, bottom = 26, 10, 22
-    und = nx.Graph(G.to_undirected())
+    H, rel_works = full_graph()
+    und = nx.Graph(H.to_undirected())
     comps = sorted(nx.connected_components(und), key=len, reverse=True)
-    unit = 21.0  # mm; kutu kenarı ≈ unit·√n
     laid = []
     for i, c in enumerate(comps):
         sub = und.subgraph(c)
         n = len(c)
-        if n == 1:
-            p = {next(iter(c)): (0.5, 0.5)}
+        if n <= 3:
+            p = {k: (j * 30.0, 0.0) for j, k in enumerate(sorted(c, key=lambda x: (x in W, name(x))))}
         else:
             p = nx.kamada_kawai_layout(sub)
-            p = normalize(nx.spring_layout(sub, pos=p, k=2.0 / math.sqrt(n), iterations=150, seed=7))
-        side_len = unit * math.sqrt(n)
-        aspect = 1.45 if i == 0 else 1.25
-        laid.append((i, p, side_len * aspect, side_len))
-    _, big_p, bw, bh = laid[0]
-    scale = min(1.0, (H_ - top - bottom) / bh, (W_ - 2 * side) * 0.68 / bw)
-    bw, bh = bw * scale, bh * scale
-    rest = [(i, w * scale * 0.9 + 18, h * scale * 0.9 + 10) for i, _, w, h in laid[1:]]
-    right_w = W_ - 2 * side - bw - 14
-    packed, used = shelf_pack(rest, right_w, gap=6)
-    shrink = min(1.0, (H_ - top - bottom) / used) if used else 1.0
-    fig = plt.figure(figsize=(W_ * MM, H_ * MM))
-    page_title(fig, "Şekil 2 · Tam ağ: kişiler, eserler, ilişkiler ve yazarlık",
-               f"{len(people)} kişi (daire, renk = devlet grubu), {len(works)} eser (elmas); {len(rels)} ilişki kenarı (renkli) ve "
-               f"{sum(1 for w in works if w['yazar_id'])} yazar–eser bağı (gri kesikli). En büyük bileşen solda, "
-               f"diğer {len(comps) - 1} bileşen sağda.")
-    ax = fig.add_axes([0, 0, 1, 1])
-    ax.set_xlim(0, W_)
-    ax.set_ylim(H_, 0)
+            area = sum((node_box(k)[1] - node_box(k)[0]) * (node_box(k)[3] - node_box(k)[2]) for k in c) * 3.2
+            xs = [v[0] for v in p.values()]
+            ys = [v[1] for v in p.values()]
+            sc = math.sqrt(area / max((max(xs) - min(xs)) * (max(ys) - min(ys)), 1e-6))
+            p = {k: (v[0] * sc * 1.25, v[1] * sc) for k, v in p.items()}
+        p = declutter(p)
+        p, w, h = shift_to_origin(p)
+        laid.append((i, p, w, h))
+    side, bottom, gap = 12, 24, 10
+    W_, H_, packed = choose_page(laid, 40, side, bottom, gap)
+    fig, ax = page_fig(W_, H_)
+    n_people = sum(1 for k in H.nodes if k in P)
+    top = title_block(ax, W_, "Şekil 2 · İlişki ağı: kişiler ve ilişkili eserler",
+                      f"En az bir ilişkisi olan {n_people} kişi (daire, renk = devlet grubu) ve bir ilişkiye konu olan "
+                      f"{len(rel_works)} eser (elmas); {len(rels)} ilişki kenarı (renkli) ve bu eserlerin yazar bağları (gri kesikli). "
+                      f"{len(comps)} bağlı bileşen, büyükten küçüğe. İlişkisi olmayan kişiler Tablo 4'te, bütün eserler Tablo 5'te listelenir.")
     pos = {}
-    for n, (x, y) in big_p.items():
-        pos[n] = (side + 6 + x * (bw - 12), top + 6 + y * (bh - 12))
-    rx = side + bw + 14
-    lookup = {i: (p, w, h) for i, p, w, h in laid}
-    for i, (ox, oy) in packed.items():
-        p, w, h = lookup[i]
-        w, h = w * scale * 0.9 * shrink, h * scale * 0.9 * shrink
-        for n, (x, y) in p.items():
-            pos[n] = (rx + ox * shrink + 9 + x * w, top + 4 + oy * shrink + y * h)
-    draw_graph(ax, G.nodes, pos, list(G.edges(data=True)), fs=5.6, rad=0.08)
-    ax.plot([rx - 7, rx - 7], [top + 2, H_ - bottom], color=GRID, lw=0.8)
-    fig.legend(handles=legend_handles(True), loc="lower left", bbox_to_anchor=(side / W_, 11 / H_), ncol=8, fontsize=9, frameon=False)
-    fig.text(1 - side / W_, 13 / H_, f"{len(comps)} bağlı bileşen; en büyüğü {len(comps[0])} düğüm", ha="right", fontsize=8, color=MUTED)
+    for i, p, w, h in laid:
+        ox, oy = packed[i]
+        for k, (x, y) in p.items():
+            pos[k] = (side + ox + x, top + oy + y)
+    pos = fill_page(pos, side, top, W_ - 2 * side, H_ - top - bottom)
+    draw_graph(ax, H.nodes, pos, list(H.edges(data=True)), rad=0.08)
+    legend_rows(ax, side, H_ - 16, type_legend_items(True), W_ - 2 * side)
+    audit(fig, "Şekil 2")
     pdf.savefig(fig)
     plt.close(fig)
-
-
-def normalize(pos):
-    xs = [p[0] for p in pos.values()]
-    ys = [p[1] for p in pos.values()]
-    x0, x1, y0, y1 = min(xs), max(xs), min(ys), max(ys)
-    return {n: ((x - x0) / ((x1 - x0) or 1), (y - y0) / ((y1 - y0) or 1)) for n, (x, y) in pos.items()}
 
 
 # ---------------------------------------------------------------- metin ve tablolar (reportlab)
@@ -433,7 +619,7 @@ for n_, f_ in [("Sans", "DejaVuSans.ttf"), ("Sans-B", "DejaVuSans-Bold.ttf"), ("
 pdfmetrics.registerFontFamily("Sans", normal="Sans", bold="Sans-B", italic="Sans-I", boldItalic="Sans-B")
 ST = {
     "h1": ParagraphStyle("h1", fontName="Serif-B", fontSize=22, leading=27, spaceAfter=6, textColor=colors.HexColor(INK)),
-    "h2": ParagraphStyle("h2", fontName="Serif-B", fontSize=14, leading=18, spaceBefore=12, spaceAfter=6),
+    "h2": ParagraphStyle("h2", fontName="Serif-B", fontSize=14, leading=18, spaceBefore=9, spaceAfter=5),
     "h3": ParagraphStyle("h3", fontName="Sans-B", fontSize=10, leading=13, spaceBefore=8, spaceAfter=3),
     "p": ParagraphStyle("p", fontName="Sans", fontSize=9, leading=13, spaceAfter=5, alignment=TA_LEFT),
     "small": ParagraphStyle("small", fontName="Sans", fontSize=7.6, leading=10, textColor=colors.HexColor("#3b3833")),
@@ -477,10 +663,13 @@ def cover_story(toc):
              ["Yazar–eser bağı", str(n_auth)], ["Kişi düzeyine indirgenmiş ilişki", str(len(person_edges))],
              ["En az bir ilişkisi olan kişi", str(len(people) - len(isolated))],
              ["Teyit edilemeyen ilişki", str(sum(1 for r in rels if r.get("dogrulanamadi")))]]
-    t = Table([[Paragraph(a, ST["cell"]), Paragraph(f"<b>{b}</b>", ST["cell"])] for a, b in stats], colWidths=[70 * mm, 25 * mm])
+    stats.append(["", ""])
+    pairs = [stats[i] + stats[i + 1] for i in range(0, len(stats), 2)]
+    t = Table([[Paragraph(a, ST["cell"]), Paragraph(f"<b>{b}</b>", ST["cell"]), Paragraph(c, ST["cell"]),
+                Paragraph(f"<b>{d}</b>", ST["cell"])] for a, b, c, d in pairs], colWidths=[58 * mm, 18 * mm, 58 * mm, 18 * mm])
     t.setStyle(TableStyle([("LINEBELOW", (0, 0), (-1, -1), 0.25, colors.HexColor("#e4ded3")),
-                           ("ALIGN", (1, 0), (1, -1), "RIGHT")]))
-    s += [t, Spacer(1, 4 * mm), Paragraph("İlişki türleri", ST["h2"])]
+                           ("ALIGN", (1, 0), (1, -1), "RIGHT"), ("ALIGN", (3, 0), (3, -1), "RIGHT")]))
+    s += [t, Paragraph("İlişki türleri", ST["h2"])]
     rows = [[Paragraph("<b>Tür</b>", ST["cell"]), Paragraph("<b>Okuma yönü</b>", ST["cell"]), Paragraph("<b>Sayı</b>", ST["cell"])]]
     for tur, col, lab in TYPES:
         rows.append([Paragraph(f"{swatch(col)} {tur}", ST["cell"]), Paragraph(lab, ST["cell"]),
@@ -491,22 +680,44 @@ def cover_story(toc):
           Paragraph("Bir ilişki her zaman <b>kaynak → hedef</b> yönünde okunur: “Kadızâde-i Rûmî → Uluğ Bey (hoca-öğrenci)”, "
                     "Kadızâde'nin Uluğ Bey'in hocası olduğunu söyler. Çağdaş-tartışma ilişkileri yönsüzdür. Bazı ilişkiler bir "
                     "esere bağlanır (örneğin Teftâzânî'nin Akāidü'n-Nesefî'ye şerh yazması). Kronolojik ağda (Şekil 1) bu ilişkiler "
-                    "eserin yazarına bağlanarak kesikli çizilir.", ST["p"]),
+                    "eserin yazarına bağlanarak kesikli çizilir. Şekil 1 okunurluk için üç dönem sayfasına (750–1250, 1250–1700, "
+                    "1700–1920) bölünmüştür; sayfalar arasında kalan ilişkiler Tablo 1'dedir.", ST["p"]),
           Paragraph("Kesikli kenarlar, veri setinde <i>dogrulanamadi</i> olarak işaretlenmiş, yani kaynakla teyit edilemeyen "
-                    "ilişkilerdir. Şekiller vektöreldir; PDF görüntüleyicide yakınlaştırarak en küçük etiket de okunabilir.", ST["p"]),
+                    "ilişkilerdir. Etiket genişlikleri yazı tipinden ölçülerek yerleştirilmiştir; hiçbir şekilde yazılar üst üste "
+                    "binmez. Şekiller vektöreldir; büyük sayfalar (A2–A1) yakınlaştırılarak okunur.", ST["p"]),
           Paragraph("Kaynak notu: Kişi ve eserler TDV İslâm Ansiklopedisi maddelerine bağlıdır. Her kaydın teyit durumu "
                     "atlasın doğrulama raporunda (reports/validation.md) ayrıntılı olarak verilmiştir.", ST["muted"]),
           Paragraph("İçindekiler", ST["h2"])]
     trow = [[Paragraph(esc(a), ST["cell"]), Paragraph(str(b), ST["cell"])] for a, b in toc]
     ttoc = Table(trow, colWidths=[150 * mm, 18 * mm])
     ttoc.setStyle(TableStyle([("LINEBELOW", (0, 0), (-1, -1), 0.25, colors.HexColor("#e4ded3")),
-                              ("ALIGN", (1, 0), (1, -1), "RIGHT")]))
+                              ("ALIGN", (1, 0), (1, -1), "RIGHT"),
+                              ("TOPPADDING", (0, 0), (-1, -1), 1.2), ("BOTTOMPADDING", (0, 0), (-1, -1), 1.2)]))
     s += [ttoc, Spacer(1, 3 * mm), Paragraph(f"Üretim tarihi: {date.today().isoformat()} · scripts/network_pdf.py", ST["muted"])]
     return s
 
 
+def person_cell(i):
+    return f"{esc(P[i]['ad'])} <font color='{MUTED}'>{yr_txt(P[i]['dogum'])}–{yr_txt(P[i]['olum'])}</font>"
+
+
 def tables_story():
-    s = [Paragraph("Tablo 1 · İlişkilerin tam listesi", ST["h1"]),
+    cross = cross_era_edges()
+    era_name = {k: f"Şekil {k} ({lab})" for k, lab, _, _ in ERAS}
+    s = [Paragraph("Tablo 1 · Dönem sayfaları arasındaki ilişkiler", ST["h1"]),
+         Paragraph(f"Şekil 1 okunur kalsın diye üç dönem sayfasına bölündü; her kişi ömrünün ortasının düştüğü sayfada yer alır. "
+                   f"Uçları farklı sayfalarda kalan {len(cross)} kişi düzeyindeki ilişki burada listelenir (Şekil 2'de ise hepsi birlikte "
+                   f"görünür).", ST["p"])]
+    rows = [[Paragraph(f"<b>{h}</b>", ST["cell"]) for h in ("Kaynak", "Sayfa", "Hedef", "Sayfa", "Tür")]]
+    for e, ea, eb in sorted(cross, key=lambda x: (x[1], LIFE[x[0]["a"]][0])):
+        tur = e["tur"] + (f" (eser: {esc(W[e['via']]['ad_sade'])})" if e["via"] else "") + (" · teyitsiz" if e["dogrulanamadi"] else "")
+        rows.append([Paragraph(person_cell(e["a"]), ST["cell"]), Paragraph(era_name[ea], ST["cell"]),
+                     Paragraph(person_cell(e["b"]), ST["cell"]), Paragraph(era_name[eb], ST["cell"]),
+                     Paragraph(f"{swatch(TCOL[e['tur']])} {tur}", ST["cell"])])
+    t = Table(rows, colWidths=[42 * mm, 26 * mm, 42 * mm, 26 * mm, 42 * mm], repeatRows=1)
+    t.setStyle(tstyle())
+    s += [t, PageBreak(),
+          Paragraph("Tablo 2 · İlişkilerin tam listesi", ST["h1"]),
          Paragraph(f"{len(rels)} ilişkinin tamamı, türe göre gruplanmış. Notlar veri setindeki açıklamalardır.", ST["p"])]
     for tur, col, lab in TYPES:
         rs = [r for r in rels if r["tur"] == tur]
@@ -526,8 +737,8 @@ def tables_story():
         s += [Paragraph(f"{swatch(col)} {tur} · {len(rs)} · <font color='{MUTED}'>{lab}</font>", ST["h2"]), t]
     s.append(PageBreak())
 
-    # Tablo 2: kişi bazında dizin
-    s += [Paragraph("Tablo 2 · Kişi bazında bağlantı dizini", ST["h1"]),
+    # Tablo 3: kişi bazında dizin
+    s += [Paragraph("Tablo 3 · Kişi bazında bağlantı dizini", ST["h1"]),
           Paragraph("Her kişinin bütün ilişkileri ve eserleri, alfabetik sırayla. Parantez içindeki sayı, kişi düzeyindeki toplam "
                     "ilişki sayısıdır (derece).", ST["p"])]
     labels_out = {"hoca-öğrenci": "Öğrencileri", "himaye": "Himaye ettikleri", "etkiledi": "Etkiledikleri",
@@ -551,7 +762,8 @@ def tables_story():
         lines = [f"<b>{esc(p['ad'])}</b> <font color='{MUTED}'>{yr_txt(p['dogum'])}–{yr_txt(p['olum'])} · "
                  f"{esc(', '.join(p['devletler']))} · ({deg[pid]})</font>"]
         for k in ["Hocaları", "Öğrencileri", "Hamileri", "Himaye ettikleri", "Etkilendikleri", "Etkiledikleri",
-                  "Çağdaş/tartışma", "Tercüme ettikleri", "Tercüme edenler", "Şerh ettikleri", "Şerh edenler", "Eserleri üzerinden"]:
+                  "Çağdaş/tartışma", "Birlikte çalıştıkları", "Tercüme ettikleri", "Tercüme edenler", "Şerh ettikleri",
+                  "Şerh edenler", "Yayımladıkları", "Yayımlayanlar", "Eserleri üzerinden"]:
             if parts.get(k):
                 lines.append(f"<font color='{MUTED}'>{k}:</font> " + "; ".join(dict.fromkeys(parts[k])))
         if ws:
@@ -561,8 +773,8 @@ def tables_story():
         s.append(KeepTogether([Paragraph("<br/>".join(lines), ST["small"]), Spacer(1, 2.2 * mm)]))
     s.append(PageBreak())
 
-    # Tablo 3: merkezîlik
-    s += [Paragraph("Tablo 3 · Merkezîlik ölçüleri", ST["h1"]),
+    # Tablo 4: merkezîlik
+    s += [Paragraph("Tablo 4 · Merkezîlik ölçüleri", ST["h1"]),
           Paragraph("Kişi düzeyindeki yönsüz ağda hesaplanmıştır. <b>Derece</b>, kişinin doğrudan bağlantı sayısıdır. <b>Arasındalık</b>, "
                     "kişinin diğer kişiler arasındaki en kısa yollar üzerinde ne sıklıkla bulunduğunu gösterir (0–1). Yüksek arasındalık, "
                     "farklı çevreleri birbirine bağlayan aracı figürleri işaret eder. Değerler yalnızca bu veri setindeki ilişkileri "
@@ -588,8 +800,8 @@ def tables_story():
           Paragraph(", ".join(f"{esc(P[i]['ad'])} <font color='{MUTED}'>({yr_txt(P[i]['dogum'])}–{yr_txt(P[i]['olum'])})</font>"
                               for i in isolated), ST["small"]), PageBreak()]
 
-    # Tablo 4: yazar–eser
-    s += [Paragraph("Tablo 4 · Yazar–eser bağları", ST["h1"]),
+    # Tablo 5: yazar–eser
+    s += [Paragraph("Tablo 5 · Yazar–eser bağları", ST["h1"]),
           Paragraph(f"{len(works)} eserin tamamı, yazarların kronolojik sırasıyla.", ST["p"])]
     rows = [[Paragraph(f"<b>{h}</b>", ST["cell"]) for h in ("Yazar", "Eser", "Yıl", "Dil", "Tür")]]
     for p in sorted(people, key=lambda p: LIFE[p["id"]][0] or 0):
@@ -626,31 +838,38 @@ def main():
     tmp = OUT.parent / ".network_tmp"
     tmp.mkdir(parents=True, exist_ok=True)
     with PdfPages(tmp / "fig1.pdf") as pdf:
-        fig_chronological(pdf)
+        for key, lab, _, _ in ERAS:
+            fig_chronological(pdf, key, lab)
     with PdfPages(tmp / "fig2.pdf") as pdf:
         fig_full(pdf)
     with PdfPages(tmp / "figt.pdf") as pdf:
         for i, (tur, _, _) in enumerate(TYPES, start=3):
             fig_by_type(pdf, i, tur)
-    n_tab = build_rl(tmp / "tables.pdf", tables_story(), "İlişki Ağı – Tablolar")
+    build_rl(tmp / "tables.pdf", tables_story(), "İlişki Ağı – Tablolar")
     tab_reader = PdfReader(str(tmp / "tables.pdf"))
-    # tablo başlangıç sayfalarını metinden bul
-    starts = {}
+    starts = {}  # tablo başlangıç sayfaları
     for i, pg in enumerate(tab_reader.pages):
-        txt = pg.extract_text() or ""
-        for k in ("Tablo 1", "Tablo 2", "Tablo 3", "Tablo 4"):
-            if k not in starts and txt.lstrip().startswith(k):
+        txt = (pg.extract_text() or "").lstrip()
+        for k in ("Tablo 1 ", "Tablo 2 ", "Tablo 3 ", "Tablo 4 ", "Tablo 5 "):
+            if k not in starts and txt.startswith(k):
                 starts[k] = i
+    sizes = {f: len(PdfReader(str(tmp / f)).pages) for f in ("fig1.pdf", "fig2.pdf", "figt.pdf")}
 
     def toc_for(cover_pages):
-        base = cover_pages
-        toc = [("Şekil 1 · Kronolojik ilişki ağı (A2)", base + 1),
-               ("Şekil 2 · Tam ağ: kişiler, eserler, ilişkiler ve yazarlık (A2)", base + 2)]
-        toc += [(f"Şekil {i} · {t} ilişkileri", base + i) for i, (t, _, _) in enumerate(TYPES, start=3)]
-        tb = base + 2 + len(TYPES)
-        names = {"Tablo 1": "Tablo 1 · İlişkilerin tam listesi", "Tablo 2": "Tablo 2 · Kişi bazında bağlantı dizini",
-                 "Tablo 3": "Tablo 3 · Merkezîlik ölçüleri ve bileşenler", "Tablo 4": "Tablo 4 · Yazar–eser bağları"}
-        toc += [(names[k], tb + v + 1) for k, v in sorted(starts.items(), key=lambda x: x[1])]
+        pg = cover_pages + 1
+        toc = []
+        for key, lab, _, _ in ERAS:
+            toc.append((f"Şekil {key} · Kronolojik ilişki ağı, {lab}", pg))
+            pg += 1
+        toc.append(("Şekil 2 · İlişki ağı: kişiler ve ilişkili eserler", pg))
+        pg += sizes["fig2.pdf"]
+        for i, (t, _, _) in enumerate(TYPES, start=3):
+            toc.append((f"Şekil {i} · {tr_cap(t)} ilişkileri", pg))
+            pg += 1
+        names = {"Tablo 1 ": "Tablo 1 · Dönem sayfaları arasındaki ilişkiler", "Tablo 2 ": "Tablo 2 · İlişkilerin tam listesi",
+                 "Tablo 3 ": "Tablo 3 · Kişi bazında bağlantı dizini", "Tablo 4 ": "Tablo 4 · Merkezîlik ölçüleri ve bileşenler",
+                 "Tablo 5 ": "Tablo 5 · Yazar–eser bağları"}
+        toc += [(names[k], pg + v) for k, v in sorted(starts.items(), key=lambda x: x[1])]
         return toc
 
     n_cover = build_rl(tmp / "cover.pdf", cover_story(toc_for(1)), "İlişki Ağı")
@@ -674,6 +893,12 @@ def main():
     tmp.rmdir()
     print(f"{OUT.relative_to(ROOT) if OUT.is_relative_to(ROOT) else OUT}: {len(writer.pages)} sayfa, "
           f"{OUT.stat().st_size // 1024} KB")
+    total = 0
+    for label, n, bad in AUDIT:
+        total += len(bad)
+        print(f"  {label}: {n} metin, {len(bad)} çakışma" + (f" {bad[:3]}" if bad else ""))
+    if total:
+        sys.exit(f"{total} metin çakışması var")
 
 
 if __name__ == "__main__":

@@ -80,13 +80,13 @@ node tests/smoke.mjs shots/   # Playwright testi (isteğe bağlı ekran görünt
 python3 scripts/network_pdf.py   # ilişki ağı PDF'i → reports/iliski-agi.pdf
 ```
 
-`reports/iliski-agi.pdf` ilişki ağının basılabilir, tam dökümüdür (36 sayfa, vektörel şekiller, yer imleri). İçeriği:
-- Kronolojik ağ ve kişi-eser tam ağı (ikisi de A2)
-- Sekiz ilişki türünün her biri için ayrı katmanlı ağ
-- 175 ilişkinin notları ve teyit durumuyla tam listesi
-- Kişi bazında bağlantı dizini
-- Merkezîlik ölçüleri ve bağlı bileşenler
-- Yazar–eser listesi
+`reports/iliski-agi.pdf` ilişki ağının basılabilir, tam dökümüdür (40 sayfa, vektörel şekiller, yer imleri). İçeriği:
+- **Kronolojik ağ:** okunur kalsın diye üç dönem sayfasına bölünmüştür (750–1250, 1250–1700, 1700–1920; A3). Sayfalar arasında kalan ilişkiler Tablo 1'dedir.
+- **İlişki ağı (A1):** ilişkisi olan bütün kişiler ve ilişkiye konu olan eserler.
+- **Tür ağları:** sekiz ilişki türünün her biri için ayrı katmanlı ağ.
+- **Tablolar:** ilişkilerin notlu ve teyit durumlu tam listesi, kişi bazında bağlantı dizini, merkezîlik ölçüleri ve bağlı bileşenler, yazar–eser listesi.
+
+Etiket genişlikleri yazı tipinden ölçülerek yerleştirilir. Betik her şekli kaydetmeden önce metinlerin üst üste binip binmediğini ve sayfadan taşıp taşmadığını denetler; çakışma varsa hata vererek durur.
 
 Üretmek için `pip install networkx scipy matplotlib reportlab pypdf` gerekir.
 

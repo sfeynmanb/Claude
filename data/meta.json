@@ -1,0 +1,228 @@
+{
+  "aciklama": "Kişiler zaman çizelgesinde devletler listesindeki İLK devletin grubuna yerleşir. Devlet dönemleri (zaman çizelgesi bantları), görünüm grupları ve YKS 'Karıştırılanlar' çiftleri. Kişi/eser verisi değildir.",
+  "zaman_araligi": [
+    750,
+    1700
+  ],
+  "yks_modu": true,
+  "devletler": [
+    {
+      "ad": "Abbasi",
+      "baslangic": 750,
+      "bitis": 1258,
+      "renk": "#8c6d3f",
+      "turk": false
+    },
+    {
+      "ad": "Samani",
+      "baslangic": 819,
+      "bitis": 1005,
+      "renk": "#6b8f71",
+      "turk": false
+    },
+    {
+      "ad": "Karahanlı",
+      "baslangic": 840,
+      "bitis": 1212,
+      "renk": "#c0392b",
+      "turk": true
+    },
+    {
+      "ad": "Gazneli",
+      "baslangic": 963,
+      "bitis": 1186,
+      "renk": "#d35400",
+      "turk": true
+    },
+    {
+      "ad": "Büyük Selçuklu",
+      "baslangic": 1040,
+      "bitis": 1157,
+      "renk": "#2e86c1",
+      "turk": true
+    },
+    {
+      "ad": "Harezmşah",
+      "baslangic": 1097,
+      "bitis": 1231,
+      "renk": "#16a085",
+      "turk": true
+    },
+    {
+      "ad": "Anadolu Selçuklu",
+      "baslangic": 1077,
+      "bitis": 1308,
+      "renk": "#5b2c6f",
+      "turk": true
+    },
+    {
+      "ad": "İlhanlı",
+      "baslangic": 1256,
+      "bitis": 1353,
+      "renk": "#7f8c8d",
+      "turk": false
+    },
+    {
+      "ad": "Memlük",
+      "baslangic": 1250,
+      "bitis": 1517,
+      "renk": "#b7950b",
+      "turk": true
+    },
+    {
+      "ad": "Anadolu Beylikleri",
+      "baslangic": 1277,
+      "bitis": 1500,
+      "renk": "#a04000",
+      "turk": true
+    },
+    {
+      "ad": "Timurlu",
+      "baslangic": 1370,
+      "bitis": 1507,
+      "renk": "#1abc9c",
+      "turk": true
+    },
+    {
+      "ad": "Osmanlı",
+      "baslangic": 1299,
+      "bitis": 1922,
+      "renk": "#922b21",
+      "turk": true
+    },
+    {
+      "ad": "Babürlü",
+      "baslangic": 1526,
+      "bitis": 1858,
+      "renk": "#117864",
+      "turk": true
+    },
+    {
+      "ad": "Hive Hanlığı",
+      "baslangic": 1512,
+      "bitis": 1920,
+      "renk": "#2874a6",
+      "turk": true
+    }
+  ],
+  "grup_sirasi": [
+    "Abbasi",
+    "Samani",
+    "Karahanlı",
+    "Gazneli",
+    "Büyük Selçuklu",
+    "Harezmşah",
+    "Anadolu Selçuklu",
+    "İlhanlı",
+    "Memlük",
+    "Anadolu Beylikleri",
+    "Timurlu",
+    "Osmanlı",
+    "Babürlü",
+    "Hive Hanlığı",
+    "Diğer"
+  ],
+  "grup_eslemesi": {
+    "Me'mûnî (Harezm)": "Diğer",
+    "Ziyârî": "Diğer",
+    "Büveyhi": "Diğer",
+    "Kâkûyî": "Diğer",
+    "Hamdânî": "Diğer",
+    "Tâhirî": "Diğer",
+    "Fatımi": "Diğer",
+    "Muvahhid": "Diğer",
+    "Merini": "Diğer",
+    "Hafsi": "Diğer",
+    "Eyyubi": "Diğer",
+    "Salgurlu": "Diğer",
+    "İldenizli": "Diğer",
+    "Şirvanşah": "Diğer",
+    "Gurlu": "Diğer",
+    "Akkoyunlu": "Diğer",
+    "Karakoyunlu": "Diğer",
+    "Eretna": "Anadolu Beylikleri",
+    "Kadı Burhaneddin Devleti": "Anadolu Beylikleri",
+    "Aydınoğulları": "Anadolu Beylikleri",
+    "Safevi": "Diğer",
+    "Altın Orda": "Diğer",
+    "Muzafferi": "Diğer",
+    "Nizârî İsmâilî": "Diğer"
+  },
+  "karistirilanlar": [
+    {
+      "a": "kutadgu-bilig",
+      "b": "atabetul-hakayik",
+      "fark": "İkisi de Karahanlı dönemi öğüt eseridir. Kutadgu Bilig devlet yönetimini anlatan ilk siyasetnamedir (Yusuf Has Hacib, 1069-70, Tavgaç Buğra Han'a), Atabetü'l-Hakayık ise yalnızca ahlak öğütleri veren dörtlüklerden oluşur (Edip Ahmet, Dad Sipehsalar Bey'e)."
+    },
+    {
+      "a": "siyasetname",
+      "b": "kutadgu-bilig",
+      "fark": "İkisi de siyasetnamedir. Kutadgu Bilig Türkçe ve manzumdur (Karahanlı, 1069-70), Siyasetname ise Farsça ve mensurdur (Büyük Selçuklu veziri Nizamülmülk, 1091-92, Melikşah'a)."
+    },
+    {
+      "a": "divanu-lugatit-turk",
+      "b": "muhakemetul-lugateyn",
+      "fark": "Divanü Lügati't-Türk Arapça yazılmış Türkçe-Arapça bir sözlüktür ve Araplara Türkçe öğretmeyi amaçlar (Kaşgarlı, 1072-77). Muhakemetü'l-Lugateyn ise Çağatay Türkçesiyle yazılmış, Türkçeyi Farsçayla karşılaştıran bir eserdir (Nevai, 1499)."
+    },
+    {
+      "a": "divanu-lugatit-turk",
+      "b": "kitabul-idrak",
+      "fark": "İkisi de Araplara Türkçe öğretmek için Arapça yazılmıştır. Divanü Lügati't-Türk Karahanlı dönemine aittir (1072-77, Bağdat), Kitabü'l-İdrak ise Memlük Kıpçakçasının grameridir (Ebu Hayyan, 1312, Kahire)."
+    },
+    {
+      "a": "kitab-i-bahriye",
+      "b": "kitabul-muhit",
+      "fark": "Kitab-ı Bahriye Akdeniz'in kılavuzudur (Piri Reis, 1521/1526), Kitabü'l-Muhit ise Hint Okyanusu denizciliğini anlatır (Seydi Ali Reis, 1554)."
+    },
+    {
+      "a": "cihannuma",
+      "b": "seyahatname",
+      "fark": "Cihannüma Katip Çelebi'nin kitaplara dayalı coğrafya eseridir. Seyahatname ise Evliya Çelebi'nin bizzat gezip gördüklerini anlattığı on ciltlik gezi kitabıdır."
+    },
+    {
+      "a": "miratul-memalik",
+      "b": "seyahatname",
+      "fark": "İkisi de gezi kitabıdır. Mir'atü'l-Memalik, Seydi Ali Reis'in Hindistan'dan dönüş yolculuğunu anlatan tek ciltlik eseridir (1557); Seyahatname, Evliya Çelebi'nin on ciltlik eseridir (XVII. yy)."
+    },
+    {
+      "a": "ibn-sina-kanun",
+      "b": "biruni-kanun",
+      "fark": "El-Kanun fi't-Tıb İbn Sina'nın tıp kitabıdır. Kanun-ı Mesudi ise Biruni'nin astronomi ansiklopedisidir ve adını Gazneli Sultan Mesud'dan alır."
+    },
+    {
+      "a": "ibn-sina-sifa",
+      "b": "ibn-sina-kanun",
+      "fark": "İkisi de İbn Sina'nındır. Kitabü'ş-Şifa adına rağmen tıp değil felsefe ansiklopedisidir; tıp kitabı El-Kanun fi't-Tıb'dır."
+    },
+    {
+      "a": "zic-i-ulug-bey",
+      "b": "zic-i-ilhani",
+      "fark": "Zic-i İlhani Merağa Rasathanesi'nde Nasirüddin Tusi'nin yönetiminde hazırlandı (İlhanlı, XIII. yy). Zic-i Uluğ Bey ise Semerkant Rasathanesi'nde hazırlandı (Timurlu, 1437)."
+    },
+    {
+      "a": "fethiyye",
+      "b": "muhammediyye",
+      "fark": "İkisi de Ali Kuşçu'nundur ve Fatih'e sunulmuştur. Fethiye astronomi, Muhammediye ise matematik risalesidir."
+    },
+    {
+      "a": "divan-i-hikmet",
+      "b": "atabetul-hakayik",
+      "fark": "Divan-ı Hikmet, Ahmet Yesevi'nin hece ölçüsüyle yazılmış tasavvufi şiirleridir. Atabetü'l-Hakayık ise Edip Ahmet'in aruzla yazdığı ahlak öğütleridir."
+    },
+    {
+      "a": "cerrahiyyetul-haniyye",
+      "b": "maddetul-hayat",
+      "fark": "İkisi de Fatih dönemi Türkçe tıp eseridir. Cerrahiyetü'l-Haniye Sabuncuoğlu'nun resimli cerrahi kitabıdır; Maddetü'l-Hayat ise Akşemseddin'in, hastalıkların bulaşmasına dair görüşüyle anılan eseridir."
+    },
+    {
+      "a": "secere-i-turk",
+      "b": "secere-i-terakime",
+      "fark": "İkisi de Ebulgazi Bahadır Han'ındır. Şecere-i Terakime Türkmenlerin (Oğuzların) soy kütüğüdür; Şecere-i Türk ise Türk-Moğol hanedanlarının, özellikle Şeybanilerin tarihidir."
+    },
+    {
+      "a": "camiut-tevarih",
+      "b": "tarih-i-cihangusa",
+      "fark": "İkisi de İlhanlı döneminde Farsça yazıldı. Tarih-i Cihangüşa Ata Melik Cüveyni'nindir ve Moğol fetihlerini anlatır; Camiü't-Tevarih ise Reşidüddin'in Oğuz tarihini de içeren genel tarihidir."
+    }
+  ]
+}

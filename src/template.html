@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Türk-İslam Atlası</title>
+<meta name="description" content="750–1700 arası Türk-İslam dünyasında kişiler ve eserler: harita, zaman çizelgesi, ilişki ağı ve YKS sınav kartları.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<style>/*__STYLE__*/</style>
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+<header class="topbar">
+  <div class="brand">
+    <h1>Türk-İslam Atlası</h1>
+    <p class="sub">Kişiler ve eserler · 750–1700</p>
+  </div>
+  <div class="search" role="search">
+    <label for="q" class="sr-only">Kişi veya eser ara</label>
+    <input id="q" type="search" autocomplete="off" placeholder="Ara: farabi, divanu lugat, kutadgu…" aria-controls="q-results" aria-expanded="false">
+    <ul id="q-results" class="q-results" role="listbox" hidden></ul>
+  </div>
+  <div class="top-actions">
+    <span class="yks-badge" title="YKS modu açık: TYT/AYT'de sık çıkan kayıtlar vurgulanır">YKS modu</span>
+    <button id="theme-btn" class="icon-btn" type="button" aria-label="Tema değiştir" title="Tema: otomatik"><span aria-hidden="true">◐</span></button>
+  </div>
+</header>
+
+<details id="filters" class="filters">
+  <summary>Filtreler <span id="filter-count" class="pill" hidden></span></summary>
+  <div class="filter-grid">
+    <label>Alan<select id="f-alan"><option value="">Tümü</option></select></label>
+    <label>Devlet<select id="f-devlet"><option value="">Tümü</option></select></label>
+    <label>Dil<select id="f-dil"><option value="">Tümü</option></select></label>
+    <label>Yüzyıl<select id="f-yuzyil"><option value="">Tümü</option></select></label>
+    <label>YKS önemi<select id="f-yks">
+      <option value="">Tümü</option>
+      <option value="yüksek">Yalnız yüksek</option>
+      <option value="orta+">Yüksek ve orta</option>
+    </select></label>
+    <button id="f-reset" type="button" class="btn ghost">Sıfırla</button>
+  </div>
+  <p id="filter-summary" class="muted small"></p>
+</details>
+
+<nav class="tabs" role="tablist" aria-label="Görünümler">
+  <button role="tab" id="tab-harita" aria-controls="view-harita" aria-selected="true" data-tab="harita">Harita</button>
+  <button role="tab" id="tab-zaman" aria-controls="view-zaman" aria-selected="false" data-tab="zaman">Zaman çizelgesi</button>
+  <button role="tab" id="tab-ag" aria-controls="view-ag" aria-selected="false" data-tab="ag">İlişki ağı</button>
+  <button role="tab" id="tab-sinav" aria-controls="view-sinav" aria-selected="false" data-tab="sinav">Sınav kartları</button>
+</nav>
+
+<main id="main">
+  <section id="view-harita" class="view" role="tabpanel" aria-labelledby="tab-harita">
+    <div class="map-wrap">
+      <div id="map" aria-label="Harita"></div>
+      <div id="map-fallback" class="fallback" hidden>Harita kütüphanesi (Leaflet) yüklenemedi. İnternet bağlantınızı kontrol edin; diğer görünümler çevrimdışı da çalışır.</div>
+    </div>
+    <div class="year-bar">
+      <button id="play" type="button" class="btn" aria-label="Zamanı oynat">▶ Oynat</button>
+      <label class="year-all"><input id="year-all" type="checkbox" checked> Tüm dönem</label>
+      <label class="year-range"><span class="sr-only">Yıl</span><input id="year" type="range" min="750" max="1700" step="1" value="1100" disabled></label>
+      <output id="year-out" for="year">Tüm dönem</output>
+    </div>
+    <div class="map-extra">
+      <label class="small"><input id="tiles" type="checkbox"> İnternet altlığı (CARTO/OSM)</label>
+      <span id="route-info" class="small muted"></span>
+    </div>
+    <div id="alive" class="chips" aria-live="polite"></div>
+  </section>
+
+  <section id="view-zaman" class="view" role="tabpanel" aria-labelledby="tab-zaman" hidden>
+    <div class="tl-tools">
+      <span class="small muted">Çubuk = ömür (kesikli kenar: yaklaşık/tartışmalı) · ◆ = eser · arka plan = devlet dönemi</span>
+      <span class="tl-zoom">
+        <button id="tl-out" type="button" class="icon-btn" aria-label="Uzaklaştır">−</button>
+        <button id="tl-in" type="button" class="icon-btn" aria-label="Yakınlaştır">+</button>
+      </span>
+    </div>
+    <div id="timeline" class="timeline" tabindex="0" aria-label="Zaman çizelgesi"></div>
+  </section>
+
+  <section id="view-ag" class="view" role="tabpanel" aria-labelledby="tab-ag" hidden>
+    <div class="net-tools">
+      <label class="small"><input id="net-allworks" type="checkbox"> Tüm eserleri göster</label>
+      <label class="small"><input id="net-authorship" type="checkbox" checked> Yazar–eser bağları</label>
+      <button id="net-fit" type="button" class="btn ghost small">Ortala</button>
+    </div>
+    <div class="net-wrap">
+      <div id="network" aria-label="İlişki ağı"></div>
+      <div id="net-fallback" class="fallback" hidden>Ağ kütüphanesi (vis-network) yüklenemedi. İnternet bağlantınızı kontrol edin.</div>
+    </div>
+    <ul id="legend" class="legend"></ul>
+  </section>
+
+  <section id="view-sinav" class="view" role="tabpanel" aria-labelledby="tab-sinav" hidden>
+    <nav class="subtabs" aria-label="Sınav bölümleri">
+      <button type="button" data-sub="kartlar" aria-pressed="true">Kartlar</button>
+      <button type="button" data-sub="karistirilanlar" aria-pressed="false">Karıştırılanlar</button>
+      <button type="button" data-sub="test" aria-pressed="false">Kısa test</button>
+    </nav>
+    <div id="sub-kartlar" class="sub">
+      <p class="small muted">Karta tıklayın veya Enter'a basın: ön yüzde eser, arka yüzde yazar, devlet, hükümdar, dil, tür ve "ilk" özelliği. Üstteki filtreler kartlara da uygulanır.</p>
+      <div id="cards" class="cards"></div>
+    </div>
+    <div id="sub-karistirilanlar" class="sub" hidden>
+      <div id="pairs" class="pairs"></div>
+    </div>
+    <div id="sub-test" class="sub" hidden>
+      <div class="quiz-head">
+        <label class="small"><input id="quiz-high" type="checkbox"> Yalnız YKS önemi yüksek eserler</label>
+        <span id="quiz-score" class="small"></span>
+        <button id="quiz-reset" type="button" class="btn ghost small">İlerlemeyi sıfırla</button>
+      </div>
+      <div id="quiz" class="quiz" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+
+<aside id="detail" class="detail" aria-label="Ayrıntılar" hidden>
+  <button id="detail-close" type="button" class="icon-btn close" aria-label="Kapat">✕</button>
+  <div id="detail-body"></div>
+</aside>
+
+<footer class="foot small muted">
+  Veriler TDV İslâm Ansiklopedisi maddelerine bağlantılıdır; teyit durumu her kayıtta belirtilir. Kıyı çizgileri: Natural Earth.
+  <span id="counts"></span>
+</footer>
+
+<script type="application/json" id="atlas-data">__DATA__</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+<script>/*__APP__*/</script>
+</body>
+</html>

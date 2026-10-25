@@ -1,0 +1,4770 @@
+[
+  {
+    "id": "harezmi-cebir",
+    "ad": "el-Kitâbü'l-Muhtasar fî Hisâbi'l-Cebr ve'l-Mukābele",
+    "ad_sade": "Kitabü'l-Muhtasar fi Hisabi'l-Cebr ve'l-Mukabele",
+    "yazar_id": "harezmi",
+    "yil": "813-830",
+    "yil_notu": "TDV: 197-215 (813-830) yılları arasında Bağdat'ta yazıldı.",
+    "dil": "Arapça",
+    "tur": "matematik",
+    "sunuldugu_kisi": "Halife Me'mûn",
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Abbasi",
+    "konu": "Birinci ve ikinci dereceden denklemlerin çözümü ile miras, ticaret ve ölçme problemlerine uygulanması.",
+    "onemi": "Cebiri bağımsız bir disiplin olarak ortaya koydu; Latince çevirileriyle Avrupa matematiğini etkiledi.",
+    "ilk_olma": "'Cebir' teriminin geçtiği ilk kitap",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hârizmî",
+        "url": "https://islamansiklopedisi.org.tr/harizmi-muhammed-b-musa"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cebir",
+        "url": "https://islamansiklopedisi.org.tr/cebir"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "harezmi-hisab",
+    "ad": "Kitâbü'l-Hisâbi'l-Hindî",
+    "ad_sade": "Kitabü'l-Hisabi'l-Hindi (Hint Hesabı)",
+    "yazar_id": "harezmi",
+    "yil": "813-833",
+    "yil_notu": "Me'mûn dönemi; kesin tarih bilinmiyor. Arapça aslı kayıp, Latince çevirisi (Algoritmi de numero Indorum) kaldı.",
+    "dil": "Arapça",
+    "tur": "matematik",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Abbasi",
+    "konu": "Hint rakamları ve onluk konumsal sistemle dört işlem.",
+    "onemi": "Hint-Arap rakamlarını İslam dünyasına ve Latince çevirisiyle Avrupa'ya tanıttı; 'algoritma' kelimesi buradan doğdu.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hârizmî",
+        "url": "https://islamansiklopedisi.org.tr/harizmi-muhammed-b-musa"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "harezmi-suretul-arz",
+    "ad": "Kitâbü Sûreti'l-arz",
+    "ad_sade": "Suretü'l-Arz (Kitabü'l-Coğrafya)",
+    "yazar_id": "harezmi",
+    "yil": "813-833",
+    "yil_notu": "Me'mûn dönemi; kesin tarih bilinmiyor.",
+    "dil": "Arapça",
+    "tur": "coğrafya",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Abbasi",
+    "konu": "Şehirlerin, dağların ve nehirlerin enlem-boylam koordinatları.",
+    "onemi": "Batlamyus coğrafyasını yeni verilerle düzelten ilk Arapça coğrafya eserlerinden biridir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hârizmî",
+        "url": "https://islamansiklopedisi.org.tr/harizmi-muhammed-b-musa"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "harezmi-zic",
+    "ad": "Zîcü's-Sindhind",
+    "ad_sade": "Zicü's-Sindhind",
+    "yazar_id": "harezmi",
+    "yil": "~830",
+    "yil_notu": "Kesin tarih bilinmiyor.",
+    "dil": "Arapça",
+    "tur": "zîc",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Abbasi",
+    "konu": "Hint astronomisine dayalı gezegen ve tutulma cetvelleri.",
+    "onemi": "İslam dünyasında hazırlanan en eski zîclerden biridir; Fergānî ona şerh yazdı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Zîc",
+        "url": "https://islamansiklopedisi.org.tr/zic"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "farabi-ihsa",
+    "ad": "İhsâü'l-ulûm",
+    "ad_sade": "İhsaü'l-Ulum",
+    "yazar_id": "farabi",
+    "yil": "~920-950",
+    "yil_notu": "Kesin tarih bilinmiyor.",
+    "dil": "Arapça",
+    "tur": "ilimler sınıflandırması",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Abbasi",
+    "konu": "Dil, mantık, matematik, fizik, metafizik, siyaset ve kelam gibi ilimlerin tanımı ve sınıflandırılması.",
+    "onemi": "İslam dünyasında ilimleri sistemli biçimde sınıflandıran ilk eserlerden biridir; Latinceye çevrildi.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İhsâü'l-Ulûm",
+        "url": "https://islamansiklopedisi.org.tr/ihsaul-ulum"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "farabi-medine",
+    "ad": "Ârâu ehli'l-medîneti'l-fâzıla",
+    "ad_sade": "el-Medinetü'l-Fazıla (Erdemli Şehir)",
+    "yazar_id": "farabi",
+    "yil": "942-943",
+    "yil_notu": "Bağdat'ta başlanıp Şam'da tamamlandığı kaydedilir.",
+    "dil": "Arapça",
+    "tur": "siyaset felsefesi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bağdat / Dımaşk",
+    "devlet": "Abbasi",
+    "konu": "Erdemli şehrin halkının görüşleri; ideal devlet ve yönetici.",
+    "onemi": "İslam siyaset felsefesinin temel eseridir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-Medînetü'l-Fâzıla",
+        "url": "https://islamansiklopedisi.org.tr/el-medinetul-fazila"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "farabi-musika",
+    "ad": "Kitâbü'l-Mûsîka'l-kebîr",
+    "ad_sade": "Kitabü'l-Musika'l-Kebir",
+    "yazar_id": "farabi",
+    "yil": "~935",
+    "yil_notu": "Kesin tarih bilinmiyor.",
+    "dil": "Arapça",
+    "tur": "müzik",
+    "sunuldugu_kisi": "Vezir Ebû Ca‘fer el-Kerhî",
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Abbasi",
+    "konu": "Müzik kuramı, ses, aralıklar ve çalgılar.",
+    "onemi": "İslam dünyasında müzik nazariyatının temel eserlerinden biridir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-Mûsîka'l-Kebîr",
+        "url": "https://islamansiklopedisi.org.tr/el-musikal-kebir"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ibn-sina-kanun",
+    "ad": "el-Kānûn fi't-tıb",
+    "ad_sade": "El-Kanun fi't-Tıb",
+    "yazar_id": "ibn-sina",
+    "yil": "1012-1025",
+    "yil_notu": "Cürcân'da başlanıp Hemedan'da sürdürüldü; tarih aralığı yaklaşıktır.",
+    "dil": "Arapça",
+    "tur": "tıp",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Cürcân / Hemedan",
+    "devlet": "Büveyhi",
+    "konu": "Tıbbın teorik esasları, ilaçlar, hastalıklar ve tedavileri; beş kitap.",
+    "onemi": "Yüzyıllarca Doğu'da ve Batı'da tıp eğitiminin temel kitabı oldu; Latinceye çevrildi.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-Kānûn fi't-Tıb",
+        "url": "https://islamansiklopedisi.org.tr/el-kanun-fit-tib"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ibn-sina-sifa",
+    "ad": "Kitâbü'ş-Şifâ",
+    "ad_sade": "Kitabü'ş-Şifa",
+    "yazar_id": "ibn-sina",
+    "yil": "1014-1027",
+    "yil_notu": "Hemedan ve İsfahan'da yazıldı; tarih aralığı yaklaşıktır.",
+    "dil": "Arapça",
+    "tur": "felsefe ansiklopedisi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Hemedan / İsfahan",
+    "devlet": "Büveyhi",
+    "konu": "Mantık, fizik (tabiat ilimleri), matematik ve metafizik.",
+    "onemi": "İslam felsefesinin en kapsamlı ansiklopedik eseridir.",
+    "ilk_olma": "İslam dünyasında tek yazarlı en kapsamlı felsefe ansiklopedisi",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – eş-Şifâ",
+        "url": "https://islamansiklopedisi.org.tr/es-sifa--ibn-sina"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ibn-sina-isarat",
+    "ad": "el-İşârât ve't-tenbîhât",
+    "ad_sade": "El-İşarat ve't-Tenbihat",
+    "yazar_id": "ibn-sina",
+    "yil": "~1030-1037",
+    "yil_notu": "Son eserlerinden.",
+    "dil": "Arapça",
+    "tur": "felsefe",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İsfahan",
+    "devlet": "Kâkûyî",
+    "konu": "Mantık, tabiat, metafizik ve tasavvufa dair özlü bir felsefe kitabı.",
+    "onemi": "Fahreddin er-Râzî ve Nasîrüddîn-i Tûsî'nin şerhleriyle yüzyıllarca tartışıldı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-İşârât ve't-Tenbîhât",
+        "url": "https://islamansiklopedisi.org.tr/el-isarat-vet-tenbihat"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ibn-sina-danisname",
+    "ad": "Dânişnâme-i Alâî",
+    "ad_sade": "Danişname-i Alai",
+    "yazar_id": "ibn-sina",
+    "yil": "~1027-1037",
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "felsefe",
+    "sunuldugu_kisi": "Kâkûyî Alâüddevle",
+    "yazildigi_yer": "İsfahan",
+    "devlet": "Kâkûyî",
+    "konu": "Mantık, metafizik ve tabiat ilimlerinin Farsça özeti.",
+    "onemi": "Farsça yazılmış ilk sistematik felsefe kitaplarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İbn Sînâ",
+        "url": "https://islamansiklopedisi.org.tr/ibn-sina"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "ilk_olma"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "biruni-asar",
+    "ad": "el-Âsârü'l-bâkıye ani'l-kurûni'l-hâliye",
+    "ad_sade": "El-Asarü'l-Bakiye",
+    "yazar_id": "biruni",
+    "yil": "~1000",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "takvim ve kronoloji",
+    "sunuldugu_kisi": "Ziyârî Kābûs b. Veşmgîr",
+    "yazildigi_yer": "Cürcân",
+    "devlet": "Ziyârî",
+    "konu": "Farklı milletlerin takvimleri, bayramları ve tarih sistemleri.",
+    "onemi": "Karşılaştırmalı kronolojinin öncü eserlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Bîrûnî",
+        "url": "https://islamansiklopedisi.org.tr/biruni"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "biruni-tahdid",
+    "ad": "Tahdîdü nihâyâti'l-emâkin",
+    "ad_sade": "Tahdidü Nihayati'l-Emakin",
+    "yazar_id": "biruni",
+    "yil": 1025,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "matematiksel coğrafya",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Gazne",
+    "devlet": "Gazneli",
+    "konu": "Şehirlerin koordinatlarını ve şehirler arası uzaklıkları belirleme yöntemleri.",
+    "onemi": "TDV'ye göre matematiksel coğrafyanın temel kitabıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tahdîdü Nihâyâti'l-Emâkin",
+        "url": "https://islamansiklopedisi.org.tr/tahdidu-nihayatil-emakin"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "biruni-hind",
+    "ad": "Tahkîku mâ li'l-Hind",
+    "ad_sade": "Tahkiku ma li'l-Hind (Kitabü'l-Hind)",
+    "yazar_id": "biruni",
+    "yil": "~1030",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "kültür tarihi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Gazne",
+    "devlet": "Gazneli",
+    "konu": "Hint dinleri, felsefesi, bilimleri, takvimi ve gelenekleri.",
+    "onemi": "Başka bir kültürü yerinde ve kendi kaynaklarından inceleyen erken bir karşılaştırmalı eserdir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Bîrûnî",
+        "url": "https://islamansiklopedisi.org.tr/biruni"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hindistan",
+        "url": "https://islamansiklopedisi.org.tr/hindistan"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "biruni-kanun",
+    "ad": "el-Kānûnü'l-Mes‘ûdî",
+    "ad_sade": "Kanun-ı Mesudi",
+    "yazar_id": "biruni",
+    "yil": "~1031-1037",
+    "yil_notu": "Sultan Mesud'un saltanatının başında yazıldı.",
+    "dil": "Arapça",
+    "tur": "astronomi ansiklopedisi",
+    "sunuldugu_kisi": "Gazneli Sultan Mesud",
+    "yazildigi_yer": "Gazne",
+    "devlet": "Gazneli",
+    "konu": "Astronomi, trigonometri, coğrafya ve kronoloji.",
+    "onemi": "Dönemin en kapsamlı astronomi ansiklopedisidir; adını sunulduğu Sultan Mesud'dan alır.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Bîrûnî",
+        "url": "https://islamansiklopedisi.org.tr/biruni"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "biruni-tefhim",
+    "ad": "et-Tefhîm li-evâili sınâati't-tencîm",
+    "ad_sade": "Et-Tefhim",
+    "yazar_id": "biruni",
+    "yil": 1029,
+    "yil_notu": null,
+    "dil": "Arapça ve Farsça",
+    "tur": "astronomi",
+    "sunuldugu_kisi": "Reyhâne bint Hasan",
+    "yazildigi_yer": "Gazne",
+    "devlet": "Gazneli",
+    "konu": "Geometri, aritmetik, astronomi ve astrolojiye giriş; soru-cevap biçiminde.",
+    "onemi": "Hem Arapça hem Farsça nüshaları bulunan bir öğretim kitabıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – et-Tefhîm",
+        "url": "https://islamansiklopedisi.org.tr/et-tefhim"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "biruni-saydele",
+    "ad": "Kitâbü's-Saydele fi't-tıb",
+    "ad_sade": "Kitabü's-Saydele",
+    "yazar_id": "biruni",
+    "yil": "~1048-1050",
+    "yil_notu": "Son eserlerinden.",
+    "dil": "Arapça",
+    "tur": "eczacılık",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Gazne",
+    "devlet": "Gazneli",
+    "konu": "İlaç maddelerinin farklı dillerdeki adları ve özellikleri.",
+    "onemi": "Eczacılık terimleri bakımından çok dilli bir kaynaktır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Bîrûnî",
+        "url": "https://islamansiklopedisi.org.tr/biruni"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "gazali-ihya",
+    "ad": "İhyâu ulûmi'd-dîn",
+    "ad_sade": "İhyau Ulumi'd-Din",
+    "yazar_id": "gazali",
+    "yil": "1095-1105",
+    "yil_notu": "İnziva yıllarında yazıldı; tarih aralığı yaklaşıktır.",
+    "dil": "Arapça",
+    "tur": "ahlak ve tasavvuf",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Dımaşk / Kudüs / Tûs",
+    "devlet": "Büyük Selçuklu",
+    "konu": "İbadetler, gündelik hayatın adabı, kötü huylar ve kurtuluşa götüren erdemler; dört bölüm.",
+    "onemi": "Fıkıh, ahlak ve tasavvufu birleştirerek Sünnî dünyada en çok okunan eserlerden biri oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Gazzâlî",
+        "url": "https://islamansiklopedisi.org.tr/gazzali"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "gazali-tehafut",
+    "ad": "Tehâfütü'l-felâsife",
+    "ad_sade": "Tehafütü'l-Felasife",
+    "yazar_id": "gazali",
+    "yil": 1095,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "felsefe eleştirisi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Büyük Selçuklu",
+    "konu": "Meşşâî filozofların (özellikle Fârâbî ve İbn Sînâ) yirmi meseledeki görüşlerinin eleştirisi.",
+    "onemi": "İbn Rüşd'ün cevabına ve Osmanlı'da Fâtih döneminde yeni tehâfütlerin yazılmasına yol açtı.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tehâfütü'l-Felâsife",
+        "url": "https://islamansiklopedisi.org.tr/tehafutul-felasife"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "gazali-munkiz",
+    "ad": "el-Münkız mine'd-dalâl",
+    "ad_sade": "El-Münkız mine'd-Dalal",
+    "yazar_id": "gazali",
+    "yil": "~1108",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "otobiyografi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Nîşâbur",
+    "devlet": "Büyük Selçuklu",
+    "konu": "Yazarın kelam, felsefe, Bâtınîlik ve tasavvuf arasındaki arayışı.",
+    "onemi": "İslam düşünce tarihinin en etkili entelektüel otobiyografisidir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-Münkız mine'd-Dalâl",
+        "url": "https://islamansiklopedisi.org.tr/el-munkiz-mined-dalal"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "gazali-nasihat",
+    "ad": "Nasîhatü'l-mülûk",
+    "ad_sade": "Nasihatü'l-Müluk",
+    "yazar_id": "gazali",
+    "yil": "~1105-1111",
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "siyasetname",
+    "sunuldugu_kisi": "Selçuklu Sultanı Sencer veya Muhammed Tapar (tartışmalı)",
+    "yazildigi_yer": null,
+    "devlet": "Büyük Selçuklu",
+    "konu": "Hükümdara adalet, inanç ve yönetim üzerine öğütler.",
+    "onemi": "Selçuklu dönemi siyasetnâme geleneğinin örneklerindendir; ikinci kısmının Gazzâlî'ye aidiyeti tartışmalıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Siyâsetnâme",
+        "url": "https://islamansiklopedisi.org.tr/siyasetname"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "hayyam-cebir",
+    "ad": "Risâle fi'l-berâhîn alâ mesâili'l-cebr ve'l-mukābele",
+    "ad_sade": "Cebir Risalesi",
+    "yazar_id": "omer-hayyam",
+    "yil": "~1070",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "matematik",
+    "sunuldugu_kisi": "Kadı Ebû Tâhir",
+    "yazildigi_yer": "Semerkant",
+    "devlet": "Karahanlı",
+    "konu": "Denklemlerin sınıflandırılması ve üçüncü dereceden denklemlerin konik kesitlerle geometrik çözümü.",
+    "onemi": "Kübik denklemlerin sistematik incelendiği ilk eserlerdendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ömer Hayyâm",
+        "url": "https://islamansiklopedisi.org.tr/omer-hayyam"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "hayyam-rubailer",
+    "ad": "Rubâiyyât",
+    "ad_sade": "Rubailer",
+    "yazar_id": "omer-hayyam",
+    "yil": null,
+    "yil_notu": "Derleme; tarih verilemez. Pek çok rubainin Hayyâm'a aidiyeti tartışmalıdır.",
+    "dil": "Farsça",
+    "tur": "şiir",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Büyük Selçuklu",
+    "konu": "Hayatın geçiciliği, kader ve varoluş üzerine dörtlükler.",
+    "onemi": "Edward FitzGerald'ın İngilizce çevirisiyle dünya çapında tanındı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ömer Hayyâm",
+        "url": "https://islamansiklopedisi.org.tr/omer-hayyam"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "siyasetname",
+    "ad": "Siyâsetnâme (Siyerü'l-mülûk)",
+    "ad_sade": "Siyasetname",
+    "yazar_id": "nizamulmulk",
+    "yil": "1091-1092",
+    "yil_notu": "TDV: Melikşah'ın isteğiyle 1092'de tamamlandı.",
+    "dil": "Farsça",
+    "tur": "siyasetname",
+    "sunuldugu_kisi": "Sultan Melikşah",
+    "yazildigi_yer": "İsfahan / Bağdat",
+    "devlet": "Büyük Selçuklu",
+    "konu": "Devlet yönetimi, adalet, ordu, haber alma ve memurlar üzerine öğütler; Bâtınîlere karşı uyarılar.",
+    "onemi": "Selçuklu devlet teşkilatını ve siyaset anlayışını gösteren temel kaynaktır.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Siyâsetnâme",
+        "url": "https://islamansiklopedisi.org.tr/siyasetname"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nizâmülmülk",
+        "url": "https://islamansiklopedisi.org.tr/nizamulmulk"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "divanu-lugatit-turk",
+    "ad": "Dîvânu Lugâti't-Türk",
+    "ad_sade": "Divanü Lügati't-Türk",
+    "yazar_id": "kasgarli-mahmud",
+    "yil": "1072-1077",
+    "yil_notu": "TDV: Ocak 1072'de başlandı, Şubat 1074'te bitirildi; muhtemelen 1077'de sunuldu.",
+    "dil": "Arapça",
+    "tur": "sözlük",
+    "sunuldugu_kisi": "Abbasi Halifesi Muktedî-Biemrillâh'ın oğlu Ebü'l-Kāsım Abdullah",
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Karahanlı",
+    "konu": "Türkçe kelimelerin Arapça açıklamaları; Türk boyları, lehçeleri, atasözleri, şiirleri ve bir dünya haritası.",
+    "onemi": "Türkçenin Arapça kadar zengin olduğunu göstermek ve Araplara Türkçe öğretmek amacıyla yazıldı; Türk dili ve kültürünün temel kaynağıdır.",
+    "ilk_olma": "İlk Türkçe sözlük; ilk Türk dünyası haritası",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Dîvânü Lugāti't-Türk",
+        "url": "https://islamansiklopedisi.org.tr/divanu-lugatit-turk"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false,
+    "devlet_notu": "Bağdat'ta yazılıp Abbasi halifesinin oğluna sunuldu; yazar Karahanlı çevresinden olduğundan Karahanlı dönemi eseri sayılır."
+  },
+  {
+    "id": "cevahirun-nahv",
+    "ad": "Cevâhirü'n-nahv fî lugâti't-Türk",
+    "ad_sade": "Cevahirü'n-Nahv",
+    "yazar_id": "kasgarli-mahmud",
+    "yil": "~1070",
+    "yil_notu": "Eser günümüze ulaşmadı; yalnızca Dîvân'daki atıflardan bilinir.",
+    "dil": "Arapça",
+    "tur": "dil bilgisi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Karahanlı",
+    "konu": "Türkçenin dil bilgisi (kayıp).",
+    "onemi": "Bilinen ilk Türkçe gramer kitabı olduğu düşünülür, ancak kayıptır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kâşgarlı Mahmud",
+        "url": "https://islamansiklopedisi.org.tr/kasgarli-mahmud"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": true
+  },
+  {
+    "id": "kutadgu-bilig",
+    "ad": "Kutadgu Bilig",
+    "ad_sade": "Kutadgu Bilig",
+    "yazar_id": "yusuf-has-hacib",
+    "yil": "1069-1070",
+    "yil_notu": "TDV: 462 (1069-70) yılında tamamlanıp sunuldu.",
+    "dil": "Türkçe (Karahanlı/Hakaniye)",
+    "tur": "siyasetname / mesnevi",
+    "sunuldugu_kisi": "Tavgaç Uluğ Buğra Kara Han",
+    "yazildigi_yer": "Balasagun / Kâşgar",
+    "devlet": "Karahanlı",
+    "konu": "Hükümdar Kün Toğdı, vezir Ay Toldı, vezirin oğlu Ögdülmiş ve derviş Odgurmış arasındaki konuşmalarla devlet yönetimi ve mutluluğa ulaşmanın yolları.",
+    "onemi": "Türk-İslam edebiyatının bilinen ilk büyük eseridir; 'mutluluk veren bilgi' anlamına gelir.",
+    "ilk_olma": "Türk-İslam edebiyatının ilk siyasetnamesi ve ilk mesnevisi",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kutadgu Bilig",
+        "url": "https://islamansiklopedisi.org.tr/kutadgu-bilig"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "atabetul-hakayik",
+    "ad": "Atebetü'l-Hakāyık",
+    "ad_sade": "Atabetü'l-Hakayık (Hakikatler Eşiği)",
+    "yazar_id": "edip-ahmet-yukneki",
+    "yil": "1100-1200",
+    "yil_notu": "TDV XII. yüzyıla tarihler; bazı araştırmacılar XIII. yüzyıl başını önerir.",
+    "dil": "Türkçe (Karahanlı/Hakaniye)",
+    "tur": "manzum öğüt",
+    "sunuldugu_kisi": "Dâd Sipehsâlâr Bey",
+    "yazildigi_yer": null,
+    "devlet": "Karahanlı",
+    "konu": "Bilginin faydası, dilin korunması, cömertlik, alçak gönüllülük gibi ahlak konuları; 14 bölüm, 101 dörtlük ve ekler.",
+    "onemi": "Kutadgu Bilig'den sonra Karahanlı Türkçesinin ikinci büyük didaktik eseridir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Atebetü'l-Hakāyık",
+        "url": "https://islamansiklopedisi.org.tr/atebetul-hakayik"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false,
+    "devlet_notu": "Yazıldığı yer ve dönem tartışmalıdır; genellikle Karahanlı dönemi eserleri arasında sayılır."
+  },
+  {
+    "id": "divan-i-hikmet",
+    "ad": "Dîvân-ı Hikmet",
+    "ad_sade": "Divan-ı Hikmet",
+    "yazar_id": "ahmet-yesevi",
+    "yil": "1100-1166",
+    "yil_notu": "Yesevî'nin hikmetleri sonraki yüzyıllarda derlendi; bugünkü nüshalardaki şiirlerin tamamı ona ait değildir.",
+    "dil": "Türkçe",
+    "tur": "tasavvufi şiir",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Yesi (Türkistan)",
+    "devlet": "Karahanlı",
+    "konu": "Hikmet adı verilen, hece ölçüsüyle yazılmış dinî-tasavvufi şiirler.",
+    "onemi": "Türkçe tasavvuf şiirinin ilk ürünlerinden olup İslamiyet'in Türkler arasında yayılmasına katkıda bulundu.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahmed Yesevî",
+        "url": "https://islamansiklopedisi.org.tr/ahmed-yesevi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mesnevi",
+    "ad": "Mesnevî-i Ma‘nevî",
+    "ad_sade": "Mesnevi",
+    "yazar_id": "mevlana",
+    "yil": "1258-1273",
+    "yil_notu": "Hüsâmeddin Çelebi'nin isteğiyle başlandı; ölümüne kadar yazıldı.",
+    "dil": "Farsça",
+    "tur": "tasavvufi mesnevi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Konya",
+    "devlet": "Anadolu Selçuklu",
+    "konu": "Hikâyeler aracılığıyla tasavvufi ve ahlaki öğretiler; altı cilt, yaklaşık 25.700 beyit.",
+    "onemi": "Tasavvuf edebiyatının en çok okunan ve şerh edilen eserlerinden biridir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mesnevî",
+        "url": "https://islamansiklopedisi.org.tr/mesnevi--mevlana"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "divan-i-kebir",
+    "ad": "Dîvân-ı Kebîr",
+    "ad_sade": "Divan-ı Kebir",
+    "yazar_id": "mevlana",
+    "yil": "1244-1273",
+    "yil_notu": "Büyük kısmı Şems ile karşılaşmadan sonra yazıldı.",
+    "dil": "Farsça",
+    "tur": "divan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Konya",
+    "devlet": "Anadolu Selçuklu",
+    "konu": "Gazeller ve rubailer; Şems-i Tebrîzî adına söylenmiş şiirler.",
+    "onemi": "Fars lirik şiirinin zirvelerinden sayılır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Dîvân-ı Kebîr",
+        "url": "https://islamansiklopedisi.org.tr/divan-i-kebir"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fihi-ma-fih",
+    "ad": "Fîhi mâ fîh",
+    "ad_sade": "Fihi Ma Fih",
+    "yazar_id": "mevlana",
+    "yil": null,
+    "yil_notu": "Sohbetlerin derlemesi; tarih verilemez.",
+    "dil": "Farsça",
+    "tur": "mensur sohbetler",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Konya",
+    "devlet": "Anadolu Selçuklu",
+    "konu": "Mevlânâ'nın sohbetlerinden derlenmiş tasavvufi notlar.",
+    "onemi": "Mevlânâ'nın düşüncesini nesir hâlinde aktarır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fîhi Mâ Fîh",
+        "url": "https://islamansiklopedisi.org.tr/fihi-ma-fih"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "yunus-divan",
+    "ad": "Dîvân-ı Yûnus Emre",
+    "ad_sade": "Yunus Emre Divanı",
+    "yazar_id": "yunus-emre",
+    "yil": "1270-1320",
+    "yil_notu": "Tarih verilemez; şiirler sonradan derlendi.",
+    "dil": "Türkçe",
+    "tur": "divan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Anadolu Beylikleri",
+    "konu": "İlahi aşk, insan sevgisi ve ölüm üzerine hece ve aruzla yazılmış şiirler.",
+    "onemi": "Anadolu Türkçesinin edebî dil olmasında belirleyici rol oynadı.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Yûnus Emre",
+        "url": "https://islamansiklopedisi.org.tr/yunus-emre"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "risaletun-nushiyye",
+    "ad": "Risâletü'n-nushiyye",
+    "ad_sade": "Risaletü'n-Nushiyye",
+    "yazar_id": "yunus-emre",
+    "yil": 1307,
+    "yil_notu": "Eserde 707 (1307-08) tarihi geçtiği kabul edilir.",
+    "dil": "Türkçe",
+    "tur": "manzum öğüt (mesnevi)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Anadolu Beylikleri",
+    "konu": "Akıl, nefis ve erdemler üzerine dinî öğütler.",
+    "onemi": "Anadolu'da nasihatnâme türünün ilk örneklerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Risâletü'n-Nushiyye",
+        "url": "https://islamansiklopedisi.org.tr/risaletun-nushiyye"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "makalat-haci-bektas",
+    "ad": "Makālât",
+    "ad_sade": "Makalat (Hacı Bektaş-ı Veli)",
+    "yazar_id": "haci-bektas-veli",
+    "yil": null,
+    "yil_notu": "Arapça aslı günümüze ulaşmadı; Türkçe tercümeleri vardır. Aidiyeti ve tarihi tartışmalıdır.",
+    "dil": "Arapça (aslı)",
+    "tur": "tasavvuf",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Anadolu Selçuklu",
+    "konu": "Şeriat, tarikat, marifet ve hakikat 'dört kapı' anlayışı.",
+    "onemi": "Bektaşî geleneğinde temel metin kabul edilir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hacı Bektâş-ı Velî",
+        "url": "https://islamansiklopedisi.org.tr/haci-bektas-i-veli"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dil",
+      "konu"
+    ],
+    "dogrulanamadi": true
+  },
+  {
+    "id": "zic-i-ilhani",
+    "ad": "Zîc-i Îlhânî",
+    "ad_sade": "Zic-i İlhani",
+    "yazar_id": "nasiruddin-tusi",
+    "yil": "1259-1272",
+    "yil_notu": "Merâga gözlemlerine dayanır; TDV'ye göre Tûsî öldüğünde tamamlanmamıştı.",
+    "dil": "Farsça",
+    "tur": "zîc",
+    "sunuldugu_kisi": "Hülâgû Han / Abaka Han",
+    "yazildigi_yer": "Merâga",
+    "devlet": "İlhanlı",
+    "konu": "Merâga Rasathanesi'nde yapılan gözlemlere dayalı astronomi cetvelleri.",
+    "onemi": "İlhanlı döneminin ana zîcidir; Uluğ Bey zîci ölçüm hatalarını düzeltti.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Zîc-i İlhânî",
+        "url": "https://islamansiklopedisi.org.tr/zic-i-ilhani"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ahlak-i-nasiri",
+    "ad": "Ahlâk-ı Nâsırî",
+    "ad_sade": "Ahlak-ı Nasıri",
+    "yazar_id": "nasiruddin-tusi",
+    "yil": 1235,
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "ahlak felsefesi",
+    "sunuldugu_kisi": "Kuhistan İsmâilî valisi Nâsırüddin Muhteşem",
+    "yazildigi_yer": "Kuhistan",
+    "devlet": "Nizârî İsmâilî",
+    "konu": "Bireysel ahlak, ev yönetimi ve şehir (siyaset) yönetimi.",
+    "onemi": "Farsça ahlak felsefesinin temel eseridir; Kınalızâde'nin Ahlâk-ı Alâî'sine model oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tûsî, Nasîrüddin",
+        "url": "https://islamansiklopedisi.org.tr/tusi-nasiruddin"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tusi-tezkire",
+    "ad": "et-Tezkire fî ilmi'l-hey'e",
+    "ad_sade": "Et-Tezkire fi İlmi'l-Hey'e",
+    "yazar_id": "nasiruddin-tusi",
+    "yil": 1261,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "astronomi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Merâga",
+    "devlet": "İlhanlı",
+    "konu": "Gök cisimlerinin hareket modelleri; Batlamyus modelinin eleştirisi ve 'Tûsî çifti'.",
+    "onemi": "Merâga okulunun Batlamyus astronomisini düzeltme çabalarının ana metnidir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tûsî, Nasîrüddin",
+        "url": "https://islamansiklopedisi.org.tr/tusi-nasiruddin"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tusi-tecrid",
+    "ad": "Tecrîdü'l-i‘tikād",
+    "ad_sade": "Tecridü'l-İtikad",
+    "yazar_id": "nasiruddin-tusi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "kelam",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "İlhanlı",
+    "konu": "Felsefi yöntemle yazılmış özlü bir kelam metni.",
+    "onemi": "Ali Kuşçu'nun şerhiyle Osmanlı ve İran medreselerinde okundu.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tûsî, Nasîrüddin",
+        "url": "https://islamansiklopedisi.org.tr/tusi-nasiruddin"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tusi-isarat-serhi",
+    "ad": "Hallü müşkilâti'l-İşârât",
+    "ad_sade": "Şerhu'l-İşarat (Tusi)",
+    "yazar_id": "nasiruddin-tusi",
+    "yil": 1246,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "şerh",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Nizârî İsmâilî",
+    "konu": "İbn Sînâ'nın el-İşârât'ına şerh; Fahreddin er-Râzî'nin eleştirilerine cevap.",
+    "onemi": "İbn Sînâ felsefesinin sonraki yüzyıllarda okunma biçimini belirledi.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-İşârât ve't-Tenbîhât",
+        "url": "https://islamansiklopedisi.org.tr/el-isarat-vet-tenbihat"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kadizade-eskal",
+    "ad": "Tuhfetü'r-reîs fî şerhi Eşkâli't-te'sîs",
+    "ad_sade": "Eşkalü't-Te'sis Şerhi",
+    "yazar_id": "kadizade-rumi",
+    "yil": 1412,
+    "yil_notu": "TDV: 815 (1412) yılında yazıldı.",
+    "dil": "Arapça",
+    "tur": "şerh / geometri",
+    "sunuldugu_kisi": "Uluğ Bey",
+    "yazildigi_yer": "Semerkant",
+    "devlet": "Timurlu",
+    "konu": "Şemseddin es-Semerkandî'nin Öklid geometrisine dair 35 önermelik eserinin şerhi.",
+    "onemi": "Osmanlı medreselerinde vazgeçilmez geometri ders kitabı oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Semerkandî, Muhammed b. Eşref",
+        "url": "https://islamansiklopedisi.org.tr/semerkandi-muhammed-b-esref"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kadızâde-i Rûmî",
+        "url": "https://islamansiklopedisi.org.tr/kadizade-i-rumi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kadizade-mulahhas",
+    "ad": "Şerhu'l-Mülahhas fi'l-hey'e",
+    "ad_sade": "Mülahhas Şerhi",
+    "yazar_id": "kadizade-rumi",
+    "yil": 1413,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "şerh / astronomi",
+    "sunuldugu_kisi": "Uluğ Bey",
+    "yazildigi_yer": "Semerkant",
+    "devlet": "Timurlu",
+    "konu": "Çağmînî'nin astronomiye giriş kitabının şerhi.",
+    "onemi": "Osmanlı medreselerinde astronomi ders kitabı olarak yüzyıllarca okundu.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kadızâde-i Rûmî",
+        "url": "https://islamansiklopedisi.org.tr/kadizade-i-rumi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "zic-i-ulug-bey",
+    "ad": "Zîc-i Uluğ Bey (Zîc-i Cedîd-i Sultânî)",
+    "ad_sade": "Zic-i Uluğ Bey",
+    "yazar_id": "ulug-bey",
+    "yil": "1437-1449",
+    "yil_notu": "TDV: 841 (1437) yılında tamamlandığı kabul edilir; Uluğ Bey ölümüne kadar üzerinde çalıştı.",
+    "dil": "Farsça",
+    "tur": "zîc",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Semerkant",
+    "devlet": "Timurlu",
+    "konu": "Takvim sistemleri, trigonometri, gezegen hareketleri ve yaklaşık 1018 yıldızın katalogu; dört bölüm.",
+    "onemi": "Batlamyus'tan sonra yeni gözlemlere dayanan en kapsamlı yıldız kataloglarından biridir; Osmanlı astronomisinin temel kaynağı oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Zîc-i Uluğ Bey",
+        "url": "https://islamansiklopedisi.org.tr/zic-i-ulug-bey"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Semerkant Rasathânesi",
+        "url": "https://islamansiklopedisi.org.tr/semerkant-rasathanesi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fethiyye",
+    "ad": "er-Risâletü'l-Fethiyye",
+    "ad_sade": "Fethiye Risalesi",
+    "yazar_id": "ali-kuscu",
+    "yil": 1473,
+    "yil_notu": "Otlukbeli zaferi (1473) münasebetiyle sunuldu.",
+    "dil": "Arapça",
+    "tur": "astronomi",
+    "sunuldugu_kisi": "Fâtih Sultan Mehmed",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Astronomiye (hey'et) giriş; gök cisimlerinin düzeni ve hareketleri.",
+    "onemi": "Fâtih'in Uzun Hasan'a karşı kazandığı zafer adına yazıldı; Osmanlı medreselerinde astronomi ders kitabı oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ali Kuşçu",
+        "url": "https://islamansiklopedisi.org.tr/ali-kuscu"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "muhammediyye",
+    "ad": "er-Risâletü'l-Muhammediyye",
+    "ad_sade": "Muhammediye Risalesi",
+    "yazar_id": "ali-kuscu",
+    "yil": 1473,
+    "yil_notu": "TDV iki ayrı tarih önerisinden söz eder (1473 ve ilk İstanbul ziyareti).",
+    "dil": "Arapça",
+    "tur": "matematik",
+    "sunuldugu_kisi": "Fâtih Sultan Mehmed",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Aritmetik ve geometriye dair orta düzey bir matematik kitabı.",
+    "onemi": "Osmanlı medreselerinde uzun süre orta düzey matematik ders kitabı olarak okutuldu.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – er-Risâletü'l-Muhammediyye",
+        "url": "https://islamansiklopedisi.org.tr/er-risaletul-muhammediyye"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ali-kuscu-heye",
+    "ad": "Risâle fi'l-hey'e",
+    "ad_sade": "Risale fi'l-Hey'e (Farsça)",
+    "yazar_id": "ali-kuscu",
+    "yil": 1458,
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "astronomi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Semerkant",
+    "devlet": "Timurlu",
+    "konu": "Astronomiye giriş.",
+    "onemi": "Semerkant döneminde yazılmış popüler bir astronomi kitabıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ali Kuşçu",
+        "url": "https://islamansiklopedisi.org.tr/ali-kuscu"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "serh-i-tecrid",
+    "ad": "Şerh-i Tecrîd (eş-Şerhu'l-cedîd)",
+    "ad_sade": "Tecrid Şerhi",
+    "yazar_id": "ali-kuscu",
+    "yil": "~1460",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "şerh / kelam",
+    "sunuldugu_kisi": "Timurlu Ebû Saîd Mirza",
+    "yazildigi_yer": "Herat",
+    "devlet": "Timurlu",
+    "konu": "Nasîrüddîn-i Tûsî'nin Tecrîdü'l-i‘tikād'ına şerh.",
+    "onemi": "Kelam ve felsefe tartışmalarında çok okunan bir şerh oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ali Kuşçu",
+        "url": "https://islamansiklopedisi.org.tr/ali-kuscu"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "serh-i-zic-ulug",
+    "ad": "Şerh-i Zîc-i Uluğ Bey",
+    "ad_sade": "Uluğ Bey Zici Şerhi (Ali Kuşçu)",
+    "yazar_id": "ali-kuscu",
+    "yil": "~1450-1470",
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "şerh / zîc",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Timurlu",
+    "konu": "Zîc-i Uluğ Bey'in açıklaması.",
+    "onemi": "Semerkant zîcinin anlaşılmasını kolaylaştırdı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ali Kuşçu",
+        "url": "https://islamansiklopedisi.org.tr/ali-kuscu"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "muhakemetul-lugateyn",
+    "ad": "Muhâkemetü'l-lugateyn",
+    "ad_sade": "Muhakemetü'l-Lugateyn",
+    "yazar_id": "ali-sir-nevai",
+    "yil": 1499,
+    "yil_notu": "TDV: 904 (1499) yılında yazıldı.",
+    "dil": "Türkçe (Çağatay)",
+    "tur": "dil karşılaştırması",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Herat",
+    "devlet": "Timurlu",
+    "konu": "Türkçe ile Farsçanın çeşitli yönlerden karşılaştırılması.",
+    "onemi": "Türkçenin Farsçadan üstün olduğunu ispat amacıyla yazıldı; klasik Çağatay Türkçesinin temel metinlerindendir.",
+    "ilk_olma": "Türkçe ile Farsçayı karşılaştıran ilk müstakil eser",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ali Şîr Nevâî",
+        "url": "https://islamansiklopedisi.org.tr/ali-sir-nevai"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "ilk_olma"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "nevai-hamse",
+    "ad": "Hamse (Nevâî)",
+    "ad_sade": "Hamse (Ali Şir Nevai)",
+    "yazar_id": "ali-sir-nevai",
+    "yil": "1483-1485",
+    "yil_notu": null,
+    "dil": "Türkçe (Çağatay)",
+    "tur": "hamse (beş mesnevi)",
+    "sunuldugu_kisi": "Hüseyin Baykara",
+    "yazildigi_yer": "Herat",
+    "devlet": "Timurlu",
+    "konu": "Hayretü'l-ebrâr, Ferhâd ü Şîrîn, Leylî vü Mecnûn, Seb‘a-i Seyyâre ve Sedd-i İskenderî.",
+    "onemi": "Nizâmî geleneğinde Türkçe yazılmış ilk tam hamsedir.",
+    "ilk_olma": "Türkçe ilk tam hamse",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hamse",
+        "url": "https://islamansiklopedisi.org.tr/hamse--edebiyat"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mecalisun-nefais",
+    "ad": "Mecâlisü'n-nefâis",
+    "ad_sade": "Mecalisü'n-Nefais",
+    "yazar_id": "ali-sir-nevai",
+    "yil": 1491,
+    "yil_notu": null,
+    "dil": "Türkçe (Çağatay)",
+    "tur": "şairler tezkiresi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Herat",
+    "devlet": "Timurlu",
+    "konu": "Timurlu dönemi şairlerinin biyografileri ve şiirlerinden örnekler.",
+    "onemi": "Türk edebiyatının ilk şairler tezkiresidir.",
+    "ilk_olma": "Türk edebiyatında ilk şairler tezkiresi",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mecâlisü'n-Nefâis",
+        "url": "https://islamansiklopedisi.org.tr/mecalisun-nefais"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "nevai-mizan",
+    "ad": "Mîzânü'l-evzân",
+    "ad_sade": "Mizanü'l-Evzan",
+    "yazar_id": "ali-sir-nevai",
+    "yil": "~1494",
+    "yil_notu": null,
+    "dil": "Türkçe (Çağatay)",
+    "tur": "aruz",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Herat",
+    "devlet": "Timurlu",
+    "konu": "Aruz vezinleri ve Türk şiirindeki kullanımları.",
+    "onemi": "Türkçe yazılmış ilk aruz kitaplarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ali Şîr Nevâî",
+        "url": "https://islamansiklopedisi.org.tr/ali-sir-nevai"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "maddetul-hayat",
+    "ad": "Mâddetü'l-hayât",
+    "ad_sade": "Maddetü'l-Hayat",
+    "yazar_id": "aksemseddin",
+    "yil": null,
+    "yil_notu": "Tarih bilinmiyor.",
+    "dil": "Türkçe",
+    "tur": "tıp",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Hastalıklar ve tedavileri; hastalıkların gözle görülmeyen 'tohumlarla' bulaştığına dair bir ifadesi yorumlanagelir.",
+    "onemi": "Bu ifade sonraki dönemde mikrop düşüncesinin erken bir sezgisi olarak yorumlanmıştır; bu yorum tartışmalıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Akşemseddin",
+        "url": "https://islamansiklopedisi.org.tr/aksemseddin"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu",
+      "onemi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "risaletun-nuriyye",
+    "ad": "Risâletü'n-nûriyye",
+    "ad_sade": "Risaletü'n-Nuriyye",
+    "yazar_id": "aksemseddin",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "tasavvuf",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Tasavvufta seyr ü sülûk ve nur kavramı.",
+    "onemi": "Bayramiyye geleneğinin metinlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Akşemseddin",
+        "url": "https://islamansiklopedisi.org.tr/aksemseddin"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dil",
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fusulul-bedayi",
+    "ad": "Fusûlü'l-bedâyi‘ fî usûli'ş-şerâyi‘",
+    "ad_sade": "Fusulü'l-Bedayi",
+    "yazar_id": "molla-fenari",
+    "yil": "~1420-1430",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "fıkıh usulü",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bursa",
+    "devlet": "Osmanlı",
+    "konu": "Fıkıh usulünde Hanefî ve mütekellimîn metotlarını birleştiren karma yöntem.",
+    "onemi": "Molla Fenârî'nin en meşhur eseridir; Osmanlı fıkıh usulü literatürünün temel kitaplarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fusûlü'l-Bedâyi'",
+        "url": "https://islamansiklopedisi.org.tr/fusulul-bedayi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fenari-isagoci",
+    "ad": "el-Fevâidü'l-Fenâriyye (Şerhu Îsâgūcî)",
+    "ad_sade": "İsagoci Şerhi",
+    "yazar_id": "molla-fenari",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "mantık",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Esîrüddin el-Ebherî'nin mantık metni Îsâgūcî'ye şerh.",
+    "onemi": "Osmanlı medreselerinde başlangıç mantık kitabı olarak okutuldu.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Molla Fenârî",
+        "url": "https://islamansiklopedisi.org.tr/molla-fenari"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kitab-i-bahriye",
+    "ad": "Kitâb-ı Bahriyye",
+    "ad_sade": "Kitab-ı Bahriye",
+    "yazar_id": "piri-reis",
+    "yil": "1521-1526",
+    "yil_notu": "TDV: İlk nüsha 927 (1521); genişletilmiş ikinci nüsha 1526.",
+    "dil": "Türkçe",
+    "tur": "denizcilik kılavuzu (portolan)",
+    "sunuldugu_kisi": "Kanuni Sultan Süleyman (Pargalı İbrahim Paşa aracılığıyla, 1526)",
+    "yazildigi_yer": "Gelibolu / İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Akdeniz kıyıları, limanlar, adalar, akıntılar ve rüzgârlar; ayrıntılı haritalar.",
+    "onemi": "Osmanlı denizciliğinin en önemli eserlerinden biridir; Akdeniz'in ayrıntılı bir kılavuzudur.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kitâb-ı Bahriyye",
+        "url": "https://islamansiklopedisi.org.tr/kitab-i-bahriyye"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "piri-1513-harita",
+    "ad": "Pîrî Reis Dünya Haritası (1513)",
+    "ad_sade": "Piri Reis Haritası (1513)",
+    "yazar_id": "piri-reis",
+    "yil": 1513,
+    "yil_notu": "919 (1513) tarihli; 1517'de Kahire'de Yavuz Sultan Selim'e sunuldu.",
+    "dil": "Türkçe",
+    "tur": "harita",
+    "sunuldugu_kisi": "Yavuz Sultan Selim",
+    "yazildigi_yer": "Gelibolu",
+    "devlet": "Osmanlı",
+    "konu": "İspanya, Portekiz ve Batı Afrika kıyıları ile Amerika'nın doğu kıyılarını gösteren dünya haritasının günümüze kalan parçası.",
+    "onemi": "Amerika kıyılarını gösteren en eski haritalardan biridir; kayıp bir Kolomb haritasından yararlandığı belirtilir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Pîrî Reis",
+        "url": "https://islamansiklopedisi.org.tr/piri-reis"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Harita",
+        "url": "https://islamansiklopedisi.org.tr/harita"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "beyan-i-menazil",
+    "ad": "Beyân-ı Menâzil-i Sefer-i Irâkeyn",
+    "ad_sade": "Beyan-ı Menazil",
+    "yazar_id": "matrakci-nasuh",
+    "yil": "~1537",
+    "yil_notu": "Irakeyn Seferi (1533-1536) sonrası yazıldı.",
+    "dil": "Türkçe",
+    "tur": "tarih / topografik minyatür",
+    "sunuldugu_kisi": "Kanuni Sultan Süleyman",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Kanuni'nin Irakeyn Seferi'nde konaklanan menziller ve şehirlerin topografik minyatürleri.",
+    "onemi": "Osmanlı topografik minyatür sanatının ilk ve en önemli örneklerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Beyân-ı Menâzil-i Sefer-i Irâkeyn",
+        "url": "https://islamansiklopedisi.org.tr/beyan-i-menazil-i-sefer-i-irakeyn"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "umdetul-hisab",
+    "ad": "Umdetü'l-hisâb",
+    "ad_sade": "Umdetü'l-Hisab",
+    "yazar_id": "matrakci-nasuh",
+    "yil": "~1533",
+    "yil_notu": "Tarih kaynaklarda farklı verilir; teyit edilemedi.",
+    "dil": "Türkçe",
+    "tur": "matematik",
+    "sunuldugu_kisi": "Kanuni Sultan Süleyman",
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Aritmetik ve ölçme (mesâha) hesapları.",
+    "onemi": "Türkçe yazılmış erken matematik kitaplarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Matrakçı Nasuh",
+        "url": "https://islamansiklopedisi.org.tr/matrakci-nasuh"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": true
+  },
+  {
+    "id": "cemalul-kuttab",
+    "ad": "Cemâlü'l-küttâb ve kemâlü'l-hüssâb",
+    "ad_sade": "Cemalü'l-Küttab",
+    "yazar_id": "matrakci-nasuh",
+    "yil": 1517,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "matematik",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Hesap ve kâtiplik bilgisi.",
+    "onemi": "Matrakçı'nın bilinen ilk matematik eseridir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Matrakçı Nasuh",
+        "url": "https://islamansiklopedisi.org.tr/matrakci-nasuh"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tuhfetul-guzat",
+    "ad": "Tuhfetü'l-guzât",
+    "ad_sade": "Tuhfetü'l-Guzat",
+    "yazar_id": "matrakci-nasuh",
+    "yil": 1530,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "silah talimi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Silah kullanma ve savaş teknikleri.",
+    "onemi": "Osmanlı askerî talim literatürünün erken örneklerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Matrakçı Nasuh",
+        "url": "https://islamansiklopedisi.org.tr/matrakci-nasuh"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "sehzade-camii",
+    "ad": "Şehzade Camii ve Külliyesi",
+    "ad_sade": "Şehzade Camii",
+    "yazar_id": "mimar-sinan",
+    "yil": "1543-1548",
+    "yil_notu": null,
+    "dil": "Yok (mimari eser)",
+    "tur": "mimari eser",
+    "sunuldugu_kisi": "Kanuni'nin oğlu Şehzade Mehmed'in anısına",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Merkezî kubbe ve dört yarım kubbeli cami ile külliye.",
+    "onemi": "Sinan'ın 'çıraklık eserim' dediği yapıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sinan",
+        "url": "https://islamansiklopedisi.org.tr/sinan"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "suleymaniye",
+    "ad": "Süleymaniye Camii ve Külliyesi",
+    "ad_sade": "Süleymaniye Camii",
+    "yazar_id": "mimar-sinan",
+    "yil": "1550-1557",
+    "yil_notu": null,
+    "dil": "Yok (mimari eser)",
+    "tur": "mimari eser",
+    "sunuldugu_kisi": "Kanuni Sultan Süleyman",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Cami, medreseler, darüşşifa, imaret ve türbelerden oluşan külliye.",
+    "onemi": "Sinan'ın 'kalfalık eserim' dediği yapıdır; Osmanlı külliye mimarisinin zirvelerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sinan",
+        "url": "https://islamansiklopedisi.org.tr/sinan"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "selimiye",
+    "ad": "Selimiye Camii ve Külliyesi",
+    "ad_sade": "Selimiye Camii",
+    "yazar_id": "mimar-sinan",
+    "yil": "1568-1575",
+    "yil_notu": null,
+    "dil": "Yok (mimari eser)",
+    "tur": "mimari eser",
+    "sunuldugu_kisi": "II. Selim",
+    "yazildigi_yer": "Edirne",
+    "devlet": "Osmanlı",
+    "konu": "Sekiz ayağa oturan büyük merkezî kubbeli cami ve külliyesi.",
+    "onemi": "Sinan'ın 'ustalık eserim' dediği yapıdır; UNESCO Dünya Mirası listesindedir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sultan Selim Külliyesi",
+        "url": "https://islamansiklopedisi.org.tr/sultan-selim-kulliyesi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sinan",
+        "url": "https://islamansiklopedisi.org.tr/sinan"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "sidretul-munteha",
+    "ad": "Sidretü müntehe'l-efkâr fî melekûti'l-felek ed-devvâr",
+    "ad_sade": "Sidretü Müntehe'l-Efkar (Zic-i Şehinşahi)",
+    "yazar_id": "takiyuddin",
+    "yil": "~1580",
+    "yil_notu": "İstanbul Rasathanesi gözlemlerine dayanır.",
+    "dil": "Arapça",
+    "tur": "zîc",
+    "sunuldugu_kisi": "III. Murad",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "İstanbul Rasathanesi'nde yapılan gözlemler ve Uluğ Bey zîcinin düzeltilmesi.",
+    "onemi": "Osmanlı rasathanesinin en önemli bilimsel ürünüdür.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Takıyyüddin er-Râsıd",
+        "url": "https://islamansiklopedisi.org.tr/takiyyuddin-er-rasid"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hendese",
+        "url": "https://islamansiklopedisi.org.tr/hendese"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kevakibud-durriyye",
+    "ad": "el-Kevâkibü'd-dürriyye fî vaz‘i'l-bingâmâti'd-devriyye",
+    "ad_sade": "El-Kevakibü'd-Dürriyye",
+    "yazar_id": "takiyuddin",
+    "yil": 1563,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "mekanik saat",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Kahire",
+    "devlet": "Osmanlı",
+    "konu": "Mekanik saatlerin yapımı.",
+    "onemi": "İslam dünyasında mekanik saat yapımına dair ilk eserlerden sayılır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Saat",
+        "url": "https://islamansiklopedisi.org.tr/saat"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Takıyyüddin er-Râsıd",
+        "url": "https://islamansiklopedisi.org.tr/takiyyuddin-er-rasid"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "turukus-seniyye",
+    "ad": "et-Turuku's-seniyye fi'l-âlâti'r-rûhâniyye",
+    "ad_sade": "Et-Turuku's-Seniyye",
+    "yazar_id": "takiyuddin",
+    "yil": 1552,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "mekanik",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Dımaşk (Şam) / Nablus",
+    "devlet": "Osmanlı",
+    "konu": "Su saatleri, pompalar ve mekanik düzenekler.",
+    "onemi": "Buhar gücüyle dönen bir şiş düzeneğini tarif etmesiyle bilinir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Takıyyüddin er-Râsıd",
+        "url": "https://islamansiklopedisi.org.tr/takiyyuddin-er-rasid"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kesfuz-zunun",
+    "ad": "Keşfü'z-zunûn an esâmi'l-kütübi ve'l-fünûn",
+    "ad_sade": "Keşfü'z-Zunun",
+    "yazar_id": "katip-celebi",
+    "yil": "1633-1653",
+    "yil_notu": "TDV: 1633'te Halep'te araştırmaya başladı; yaklaşık yirmi yılda tamamlandı.",
+    "dil": "Arapça",
+    "tur": "bibliyografya / ansiklopedi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Yaklaşık 14.500 eser ve ilim dalının alfabetik tanıtımı.",
+    "onemi": "İslam dünyasının en kapsamlı bibliyografyasıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Keşfü'z-Zunûn",
+        "url": "https://islamansiklopedisi.org.tr/kesfuz-zunun"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "cihannuma",
+    "ad": "Cihannümâ",
+    "ad_sade": "Cihannüma",
+    "yazar_id": "katip-celebi",
+    "yil": "1648-1657",
+    "yil_notu": "İki kez yazılmaya başlandı, ikisi de tamamlanamadı; 1732'de Müteferrika tarafından basıldı.",
+    "dil": "Türkçe",
+    "tur": "coğrafya",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Dünya coğrafyası; Asya ülkeleri ayrıntılı olarak; Avrupa atlaslarından yararlanılmıştır.",
+    "onemi": "Avrupa coğrafya kaynaklarını kullanan ilk Osmanlı coğrafya eserlerindendir; Müteferrika matbaasında basılan ilk eserlerdendir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cihannümâ",
+        "url": "https://islamansiklopedisi.org.tr/cihannuma--katip-celebi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tuhfetul-kibar",
+    "ad": "Tuhfetü'l-kibâr fî esfâri'l-bihâr",
+    "ad_sade": "Tuhfetü'l-Kibar",
+    "yazar_id": "katip-celebi",
+    "yil": 1656,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "denizcilik tarihi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Osmanlı denizcilik tarihi ve donanmanın düzenine dair öneriler.",
+    "onemi": "Osmanlı deniz tarihinin ilk müstakil eseridir.",
+    "ilk_olma": "İlk Osmanlı denizcilik tarihi",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kâtib Çelebi",
+        "url": "https://islamansiklopedisi.org.tr/katib-celebi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "ilk_olma"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mizanul-hak",
+    "ad": "Mîzânü'l-hak fî ihtiyâri'l-ehak",
+    "ad_sade": "Mizanü'l-Hak",
+    "yazar_id": "katip-celebi",
+    "yil": 1656,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "din ve toplum",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Kadızâdeliler-sufiler tartışmasındaki meselelerin (kahve, tütün, sema vb.) ölçülü bir dille ele alınması.",
+    "onemi": "Kâtib Çelebi'nin son eseridir; dönemin tartışmalarına akılcı bir bakış sunar.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kâtib Çelebi",
+        "url": "https://islamansiklopedisi.org.tr/katib-celebi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "dusturul-amel-katip",
+    "ad": "Düstûrü'l-amel li-ıslâhi'l-halel",
+    "ad_sade": "Düsturü'l-Amel (Katip Çelebi)",
+    "yazar_id": "katip-celebi",
+    "yil": 1653,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "ıslahatname",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Devletin mali bozukluklarının nedenleri ve çözüm önerileri.",
+    "onemi": "XVII. yüzyıl ıslahat düşüncesinin önemli metinlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kâtib Çelebi",
+        "url": "https://islamansiklopedisi.org.tr/katib-celebi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "seyahatname",
+    "ad": "Seyahatnâme (Târîh-i Seyyâh)",
+    "ad_sade": "Seyahatname",
+    "yazar_id": "evliya-celebi",
+    "yil": "1672-1684",
+    "yil_notu": "Seyahatler 1630'lardan 1681'e uzanır; eser Mısır'da son yıllarında yazıldı ve 1742'de İstanbul'a getirildi.",
+    "dil": "Türkçe",
+    "tur": "seyahatname",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Kahire",
+    "devlet": "Osmanlı",
+    "konu": "Osmanlı ülkesi ve komşu bölgelerin şehirleri, yapıları, halkları, dilleri ve gelenekleri; on cilt.",
+    "onemi": "XVII. yüzyıl Osmanlı toplumunun en kapsamlı kaynaklarından biridir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Seyahatnâme",
+        "url": "https://islamansiklopedisi.org.tr/seyahatname--evliya-celebi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fuzuli-leyla",
+    "ad": "Leylâ vü Mecnûn (Fuzûlî)",
+    "ad_sade": "Leyla ile Mecnun (Fuzuli)",
+    "yazar_id": "fuzuli",
+    "yil": 1535,
+    "yil_notu": "Kanuni'nin Bağdat'ı almasından sonra yazıldığı kabul edilir.",
+    "dil": "Türkçe",
+    "tur": "mesnevi",
+    "sunuldugu_kisi": "Bağdat valisi Üveys Paşa",
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Osmanlı",
+    "konu": "Leylâ ile Mecnûn'un beşerî aşktan ilahi aşka yükselen hikâyesi.",
+    "onemi": "TDV: Klasik dönem Türk mesnevilerinin en güzeli kabul edilir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Leylâ ve Mecnûn",
+        "url": "https://islamansiklopedisi.org.tr/leyla-ve-mecnun"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fuzuli-hadika",
+    "ad": "Hadîkatü's-süedâ",
+    "ad_sade": "Hadikatü's-Süeda",
+    "yazar_id": "fuzuli",
+    "yil": "~1546",
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "maktel",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Osmanlı",
+    "konu": "Peygamberlerin çektiği sıkıntılar ve Kerbelâ olayı.",
+    "onemi": "Türkçe maktel türünün en ünlü örneğidir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fuzûlî",
+        "url": "https://islamansiklopedisi.org.tr/fuzuli"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "sikayetname",
+    "ad": "Şikâyetnâme",
+    "ad_sade": "Şikayetname",
+    "yazar_id": "fuzuli",
+    "yil": "~1540",
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "mektup (münşeat)",
+    "sunuldugu_kisi": "Nişancı Celâlzâde Mustafa Çelebi",
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Kendisine bağlanan maaşı alamamasından yakınan, bürokrasiyi hicveden mektup.",
+    "onemi": "Klasik Türk nesrinde hiciv ve mizahın ünlü örneğidir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fuzûlî",
+        "url": "https://islamansiklopedisi.org.tr/fuzuli"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "beng-u-bade",
+    "ad": "Beng ü Bâde",
+    "ad_sade": "Beng ü Bade",
+    "yazar_id": "fuzuli",
+    "yil": "~1508",
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "münazara mesnevisi",
+    "sunuldugu_kisi": "Şah İsmâil",
+    "yazildigi_yer": null,
+    "devlet": "Safevi",
+    "konu": "Esrar ile şarabın münazarası; dönemin siyasi rekabetine alegorik gönderme.",
+    "onemi": "Türk edebiyatında münazara türünün tanınmış örneklerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fuzûlî",
+        "url": "https://islamansiklopedisi.org.tr/fuzuli"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fuzuli-turkce-divan",
+    "ad": "Türkçe Dîvân (Fuzûlî)",
+    "ad_sade": "Fuzuli Divanı",
+    "yazar_id": "fuzuli",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "divan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Gazeller, kasideler (Su Kasidesi dâhil) ve diğer nazım şekilleri.",
+    "onemi": "Aşk ve ıstırap temalı lirizmiyle divan şiirinin zirvelerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fuzûlî",
+        "url": "https://islamansiklopedisi.org.tr/fuzuli"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "baki-divan",
+    "ad": "Dîvân-ı Bâkî",
+    "ad_sade": "Baki Divanı",
+    "yazar_id": "baki",
+    "yil": "1566",
+    "yil_notu": "İlk tertibi Kanuni'nin isteğiyle onun sağlığında yapıldı.",
+    "dil": "Türkçe",
+    "tur": "divan",
+    "sunuldugu_kisi": "Kanuni Sultan Süleyman",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Gazel ağırlıklı klasik Osmanlı şiirleri.",
+    "onemi": "Klasik Osmanlı gazelinin en olgun örneklerini içerir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Bâkî",
+        "url": "https://islamansiklopedisi.org.tr/baki--sair"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kanuni-mersiyesi",
+    "ad": "Kanûnî Mersiyesi",
+    "ad_sade": "Kanuni Mersiyesi",
+    "yazar_id": "baki",
+    "yil": 1566,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "mersiye",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Kanuni Sultan Süleyman'ın ölümü üzerine yazılan ağıt.",
+    "onemi": "Türk edebiyatının en ünlü mersiyelerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Bâkî",
+        "url": "https://islamansiklopedisi.org.tr/baki--sair"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kindi-felsefe-ula",
+    "ad": "Kitâb fi'l-felsefeti'l-ûlâ",
+    "ad_sade": "İlk Felsefe Üzerine",
+    "yazar_id": "kindi",
+    "yil": "833-842",
+    "yil_notu": "Halife Mu‘tasım dönemi.",
+    "dil": "Arapça",
+    "tur": "felsefe",
+    "sunuldugu_kisi": "Halife Mu‘tasım-Billâh",
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Abbasi",
+    "konu": "Metafizik; Tanrı'nın birliği ve âlemin yaratılmışlığı.",
+    "onemi": "Arapça yazılmış ilk sistematik metafizik eserlerinden biridir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kindî",
+        "url": "https://islamansiklopedisi.org.tr/kindi-yakub-b-ishak"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fergani-cevami",
+    "ad": "Cevâmi‘u ilmi'n-nücûm",
+    "ad_sade": "Cevamiu İlmi'n-Nücum (Elementa Astronomica)",
+    "yazar_id": "fergani",
+    "yil": "833-857",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "astronomi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bağdat",
+    "devlet": "Abbasi",
+    "konu": "Batlamyus'un el-Mecistî'sinin özeti; yeryüzü ölçüleri ve iklimler.",
+    "onemi": "Latinceye 1134 ve 1175'te çevrildi; Avrupa'da astronomi öğretiminde kullanıldı.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fergānî",
+        "url": "https://islamansiklopedisi.org.tr/fergani"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "cevheri-sihah",
+    "ad": "Tâcü'l-luga ve sıhâhu'l-Arabiyye (es-Sıhâh)",
+    "ad_sade": "Es-Sıhah",
+    "yazar_id": "cevheri",
+    "yil": "~1000",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "sözlük",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Nîşâbur",
+    "devlet": "Samani",
+    "konu": "Kelimelerin son kök harfine göre dizildiği Arapça sözlük.",
+    "onemi": "Arap sözlükçülüğünde yeni bir yöntem getirdi; çok sayıda özeti ve çevirisi yapıldı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cevherî",
+        "url": "https://islamansiklopedisi.org.tr/cevheri-ismail-b-hammad"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tâcü'l-Luga",
+        "url": "https://islamansiklopedisi.org.tr/tacul-luga"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fezailul-etrak",
+    "ad": "Fezâilü'l-Etrâk (Menâkıbü'l-Etrâk)",
+    "ad_sade": "Fezailü'l-Etrak",
+    "yazar_id": "cahiz",
+    "yil": "840-859",
+    "yil_notu": "TDV: 225-245 (840-859) arasında yazıldı.",
+    "dil": "Arapça",
+    "tur": "risale",
+    "sunuldugu_kisi": "Halife Mu‘tasım-Billâh için yazıldı ancak ona sunulamadı",
+    "yazildigi_yer": "Bağdat / Sâmerrâ",
+    "devlet": "Abbasi",
+    "konu": "Türklerin karakteri ve askerî meziyetleri.",
+    "onemi": "TDV: İslam dünyasında Türklere ayrılmış en eski eserdir.",
+    "ilk_olma": "Türklere dair yazılmış ilk müstakil eser",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fezâilü'l-Etrâk",
+        "url": "https://islamansiklopedisi.org.tr/fezailul-etrak"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "cahiz-hayevan",
+    "ad": "Kitâbü'l-Hayevân",
+    "ad_sade": "Kitabü'l-Hayevan",
+    "yazar_id": "cahiz",
+    "yil": "~847-861",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "zooloji / edebiyat",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Abbasi",
+    "konu": "Hayvanların özellikleri, davranışları ve onlarla ilgili şiir ve anekdotlar.",
+    "onemi": "Arap edebiyatında hayvanlar üzerine en kapsamlı eserdir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Câhiz",
+        "url": "https://islamansiklopedisi.org.tr/cahiz"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kitabut-tevhid",
+    "ad": "Kitâbü't-Tevhîd",
+    "ad_sade": "Kitabü't-Tevhid",
+    "yazar_id": "maturidi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "kelam",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Semerkant",
+    "devlet": "Samani",
+    "konu": "Bilgi teorisi, Allah'ın varlığı ve birliği, nübüvvet ve iman konuları.",
+    "onemi": "TDV: Kelam yönteminin hem ilk çalışması hem de temel eseridir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kitâbü't-Tevhîd",
+        "url": "https://islamansiklopedisi.org.tr/kitabut-tevhid--maturidi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tevilatul-kuran",
+    "ad": "Te'vîlâtü'l-Kur'ân",
+    "ad_sade": "Te'vilatü'l-Kur'an",
+    "yazar_id": "maturidi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "tefsir",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Semerkant",
+    "devlet": "Samani",
+    "konu": "Kur'an tefsiri; öğrencilere verilen derslerden derlenmiştir.",
+    "onemi": "Akli yorumu öne çıkaran erken dönem tefsirlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Te'vîlâtü'l-Kur'ân",
+        "url": "https://islamansiklopedisi.org.tr/tevilatul-kuran"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "sahih-buhari",
+    "ad": "el-Câmiu's-sahîh",
+    "ad_sade": "Sahih-i Buhari",
+    "yazar_id": "buhari",
+    "yil": "~830-846",
+    "yil_notu": "Yaklaşık on altı yılda tamamlandığı rivayet edilir.",
+    "dil": "Arapça",
+    "tur": "hadis",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Abbasi",
+    "konu": "Sıkı ölçütlerle seçilmiş sahih hadisler.",
+    "onemi": "Sünnî gelenekte Kur'an'dan sonra en güvenilir kitap kabul edilir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-Câmiu's-Sahîh",
+        "url": "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "razi-havi",
+    "ad": "Kitâbü'l-Hâvî fi't-tıb",
+    "ad_sade": "El-Havi",
+    "yazar_id": "ebubekir-razi",
+    "yil": "~900-925",
+    "yil_notu": "Yazar eseri bitiremeden öldü; notları sonradan derlendi.",
+    "dil": "Arapça",
+    "tur": "tıp",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Rey",
+    "devlet": "Samani",
+    "konu": "Antik ve İslam tıbbının derlemesi ile yazarın klinik gözlemleri.",
+    "onemi": "Latince çevirisi 1486'da basıldı; Avrupa tıbbını etkiledi.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-Hâvî",
+        "url": "https://islamansiklopedisi.org.tr/el-havi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "razi-cuderi",
+    "ad": "el-Cüderî ve'l-hasbe",
+    "ad_sade": "Çiçek ve Kızamık Risalesi",
+    "yazar_id": "ebubekir-razi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "tıp",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Abbasi",
+    "konu": "Çiçek ve kızamık hastalıklarının belirtileri ve ayırıcı tanısı.",
+    "onemi": "Bu iki hastalığı ayıran ilk ayrıntılı klinik tarif kabul edilir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ebû Bekir er-Râzî",
+        "url": "https://islamansiklopedisi.org.tr/ebu-bekir-er-razi-muhammed-b-zekeriyya"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "onemi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kitabul-menazir",
+    "ad": "Kitâbü'l-Menâzır",
+    "ad_sade": "Kitabü'l-Menazır (Optik)",
+    "yazar_id": "ibnul-heysem",
+    "yil": "1028-1038",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "optik",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Kahire",
+    "devlet": "Fatımi",
+    "konu": "Görme, ışığın yansıması ve kırılması; yedi bölüm.",
+    "onemi": "Optiği deneye dayalı bir bilim hâline getirdi; Kemâleddin el-Fârisî'nin şerhiyle yaşatıldı.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İbnü'l-Heysem",
+        "url": "https://islamansiklopedisi.org.tr/ibnul-heysem"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İlm-i Menâzır",
+        "url": "https://islamansiklopedisi.org.tr/ilm-i-menazir"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "zicus-sabi",
+    "ad": "ez-Zîcü's-Sâbî",
+    "ad_sade": "Zic-i Sabi",
+    "yazar_id": "battani",
+    "yil": "~900",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "zîc",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Rakka",
+    "devlet": "Abbasi",
+    "konu": "Yeni gözlemlerle düzeltilmiş güneş, ay ve gezegen cetvelleri.",
+    "onemi": "Latince çevirisiyle (Opus Astronomicum) Avrupa astronomisini etkiledi.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Bettânî",
+        "url": "https://islamansiklopedisi.org.tr/bettani"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Zîc",
+        "url": "https://islamansiklopedisi.org.tr/zic"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ibn-fadlan-risale",
+    "ad": "Risâletü İbn Fadlân",
+    "ad_sade": "İbn Fadlan Seyahatnamesi",
+    "yazar_id": "ibn-fadlan",
+    "yil": "922-923",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "seyahatname",
+    "sunuldugu_kisi": "Halife Muktedir-Billâh",
+    "yazildigi_yer": null,
+    "devlet": "Abbasi",
+    "konu": "Bağdat'tan İtil Bulgarlarına yolculuk; Oğuz, Peçenek, Başkurt, Hazar ve Rus halkları.",
+    "onemi": "TDV: İtil Bulgar devleti hakkındaki en eski yazılı kaynaktır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İbn Fadlân",
+        "url": "https://islamansiklopedisi.org.tr/ibn-fadlan"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "sehname",
+    "ad": "Şâhnâme",
+    "ad_sade": "Şehname",
+    "yazar_id": "firdevsi",
+    "yil": "977-1010",
+    "yil_notu": "Yaklaşık otuz yılda tamamlandı (1010).",
+    "dil": "Farsça",
+    "tur": "destan",
+    "sunuldugu_kisi": "Gazneli Sultan Mahmud",
+    "yazildigi_yer": "Tûs",
+    "devlet": "Gazneli",
+    "konu": "Efsanevi İran hükümdarlarından Sâsânîlerin sonuna kadar İran tarihi ve destanları; Türk-İran (Turan) mücadeleleri.",
+    "onemi": "İran'ın millî destanıdır; Türk edebiyatında da çok okundu ve Osmanlı sarayında Şehnâmecilik geleneğine adını verdi.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şâhnâme",
+        "url": "https://islamansiklopedisi.org.tr/sahname"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Firdevsî",
+        "url": "https://islamansiklopedisi.org.tr/firdevsi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tarih-i-beyhaki",
+    "ad": "Târîh-i Beyhakī",
+    "ad_sade": "Tarih-i Beyhaki",
+    "yazar_id": "beyhaki",
+    "yil": "~1060-1077",
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Gazne",
+    "devlet": "Gazneli",
+    "konu": "Gazneliler tarihi (1018-1059); günümüze yalnızca 1030-1041 kısmı ulaştı.",
+    "onemi": "Dandanakan Savaşı'na kadar olan olayların ayrıntılı kaynağıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Târîh-i Beyhakī",
+        "url": "https://islamansiklopedisi.org.tr/tarih-i-beyhaki"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kesful-mahcub",
+    "ad": "Keşfü'l-mahcûb",
+    "ad_sade": "Keşfü'l-Mahcub",
+    "yazar_id": "hucviri",
+    "yil": "~1043-1072",
+    "yil_notu": "TDV: Muhtemelen 1043'te Lahor'da yazılmaya başlandı.",
+    "dil": "Farsça",
+    "tur": "tasavvuf",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Lahor",
+    "devlet": "Gazneli",
+    "konu": "Tasavvufun teorik ve pratik konuları, sufilerin hayatları.",
+    "onemi": "Farsça yazılmış ilk sistematik tasavvuf kitabıdır.",
+    "ilk_olma": "Farsça ilk sistematik tasavvuf kitabı",
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Keşfü'l-Mahcûb",
+        "url": "https://islamansiklopedisi.org.tr/kesful-mahcub"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "el-giyasi",
+    "ad": "Gıyâsü'l-ümem fi'ltiyâsi'z-zulem (el-Gıyâsî)",
+    "ad_sade": "El-Gıyasi",
+    "yazar_id": "cuveyni",
+    "yil": "1072-1085",
+    "yil_notu": "TDV: 1071'den sonra, muhtemelen Alparslan'ın ölümünden (1072) sonra yazıldı.",
+    "dil": "Arapça",
+    "tur": "siyaset",
+    "sunuldugu_kisi": "Nizâmülmülk (Gıyâseddin)",
+    "yazildigi_yer": "Nîşâbur",
+    "devlet": "Büyük Selçuklu",
+    "konu": "İmamet, devlet başkanlığı ve devlet yönetimi.",
+    "onemi": "Sünnî siyaset düşüncesinin önemli metinlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-Gıyâsî",
+        "url": "https://islamansiklopedisi.org.tr/el-giyasi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kessaf",
+    "ad": "el-Keşşâf an hakāikı gavâmizi't-tenzîl",
+    "ad_sade": "El-Keşşaf",
+    "yazar_id": "zemahseri",
+    "yil": "1132-1134",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "tefsir",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Mekke",
+    "devlet": "Abbasi",
+    "konu": "Dil ve belagat incelikleri öne çıkan Kur'an tefsiri.",
+    "onemi": "Mu‘tezilî yorumlarına rağmen belagat yönüyle Sünnî çevrelerde de çok okundu.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Zemahşerî",
+        "url": "https://islamansiklopedisi.org.tr/zemahseri"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mukaddimetul-edeb",
+    "ad": "Mukaddimetü'l-edeb",
+    "ad_sade": "Mukaddimetü'l-Edeb",
+    "yazar_id": "zemahseri",
+    "yil": "1137-1144",
+    "yil_notu": "TDV: Ölümünden birkaç yıl önce yazıldı.",
+    "dil": "Arapça",
+    "tur": "sözlük",
+    "sunuldugu_kisi": "Harezmşah Atsız",
+    "yazildigi_yer": "Gürgenç (Harezm)",
+    "devlet": "Harezmşah",
+    "konu": "İsimler, fiiller, harfler ve çekimler; beş bölüm.",
+    "onemi": "Nüshalarına Farsça, Türkçe (Harezm Türkçesi) ve Moğolca karşılıklar eklenerek çok dilli bir sözlüğe dönüştü.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mukaddimetü'l-Edeb",
+        "url": "https://islamansiklopedisi.org.tr/mukaddimetul-edeb"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mefatihul-gayb",
+    "ad": "Mefâtîhu'l-gayb (et-Tefsîrü'l-kebîr)",
+    "ad_sade": "Mefatihu'l-Gayb",
+    "yazar_id": "fahreddin-razi",
+    "yil": "~1190-1210",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "tefsir",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Herat",
+    "devlet": "Harezmşah",
+    "konu": "Kelam ve felsefe tartışmalarını içeren kapsamlı Kur'an tefsiri.",
+    "onemi": "Dirâyet tefsirlerinin en hacimlilerindendir; bazı kısımlarını öğrencilerinin tamamladığı ileri sürülür.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mefâtîhu'l-Gayb",
+        "url": "https://islamansiklopedisi.org.tr/mefatihul-gayb--razi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "razi-isarat-serhi",
+    "ad": "Şerhu'l-İşârât",
+    "ad_sade": "İşarat Şerhi (Fahreddin Razi)",
+    "yazar_id": "fahreddin-razi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "şerh",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Harezmşah",
+    "konu": "İbn Sînâ'nın el-İşârât'ına eleştirel şerh.",
+    "onemi": "Tûsî'nin cevap niteliğindeki şerhine yol açtı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-İşârât ve't-Tenbîhât",
+        "url": "https://islamansiklopedisi.org.tr/el-isarat-vet-tenbihat"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fevaihul-cemal",
+    "ad": "Fevâihu'l-cemâl ve fevâtihu'l-celâl",
+    "ad_sade": "Fevaihu'l-Cemal",
+    "yazar_id": "necmeddin-kubra",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "tasavvuf",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Gürgenç (Harezm)",
+    "devlet": "Harezmşah",
+    "konu": "Halvet sırasında yaşanan mistik müşahedeler ve renkli nurlar.",
+    "onemi": "Kübreviyye tasavvuf anlayışının temel metnidir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fevâihu'l-Cemâl",
+        "url": "https://islamansiklopedisi.org.tr/fevaihul-cemal-ve-fevatihul-celal"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "bakirgan-kitabi",
+    "ad": "Bakırgan Kitabı",
+    "ad_sade": "Bakırgan Kitabı",
+    "yazar_id": "hakim-ata",
+    "yil": null,
+    "yil_notu": "Hakîm Ata dâhil on dört şairin şiirlerinden oluşan sonradan yapılmış bir derlemedir; ilk baskısı 1846 Kazan.",
+    "dil": "Türkçe",
+    "tur": "tasavvufi şiir derlemesi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Harezmşah",
+    "konu": "Hakîm Ata ve diğer Yesevî şairlerinin tasavvufi şiir ve hikâyeleri.",
+    "onemi": "Yesevî geleneğinin Türkçe şiirini yaşatan derlemelerdendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Bakırgan Kitabı",
+        "url": "https://islamansiklopedisi.org.tr/bakirgan-kitabi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "hadikatul-hakika",
+    "ad": "Hadîkatü'l-hakîka ve şerîatü't-tarîka",
+    "ad_sade": "Hadikatü'l-Hakika",
+    "yazar_id": "senai",
+    "yil": "~1131",
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "tasavvufi mesnevi",
+    "sunuldugu_kisi": "Gazneli Sultan Behram Şah",
+    "yazildigi_yer": "Gazne",
+    "devlet": "Gazneli",
+    "konu": "Tevhid, akıl ve aşk gibi konuları işleyen yaklaşık 10.000 beyitlik mesnevi.",
+    "onemi": "Farsça tasavvufi mesnevinin ilk büyük örneğidir.",
+    "ilk_olma": "Farsça ilk büyük tasavvufi mesnevi",
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hadîkatü'l-Hakîka",
+        "url": "https://islamansiklopedisi.org.tr/hadikatul-hakika"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mantikut-tayr",
+    "ad": "Mantıku't-tayr",
+    "ad_sade": "Mantıku't-Tayr (Kuş Dili)",
+    "yazar_id": "attar",
+    "yil": "~1177",
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "tasavvufi mesnevi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Nîşâbur",
+    "devlet": "Büyük Selçuklu",
+    "konu": "Hüdhüd önderliğinde Sîmurg'u arayan kuşların yolculuğu; yaklaşık 5000 beyit.",
+    "onemi": "Tasavvufi yolculuğun en ünlü alegorilerinden biridir; Gülşehrî Türkçeye uyarladı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mantıku't-Tayr",
+        "url": "https://islamansiklopedisi.org.tr/mantikut-tayr"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "devlet"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tezkiretul-evliya",
+    "ad": "Tezkiretü'l-evliyâ",
+    "ad_sade": "Tezkiretü'l-Evliya",
+    "yazar_id": "attar",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "biyografi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Nîşâbur",
+    "devlet": "Harezmşah",
+    "konu": "Sufilerin hayatları ve sözleri.",
+    "onemi": "Farsça sufi biyografilerinin temel kaynaklarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Attâr, Ferîdüddin",
+        "url": "https://islamansiklopedisi.org.tr/attar-feriduddin"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "nizami-hamse",
+    "ad": "Hamse (Penc Genc)",
+    "ad_sade": "Hamse (Nizami)",
+    "yazar_id": "nizami-gencevi",
+    "yil": "1174-1211",
+    "yil_notu": "TDV: 35-40 yılda yazıldı; Hüsrev ü Şîrîn 1180, Leylâ vü Mecnûn 1188, Heft Peyker 1197, İskendernâme 1201 ve 1211 sonrası.",
+    "dil": "Farsça",
+    "tur": "hamse (beş mesnevi)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Gence",
+    "devlet": "İldenizli",
+    "konu": "Mahzenü'l-esrâr, Hüsrev ü Şîrîn, Leylâ vü Mecnûn, Heft Peyker ve İskendernâme.",
+    "onemi": "Hamse türünü başlattı; Nevâî, Ahmedî, Şeyhî ve Fuzûlî gibi Türk şairlerine model oldu.",
+    "ilk_olma": "Hamse türünün ilk örneği",
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nizâmî-i Gencevî",
+        "url": "https://islamansiklopedisi.org.tr/nizami-i-gencevi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hamse",
+        "url": "https://islamansiklopedisi.org.tr/hamse--edebiyat"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "el-hidaye",
+    "ad": "el-Hidâye",
+    "ad_sade": "El-Hidaye",
+    "yazar_id": "merginani",
+    "yil": "~1170-1197",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "fıkıh",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Karahanlı",
+    "konu": "Hanefî fıkhının kendi metni Bidâyetü'l-mübtedî üzerine yazılmış şerhi.",
+    "onemi": "Medreselerde temel ders kitabı oldu; üzerine Fethu'l-Kadîr gibi önemli şerhler yazıldı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-Hidâye",
+        "url": "https://islamansiklopedisi.org.tr/el-hidaye"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "akaidun-nesefi",
+    "ad": "el-Akāid (Akāidü'n-Nesefî)",
+    "ad_sade": "Akaidü'n-Nesefi",
+    "yazar_id": "omer-nesefi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "kelam (akaid metni)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Semerkant",
+    "devlet": "Karahanlı",
+    "konu": "Mâtürîdî Ehl-i sünnet inancının kısa maddeler hâlinde özeti.",
+    "onemi": "Medreselerde en çok okunan akaid metinlerindendir; Teftâzânî'nin şerhiyle meşhur oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Akāidü'n-Nesefî",
+        "url": "https://islamansiklopedisi.org.tr/akaidun-nesefi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "maarif-bahaeddin",
+    "ad": "Maârif (Bahâeddin Veled)",
+    "ad_sade": "Maarif",
+    "yazar_id": "bahaeddin-veled",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "vaaz ve sohbet notları",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Harezmşah",
+    "konu": "Tasavvufi yorumlar ve manevi tecrübeler.",
+    "onemi": "Mevlânâ'nın düşüncesinin kaynaklarından biridir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Bahâeddin Veled",
+        "url": "https://islamansiklopedisi.org.tr/bahaeddin-veled"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "makalat-sems",
+    "ad": "Makālât-ı Şems-i Tebrîzî",
+    "ad_sade": "Makalat (Şems-i Tebrizi)",
+    "yazar_id": "sems-tebrizi",
+    "yil": "1244-1247",
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "sohbet derlemesi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Konya",
+    "devlet": "Anadolu Selçuklu",
+    "konu": "Şems'in sohbetlerinden derlenmiş tasavvufi notlar.",
+    "onemi": "Şems'in düşüncesini doğrudan aktaran tek kaynaktır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Makālât",
+        "url": "https://islamansiklopedisi.org.tr/makalat"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ibtidaname",
+    "ad": "İbtidânâme (Velednâme)",
+    "ad_sade": "İbtidaname",
+    "yazar_id": "sultan-veled",
+    "yil": 1291,
+    "yil_notu": null,
+    "dil": "Farsça (Türkçe beyitlerle)",
+    "tur": "mesnevi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Konya",
+    "devlet": "Anadolu Selçuklu",
+    "konu": "Mevlânâ'nın hayatı, Şems ve Mevlevî çevresi.",
+    "onemi": "Mevlânâ'nın hayatı için temel kaynaktır; Sultan Veled'in ilk mesnevisidir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sultan Veled",
+        "url": "https://islamansiklopedisi.org.tr/sultan-veled"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "miftahul-gayb",
+    "ad": "Miftâhu'l-gayb",
+    "ad_sade": "Miftahu'l-Gayb",
+    "yazar_id": "sadreddin-konevi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "tasavvuf / metafizik",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Konya",
+    "devlet": "Anadolu Selçuklu",
+    "konu": "Vahdet-i vücûd metafiziğinin sistematik anlatımı.",
+    "onemi": "Konevî'nin temel eseridir; Molla Fenârî ona Misbâhu'l-üns adlı şerhi yazdı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Miftâhu'l-Gayb",
+        "url": "https://islamansiklopedisi.org.tr/miftahul-gayb"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "el-fukuk",
+    "ad": "el-Fükûk",
+    "ad_sade": "El-Fükuk",
+    "yazar_id": "sadreddin-konevi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "şerh",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Konya",
+    "devlet": "Anadolu Selçuklu",
+    "konu": "Fusûsü'l-hikem'in bölüm başlıklarının sırlarını açıklayan eser.",
+    "onemi": "Fusûs şerh geleneğinin temel halkalarından biridir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – el-Fükûk",
+        "url": "https://islamansiklopedisi.org.tr/el-fukuk"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "fususul-hikem",
+    "ad": "Fusûsü'l-hikem",
+    "ad_sade": "Fususu'l-Hikem",
+    "yazar_id": "ibnul-arabi",
+    "yil": 1229,
+    "yil_notu": "TDV 627/1230'u verir; Dımaşk'ta yazıldığı yaygın kabul görür.",
+    "dil": "Arapça",
+    "tur": "tasavvuf",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Dımaşk (Şam)",
+    "devlet": "Eyyubi",
+    "konu": "Yirmi yedi peygamberin hikmetleri üzerinden insan-ı kâmil ve vahdet-i vücûd.",
+    "onemi": "İbnü'l-Arabî'nin bütün fikirlerinin özeti sayılır; Osmanlı'da çok sayıda şerhi yazıldı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fusûsü'l-Hikem",
+        "url": "https://islamansiklopedisi.org.tr/fususul-hikem"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mirsadul-ibad",
+    "ad": "Mirsâdü'l-ibâd mine'l-mebde' ile'l-meâd",
+    "ad_sade": "Mirsadü'l-İbad",
+    "yazar_id": "necmeddin-daye",
+    "yil": 1223,
+    "yil_notu": "TDV: 620 (1223) yılında Sivas'ta Keykubad'a sunuldu; bir başka maddede 1221 Kayseri geçer.",
+    "dil": "Farsça",
+    "tur": "tasavvuf / siyasetname",
+    "sunuldugu_kisi": "Sultan I. Alâeddin Keykubad",
+    "yazildigi_yer": "Sivas",
+    "devlet": "Anadolu Selçuklu",
+    "konu": "Tasavvufi yolculuk; beşinci bölümünde hükümdar, vezir ve toplum kesimlerinin ahlakı.",
+    "onemi": "Anadolu Selçuklu döneminin önemli Farsça eserlerindendir; Çinceye kadar çevrildi.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Necmeddîn-i Dâye",
+        "url": "https://islamansiklopedisi.org.tr/necmeddin-i-daye"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Siyâsetnâme",
+        "url": "https://islamansiklopedisi.org.tr/siyasetname"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "evamirul-alaiyye",
+    "ad": "el-Evâmirü'l-Alâiyye fi'l-umûri'l-Alâiyye (Selçuknâme)",
+    "ad_sade": "Selçukname (İbn Bibi)",
+    "yazar_id": "ibn-bibi",
+    "yil": 1281,
+    "yil_notu": "TDV: 679 (1281) yılında tamamlandı.",
+    "dil": "Farsça",
+    "tur": "tarih",
+    "sunuldugu_kisi": "Alâeddin Atâ Melik Cüveynî",
+    "yazildigi_yer": "Konya",
+    "devlet": "Anadolu Selçuklu",
+    "konu": "Anadolu Selçuklu tarihi (1192-1280).",
+    "onemi": "Anadolu Selçukluları hakkındaki en önemli kaynaktır; tek nüshası Ayasofya Kütüphanesi'ndedir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İbn Bîbî",
+        "url": "https://islamansiklopedisi.org.tr/ibn-bibi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "sunuldugu_kisi",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tarih-i-cihangusa",
+    "ad": "Târîh-i Cihângüşâ",
+    "ad_sade": "Tarih-i Cihangüşa",
+    "yazar_id": "ata-melik-cuveyni",
+    "yil": "1252-1260",
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Karakurum / Bağdat",
+    "devlet": "İlhanlı",
+    "konu": "Cengiz Han ve haleflerinin fetihleri, Harezmşahlar ve İsmâilîlerin tarihi.",
+    "onemi": "Moğol fetihleri hakkındaki temel kaynaklardandır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cüveynî, Atâ Melik",
+        "url": "https://islamansiklopedisi.org.tr/cuveyni-ata-melik"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "camiut-tevarih",
+    "ad": "Câmiu't-tevârîh",
+    "ad_sade": "Camiü't-Tevarih",
+    "yazar_id": "residuddin",
+    "yil": "1300-1310",
+    "yil_notu": "TDV: İlk versiyon 1306-07 (3 cilt), ikinci 1310 (4 cilt).",
+    "dil": "Farsça",
+    "tur": "tarih",
+    "sunuldugu_kisi": "Gāzân Han (ithaf); Olcaytu döneminde tamamlandı",
+    "yazildigi_yer": "Tebriz",
+    "devlet": "İlhanlı",
+    "konu": "Moğol ve Türk boylarının tarihi, Oğuz Han ve Oğuz boyları, İslam ve dünya milletleri tarihi.",
+    "onemi": "Türk boyları ve Oğuz destanı hakkında temel kaynaklardandır; ilk dünya tarihlerinden biri sayılır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Câmiu't-Tevârîh",
+        "url": "https://islamansiklopedisi.org.tr/camiut-tevarih"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Oğuznâme",
+        "url": "https://islamansiklopedisi.org.tr/oguzname"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "durretut-tac",
+    "ad": "Dürretü't-tâc li-gurreti'd-Dîbâc",
+    "ad_sade": "Dürretü't-Tac",
+    "yazar_id": "kutbuddin-sirazi",
+    "yil": "~1306",
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "ansiklopedi",
+    "sunuldugu_kisi": "Gîlân emîri Dübbâc",
+    "yazildigi_yer": null,
+    "devlet": "İlhanlı",
+    "konu": "Mantık, felsefe, matematik ve astronomiyi kapsayan ilimler ansiklopedisi.",
+    "onemi": "Osmanlı aritmetik ve geometri çalışmalarına kaynaklık etti.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kutbüddîn-i Şîrâzî",
+        "url": "https://islamansiklopedisi.org.tr/kutbuddin-i-sirazi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kitabul-idrak",
+    "ad": "Kitâbü'l-İdrâk li-lisâni'l-Etrâk",
+    "ad_sade": "Kitabü'l-İdrak",
+    "yazar_id": "ebu-hayyan",
+    "yil": 1312,
+    "yil_notu": "TDV: 712 (1312) yılında Kahire'de tamamlandı.",
+    "dil": "Arapça",
+    "tur": "sözlük ve dil bilgisi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Kahire",
+    "devlet": "Memlük",
+    "konu": "Memlük Mısır'ında konuşulan Oğuz özellikli Kıpçak Türkçesinin sözlüğü ve grameri.",
+    "onemi": "Araplara Türkçe öğretmek için yazıldı; Memlük Kıpçakçasının en eski grameridir.",
+    "ilk_olma": "Memlük Kıpçak Türkçesinin bilinen ilk grameri",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kitâbü'l-İdrâk",
+        "url": "https://islamansiklopedisi.org.tr/kitabul-idrak"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mukaddime",
+    "ad": "Mukaddime",
+    "ad_sade": "Mukaddime (İbn Haldun)",
+    "yazar_id": "ibn-haldun",
+    "yil": 1377,
+    "yil_notu": "İlk taslağı 1377'de Kal‘atü İbn Selâme'de tamamlandı; sonradan geliştirildi.",
+    "dil": "Arapça",
+    "tur": "tarih felsefesi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Hafsi",
+    "konu": "Toplumların yapısı, asabiyet, devletlerin doğuşu ve çöküşü, ekonomi ve ilimler.",
+    "onemi": "Tarih felsefesi ve toplum biliminin kurucu metinlerinden sayılır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mukaddime",
+        "url": "https://islamansiklopedisi.org.tr/mukaddime--ibn-haldun"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ibn-battuta-rihle",
+    "ad": "Tuhfetü'n-nuzzâr fî garâibi'l-emsâr ve acâibi'l-esfâr (er-Rihle)",
+    "ad_sade": "İbn Battuta Seyahatnamesi",
+    "yazar_id": "ibn-battuta",
+    "yil": 1355,
+    "yil_notu": "İbn Cüzey'e yazdırıldı.",
+    "dil": "Arapça",
+    "tur": "seyahatname",
+    "sunuldugu_kisi": "Merinî Sultanı Ebû İnân",
+    "yazildigi_yer": "Fas",
+    "devlet": "Merini",
+    "konu": "Mağrib'den Çin'e uzanan yolculuklar; Anadolu beylikleri ve Ahîler hakkında gözlemler.",
+    "onemi": "XIV. yüzyıl Anadolu'su ve Ahîlik için birinci elden kaynaktır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tuhfetü'n-Nüzzâr",
+        "url": "https://islamansiklopedisi.org.tr/tuhfetun-nuzzar"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahîlik",
+        "url": "https://islamansiklopedisi.org.tr/ahilik"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "bostan",
+    "ad": "Bostân",
+    "ad_sade": "Bostan",
+    "yazar_id": "sadi-sirazi",
+    "yil": 1257,
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "mesnevi (ahlak)",
+    "sunuldugu_kisi": "Salgurlu Atabeg Ebû Bekir b. Sa‘d",
+    "yazildigi_yer": "Şiraz",
+    "devlet": "Salgurlu",
+    "konu": "Adalet, ihsan, aşk, tevazu gibi erdemler üzerine manzum hikâyeler.",
+    "onemi": "Osmanlı'da ahlak eğitiminde çok okundu ve şerh edildi.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sa‘dî-i Şîrâzî",
+        "url": "https://islamansiklopedisi.org.tr/sadi-i-sirazi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Siyâsetnâme",
+        "url": "https://islamansiklopedisi.org.tr/siyasetname"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "gulistan",
+    "ad": "Gülistân",
+    "ad_sade": "Gülistan",
+    "yazar_id": "sadi-sirazi",
+    "yil": 1258,
+    "yil_notu": "TDV: 656 (1258).",
+    "dil": "Farsça",
+    "tur": "mensur-manzum hikâyeler",
+    "sunuldugu_kisi": "Salgurlu Atabeg Ebû Bekir b. Sa‘d",
+    "yazildigi_yer": "Şiraz",
+    "devlet": "Salgurlu",
+    "konu": "Hükümdarların ve dervişlerin hâlleri, kanaat, terbiye ve sohbet adabı üzerine hikâyeler.",
+    "onemi": "Fars nesrinin klasiklerindendir; Osmanlı'da Farsça öğretiminde temel kitap oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sa‘dî-i Şîrâzî",
+        "url": "https://islamansiklopedisi.org.tr/sadi-i-sirazi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tehafutut-tehafut",
+    "ad": "Tehâfütü't-Tehâfüt",
+    "ad_sade": "Tehafütü't-Tehafüt",
+    "yazar_id": "ibn-rusd",
+    "yil": "1180-1181",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "felsefe",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Kurtuba / İşbiliye",
+    "devlet": "Muvahhid",
+    "konu": "Gazzâlî'nin Tehâfütü'l-felâsife'sindeki eleştirilere madde madde cevap.",
+    "onemi": "Felsefe-kelam tartışmasının klasik metnidir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tehâfütü Tehâfüti'l-Felâsife",
+        "url": "https://islamansiklopedisi.org.tr/tehafutu-tehafutil-felasife"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "garibname",
+    "ad": "Garîbnâme",
+    "ad_sade": "Garibname",
+    "yazar_id": "asik-pasa",
+    "yil": 1330,
+    "yil_notu": "TDV: 730 (1330).",
+    "dil": "Türkçe",
+    "tur": "didaktik-tasavvufi mesnevi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Kırşehir",
+    "devlet": "İlhanlı",
+    "konu": "On bölümde, sayılara göre düzenlenmiş dinî ve ahlaki öğütler; yaklaşık 12.000 beyit.",
+    "onemi": "Halkı eğitmek amacıyla Türkçe yazılmış en hacimli erken Anadolu eserlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Garibnâme",
+        "url": "https://islamansiklopedisi.org.tr/garibname"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "gulsehri-mantikut-tayr",
+    "ad": "Mantıku't-tayr (Gülşehrî)",
+    "ad_sade": "Mantıku't-Tayr Tercümesi (Gülşehri)",
+    "yazar_id": "gulsehri",
+    "yil": 1317,
+    "yil_notu": "TDV: 717/1317.",
+    "dil": "Türkçe",
+    "tur": "mesnevi (serbest tercüme)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Kırşehir",
+    "devlet": "İlhanlı",
+    "konu": "Attâr'ın eserinin genişletilmiş Türkçe manzum uyarlaması.",
+    "onemi": "Anadolu Türkçesinde tasavvufi mesnevi geleneğinin erken örneklerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Gülşehrî",
+        "url": "https://islamansiklopedisi.org.tr/gulsehri"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mantıku't-Tayr",
+        "url": "https://islamansiklopedisi.org.tr/mantikut-tayr"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kadi-burhaneddin-divan",
+    "ad": "Dîvân-ı Kadı Burhâneddin",
+    "ad_sade": "Kadı Burhaneddin Divanı",
+    "yazar_id": "kadi-burhaneddin",
+    "yil": "1365-1398",
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "divan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Sivas",
+    "devlet": "Kadı Burhaneddin Devleti",
+    "konu": "Gazel ve tuyuğlar; Azerî sahasına yakın Eski Anadolu Türkçesi.",
+    "onemi": "Tek nüshası British Museum'dadır; tuyuğ türünün en zengin örneklerini içerir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kadı Burhâneddin",
+        "url": "https://islamansiklopedisi.org.tr/kadi-burhaneddin"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "nesimi-divan",
+    "ad": "Türkçe Dîvân (Nesîmî)",
+    "ad_sade": "Nesimi Divanı",
+    "yazar_id": "nesimi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "divan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Memlük",
+    "konu": "Hurûfî ve tasavvufi temalı gazeller ve tuyuğlar.",
+    "onemi": "Azerî sahası Türk şiirinin önemli eserlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nesîmî",
+        "url": "https://islamansiklopedisi.org.tr/nesimi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "devlet"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "iskendername-ahmedi",
+    "ad": "İskendernâme (Ahmedî)",
+    "ad_sade": "İskendername (Ahmedi)",
+    "yazar_id": "ahmedi",
+    "yil": "1390-1410",
+    "yil_notu": "TDV: 1390'da yazıldı, ~1410'a kadar eklemeler yapıldı; bir başka bilgiye göre 1403'te tamamlandı.",
+    "dil": "Türkçe",
+    "tur": "mesnevi",
+    "sunuldugu_kisi": "Emîr Süleyman Çelebi (bazı kayıtlarda Çelebi Mehmed)",
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "İskender'in hayatı ve seferleri; sonuna eklenen 'Dâsitân-ı Tevârîh-i Mülûk-i Âl-i Osmân' bölümü.",
+    "onemi": "İçindeki bölüm manzum ilk Osmanlı tarihi sayılır.",
+    "ilk_olma": "Manzum ilk Osmanlı tarihi (eserin bir bölümü)",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahmedî",
+        "url": "https://islamansiklopedisi.org.tr/ahmedi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – İskender",
+        "url": "https://islamansiklopedisi.org.tr/iskender"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "ilk_olma"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "harname",
+    "ad": "Harnâme",
+    "ad_sade": "Harname",
+    "yazar_id": "seyhi",
+    "yil": "~1430",
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "hiciv mesnevisi",
+    "sunuldugu_kisi": "II. Murad",
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Öküzleri kıskanıp boynuz isterken kulaklarını yitiren eşeğin hikâyesi; 126 beyit.",
+    "onemi": "Divan edebiyatının bilinen ilk hiciv eseri ve en güzel hicivlerinden biri sayılır.",
+    "ilk_olma": "Klasik Türk şiirinin bilinen ilk hiciv mesnevisi",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şeyhî",
+        "url": "https://islamansiklopedisi.org.tr/seyhi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hiciv",
+        "url": "https://islamansiklopedisi.org.tr/hiciv"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "husrev-u-sirin-seyhi",
+    "ad": "Hüsrev ü Şîrîn (Şeyhî)",
+    "ad_sade": "Hüsrev ü Şirin (Şeyhi)",
+    "yazar_id": "seyhi",
+    "yil": "~1421-1430",
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "mesnevi",
+    "sunuldugu_kisi": "II. Murad",
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Nizâmî'nin Hüsrev ü Şîrîn'inden serbest uyarlama aşk hikâyesi.",
+    "onemi": "Anadolu sahasında Hüsrev ü Şîrîn konusunun en başarılı örneklerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Şeyhî",
+        "url": "https://islamansiklopedisi.org.tr/seyhi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hüsrev ve Şîrin",
+        "url": "https://islamansiklopedisi.org.tr/husrev-ve-sirin"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "sifaul-eskam",
+    "ad": "Şifâü'l-eskām ve devâü'l-âlâm",
+    "ad_sade": "Şifaü'l-Eskam",
+    "yazar_id": "haci-pasa",
+    "yil": 1380,
+    "yil_notu": "TDV: 1380'de Ayasuluk'ta tamamlandı.",
+    "dil": "Arapça",
+    "tur": "tıp",
+    "sunuldugu_kisi": "Aydınoğlu İsa Bey",
+    "yazildigi_yer": "Ayasuluk (Selçuk)",
+    "devlet": "Aydınoğulları",
+    "konu": "Teorik ve pratik tıp, ilaçlar ve hastalıklar.",
+    "onemi": "Anadolu beylikleri döneminin en kapsamlı tıp eserlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hacı Paşa",
+        "url": "https://islamansiklopedisi.org.tr/haci-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "muntahab-i-sifa",
+    "ad": "Müntahab-ı Şifâ",
+    "ad_sade": "Müntahab-ı Şifa",
+    "yazar_id": "haci-pasa",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "tıp",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Ayasuluk (Selçuk)",
+    "devlet": "Aydınoğulları",
+    "konu": "Şifâü'l-eskām'ın üç bölümlük Türkçe özeti: teori-pratik, gıdalar-ilaçlar, hastalıklar.",
+    "onemi": "Tıp bilgisini Türkçe okuyucuya ulaştıran erken eserlerdendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hacı Paşa",
+        "url": "https://islamansiklopedisi.org.tr/haci-pasa"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "vesiletun-necat",
+    "ad": "Vesîletü'n-necât (Mevlid)",
+    "ad_sade": "Mevlid (Vesiletü'n-Necat)",
+    "yazar_id": "suleyman-celebi",
+    "yil": 1409,
+    "yil_notu": "Yaygın kabule göre 812 (1409); TDV özetinde tarih teyit edilemedi.",
+    "dil": "Türkçe",
+    "tur": "mevlid (mesnevi)",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Bursa",
+    "devlet": "Osmanlı",
+    "konu": "Hz. Muhammed'in doğumu, mucizeleri ve vefatı.",
+    "onemi": "Türkçe mevlidlerin ilki ve en meşhurudur.",
+    "ilk_olma": "Türkçe ilk mevlid",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Süleyman Çelebi, Dede",
+        "url": "https://islamansiklopedisi.org.tr/suleyman-celebi-dede"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kabusname-tercumesi",
+    "ad": "Kābûsnâme Tercümesi",
+    "ad_sade": "Kabusname Tercümesi",
+    "yazar_id": "mercimek-ahmed",
+    "yil": "1431-1432",
+    "yil_notu": "TDV: Mercimek Ahmed çeviriyi 835'te (1431-32) tamamladığını belirtir.",
+    "dil": "Türkçe",
+    "tur": "nasihatname (tercüme)",
+    "sunuldugu_kisi": "II. Murad",
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Ziyârî hükümdarı Keykâvus b. İskender'in oğluna yazdığı öğütler; 44 bölüm.",
+    "onemi": "Eski Anadolu Türkçesi nesrinin önemli örneklerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Keykâvus b. İskender",
+        "url": "https://islamansiklopedisi.org.tr/keykavus-b-iskender"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "cerrahiyyetul-haniyye",
+    "ad": "Cerrâhiyyetü'l-Hâniyye (Cerrâhiye-i İlhâniyye)",
+    "ad_sade": "Cerrahiyetü'l-Haniye",
+    "yazar_id": "sabuncuoglu",
+    "yil": 1465,
+    "yil_notu": "TDV: 870 (1465).",
+    "dil": "Türkçe",
+    "tur": "tıp (cerrahi)",
+    "sunuldugu_kisi": "Fâtih Sultan Mehmed",
+    "yazildigi_yer": "Amasya",
+    "devlet": "Osmanlı",
+    "konu": "Zehrâvî'nin et-Tasrîf'inin cerrahi bölümüne dayanan, yazarın gözlemleri ve yeni aletlerle genişletilmiş cerrahi kitabı.",
+    "onemi": "Ameliyat sırasında hasta ve hekimi gösteren minyatürleri İslam tıp tarihinde bir ilktir.",
+    "ilk_olma": "Ameliyat sahnelerini minyatürle gösteren ilk İslam tıp kitabı; ilk resimli Türkçe cerrahi kitabı",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sabuncuoğlu Şerefeddin",
+        "url": "https://islamansiklopedisi.org.tr/sabuncuoglu-serefeddin"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – et-Tasrîf",
+        "url": "https://islamansiklopedisi.org.tr/et-tasrif--zehravi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "mucerrebname",
+    "ad": "Mücerrebnâme",
+    "ad_sade": "Mücerrebname",
+    "yazar_id": "sabuncuoglu",
+    "yil": 1468,
+    "yil_notu": "TDV: 873 (1468).",
+    "dil": "Türkçe",
+    "tur": "farmakoloji",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Amasya",
+    "devlet": "Osmanlı",
+    "konu": "İlaçlar ve denenmiş tedaviler.",
+    "onemi": "TDV: Türkçe yazılmış ilk deneysel tıp eseri olarak anılır.",
+    "ilk_olma": "Türkçe ilk deneysel farmakoloji eseri",
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sabuncuoğlu Şerefeddin",
+        "url": "https://islamansiklopedisi.org.tr/sabuncuoglu-serefeddin"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tevarih-asikpasazade",
+    "ad": "Tevârîh-i Âl-i Osmân (Âşıkpaşazâde Tarihi)",
+    "ad_sade": "Aşıkpaşazade Tarihi",
+    "yazar_id": "asikpasazade",
+    "yil": 1484,
+    "yil_notu": "TDV: 1484'te tamamlandı.",
+    "dil": "Türkçe",
+    "tur": "tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Osmanlı Devleti'nin kuruluşundan II. Bayezid dönemine kadar olaylar.",
+    "onemi": "İlk standart Osmanlı tarihlerinden biridir; Neşrî'ye kaynak oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Âşıkpaşazâde",
+        "url": "https://islamansiklopedisi.org.tr/asikpasazade"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "durerul-hukkam",
+    "ad": "Dürerü'l-hükkâm fî şerhi Gureri'l-ahkâm",
+    "ad_sade": "Dürerü'l-Hükkam",
+    "yazar_id": "molla-husrev",
+    "yil": "1471-1477",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "fıkıh",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Yazarın Hanefî fıkıh metni Gurerü'l-ahkâm'ın şerhi.",
+    "onemi": "TDV: Osmanlı mahkemelerinde hâkimlerin başvurduğu yarı resmî bir hukuk kaynağı işlevi gördü.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Gurerü'l-Ahkâm",
+        "url": "https://islamansiklopedisi.org.tr/gurerul-ahkam"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Molla Hüsrev",
+        "url": "https://islamansiklopedisi.org.tr/molla-husrev"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "gayetul-emani",
+    "ad": "Gāyetü'l-emânî fî tefsîri'l-kelâmi'r-Rabbânî",
+    "ad_sade": "Gayetü'l-Emani",
+    "yazar_id": "molla-gurani",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "tefsir",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Kur'an tefsiri.",
+    "onemi": "Osmanlı'da yazılmış erken tefsirlerdendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Molla Gürânî",
+        "url": "https://islamansiklopedisi.org.tr/molla-gurani"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "konu"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tehafut-hocazade",
+    "ad": "Tehâfüt (Hocazâde)",
+    "ad_sade": "Tehafüt (Hocazade)",
+    "yazar_id": "hocazade",
+    "yil": "~1470-1480",
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "felsefe-kelam",
+    "sunuldugu_kisi": "Fâtih Sultan Mehmed",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Gazzâlî ile filozoflar arasındaki meselelerin yeniden değerlendirilmesi.",
+    "onemi": "Fâtih'in açtığı yarışmada Alâeddin et-Tûsî'nin eserine tercih edildi; tehâfüt geleneğinin en önemli metinlerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hocazâde Muslihuddin Efendi",
+        "url": "https://islamansiklopedisi.org.tr/hocazade-muslihuddin-efendi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tûsî, Alâeddin",
+        "url": "https://islamansiklopedisi.org.tr/tusi-alaeddin"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "serhul-akaid",
+    "ad": "Şerhu'l-Akāid",
+    "ad_sade": "Şerhu'l-Akaid",
+    "yazar_id": "teftazani",
+    "yil": 1367,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "şerh / kelam",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Altın Orda",
+    "konu": "Ömer en-Nesefî'nin el-Akāid'inin şerhi.",
+    "onemi": "Osmanlı medreselerinde en çok okunan kelam kitaplarından biri oldu.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Akāidü'n-Nesefî",
+        "url": "https://islamansiklopedisi.org.tr/akaidun-nesefi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "devlet"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "et-tarifat",
+    "ad": "et-Ta‘rîfât",
+    "ad_sade": "Et-Tarifat",
+    "yazar_id": "curcani",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "terimler sözlüğü",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Timurlu",
+    "konu": "İslami ilimlerin terimlerinin tanımları.",
+    "onemi": "Terim sözlüklerinin en çok başvurulanlarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – et-Ta‘rîfât",
+        "url": "https://islamansiklopedisi.org.tr/et-tarifat"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "serhul-mevakif",
+    "ad": "Şerhu'l-Mevâkıf",
+    "ad_sade": "Mevakıf Şerhi",
+    "yazar_id": "curcani",
+    "yil": 1407,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "şerh / kelam",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Semerkant",
+    "devlet": "Timurlu",
+    "konu": "Adudüddin el-Îcî'nin el-Mevâkıf'ının şerhi.",
+    "onemi": "Kelam literatürünün temel şerhlerindendir; Kadızâde bazı görüşlerini eleştirdi.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Cürcânî, Seyyid Şerîf",
+        "url": "https://islamansiklopedisi.org.tr/curcani-seyyid-serif"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "yazildigi_yer"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "miftahul-hisab",
+    "ad": "Miftâhu'l-hisâb",
+    "ad_sade": "Miftahu'l-Hisab",
+    "yazar_id": "kasi",
+    "yil": 1427,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "matematik",
+    "sunuldugu_kisi": "Uluğ Bey",
+    "yazildigi_yer": "Semerkant",
+    "devlet": "Timurlu",
+    "konu": "Doğal ve rasyonel sayılarla hesap, altmışlık hesap, mesâha ve cebir.",
+    "onemi": "Ondalık kesirlerin sistematik kullanımıyla bilinir; Osmanlı'da ileri düzey öğretimde tercih edildi.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kâşî",
+        "url": "https://islamansiklopedisi.org.tr/kasi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hesap",
+        "url": "https://islamansiklopedisi.org.tr/hesap--matematik"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "risaletul-muhitiyye",
+    "ad": "er-Risâletü'l-Muhîtıyye",
+    "ad_sade": "Er-Risaletü'l-Muhitiyye",
+    "yazar_id": "kasi",
+    "yil": 1424,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "matematik",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Semerkant",
+    "devlet": "Timurlu",
+    "konu": "Çemberin çevresinin hesaplanması.",
+    "onemi": "π sayısını 16 ondalık basamağa kadar doğru hesapladı.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hendese",
+        "url": "https://islamansiklopedisi.org.tr/hendese"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "baburname",
+    "ad": "Vekāyi‘ (Bâbürnâme)",
+    "ad_sade": "Baburname",
+    "yazar_id": "babur",
+    "yil": "1519-1530",
+    "yil_notu": "TDV: 1519-1530 arasında kısım kısım yazıldı.",
+    "dil": "Türkçe (Çağatay)",
+    "tur": "hatırat",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Kâbil / Agra",
+    "devlet": "Babürlü",
+    "konu": "Bâbür'ün 12 yaşında Fergana tahtına çıkışından ölümünden bir yıl öncesine kadar hayatı; Hindistan'ın coğrafyası ve doğası.",
+    "onemi": "TDV: Çağatay edebiyatında nesrin şaheser seviyesine yükseldiği eserdir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Bâbürnâme",
+        "url": "https://islamansiklopedisi.org.tr/baburname"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "huseyni-divan",
+    "ad": "Dîvân-ı Hüseynî",
+    "ad_sade": "Hüseyni Divanı (Hüseyin Baykara)",
+    "yazar_id": "huseyin-baykara",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe (Çağatay)",
+    "tur": "divan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Herat",
+    "devlet": "Timurlu",
+    "konu": "Hüseyin Baykara'nın 'Hüseynî' mahlasıyla yazdığı Çağatayca şiirler.",
+    "onemi": "Hükümdar-şair geleneğinin Çağatay sahasındaki örneğidir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hüseyin Baykara",
+        "url": "https://islamansiklopedisi.org.tr/huseyin-baykara"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "dusturul-amel-mirim",
+    "ad": "Düstûrü'l-amel fî tashîhi'l-cedvel",
+    "ad_sade": "Düsturü'l-Amel (Mirim Çelebi)",
+    "yazar_id": "mirim-celebi",
+    "yil": 1499,
+    "yil_notu": "TDV: 904 (1499).",
+    "dil": "Farsça",
+    "tur": "şerh / zîc",
+    "sunuldugu_kisi": "II. Bayezid",
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Zîc-i Uluğ Bey'in şerhi; bir derecelik sinüsün beş yöntemle hesabı.",
+    "onemi": "Semerkant astronomisinin Osmanlı'daki devamını gösterir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Düstûrü'l-Amel",
+        "url": "https://islamansiklopedisi.org.tr/dusturul-amel"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tevarih-kemalpasazade",
+    "ad": "Tevârîh-i Âl-i Osmân (Kemalpaşazâde)",
+    "ad_sade": "Kemalpaşazade Tarihi",
+    "yazar_id": "kemalpasazade",
+    "yil": "1502-1534",
+    "yil_notu": "II. Bayezid'in isteğiyle başlandı; Kanuni dönemini anlatan onuncu defter sonradan eklendi.",
+    "dil": "Türkçe",
+    "tur": "tarih",
+    "sunuldugu_kisi": "II. Bayezid",
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Osmanlı tarihi; on defter.",
+    "onemi": "Sanatlı nesirle yazılmış önemli bir Osmanlı tarihidir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kemalpaşazâde",
+        "url": "https://islamansiklopedisi.org.tr/kemalpasazade"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tevârîh-i Âl-i Osmân",
+        "url": "https://islamansiklopedisi.org.tr/tevarih-i-al-i-osman"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "nigaristan",
+    "ad": "Nigâristân",
+    "ad_sade": "Nigaristan",
+    "yazar_id": "kemalpasazade",
+    "yil": 1528,
+    "yil_notu": null,
+    "dil": "Farsça",
+    "tur": "mensur-manzum hikâyeler",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Sa‘dî'nin Gülistân'ı tarzında ahlaki hikâyeler.",
+    "onemi": "Osmanlı'da Gülistân geleneğinin örneklerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kemalpaşazâde",
+        "url": "https://islamansiklopedisi.org.tr/kemalpasazade"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "irsadul-akl",
+    "ad": "İrşâdü'l-akli's-selîm ilâ mezâye'l-Kitâbi'l-Kerîm",
+    "ad_sade": "Ebussuud Tefsiri",
+    "yazar_id": "ebussuud",
+    "yil": "1546-1566",
+    "yil_notu": "TDV: muhtemelen 953-973 (1546-1566) arasında yazıldı.",
+    "dil": "Arapça",
+    "tur": "tefsir",
+    "sunuldugu_kisi": "Kanuni Sultan Süleyman",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Belagat ağırlıklı Kur'an tefsiri.",
+    "onemi": "Osmanlı'da yazılmış en tanınmış tefsirdir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ebüssuûd Efendi",
+        "url": "https://islamansiklopedisi.org.tr/ebussuud-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "maruzat",
+    "ad": "Ma‘rûzât",
+    "ad_sade": "Maruzat",
+    "yazar_id": "ebussuud",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "fetva derlemesi",
+    "sunuldugu_kisi": "Kanuni Sultan Süleyman",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Padişaha arz edilip kanun hükmü kazanan fetvalar.",
+    "onemi": "Şer‘î hukuk ile örfî hukukun uzlaştırılmasının belgesidir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ebüssuûd Efendi",
+        "url": "https://islamansiklopedisi.org.tr/ebussuud-efendi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Fetâvâ-yı Ebüssuûd Efendi",
+        "url": "https://islamansiklopedisi.org.tr/fetava-yi-ebussuud-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "dil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "sekaik",
+    "ad": "eş-Şekāiku'n-nu‘mâniyye fî ulemâi'd-devleti'l-Osmâniyye",
+    "ad_sade": "Şakaik-i Numaniye",
+    "yazar_id": "taskoprizade",
+    "yil": 1558,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "biyografi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Osman Gazi'den Kanuni dönemine kadar Osmanlı âlim ve şeyhlerinin biyografileri.",
+    "onemi": "Osmanlı ilim tarihinin temel kaynağıdır; Mecdî tarafından Türkçeye çevrildi.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Taşköprizâde Ahmed Efendi",
+        "url": "https://islamansiklopedisi.org.tr/taskoprizade-ahmed-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "miftahus-saade",
+    "ad": "Miftâhu's-saâde ve misbâhu's-siyâde",
+    "ad_sade": "Miftahu's-Saade",
+    "yazar_id": "taskoprizade",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Arapça",
+    "tur": "ilimler ansiklopedisi",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "İlimlerin tarihi, tanımı ve sınıflandırılması; yedi bölüm.",
+    "onemi": "Osmanlı'da ilimler sınıflandırmasının en kapsamlı eseridir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Miftâhu's-Saâde",
+        "url": "https://islamansiklopedisi.org.tr/miftahus-saade"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "ahlak-i-alai",
+    "ad": "Ahlâk-ı Alâî",
+    "ad_sade": "Ahlak-ı Alai",
+    "yazar_id": "kinalizade",
+    "yil": 1564,
+    "yil_notu": "TDV: 1564'te Şam kadısıyken yazıldı.",
+    "dil": "Türkçe",
+    "tur": "ahlak felsefesi",
+    "sunuldugu_kisi": "Suriye beylerbeyi Semiz Ali Paşa",
+    "yazildigi_yer": "Dımaşk (Şam)",
+    "devlet": "Osmanlı",
+    "konu": "Bireysel ahlak, aile ahlakı ve siyaset ahlakı; mukaddime ve üç bölüm.",
+    "onemi": "Türkçe yazılmış en kapsamlı ahlak felsefesi kitabıdır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ahlâk-ı Alâî",
+        "url": "https://islamansiklopedisi.org.tr/ahlak-i-alai"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kunhul-ahbar",
+    "ad": "Künhü'l-ahbâr",
+    "ad_sade": "Künhü'l-Ahbar",
+    "yazar_id": "mustafa-ali",
+    "yil": "1591-1599",
+    "yil_notu": "TDV: 1000-1008 (1591-1599).",
+    "dil": "Türkçe",
+    "tur": "genel tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Yaratılıştan başlayarak İslam, Türk ve Osmanlı tarihi; dört 'rükün'.",
+    "onemi": "XVI. yüzyıl Osmanlı tarihinin temel kaynaklarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Âlî Mustafa Efendi",
+        "url": "https://islamansiklopedisi.org.tr/ali-mustafa-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "nushatus-selatin",
+    "ad": "Nushatü's-selâtîn",
+    "ad_sade": "Nushatü's-Selatin",
+    "yazar_id": "mustafa-ali",
+    "yil": 1581,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "nasihatname",
+    "sunuldugu_kisi": "III. Murad",
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Devlet düzenindeki bozulmalar ve padişaha öğütler.",
+    "onemi": "Osmanlı ıslahatname geleneğinin erken örneklerindendir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Âlî Mustafa Efendi",
+        "url": "https://islamansiklopedisi.org.tr/ali-mustafa-efendi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tacut-tevarih",
+    "ad": "Tâcü't-tevârîh",
+    "ad_sade": "Tacü't-Tevarih",
+    "yazar_id": "hoca-sadeddin",
+    "yil": 1584,
+    "yil_notu": "TDV: 992/1584'te III. Murad'a sunuldu.",
+    "dil": "Türkçe",
+    "tur": "tarih",
+    "sunuldugu_kisi": "III. Murad",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Osmanlı Devleti'nin kuruluşundan Yavuz Sultan Selim'in ölümüne (1520) kadar; her padişah için bir bölüm.",
+    "onemi": "Klasik Osmanlı tarih yazımının sanatlı nesirle yazılmış önemli örneğidir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tâcü't-Tevârîh",
+        "url": "https://islamansiklopedisi.org.tr/tacut-tevarih"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "miratul-memalik",
+    "ad": "Mir'âtü'l-memâlik",
+    "ad_sade": "Miratü'l-Memalik",
+    "yazar_id": "seydi-ali-reis",
+    "yil": 1557,
+    "yil_notu": "TDV: Bağdat'ta başlandı, 1557 başında İstanbul'da tamamlandı.",
+    "dil": "Türkçe",
+    "tur": "seyahatname",
+    "sunuldugu_kisi": "Kanuni Sultan Süleyman",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Hindistan'dan Afganistan, Orta Asya ve İran üzerinden İstanbul'a dönüş yolculuğu.",
+    "onemi": "Türk edebiyatının ilk seyahatnamelerinden biridir.",
+    "ilk_olma": "Türk edebiyatının ilk seyahatnamelerinden",
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Seydi Ali Reis",
+        "url": "https://islamansiklopedisi.org.tr/seydi-ali-reis"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "sunuldugu_kisi"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "kitabul-muhit",
+    "ad": "Kitâbü'l-Muhît fî ilmi'l-eflâk ve'l-ebhur",
+    "ad_sade": "Kitabü'l-Muhit",
+    "yazar_id": "seydi-ali-reis",
+    "yil": 1554,
+    "yil_notu": "TDV: 1554'te Ahmedâbâd'da yazıldı; dönüşte Edirne'de Kanuni'ye sunuldu.",
+    "dil": "Türkçe",
+    "tur": "denizcilik / astronomi",
+    "sunuldugu_kisi": "Kanuni Sultan Süleyman",
+    "yazildigi_yer": "Ahmedâbâd",
+    "devlet": "Osmanlı",
+    "konu": "Yıldızlarla yön bulma, takvim, pusula, Hint Okyanusu limanları ve muson rüzgârları; on bölüm.",
+    "onemi": "Hint Okyanusu denizciliği için yazılmış en kapsamlı Türkçe kılavuzdur.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Kitâbü'l-Muhît",
+        "url": "https://islamansiklopedisi.org.tr/kitabul-muhit"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "siham-i-kaza",
+    "ad": "Sihâm-ı Kazâ",
+    "ad_sade": "Siham-ı Kaza",
+    "yazar_id": "nefi",
+    "yil": "~1620-1635",
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "hiciv",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Devrin devlet adamları ve şairleri hakkında hicivler.",
+    "onemi": "Divan edebiyatında hiciv türünün en ünlü örneklerindendir; şairin idamına yol açtı.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nef‘î",
+        "url": "https://islamansiklopedisi.org.tr/nefi"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Hiciv",
+        "url": "https://islamansiklopedisi.org.tr/hiciv"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "nefi-turkce-divan",
+    "ad": "Türkçe Dîvân (Nef‘î)",
+    "ad_sade": "Nefi Divanı",
+    "yazar_id": "nefi",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "divan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Kasideler ve gazeller.",
+    "onemi": "Kaside türünün zirve örneklerini içerir.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Nef‘î",
+        "url": "https://islamansiklopedisi.org.tr/nefi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "tarih-i-pecevi",
+    "ad": "Târîh-i Peçevî",
+    "ad_sade": "Peçevi Tarihi",
+    "yazar_id": "pecevi",
+    "yil": "1641-1645",
+    "yil_notu": "Son yıllarında Budin ve Peçuy'da yazıldı.",
+    "dil": "Türkçe",
+    "tur": "tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Budin / Peçuy",
+    "devlet": "Osmanlı",
+    "konu": "Kanuni'nin cülûsundan IV. Murad'ın ölümüne (1520-1640) kadar Osmanlı tarihi.",
+    "onemi": "Macar kaynaklarından yararlanması ve kahve-tütün gibi sosyal konulara değinmesiyle dikkat çeker.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Târîh-i Peçevî",
+        "url": "https://islamansiklopedisi.org.tr/tarih-i-pecevi"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "koci-bey-risalesi",
+    "ad": "Koçi Bey Risâlesi",
+    "ad_sade": "Koçi Bey Risalesi",
+    "yazar_id": "koci-bey",
+    "yil": 1631,
+    "yil_notu": "IV. Murad'a sunulan ilk risale için yaygın tarih 1631'dir; Sultan İbrâhim'e ikinci bir risale sundu.",
+    "dil": "Türkçe",
+    "tur": "ıslahatname / siyasetname",
+    "sunuldugu_kisi": "IV. Murad",
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Devletin bozulma nedenleri (tımar sistemi, rüşvet, liyakatsizlik) ve çözüm önerileri.",
+    "onemi": "XVII. yüzyıl Osmanlı ıslahat düşüncesinin en tanınmış metnidir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Koçi Bey",
+        "url": "https://islamansiklopedisi.org.tr/koci-bey"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "secere-i-terakime",
+    "ad": "Şecere-i Terâkime",
+    "ad_sade": "Şecere-i Terakime",
+    "yazar_id": "ebulgazi",
+    "yil": "1659-1661",
+    "yil_notu": null,
+    "dil": "Türkçe (Çağatay)",
+    "tur": "tarih / soy kütüğü",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Hîve",
+    "devlet": "Hive Hanlığı",
+    "konu": "Oğuz Han soyu ve Türkmen boylarının tarihi.",
+    "onemi": "Oğuz destan geleneğinin geç dönem yazılı varyantlarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ebülgazi Bahadır Han",
+        "url": "https://islamansiklopedisi.org.tr/ebulgazi-bahadir-han"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Oğuznâme",
+        "url": "https://islamansiklopedisi.org.tr/oguzname"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "secere-i-turk",
+    "ad": "Şecere-i Türk",
+    "ad_sade": "Şecere-i Türk",
+    "yazar_id": "ebulgazi",
+    "yil": "1663-1665",
+    "yil_notu": "Yazar ölünce oğlu Ebü'l-Muzaffer Anuşa Han tarafından tamamlandı.",
+    "dil": "Türkçe (Çağatay)",
+    "tur": "tarih",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "Hîve",
+    "devlet": "Hive Hanlığı",
+    "konu": "Türk ve Moğol hanedanlarının, özellikle Şeybânîler ve Hîve hanlarının tarihi.",
+    "onemi": "Orta Asya Türk tarihinin önemli kaynaklarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Ebülgazi Bahadır Han",
+        "url": "https://islamansiklopedisi.org.tr/ebulgazi-bahadir-han"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil"
+    ],
+    "dogrulanamadi": false,
+    "olum_sonrasi_tamamlandi": true
+  },
+  {
+    "id": "tezkiretul-bunyan",
+    "ad": "Tezkiretü'l-bünyân",
+    "ad_sade": "Tezkiretü'l-Bünyan",
+    "yazar_id": "sai-mustafa-celebi",
+    "yil": "1586-1587",
+    "yil_notu": "TDV: tahmini 1586-1587.",
+    "dil": "Türkçe",
+    "tur": "biyografi / mimari",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Mimar Sinan'ın kendi anlatımına dayanan hayatı ve eserlerinin listesi.",
+    "onemi": "Mimar Sinan hakkındaki temel kaynaktır.",
+    "ilk_olma": null,
+    "yks_onemi": "orta",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Tezkiretü'l-Bünyân",
+        "url": "https://islamansiklopedisi.org.tr/tezkiretul-bunyan"
+      },
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Sâî Mustafa Çelebi",
+        "url": "https://islamansiklopedisi.org.tr/sai-mustafa-celebi"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "muhibbi-divani",
+    "ad": "Dîvân-ı Muhibbî",
+    "ad_sade": "Muhibbi Divanı",
+    "yazar_id": "suleyman-1",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "divan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": "İstanbul",
+    "devlet": "Osmanlı",
+    "konu": "Kanuni Sultan Süleyman'ın 'Muhibbî' mahlasıyla yazdığı şiirler.",
+    "onemi": "Osmanlı padişahlarının en hacimli divanlarındandır.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Süleyman I",
+        "url": "https://islamansiklopedisi.org.tr/suleyman-i"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "avni-divani",
+    "ad": "Dîvân-ı Avnî",
+    "ad_sade": "Avni Divanı",
+    "yazar_id": "mehmed-2",
+    "yil": null,
+    "yil_notu": null,
+    "dil": "Türkçe",
+    "tur": "divan",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Osmanlı",
+    "konu": "Fâtih Sultan Mehmed'in 'Avnî' mahlasıyla yazdığı şiirler.",
+    "onemi": "Fâtih'in şair kimliğini gösterir.",
+    "ilk_olma": null,
+    "yks_onemi": "düşük",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Mehmed II",
+        "url": "https://islamansiklopedisi.org.tr/mehmed-ii"
+      }
+    ],
+    "teyitsiz_alanlar": [],
+    "dogrulanamadi": false
+  },
+  {
+    "id": "dede-korkut",
+    "ad": "Kitâb-ı Dedem Korkut alâ Lisân-ı Tâife-i Oğuzân",
+    "ad_sade": "Dede Korkut Kitabı",
+    "yazar_id": null,
+    "yil": "1450-1550",
+    "yil_notu": "Anonim; anlatılar çok daha eskidir. TDV: bilinen iki yazma nüsha vardır (biri Dresden nüshası, 1815'te F. von Diez buldu); yazıya geçirilme tarihi tartışmalıdır.",
+    "dil": "Türkçe",
+    "tur": "destan / hikâye",
+    "sunuldugu_kisi": null,
+    "yazildigi_yer": null,
+    "devlet": "Akkoyunlu",
+    "konu": "Oğuz boylarının kahramanlık hikâyeleri; bir mukaddime ve on iki hikâye.",
+    "onemi": "Oğuz Türklerinin destani geleneğinin en önemli yazılı metnidir.",
+    "ilk_olma": null,
+    "yks_onemi": "yüksek",
+    "kaynaklar": [
+      {
+        "ad": "TDV İslâm Ansiklopedisi – Dede Korkut",
+        "url": "https://islamansiklopedisi.org.tr/dede-korkut"
+      }
+    ],
+    "teyitsiz_alanlar": [
+      "yil",
+      "devlet"
+    ],
+    "dogrulanamadi": false,
+    "devlet_notu": "Yazıya geçirildiği dönem ve çevre tartışmalıdır (Akkoyunlu veya erken Osmanlı).",
+    "anonim": true
+  }
+]

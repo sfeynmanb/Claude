@@ -1,0 +1,621 @@
+[
+  {
+    "kaynak": "cuveyni",
+    "hedef": "gazali",
+    "tur": "hoca-öğrenci",
+    "not": "Gazzâlî Nîşâbur'da İmâmü'l-Haremeyn'den ders aldı."
+  },
+  {
+    "kaynak": "ahmet-yesevi",
+    "hedef": "hakim-ata",
+    "tur": "hoca-öğrenci",
+    "not": "Hakîm Ata, Yesevî'nin halifesidir."
+  },
+  {
+    "kaynak": "bahaeddin-veled",
+    "hedef": "mevlana",
+    "tur": "hoca-öğrenci",
+    "not": "Babası ve ilk hocası."
+  },
+  {
+    "kaynak": "mevlana",
+    "hedef": "sultan-veled",
+    "tur": "hoca-öğrenci",
+    "not": "Babası ve şeyhi."
+  },
+  {
+    "kaynak": "ibnul-arabi",
+    "hedef": "sadreddin-konevi",
+    "tur": "hoca-öğrenci",
+    "not": "Konevî, İbnü'l-Arabî'nin manevi oğlu ve öğrencisidir."
+  },
+  {
+    "kaynak": "nasiruddin-tusi",
+    "hedef": "kutbuddin-sirazi",
+    "tur": "hoca-öğrenci",
+    "not": "Kutbüddin Merâga'da Tûsî'den astronomi ve felsefe okudu."
+  },
+  {
+    "kaynak": "molla-fenari",
+    "hedef": "kadizade-rumi",
+    "tur": "hoca-öğrenci",
+    "not": "Kadızâde, Molla Fenârî'den ders aldı."
+  },
+  {
+    "kaynak": "curcani",
+    "hedef": "kadizade-rumi",
+    "tur": "hoca-öğrenci",
+    "not": "Kadızâde Semerkant'ta Cürcânî'nin derslerine katıldı, sonra bazı görüşlerini eleştirdi."
+  },
+  {
+    "kaynak": "kadizade-rumi",
+    "hedef": "ulug-bey",
+    "tur": "hoca-öğrenci",
+    "not": "Kadızâde, Uluğ Bey'in hocası oldu."
+  },
+  {
+    "kaynak": "kadizade-rumi",
+    "hedef": "ali-kuscu",
+    "tur": "hoca-öğrenci"
+  },
+  {
+    "kaynak": "ulug-bey",
+    "hedef": "ali-kuscu",
+    "tur": "hoca-öğrenci"
+  },
+  {
+    "kaynak": "kasi",
+    "hedef": "ali-kuscu",
+    "tur": "hoca-öğrenci",
+    "not": "Ali Kuşçu'nun Semerkant'taki hocaları arasında sayılır.",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "aksemseddin",
+    "hedef": "mehmed-2",
+    "tur": "hoca-öğrenci",
+    "not": "Fâtih'in hocası."
+  },
+  {
+    "kaynak": "molla-gurani",
+    "hedef": "mehmed-2",
+    "tur": "hoca-öğrenci",
+    "not": "Şehzadelik döneminde hocası."
+  },
+  {
+    "kaynak": "hocazade",
+    "hedef": "mehmed-2",
+    "tur": "hoca-öğrenci",
+    "not": "TDV: Fâtih'in hocası."
+  },
+  {
+    "kaynak": "necmeddin-kubra",
+    "hedef": "necmeddin-daye",
+    "tur": "hoca-öğrenci",
+    "not": "Dâye, Kübreviyye çevresinde yetişti."
+  },
+  {
+    "kaynak": "hoca-sadeddin",
+    "hedef": "murad-3",
+    "tur": "hoca-öğrenci",
+    "not": "Şehzadeliğinden itibaren hocası (1573)."
+  },
+  {
+    "kaynak": "tamgac-bugra-han",
+    "hedef": "yusuf-has-hacib",
+    "tur": "himaye",
+    "not": "Kutadgu Bilig'i sunduğu hükümdar; has hâciplik unvanını verdi."
+  },
+  {
+    "kaynak": "gazneli-mahmud",
+    "hedef": "biruni",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "gazneli-mahmud",
+    "hedef": "firdevsi",
+    "tur": "himaye",
+    "not": "Şehnâme ona sunuldu; ilişkinin ayrıntıları tartışmalıdır."
+  },
+  {
+    "kaynak": "alparslan",
+    "hedef": "nizamulmulk",
+    "tur": "himaye",
+    "not": "Veziri."
+  },
+  {
+    "kaynak": "meliksah",
+    "hedef": "nizamulmulk",
+    "tur": "himaye",
+    "not": "Veziri."
+  },
+  {
+    "kaynak": "meliksah",
+    "hedef": "omer-hayyam",
+    "tur": "himaye",
+    "not": "Takvim heyetini görevlendirdi."
+  },
+  {
+    "kaynak": "nizamulmulk",
+    "hedef": "gazali",
+    "tur": "himaye",
+    "not": "Bağdat Nizamiyesi'ne müderris tayin etti (1091)."
+  },
+  {
+    "kaynak": "nizamulmulk",
+    "hedef": "cuveyni",
+    "tur": "himaye",
+    "not": "Nîşâbur Nizamiyesi'nde müderris yaptı."
+  },
+  {
+    "kaynak": "keykubad-1",
+    "hedef": "bahaeddin-veled",
+    "tur": "himaye",
+    "not": "Konya'ya davet etti."
+  },
+  {
+    "kaynak": "keykubad-1",
+    "hedef": "necmeddin-daye",
+    "tur": "himaye",
+    "not": "Mirsâdü'l-ibâd'ı kabul etti."
+  },
+  {
+    "kaynak": "gazan-han",
+    "hedef": "residuddin",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "timur",
+    "hedef": "teftazani",
+    "tur": "himaye",
+    "not": "Semerkant'a getirtti."
+  },
+  {
+    "kaynak": "timur",
+    "hedef": "curcani",
+    "tur": "himaye",
+    "not": "Şiraz'dan Semerkant'a götürdü (1387)."
+  },
+  {
+    "kaynak": "ulug-bey",
+    "hedef": "kadizade-rumi",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "ulug-bey",
+    "hedef": "kasi",
+    "tur": "himaye",
+    "not": "Semerkant'a davet etti."
+  },
+  {
+    "kaynak": "huseyin-baykara",
+    "hedef": "ali-sir-nevai",
+    "tur": "himaye",
+    "not": "Çocukluk arkadaşı; vezir ve dostu."
+  },
+  {
+    "kaynak": "murad-2",
+    "hedef": "molla-fenari",
+    "tur": "himaye",
+    "not": "1425'te müftü tayin etti."
+  },
+  {
+    "kaynak": "murad-2",
+    "hedef": "mercimek-ahmed",
+    "tur": "himaye",
+    "not": "Kābûsnâme'yi ona çevirtti."
+  },
+  {
+    "kaynak": "murad-2",
+    "hedef": "seyhi",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "mehmed-2",
+    "hedef": "ali-kuscu",
+    "tur": "himaye",
+    "not": "Ayasofya Medresesi'ne müderris tayin etti."
+  },
+  {
+    "kaynak": "mehmed-2",
+    "hedef": "molla-husrev",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "mehmed-2",
+    "hedef": "hocazade",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "mehmed-2",
+    "hedef": "sabuncuoglu",
+    "tur": "himaye",
+    "not": "Cerrâhiyye ona sunuldu."
+  },
+  {
+    "kaynak": "suleyman-1",
+    "hedef": "piri-reis",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "suleyman-1",
+    "hedef": "matrakci-nasuh",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "suleyman-1",
+    "hedef": "mimar-sinan",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "suleyman-1",
+    "hedef": "ebussuud",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "suleyman-1",
+    "hedef": "baki",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "suleyman-1",
+    "hedef": "seydi-ali-reis",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "suleyman-1",
+    "hedef": "kemalpasazade",
+    "tur": "himaye",
+    "not": "1526'da şeyhülislam oldu."
+  },
+  {
+    "kaynak": "murad-3",
+    "hedef": "takiyuddin",
+    "tur": "himaye",
+    "not": "Rasathanenin kurulmasını destekledi."
+  },
+  {
+    "kaynak": "murad-3",
+    "hedef": "hoca-sadeddin",
+    "tur": "himaye"
+  },
+  {
+    "kaynak": "hoca-sadeddin",
+    "hedef": "takiyuddin",
+    "tur": "himaye",
+    "not": "Rasathanenin kuruluşunu destekledi."
+  },
+  {
+    "kaynak": "ali-sir-nevai",
+    "hedef": "huseyin-baykara",
+    "tur": "etkiledi",
+    "not": "Çağatay şiirinde birbirlerini etkilediler."
+  },
+  {
+    "kaynak": "kindi",
+    "hedef": "farabi",
+    "tur": "etkiledi",
+    "not": "İslam Meşşâî geleneğinin öncüsü olarak."
+  },
+  {
+    "kaynak": "farabi",
+    "hedef": "ibn-sina",
+    "tur": "etkiledi",
+    "not": "İbn Sînâ, Aristo'nun Metafizik'ini Fârâbî'nin bir risalesi sayesinde anladığını söyler."
+  },
+  {
+    "kaynak": "ibn-sina",
+    "hedef": "gazali",
+    "tur": "etkiledi",
+    "not": "Gazzâlî Tehâfüt'te özellikle İbn Sînâ'nın görüşlerini eleştirdi."
+  },
+  {
+    "kaynak": "gazali",
+    "hedef": "ibn-rusd",
+    "tur": "etkiledi",
+    "not": "İbn Rüşd, Tehâfütü't-Tehâfüt ile Gazzâlî'ye cevap verdi."
+  },
+  {
+    "kaynak": "ebubekir-razi",
+    "hedef": "ibn-sina",
+    "tur": "etkiledi",
+    "not": "Klinik tıp geleneği."
+  },
+  {
+    "kaynak": "maturidi",
+    "hedef": "omer-nesefi",
+    "tur": "etkiledi",
+    "not": "Nesefî'nin Akāid'i Mâtürîdî inanç sisteminin özetidir."
+  },
+  {
+    "kaynak": "senai",
+    "hedef": "mevlana",
+    "tur": "etkiledi",
+    "not": "TDV: Mevlânâ kendisini Senâî ve Attâr çizgisine yerleştirir."
+  },
+  {
+    "kaynak": "attar",
+    "hedef": "mevlana",
+    "tur": "etkiledi",
+    "not": "Mevlânâ, Attâr'ın bazı hikâyelerini Mesnevî'de kullandı."
+  },
+  {
+    "kaynak": "sems-tebrizi",
+    "hedef": "mevlana",
+    "tur": "etkiledi",
+    "not": "1244 karşılaşması Mevlânâ'nın hayatını değiştirdi."
+  },
+  {
+    "kaynak": "mevlana",
+    "hedef": "yunus-emre",
+    "tur": "etkiledi",
+    "not": "Yaygın kabule göre."
+  },
+  {
+    "kaynak": "yunus-emre",
+    "hedef": "asik-pasa",
+    "tur": "etkiledi",
+    "not": "TDV: Garibnâme'nin üslubu Yunus Emre ve Mevlânâ'nın etkisini taşır."
+  },
+  {
+    "kaynak": "mevlana",
+    "hedef": "asik-pasa",
+    "tur": "etkiledi"
+  },
+  {
+    "kaynak": "ahmet-yesevi",
+    "hedef": "haci-bektas-veli",
+    "tur": "etkiledi",
+    "not": "Vilâyetnâme Hacı Bektaş'ı Yesevî'ye bağlar; bu bağ menkıbevî olup tarihsel olarak tartışmalıdır.",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "yusuf-has-hacib",
+    "hedef": "edip-ahmet-yukneki",
+    "tur": "etkiledi",
+    "not": "TDV: Yüknekî'nin üslubu Kutadgu Bilig'e çok şey borçludur."
+  },
+  {
+    "kaynak": "nizami-gencevi",
+    "hedef": "ali-sir-nevai",
+    "tur": "etkiledi",
+    "not": "Hamse geleneği."
+  },
+  {
+    "kaynak": "nizami-gencevi",
+    "hedef": "fuzuli",
+    "tur": "etkiledi",
+    "not": "Leylâ vü Mecnûn konusu."
+  },
+  {
+    "kaynak": "nizami-gencevi",
+    "hedef": "ahmedi",
+    "tur": "etkiledi",
+    "not": "İskendernâme konusu."
+  },
+  {
+    "kaynak": "nizami-gencevi",
+    "hedef": "seyhi",
+    "tur": "etkiledi",
+    "not": "Hüsrev ü Şîrîn konusu."
+  },
+  {
+    "kaynak": "ali-sir-nevai",
+    "hedef": "fuzuli",
+    "tur": "etkiledi"
+  },
+  {
+    "kaynak": "nasiruddin-tusi",
+    "hedef": "kinalizade",
+    "tur": "etkiledi",
+    "not": "Ahlâk-ı Alâî, Ahlâk-ı Nâsırî geleneğini sürdürür."
+  },
+  {
+    "kaynak": "ulug-bey",
+    "hedef": "takiyuddin",
+    "tur": "etkiledi",
+    "not": "Takıyyüddin gözlemlerinde Uluğ Bey zîcini düzeltmeyi amaçladı."
+  },
+  {
+    "kaynak": "ata-melik-cuveyni",
+    "hedef": "residuddin",
+    "tur": "etkiledi",
+    "not": "Câmiu't-tevârîh, Cihângüşâ'dan yararlandı."
+  },
+  {
+    "kaynak": "residuddin",
+    "hedef": "ebulgazi",
+    "tur": "etkiledi",
+    "not": "Ebülgazi, Oğuz geleneğini anlatırken Reşîdüddin'den yararlandı."
+  },
+  {
+    "kaynak": "kadizade-rumi",
+    "hedef": "mirim-celebi",
+    "tur": "etkiledi",
+    "not": "Dedesi; Semerkant geleneği."
+  },
+  {
+    "kaynak": "ali-kuscu",
+    "hedef": "mirim-celebi",
+    "tur": "etkiledi",
+    "not": "Anne tarafından dedesi."
+  },
+  {
+    "kaynak": "taskoprizade",
+    "hedef": "katip-celebi",
+    "tur": "etkiledi",
+    "not": "Miftâhu's-saâde, Keşfü'z-zunûn'a kaynak oldu."
+  },
+  {
+    "kaynak": "asik-pasa",
+    "hedef": "asikpasazade",
+    "tur": "etkiledi",
+    "not": "Büyük dedesi."
+  },
+  {
+    "kaynak": "ibnul-arabi",
+    "hedef": "molla-fenari",
+    "tur": "etkiledi",
+    "not": "Fenârî, Konevî'nin Miftâhu'l-gayb'ına şerh yazarak Ekberî geleneği sürdürdü."
+  },
+  {
+    "kaynak": "ibnul-heysem",
+    "hedef": "kutbuddin-sirazi",
+    "tur": "etkiledi",
+    "not": "Kutbüddin'in öğrencisi Kemâleddin el-Fârisî, Kitâbü'l-Menâzır'ı şerh etti."
+  },
+  {
+    "kaynak": "harezmi",
+    "hedef": "fergani",
+    "tur": "etkiledi",
+    "not": "Fergānî, Hârizmî'nin zîcine şerh yazdı."
+  },
+  {
+    "kaynak": "biruni",
+    "hedef": "ibn-sina",
+    "tur": "çağdaş-tartışma",
+    "not": "Doğa felsefesi üzerine mektuplaştılar (el-Es'ile ve'l-ecvibe)."
+  },
+  {
+    "kaynak": "teftazani",
+    "hedef": "curcani",
+    "tur": "çağdaş-tartışma",
+    "not": "Timur huzurunda münazara."
+  },
+  {
+    "kaynak": "molla-husrev",
+    "hedef": "molla-gurani",
+    "tur": "çağdaş-tartışma",
+    "not": "1462 protokol meselesi ve kölelik risalesi tartışması."
+  },
+  {
+    "kaynak": "ibn-haldun",
+    "hedef": "timur",
+    "tur": "çağdaş-tartışma",
+    "not": "1401 Şam kuşatmasında görüştüler."
+  },
+  {
+    "kaynak": "mevlana",
+    "hedef": "sadreddin-konevi",
+    "tur": "çağdaş-tartışma",
+    "not": "Konya'nın iki büyük sufisi; aralarında saygıya dayalı bir ilişki olduğu rivayet edilir.",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "ahi-evran",
+    "hedef": "haci-bektas-veli",
+    "tur": "çağdaş-tartışma",
+    "not": "Vilâyetnâme'de çekişmeli ilişkileri anlatılır (menkıbevî).",
+    "dogrulanamadi": true
+  },
+  {
+    "kaynak": "hocazade",
+    "hedef": "gazali",
+    "tur": "etkiledi",
+    "not": "Fâtih'in isteğiyle Gazzâlî'nin Tehâfüt'ü üzerine yeni bir Tehâfüt yazdı."
+  },
+  {
+    "kaynak": "gulsehri",
+    "hedef": "mantikut-tayr",
+    "tur": "tercüme etti",
+    "not": "Türkçe manzum uyarlama (1317)."
+  },
+  {
+    "kaynak": "mercimek-ahmed",
+    "hedef": "kabusname-tercumesi",
+    "tur": "tercüme etti",
+    "not": "Keykâvus'un eserini Türkçeye çevirdi."
+  },
+  {
+    "kaynak": "sabuncuoglu",
+    "hedef": "cerrahiyyetul-haniyye",
+    "tur": "tercüme etti",
+    "not": "Zehrâvî'nin et-Tasrîf'inin cerrahi bölümünü yeni gözlemlerle Türkçeye aktardı."
+  },
+  {
+    "kaynak": "teftazani",
+    "hedef": "akaidun-nesefi",
+    "tur": "şerh yazdı",
+    "not": "Şerhu'l-Akāid."
+  },
+  {
+    "kaynak": "fahreddin-razi",
+    "hedef": "ibn-sina-isarat",
+    "tur": "şerh yazdı",
+    "not": "Eleştirel şerh."
+  },
+  {
+    "kaynak": "nasiruddin-tusi",
+    "hedef": "ibn-sina-isarat",
+    "tur": "şerh yazdı",
+    "not": "Râzî'ye cevap niteliğinde şerh."
+  },
+  {
+    "kaynak": "ali-kuscu",
+    "hedef": "tusi-tecrid",
+    "tur": "şerh yazdı",
+    "not": "eş-Şerhu'l-cedîd."
+  },
+  {
+    "kaynak": "ali-kuscu",
+    "hedef": "zic-i-ulug-bey",
+    "tur": "şerh yazdı"
+  },
+  {
+    "kaynak": "mirim-celebi",
+    "hedef": "zic-i-ulug-bey",
+    "tur": "şerh yazdı",
+    "not": "Düstûrü'l-amel."
+  },
+  {
+    "kaynak": "mirim-celebi",
+    "hedef": "fethiyye",
+    "tur": "şerh yazdı"
+  },
+  {
+    "kaynak": "sadreddin-konevi",
+    "hedef": "fususul-hikem",
+    "tur": "şerh yazdı",
+    "not": "el-Fükûk."
+  },
+  {
+    "kaynak": "fergani",
+    "hedef": "harezmi-zic",
+    "tur": "şerh yazdı",
+    "not": "TDV: Hârizmî'nin zîcine şerh yazdı."
+  },
+  {
+    "kaynak": "molla-fenari",
+    "hedef": "miftahul-gayb",
+    "tur": "şerh yazdı",
+    "not": "Misbâhu'l-üns."
+  },
+  {
+    "kaynak": "ibn-rusd",
+    "hedef": "gazali-tehafut",
+    "tur": "etkiledi",
+    "not": "Tehâfütü't-Tehâfüt bu esere cevaptır."
+  },
+  {
+    "kaynak": "hocazade",
+    "hedef": "gazali-tehafut",
+    "tur": "etkiledi",
+    "not": "Tehâfüt geleneğini sürdürdü."
+  },
+  {
+    "kaynak": "kutadgu-bilig",
+    "hedef": "atabetul-hakayik",
+    "tur": "etkiledi",
+    "not": "Üslup etkisi."
+  },
+  {
+    "kaynak": "ahlak-i-nasiri",
+    "hedef": "ahlak-i-alai",
+    "tur": "etkiledi"
+  },
+  {
+    "kaynak": "nizami-hamse",
+    "hedef": "nevai-hamse",
+    "tur": "etkiledi"
+  }
+]

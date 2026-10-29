@@ -19,6 +19,7 @@ Bu klasördeki dosyalar:
 | `analiz/agirlik_senaryolari.csv` | Alıcı perspektiflerine göre ağırlık setleri |
 | `analiz/karsilastir.py` | Ağırlıklı skorlama ve duyarlılık analizi aracı (bağımlılıksız Python 3) |
 | `analiz/tedarik_kontrol_listesi.md` | Satın alma / geliştirme kontrol listesi |
+| `Dual-Use_Karar_Destek_Sektor_Analizi.pdf` | Raporun PDF sürümü |
 
 ---
 
@@ -36,7 +37,7 @@ Bu klasördeki dosyalar:
 9. [Sektörün Yapısal İhtiyaçları](#9-sektörün-yapısal-ihtiyaçları)
 10. [Sektörün Yapısal Sorunları](#10-sektörün-yapısal-sorunları)
 11. [Düzenleyici ve Yönetişim Çerçevesi](#11-düzenleyici-ve-yönetişim-çerçevesi)
-12. [Türkiye İçin Çıkarımlar ve Öneriler](#12-türkiye-için-çıkarımlar-ve-öneriler)
+12. [Türkiye: Pazar Analizi ve Stratejiler](#12-türkiye-pazar-analizi-ve-stratejiler)
 13. [2027–2030 Senaryoları ve Göstergeler](#13-20272030-senaryoları-ve-göstergeler)
 14. [Kaynakça](#14-kaynakça)
 15. [Ek: Sözlük](#15-ek-sözlük)
@@ -83,9 +84,13 @@ Bu klasördeki dosyalar:
    (Lavender/Gospel [K22], 2026 İran harekâtı [K19]), model sağlayıcı–devlet çatışması, sermaye-gelir
    uçurumu ve AB YZ Yasası'nın askerî istisnasından doğan düzenleme boşluğu [K24].
 
-7. **Türkiye platform katmanında güçlü, yatay karar katmanında ve girişim finansmanında zayıf.**
-   Baykar, ASELSAN, HAVELSAN, TUSAŞ, STM ve Roketsan güçlü; ancak kamuya açık güvenilir savunma
-   girişimi yatırım verisi bulunamadı [K31][K50]. Öneriler Bölüm 12'de.
+7. **Türkiye güçlü bir platform ihracatçısı; asıl fırsat ihraç edilen sistemlerin içindeki yazılım
+   değeri.** Savunma ve havacılık ihracatı 2025'te 10,05 milyar $'a ulaştı (+%48), yarısından fazlası
+   NATO/AB/ABD'ye gitti [K63]. ASELSAN (Top 100'de 40.), TUSAŞ, ARCA, Roketsan ve MKE'nin toplam savunma
+   geliri ~14,9 milyar $ [K65]; Baykar 2,2 milyar $ ihracatla SİHA ihracatının lideri [K69]. Buna karşın
+   yurt içi saf askerî YZ pazarı analist tahminiyle 2026'da yalnızca ~0,1–0,36 milyar $; yatay veri/karar
+   platformu ve girişim finansmanı zayıf. Önerilen strateji: platform ihracatını koru, nişlerde farklılaş,
+   ortaklıklarla pazara eriş, egemen yatay platformu kademeli kur (Bölüm 12).
 
 ---
 
@@ -110,6 +115,8 @@ düşünce kuruluşları, bakanlık açıklamaları), ardından:
   rakamlar "[Raporlanan]" olarak işaretlenmiştir.
 - Çalışma ortamının ağ kısıtı nedeniyle bazı birincil kaynak sitelerine doğrudan erişilemedi;
   veriler arama sonuç özetlerinden derlendi. Kritik kararlardan önce birincil kaynağa dönülmelidir.
+- **Türkiye pazar tahmini:** Bölüm 12.3'teki Türkiye askerî YZ pazar büyüklüğü, küresel oranların Türkiye
+  harcamasına uygulanmasıyla yapılmış bir analist tahminidir; resmî bir veri değildir.
 - **Kapsam boşlukları:** Japonya'nın 2026 savunma YZ faaliyetleri, Rusya'nın sistemleri ve Türk
   savunma girişimlerinin yatırım turları için güvenilir açık kaynak veri bulunamadı.
 - Palantir'in 3. çeyrek 2026 sonuçları 2 Kasım 2026'da açıklanacak; rapordaki son veri 2Ç 2026.
@@ -251,10 +258,13 @@ birbirini satın alması. Önümüzdeki 18–24 ayda (c) türü hızlanacak.
 ## 5. Sektör Haritası: Yedi Oyuncu Grubu
 
 ```
- G1 Hesaplama & temel modeller ─► G2 Veri/karar platformları ─► G3 Otonomi yazılımı ─► G4 Neo-prime'lar ─► G5 Ana yükleniciler ─► Kullanıcı
-                                                                                        ▲                     ▲
-                                  G6 Sistem entegratörleri / hizmet şirketleri ──────────┴─────────────────────┘
-                                  G7 Devlet yapımı ekosistemler (DELTA, PLA/CETC, iDEX) — tüm katmanlarda
+ G1 Hesaplama & temel modeller
+   └─► G2 Veri/karar platformları
+         └─► G3 Otonomi yazılımı
+               └─► G4 Neo-prime'lar
+                     └─► G5 Ana yükleniciler ─► Kullanıcı
+ G6 Sistem entegratörleri / hizmet şirketleri ── G4 ve G5'i kullanıcıya bağlar
+ G7 Devlet yapımı ekosistemler (DELTA, PLA/CETC, iDEX) ── tüm katmanlarda
 ```
 
 ### 5.1 G1 — Hesaplama ve temel model sağlayıcıları
@@ -593,56 +603,265 @@ ve alıcı şartnameleri fiilî düzenleyici hâline geliyor.
 
 ---
 
-## 12. Türkiye İçin Çıkarımlar ve Öneriler
+## 12. Türkiye: Pazar Analizi ve Stratejiler
 
-### 12.1 Türkiye sektör haritasının neresinde?
+Bu bölüm Türkiye'yi üç düzeyde ele alır: (i) savunma sanayiinin makro ve şirket düzeyindeki pazar
+yapısı, (ii) bu yapı içinde YZ destekli karar destek ve otonomi pazarının büyüklüğü ve segmentleri,
+(iii) ulusal düzeyde, kurum/şirket düzeyinde ve dış pazar düzeyinde stratejiler ile 2026–2030 yol
+haritası.
 
-| Grup | Türk oyuncular | Durum |
+### 12.1 Makro görünüm
+
+| Gösterge | Değer | Kanıt / kaynak |
 |---|---|---|
-| G1 Hesaplama/model | — (kamu YZ platformu, TÜBİTAK çağrıları) | Erken aşama; SSB YZ platformu ve 2026–2030 eylem planı [K31] |
-| G2 Veri/karar platformu | HAVELSAN (ADVENT-AI, MAIN) | Program bazlı; yatay, çok kurumlu bir platform yok |
-| G3 Otonomi yazılımı | Baykar, STM, ASELSAN içinde | Bağımsız otonomi yazılımı şirketi kamuya açık veride görünmüyor |
-| G4 Neo-prime | Baykar (fiilen yazılım hızında çalışan platform üreticisi) | Güçlü; SİVRİSİNEK, MIZRAK ve SAHA 2026'daki 6 yeni otonom sistem [K50] |
-| G5 Ana yükleniciler | ASELSAN, TUSAŞ, Roketsan, HAVELSAN, STM | Güçlü; YZ ortaklık ve merkez yatırımları |
-| G6 Entegratörler | Yüklenicilerin içinde | Ayrı pazar yok |
-| G7 Devlet ekosistemi | SSB, SAVTEK, TÜBİTAK | Hibe ve program odaklı; Ukrayna/Hindistan tarzı açık modül pazarı yok |
+| Savunma ve havacılık ihracatı (2025) | **10,05 milyar $** (+%48; 2024: 7,1 milyar $); 7,3 milyar $'lık hedef aşıldı | Doğrulanmış (SSB) [K63] |
+| İhracatın pazar dağılımı (2025) | ~5,6 milyar $ (%56) AB, NATO ülkeleri ve ABD'ye | Doğrulanmış (SSB) [K63] |
+| Toplam Türkiye ihracatı içindeki pay | %3,7 | Doğrulanmış (SSB) [K63] |
+| Farklı yöntemle ihracat | 4,23 milyar $ (CAAM, dünya 8.); SIPRI 2021–2025'te dünya 11. | Raporlanan [K63][K72] |
+| MSB 2026 bütçesi | 1 trilyon 202 milyar TL (~28,7 milyar $) | Raporlanan (TBMM sunumu) [K64] |
+| NATO tanımıyla savunma harcaması (2026) | ~48 milyar $; GSYH'nin %2,85'i | Raporlanan (NATO tahmini) [K64] |
+| Sektör cirosu (2025) | 20 milyar $'ın üzerinde (SSB Başkanı); başka bir projeksiyonda 18,2 milyar $ (2026: 19,8) | Raporlanan [K64][K71] |
+| Yerlilik oranı | Birçok kritik sistemde %80'in üzerinde | Raporlanan (SSB) [K71] |
+| Savunma Ar-Ge harcaması | ~2,6 milyar $ (kaynaklarda 2–3,5 milyar $ aralığı) | Raporlanan, tutarsız [K71] |
+| SAHA 2026 (5–9 Mayıs) | ~8 milyar $ ihracat sözleşmesi (SAHA 2024: 6,2); 164 imza töreni; 203 yeni ürün | Raporlanan (resmî açıklama) [K74] |
+| 2026'da sektöre verilen yeni iş | ~15 milyar $ (Ekim 2026 itibarıyla) | Raporlanan [K73] |
+| Harcama projeksiyonu | Savunma sektörü harcamalarının 2027'de 3,5–4 trilyon TL'ye ulaşması | Raporlanan (QNB Araştırma) [K73] |
 
-### 12.2 SWOT
+**Okuma [Analist yargısı]:** Türkiye, ihracatı 2021'den bu yana yaklaşık üç katına çıkarmış, ihracatının
+yarısından fazlasını NATO/AB/ABD pazarlarına yapan ve yerli tedarik oranı %80'i aşan bir **platform ve
+mühimmat ihracatçısı**dır. Bu güçlü taban, YZ karar destek katmanına geçiş için hem pazar (yerli talep +
+ihracat kanalları) hem de saha verisi sağlar; eksik olan yazılım odaklı iş modeli ve finansmandır.
 
-| Güçlü | Zayıf |
+### 12.2 Şirket düzeyinde pazar yapısı
+
+| Şirket | Konum ve ölçek | YZ / karar destek varlıkları | Kaynak |
+|---|---|---|---|
+| **ASELSAN** | Defense News Top 100'de 40. (savunma geliri 4,46 milyar $, +%26); 2025 hasılatı 180,4 milyar TL, net kâr ~30 milyar TL; bakiye sipariş 20,4 milyar $ (2024 sonu: 14,0); Mayıs 2026'da Türkiye'nin en değerli halka açık şirketi | **Çelik Kubbe**'nin YZ destekli komuta-kontrol yazılımı ve **HAKİM** hava komuta kontrol sistemi; 1,47 milyar €'luk hava savunma sözleşmesi (raporlarda 780 milyon € da geçiyor); deniz sensör/atış kontrolüne YZ; YZ destekli Kent Güvenliği (~470 milyon $) | [K65][K66][K67][K31] |
+| **TUSAŞ** | Top 100'de 48. (3,65 milyar $, +%16) | KAAN; Endonezya'ya 48 KAAN (2025, raporlarda ~10 milyar $); insansız sistemlerde otonomi | [K65][K75] |
+| **ARCA Savunma** | Top 100'e ilk giriş, 53. (~3 milyar $; 2024: 653 milyon $) | 155 mm topçu mühimmatı; Estonya'da üretim tesisi — YZ değil, ama "kitle" talebinin göstergesi | [K74] |
+| **Roketsan** | Top 100'de 64.; 2025 cirosu ~2 milyar $ [Raporlanan] | Çelik Kubbe ortağı; füze güdüm ve atış kontrolü | [K65][K76] |
+| **MKE** | Top 100'de 81. (1,42 milyar $) | Çelik Kubbe ortağı | [K65] |
+| **Baykar** | Gelir açıklamadığı için listede yok; 2025 ihracatı **2,2 milyar $** (2021: 664 milyon $), toplam gelir ~2,5 milyar $, gelirin %88–90'ı ihracat; 37–39 ülkeye satış | Otonom İHA/SİHA, Kızılelma insansız savaş uçağı (Endonezya'ya 12 adet, May 2026); SAHA 2026'da 6 yeni otonom sistem; Leonardo ile **LBA Systems** (İtalya, %50–50; Temmuz 2026'da faaliyete geçti) | [K69][K75][K68][K50] |
+| **HAVELSAN** | TSKGV şirketi; güncel ciro kamuya açık kaynakta bulunamadı | **ADVENT-AI** deniz muharebe yönetimi; **MAIN** kurumsal YZ platformu (9 milyar parametreli model); Azerbaycan'da operasyonel hazırlık yazılımı | [K26][K70] |
+| **STM** | Güncel ciro bulunamadı | KARGU ve ALPAGU dolanan mühimmatları; Avrupa'ya ilk ihracat sözleşmesi (Ocak 2026) | [K76] |
+
+**Yoğunlaşma:** Top 100'deki beş Türk şirketinin toplam savunma geliri ~14,9 milyar $ [K65]; Baykar ile
+birlikte sektör gelirinin büyük kısmı yaklaşık 6–8 kurumda toplanıyor. Bu şirketlerin önemli bir bölümü
+kamu veya TSK Güçlendirme Vakfı (TSKGV) bağlantılı. **Analist yargısı:** Yapı, Bölüm 5'teki
+gruplandırmayla G5 (ana yükleniciler) ve G4 (Baykar) ağırlıklı; G2 (yatay veri/karar platformu) ve
+G3 (bağımsız otonomi yazılımı) katmanlarında kamuya açık ölçekli bir bağımsız oyuncu yok.
+
+### 12.3 Türkiye'de YZ destekli karar destek pazarı: Büyüklük tahmini
+
+Türkiye'ye özgü bir askerî YZ pazar verisi yayımlanmamıştır. Aşağıdaki tahmin, şeffaf varsayımlarla
+yapılmış bir **analist tahminidir** ve yalnızca büyüklük mertebesini göstermek içindir.
+
+**Yöntem:**
+1. Küresel askerî YZ pazarı 2026: 10–20 milyar $ (uzlaşı aralığı, Bölüm 4.1) [K40].
+2. Küresel askerî harcama: ~2,7 trilyon $ (SIPRI'nin 2024 verisi; 2025–2026 daha yüksek olabilir).
+3. Küresel oran: askerî harcamanın ~%0,37–0,74'ü YZ'ye gidiyor.
+4. Bu oran Türkiye'nin 2026 savunma harcamasına (MSB bütçesi 28,7 milyar $ ile NATO tanımı 48 milyar $
+   arası) uygulanır.
+5. 2030 için yıllık %12–20 büyüme (küresel tahminlerin aralığı) varsayılır.
+
+| Ölçüt | 2026 (alt – üst) | 2030 (alt – üst) | Not |
+|---|---|---|---|
+| **Yurt içi askerî YZ harcaması** | ~0,11 – 0,36 milyar $ | ~0,17 – 0,74 milyar $ | Küresel orana göre; Türkiye'nin yerlilik politikası nedeniyle bu harcamanın büyük kısmı yerli firmalara gider |
+| **YZ içeren ihracat** | Ayrıca ölçülemiyor | — | Baykar'ın 2,2 milyar $'lık ihracatı ve Çelik Kubbe benzeri sistemler otonomi/karar destek içeriyor; ancak YZ payı ayrıştırılamıyor |
+
+**Analist yargısı:** Yurt içi saf YZ pazarı (yüz milyonlar mertebesi) küçük; **asıl ekonomik değer, YZ'nin
+platform ve sistem ihracatına kattığı farklılaştırmada**. Bu nedenle Türkiye'nin YZ stratejisi, salt
+yurt içi yazılım pazarı üzerine değil, "**ihracat edilen sistemlerin içindeki yazılım değeri**" üzerine
+kurulmalıdır. Karşılaştırma için: Hindistan'ın tüm savunma teknolojisi girişimlerine 2025'te giden VC
+~68 milyon $ [K53]; Ukrayna'nınki ~105 milyon $ [K52].
+
+### 12.4 Segment analizi
+
+| Segment | Talep itici gücü | Başlıca Türk oyuncular | Olgunluk | Girişimler ve KOBİ'ler için fırsat |
+|---|---|---|---|---|
+| **Hava savunma C2 ve karar destek** | Çelik Kubbe; İran savaşı sonrası bölgesel hava tehdidi | ASELSAN (HAKİM), Roketsan, TÜBİTAK SAGE, MKE | Yüksek — 2026 ortasında ilk tesis, teslimatlarda %50 artış [K67] | Sensör füzyonu, tehdit önceliklendirme, simülasyon ve test modülleri |
+| **Otonom platform yazılımı** (İHA, SİHA, insansız savaş uçağı) | İhracat; insanlı-insansız ekip; sürü | Baykar, TUSAŞ, STM | Yüksek (platform), orta (sürü/çok platform koordinasyonu) | Görev planlama, EH altında seyrüsefer, sürü koordinasyonu, kenar çıkarımı |
+| **İSR ve görüntü/sinyal analizi** | Sınır güvenliği, terörle mücadele, deniz yetki alanları | ASELSAN, HAVELSAN | Orta | Bilgisayarlı görü, SAR analizi, RF sınıflandırma, OSINT |
+| **Deniz muharebe yönetimi** | Mavi Vatan, MİLGEM, insansız deniz araçları | HAVELSAN (ADVENT-AI), ASELSAN, STM | Orta — YZ önerileri ikinci aşamada [K26] | Akustik sınıflandırma, deniz resmi füzyonu, bakım tahmini |
+| **Elektronik harp** | EH yoğun modern muharebe ortamı | ASELSAN | Orta | Bilişsel EH, spektrum yönetimi algoritmaları |
+| **İç güvenlik / kent güvenliği** (çift kullanım) | Kentsel güvenlik projeleri | ASELSAN (~470 milyon $) | Orta | Olay yönetimi, kriz karar destek — insan hakları ve veri koruma yönetişimi gerektirir |
+| **Lojistik, bakım, eğitim/simülasyon** | Envanter büyümesi; sentetik eğitim | HAVELSAN (MAIN bakım asistanı), simülasyon birimleri | Orta-yüksek | Kestirimci bakım, sentetik veri, dijital ikiz |
+| **Dil modeli ve istihbarat özetleme** | Eylem Planı: BİLGE (37 milyar parametre), Türk Dilleri dil modeli (2027 sonu) [K70] | TÜBİTAK, HAVELSAN (MAIN) | Erken | Türkçe ve Türk dilleri için alan uyarlaması, güvenli RAG, değerlendirme araçları |
+
+### 12.5 Talep tarafı, tedarik yapısı ve politika çerçevesi
+
+- **Tek merkezli alıcı:** Tedarik SSB merkezli ve program bazlı; yazılım çoğunlukla donanım programlarının
+  bir bileşeni olarak satın alınıyor. Bu, büyük yükleniciler için öngörülebilirlik, bağımsız yazılım
+  şirketleri için yüksek giriş engeli demek.
+- **Yerlilik politikası:** %80'i aşan yerlilik [K71] yabancı platformların (Palantir, Anduril vb.) yurt içi
+  pazara girişini sınırlıyor; yerli oyunculara korunaklı bir pazar sağlıyor ama rekabet baskısını da azaltıyor.
+- **2026–2030 Türkiye Yapay Zekâ Eylem Planı** (Resmî Gazete, 18 Ağustos 2026) [K70]:
+  - 2030'a kadar en az 1 GW YZ/veri merkezi kurulu gücü;
+  - veri merkezi, bulut ve YZ altyapısında en az 10 milyar $ özel sektör ağırlıklı yatırım;
+  - araştırmacı, girişim ve KOBİ'lere 20 milyon GPU-saat (zaman çizelgesi kaynaklarda tutarsız);
+  - TÜBİTAK'ın 37 milyar parametreli BİLGE modelinin geliştiricilere açılması;
+  - 2027 sonuna kadar ortak "Türk Dilleri Büyük Dil Modeli";
+  - 10 bin ileri düzey uzman, 2 bin kamu veri setinin açılması.
+- **SSB YZ platformu ve AR-GE portföyü:** Veri merkezi, donanım ve model eğitim engellerini aşmak için
+  ortak platform; 6,5 milyar TL'yi aşan bütçeli 122 AR-GE projesi [K31].
+- **Finansman araçları:** Türkiye Kalkınma Fonu'nun yönettiği **Yenilikçi ve İleri Teknolojiler Katılım
+  GSYF** (SSB ile 2021'de kuruldu; çift kullanım ve derin teknoloji odaklı) [K73]; TÜBİTAK **BiGG**
+  programıyla erken aşama savunma girişimlerine destek [K73]. Genel girişim sermayesi tarafında son beş
+  yılda 455 GSYF ~2,3 milyar $ kaynak topladı (tüm sektörler) [K73].
+- **Uluslararası kısıt:** Türkiye, AB'nin SAFE savunma finansman mekanizmasının dışında; resmî bir AB
+  güvenlik anlaşması yokluğu gerekçe gösteriliyor. Türk firmaları AB içinde ortak girişimler (LBA Systems)
+  ve yerel tesisler (ARCA–Estonya) kurarak bu kısıtı aşmaya çalışıyor [K68][K74].
+
+### 12.6 Girişim ekosistemi
+
+Kamuya açık kaynaklarda Türk savunma YZ girişimlerine ait güvenilir yatırım turu verisi **bulunamadı**
+[K50]. Bu boşluğun yapısal nedenleri [Analist yargısı]:
+
+1. **Tek alıcı ve uzun ödeme döngüleri** girişim sermayesi için risk profilini bozuyor.
+2. **Yüklenicilerin iç geliştirme tercihi:** YZ kabiliyeti ASELSAN, HAVELSAN ve Baykar içinde gelişiyor;
+   dış girişimlere alt yüklenici rolü kalıyor.
+3. **Gizlilik ve güvenlik izni gereksinimleri** küçük ekipler için maliyetli.
+4. **Fon yapıları:** Uluslararası LP'lerin savunma yatırımlarına kısıtları ve yerli fonların sınırlı ölçeği.
+5. **Veri erişimi:** Eğitim verisinin askerî kurumlarda kalması; açık test sahası ve ortak veri setlerinin yokluğu.
+
+**Değişim sinyalleri:** Tera'nın savunma tedarikçisi Best Grup'un %70'ini satın alması savunma
+finansmanında bir dönüşüm sinyali olarak yorumlanıyor [K73]; Eylem Planı'ndaki GPU-saat ve kamu veri seti
+hedefleri doğrudan bu darboğazlara yönelik.
+
+**Karşılaştırma:** İsrail'de girişimler büyük yüklenicilerin platformlarına bileşen olarak takılıyor
+[K51]; Ukrayna'da devlet platformu (DELTA) açık modül pazarı yaratıyor [K18]; Hindistan iDEX ile 600'den
+fazla girişime küçük ama hızlı hibeler veriyor [K53]. Türkiye'de bu üç modelden hiçbiri ölçekli biçimde
+kurulmuş değil.
+
+### 12.7 Dış pazar analizi
+
+| Pazar | Talep ve kanıt | Türkiye'nin değer önerisi | Giriş modeli | Başlıca riskler |
+|---|---|---|---|---|
+| **Avrupa / NATO** | İhracatın %56'sı AB/NATO/ABD [K63]; Avrupa'nın egemenlik ve "kitle" talebi | Muharebede kanıtlanmış, uygun maliyetli platformlar; hızlı teslimat | AB içinde ortak girişim (LBA Systems), yerel üretim (ARCA–Estonya), doğrudan ihracat (STM KARGU) | SAFE dışında kalma; siyasi veto; Avrupa'nın kendi neo-prime'larıyla rekabet |
+| **Körfez** | Büyük bütçeler; ucuz karşı-İHA ve YZ ağlarına yönelim [K61] | Hava savunma (Çelik Kubbe tecrübesi), İHA, deniz sistemleri | Ortak üretim ve yerelleştirme (EDGE, SAMI ile) | Yerelleştirme şartları; teknoloji transferi baskısı; İran savaşı sonrası altyapı hasarı |
+| **Asya-Pasifik** | Endonezya: 48 KAAN (2025) ve 12 Kızılelma (2026) [K75]; Kore'nin güçlü rekabeti | Platform + ortak üretim + finansman paketi | Hükümetler arası anlaşma + yerel sanayi katılımı | Uzun teslim süreleri (KAAN'da 120 ay ifadesi); Kore ve Çin ile fiyat rekabeti |
+| **Afrika** | TB2 başta olmak üzere çok sayıda ülke müşteri [K69][K72] | Düşük maliyet, hızlı teslim, eğitim paketi | Doğrudan satış + eğitim + bakım | Ödeme riski; insan hakları kaynaklı itibar riski |
+| **Kafkasya / Orta Asya / Türk dünyası** | HAVELSAN yazılımı Azerbaycan'da [K26]; Türk Dilleri dil modeli hedefi [K70] | Dil ve kültür yakınlığı; yazılım + eğitim | Hükümetler arası işbirliği; ortak geliştirme | Rusya ve Çin etkisi; küçük bütçeler |
+
+**İHA pazarı özel notu:** Baykar 2025'te de dünya SİHA ihracatının lideri olarak raporlandı [K69]. SIPRI'nin
+kabiliyet ağırlıklı ölçüsünde (TIV) Türkiye dönemin en büyük İHA ihracatçısı; adet bazında ise ABD ve İran
+öne çıkıyor [K72]. Sıkça tekrarlanan "%65 küresel pay" rakamı Türk kaynaklı bir tahmindir ve bağımsız
+olarak doğrulanmamıştır [K72].
+
+### 12.8 Rekabet konumlanması: Türkiye ve benzer ihracatçılar
+
+| Boyut | Türkiye | İsrail | Güney Kore | Ukrayna | Avrupa neo-prime'ları |
+|---|---|---|---|---|---|
+| Fiyat / maliyet etkinliği | Güçlü | Orta | Güçlü | Çok güçlü (yurt içi) | Orta |
+| Muharebe kanıtı | Güçlü (Libya, Karabağ, Ukrayna'da TB2) | Çok güçlü | Sınırlı | Çok güçlü | Karışık (HX-2 tartışması) |
+| Yazılım / YZ derinliği | Orta | Güçlü | Orta | Güçlü (DELTA) | Güçlü |
+| Üretim ölçeği | Güçlü | Orta | Çok güçlü | Orta | Gelişiyor |
+| İhracat esnekliği | Güçlü (çok yönlü dış politika) | Kısıtlı (siyasi) | Güçlü | Sınırlı (savaş) | Kısıtlı (ihracat kontrolleri) |
+| Finansman ekosistemi | Zayıf | Güçlü | Orta | Zayıf | Güçlü |
+
+**Analist yargısı:** Türkiye'nin rekabet avantajı "**kanıtlanmış platform + uygun fiyat + esnek ihracat**"
+üçlüsü. Rakiplerin (özellikle Kore ve Avrupa neo-prime'larının) yazılım/YZ katmanında hızla ilerlemesi,
+bu avantajı orta vadede aşındırabilir; savunulabilirlik için YZ katmanının platformlara entegre edilmesi
+şart.
+
+### 12.9 SWOT ve TOWS stratejileri
+
+| Güçlü (S) | Zayıf (W) |
 |---|---|
-| Muharebede kanıtlanmış İHA/SİHA ve dolanan mühimmat | Yatay veri/ontoloji katmanında ölçekli yerli ürün yok |
-| Güçlü yükleniciler ve C2/CMS deneyimi | Savunma girişim sermayesi ve açık veri sınırlı |
-| NATO üyeliği | Tedarik modeli donanım odaklı |
-| İhracat pazarlarında kabul görmüş platformlar | Egemen hesaplama ve savunma için büyük model altyapısı erken aşamada |
+| S1 Muharebede kanıtlanmış İHA/SİHA ve dolanan mühimmat | W1 Ölçekli yatay veri/ontoloji platformu yok |
+| S2 10 milyar $ ihracat ve %56'sı NATO/AB/ABD'ye | W2 Savunma girişim sermayesi ve açık veri çok sınırlı |
+| S3 Güçlü yükleniciler, %80+ yerlilik, Çelik Kubbe gibi entegre programlar | W3 Donanım odaklı, program bazlı tedarik modeli |
+| S4 NATO üyeliği ve çok yönlü ihracat ilişkileri | W4 Egemen hesaplama ve büyük model altyapısı erken aşamada |
+| S5 Eylem Planı ile kamu kaynakları ve hedefler netleşti | W5 Bağımsız TEVV ve EH dâhil test altyapısı sınırlı |
 
-| Fırsat | Tehdit |
+| Fırsat (O) | Tehdit (T) |
 |---|---|
-| ABD dışı yatay platform boşluğu (7.3) | ABD/Avrupa platformlarının NATO'da fiilî standart olması |
-| Mevcut İHA'ların üzerine yazılım/otonomi katmanı | GPU ve modelde dış bağımlılık |
-| Afet, sınır, enerjide çift kullanım | Yetenek göçü |
-| Körfez ve Asya'daki büyüyen talep (EDGE, Kore örnekleri) | Sıkılaşan uluslararası normların ihracatı etkilemesi |
+| O1 ABD dışı yatay platform boşluğu (Bölüm 7.3) | T1 ABD/Avrupa platformlarının NATO'da fiilî standart olması |
+| O2 Avrupa'nın "kitle" ve egemenlik talebi | T2 SAFE dışında kalma ve AB içi siyasi kısıtlar |
+| O3 Körfez, Asya ve Afrika'da büyüyen talep | T3 GPU, çip ve model katmanında dış bağımlılık; ihracat kontrolleri |
+| O4 Sivil–askerî çift kullanım (afet, enerji, sınır) | T4 Yetenek göçü ve küresel ücret rekabeti |
+| O5 Türk dilleri için dil modeli niş alanı | T5 Uluslararası normların (CCW) sıkılaşması ve itibar riski |
 
-### 12.3 Öneriler
+| | **Fırsatlar (O)** | **Tehditler (T)** |
+|---|---|---|
+| **Güçlü (S)** | **SO — Büyüme:** İhracat edilen her platforma YZ görev yazılımı paketi ekle (S1+O3); Çelik Kubbe'nin C2/karar destek katmanını ihracat ürününe dönüştür (S3+O3); Avrupa'da ortak girişimlerle "kitle" talebine gir (S2+O2) | **ST — Savunma:** NATO birlikte çalışabilirlik sertifikasyonuyla standart dışı kalma riskini azalt (S4+T1); AB içi yerel tüzel kişilik ve üretimle SAFE kısıtını aş (S2+T2); ölçülebilir insan kontrolünü ürün özelliği yap (S3+T5) |
+| **Zayıf (W)** | **WO — Dönüşüm:** Ulusal açık veri standardı ve ortak platformla yatay katmanı kur (W1+O1); Eylem Planı GPU-saatlerini savunma girişimlerine ayır (W4+O5); çift kullanım sivil projelerle girişimlere ilk müşteri sağla (W2+O4) | **WT — Risk azaltma:** Çoklu model ve donanım tedarik mimarisi (W4+T3); bağımsız TEVV merkezi ve test sahaları (W5+T5); yetenek tutma programları ve diaspora bağlantıları (W2+T4) |
 
-1. **Ulusal savunma veri standardı:** Tek tedarikçiye değil, NATO standartlarıyla uyumlu açık bir
-   ontoloji/veri modeline yatırım; tüm yükleniciler için zorunlu. DELTA'nın açık modül yaklaşımı örnek.
-2. **Yazılıma özgü tedarik yolu:** 90 günlük prototip → sürekli tedarik; yazılımın donanım
-   programlarından ayrı bütçelenmesi.
+### 12.10 Ulusal stratejik seçenekler
+
+| Seçenek | Açıklama | Etki | Maliyet | Süre | Risk |
+|---|---|---|---|---|---|
+| **A — Platform ihracatçısı + gömülü YZ** | Mevcut modeli sürdür; YZ'yi platformların içinde geliştir | Orta | Düşük | Kısa | Yazılım katmanında rakiplere geride kalma |
+| **B — Egemen yatay platform** | Ulusal veri standardı + ortak karar platformu (ASELSAN/HAVELSAN + girişimler) | Yüksek | Yüksek | Uzun | Yürütme ve kurumlar arası koordinasyon |
+| **C — Köprü ve ortaklık stratejisi** | AB, Körfez, Asya'da ortak girişimler; müttefik yazılım şirketleriyle hisse ortaklıkları | Yüksek | Orta | Orta | Siyasi kırılganlık, teknoloji sızıntısı |
+| **D — Niş liderlik** | Sürü, karşı-İHA, EH, deniz otonomisi, Türk dilleri dil modeli gibi nişlerde dünya liderliği | Orta-yüksek | Orta | Orta | Niş pazarların küçüklüğü |
+
+**Önerilen portföy [Analist yargısı]:** **A'yı koru, D ile farklılaş, C ile pazara eriş, B'yi kademeli
+kur.** B tek başına pahalı ve uzun; ama A, C ve D'nin uzun vadeli değeri, ortak veri standardı ve test
+altyapısı olmadan sınırlı kalır. Bu nedenle B'nin ilk adımları (veri standardı, test sahası, ortak GPU
+kapasitesi) 2026–2027'de başlatılmalı.
+
+### 12.11 Kurum ve şirket düzeyinde stratejiler
+
+| Aktör | Stratejik öncelik | Somut adımlar |
+|---|---|---|
+| **SSB** | Yazılım tedarikini platform tedarikinden ayırmak; ekosistem kurucusu olmak | Yazılıma özgü hızlı tedarik yolu; açık veri/arayüz standardı; DELTA benzeri modül pazarı; girişimler için 6–12 aylık "ilk müşteri" sözleşmeleri; savunma girişim yatırımlarının yıllık raporlanması |
+| **ASELSAN** | Çelik Kubbe/HAKİM'i bir **karar platformu ürününe** dönüştürmek | C2 yazılımını açık API'lerle üçüncü taraf modüllere açma; ayrı bir yazılım/YZ iş birimi; ihracat için "YZ destekli entegre hava savunma C2" paketi; Sensör Verisi İşleme ve YZ Merkezi'nin girişimlerle ortak çalışması |
+| **HAVELSAN** | MAIN ve dil modeli yetkinliğini **savunma dil modeli sağlayıcılığına** taşımak | BİLGE ve Türk Dilleri modeliyle uyumlu güvenli savunma modeli; ADVENT-AI'nin ihracatı; kamu ve askerî kurumlar için yerinde (on-premise) YZ platformu |
+| **Baykar** | Platform liderliğini **yazılım tanımlı filo**ya genişletmek | Çok platformlu görev otonomisi ve sürü yazılımı; LBA Systems üzerinden Avrupa'da YZ ve siber dayanıklılık geliştirme; ihracat müşterilerine yazılım güncelleme ve veri hizmeti aboneliği |
+| **TUSAŞ** | KAAN ve insansız sistemler için **insanlı-insansız ekip** yazılımı | KAAN–ANKA–Kızılelma ekip konsepti için görev yazılımı; Endonezya ortak üretiminde yazılım/entegrasyon payını büyütme |
+| **Roketsan, STM, MKE** | Mühimmat ve dolanan mühimmatta **otonomi ve hedef doğrulama** katmanı | Terminal yönlendirme ve EH dayanıklılığı; insan kontrolü özelliklerinin belgelenmesi (ihracat ve norm riski için) |
+| **Girişimler ve KOBİ'ler** | Yüklenicilere **takılabilir bileşen** olmak; önce çift kullanım | Bir niş seç (görüntü analizi, sensör füzyonu, simülasyon, kestirimci bakım); sivil müşteriyle (AFAD, enerji, liman) gelir kur; DIANA ve NATO İnovasyon Fonu başvuruları; yüklenici ortaklıkları |
+| **Yatırımcılar** | Seçici ve ortaklık odaklı yatırım | G2/G3 nişleri ve çift kullanım şirketleri; yüklenici ile ortak yatırım (stratejik + finansal); çıkış yolu olarak yüklenici satın almaları ve AB ortak girişimleri |
+| **Üniversiteler ve TÜBİTAK** | Yetenek ve açık araştırma altyapısı | Savunma YZ yüksek lisans programları; ortak veri setleri ve değerlendirme ölçütleri; BİLGE'nin güvenli savunma sürümleri |
+
+### 12.12 Ürün-pazar eşleştirmesi (ihracat odaklı)
+
+| Ürün paketi | Hedef pazar | Gerekçe |
+|---|---|---|
+| YZ destekli entegre hava savunma C2 (Çelik Kubbe tecrübesi) | Körfez, Asya-Pasifik | Bölgesel hava tehdidi; ucuz karşı-İHA arayışı [K61] |
+| Otonom İHA + sürü görev yazılımı | Avrupa (LBA Systems üzerinden), Asya | Avrupa'nın kitle talebi; SAFE kısıtına ortak girişimle çözüm |
+| Deniz muharebe yönetimi + YZ (ADVENT-AI) | Asya-Pasifik, Körfez | Deniz kuvvetlerinin modernizasyonu |
+| Türk dilleri istihbarat/özetleme dil modeli | Orta Asya, Kafkasya | Dil yakınlığı; rakiplerin zayıf olduğu niş |
+| Kriz ve afet karar destek (çift kullanım) | Deprem riskli ülkeler, Körfez | Türkiye'nin afet yönetimi tecrübesi; sivil gelir |
+
+### 12.13 2026–2030 yol haritası ve başarı göstergeleri
+
+| Dönem | Öncelikler | Başarı göstergeleri (KPI) |
+|---|---|---|
+| **2026–2027 — Temel** | Ulusal savunma veri standardı taslağı; yazılım tedarik yolu pilotu; bağımsız test sahası; Eylem Planı GPU-saatlerinden savunma payı; Çelik Kubbe C2'nin açık API'leri | Standart taslağı yayımlandı; en az 10 girişime hızlı sözleşme; test protokolü yayımlandı; savunma girişim yatırım verisi ilk kez raporlandı |
+| **2028 — Ölçek** | Modül pazarı (DELTA benzeri); ilk ihracat yazılım paketleri; Türk Dilleri dil modelinin savunma uyarlaması | Platforma bağlanan üçüncü taraf modül sayısı; YZ paketli ihracat sözleşmeleri; savunma YZ girişimlerine yıllık yatırım |
+| **2029–2030 — Liderlik** | Seçili nişlerde dünya liderliği; NATO'da birlikte çalışabilir egemen platform seçeneği | İhracatta yazılım/hizmet payı; NATO birlikte çalışabilirlik sertifikaları; nişlerde pazar payı; yetenek havuzu (Eylem Planı hedefi: 10 bin uzman) |
+
+### 12.14 Riskler ve azaltma
+
+| Risk | Olasılık | Etki | Azaltma |
+|---|---|---|---|
+| GPU/çip ihracat kısıtları | Orta | Yüksek | Çoklu tedarikçi; verimli model mimarileri; Eylem Planı veri merkezi kapasitesi |
+| AB pazarında siyasi kısıtlar (SAFE) | Yüksek | Orta | AB içi ortak girişimler, yerel üretim, NATO kanalları |
+| Uluslararası norm sıkılaşması (CCW) | Düşük-orta | Yüksek | Ölçülebilir insan kontrolü ve denetim kaydını tasarımın parçası yapma |
+| İtibar riski (otonom silah iddiaları) | Orta | Orta-yüksek | Şeffaf insan kontrolü politikası; bağımsız test. Örnek: BM Libya Uzmanlar Paneli'nin 2021 raporunda KARGU-2'nin operatör bağlantısı olmadan kullanılmış olabileceği iddiası uluslararası tartışma yarattı; üretici sistemin insan kontrolüyle çalıştığını belirtti [Raporlanan] [K77] |
+| Yetenek göçü | Yüksek | Yüksek | Ücret ve hisse programları; diaspora; üniversite ortaklıkları |
+| Yüklenici yoğunlaşması ve rekabet eksikliği | Orta | Orta | Açık standartlar; modül pazarı; girişimlere ayrılmış tedarik payları |
+
+### 12.15 Öneriler (özet)
+
+1. **Ulusal savunma veri standardı:** NATO standartlarıyla uyumlu açık ontoloji/veri modeli; tüm
+   yükleniciler için zorunlu.
+2. **Yazılıma özgü tedarik yolu:** 90 günlük prototip → sürekli tedarik; yazılım ayrı bütçelensin.
 3. **Bağımsız TEVV merkezi:** EH dâhil standart test protokolleri ve paylaşılan sonuçlar.
-4. **Çoklu model mimarisi:** ABD'nin 8 sağlayıcılı yaklaşımı gibi, model katmanında değiştirilebilirlik;
-   yerli ve açık modellerle ikame.
+4. **Çoklu model mimarisi:** BİLGE ve Türk Dilleri modeli dâhil, model katmanında değiştirilebilirlik.
 5. **Ölçülebilir insan kontrolü:** İnceleme süresi, ret oranı, belirsizlik gösterimi, denetim kaydı
-   şartnameye girsin; normlar sıkılaşırsa ihracatı da korur.
-6. **Çift kullanım programı:** AFAD, enerji ve kritik altyapı için aynı karar destek çekirdeğinin
-   sivil sürümü; `PassiveDefenseOptimizer` gibi fizik tabanlı araçların kritik altyapı korumasına uyarlanması.
-7. **Girişimlere ilk müşteri garantisi ve şeffaf veri:** 6–12 aylık küçük, hızlı sözleşmeler;
-   NATO DIANA ve NIF ile eşleştirme; savunma girişim yatırımlarının yıllık raporlanması (bugün bu
-   veri kamuya açık değil).
-8. **Egemen hesaplama:** YZ Eylem Planı'ndaki veri merkezi hedeflerinin bir kısmı akredite,
-   sınıflandırılmış iş yüküne uygun kapasite olarak planlansın.
-9. **Ortaklık stratejisi:** Saab–Helsing, Hensoldt–Helsing, LIG Nex1–Palantir örneklerindeki gibi,
-   Türk yüklenicilerin yerli veya müttefik yazılım şirketleriyle hisse + sözleşme bazlı ortaklıklar kurması.
+   şartnamede; ihracatta rekabet avantajı olarak konumlandırma.
+6. **Çelik Kubbe'yi platforma dönüştürmek:** Açık API'ler, üçüncü taraf modüller ve ihracat paketi.
+7. **Çift kullanım programı:** AFAD, enerji ve kritik altyapı için aynı karar destek çekirdeğinin sivil
+   sürümü; `PassiveDefenseOptimizer` gibi fizik tabanlı araçların kritik altyapı korumasına uyarlanması.
+8. **Girişim finansmanı ve veri şeffaflığı:** "İlk müşteri" sözleşmeleri, Yenilikçi ve İleri Teknolojiler
+   GSYF'nin ölçeklenmesi, DIANA/NIF eşleştirmesi ve yatırımların yıllık raporlanması.
+9. **Ortaklık stratejisi:** LBA Systems modeli gibi AB içi ortak girişimler; Körfez ve Asya'da ortak üretim;
+   müttefik yazılım şirketleriyle hisse + sözleşme bazlı ortaklıklar.
+10. **Egemen hesaplama:** Eylem Planı'ndaki 1 GW hedefinin bir bölümü akredite, sınıflandırılmış iş yüküne
+    uygun kapasite olarak planlansın.
 
 ---
 
@@ -728,6 +947,21 @@ ve alıcı şartnameleri fiilî düzenleyici hâline geliyor.
 - **[K60]** Tekever — [Tech.eu](https://tech.eu/2025/05/06/tekever-becomes-the-latest-unicorn-in-europes-defencetech-industry/); [ECO News](https://econews.pt/2026/08/14/tekever-seeks-e500m-in-funding-at-e5-5bn-valuation/); [Sifted](https://sifted.eu/articles/defence-unicorn-tekever)
 - **[K61]** Körfez — [Gulf News – EDGE/SIRBAI](https://gulfnews.com/uae/sirbai-edge-team-up-to-boost-ai-powered-drone-swarm-capabilities-1.500418483); [Aranca – Rearming the Gulf](https://www.aranca.com/knowledge-library/special-reports/investment-research/gulf-defense-market-outlook); [Verdantix](https://research.verdantix.com/vantage/blog/iran-war-challenges-gulf-ambitions-to-embed-ai-in-operations--ehs-and-esg)
 - **[K62]** ABD entegratörleri — [Booz Allen 10-K FY2026 (SEC)](https://www.sec.gov/Archives/edgar/data/0001443646/000162828026037521/bah-20260331.htm); [Booz Allen – YZ hizmetleri](https://www.boozallen.com/insights/ai/booz-allen-ranks-first-in-artificial-intelligence-services.html); [Motley Fool](https://www.fool.com/investing/2025/05/27/this-key-palantir-partner-was-a-victim-of-doge-cut)
+- **[K63]** Türkiye savunma ihracatı 2025 — [Milliyet – SSB Başkanı Görgün](https://www.milliyet.com.tr/7560406); [DonanımHaber](https://www.donanimhaber.com/savunma-ve-havacilik-ihracati-2025-te-10-milyar-dolari-asti--200474); [İstiklal](https://www.istiklal.com.tr/teknoloji/savunma-ve-havacilik-ihracatta-10-milyar-dolar-esigini-asti-1079856h); [Nefes – CAAM sıralaması](https://www.nefes.com.tr/turkiyenin-savunma-ihracatindaki-yukselisi-dunya-listesine-yansidi-154019)
+- **[K64]** Türkiye 2026 savunma bütçesi — [Rudaw – MSB bütçe sunumu](https://rudaw.net/turkish/middleeast/turkey/271120253); [Cumhuriyet – NATO 2026](https://www.cumhuriyet.com.tr/ekonomi/nato-2026-savunma-butcesini-acikladi-hangi-ulke-ne-kadar-harcayacak-2519057); [Paratic](https://paratic.com/savunma-sektoru-2026da-one-cikacak-asels-ve-otkar-odakta/)
+- **[K65]** Defense News Top 100 (2026) Türk şirketleri — [Hürriyet Daily News](https://www.hurriyetdailynews.com/five-turkish-defense-firms-rank-among-worlds-top-100-226293); [Ekonomi Gazetesi](https://www.ekonomigazetesi.com/sektor-haberleri/defense-news-top-100de-turkiyede-5-sirket-86604); [Midas](https://www.getmidas.com/midasin-kulaklari/defense-news-top-100de-aselsan-ilk-40a-girdi-5-turk-sirketinin-toplam-geliri-149-milyar-dolar-oldu-p-723526)
+- **[K66]** ASELSAN finansalları — [Forbes Türkiye](https://www.forbes.com.tr/para-yatirim/aselsan-dan-2025-te-180-4-milyar-liralik-ciro); [Bloomberg HT – bakiye sipariş](https://www.bloomberght.com/aselsan-in-bakiye-siparisleri-20-milyar-dolari-asti-3770024); [Turkish Minute – en değerli şirket](https://turkishminute.com/2026/05/05/aselsan-becomes-turkeys-most-valuable-listed-company-amid-defense-export-boom/); [Quwa](https://quwa.org/turkey/turkish-defence-news/aselsans-backlog-hits-23-2-billion-as-turkiyes-defence-electronics-giant-grows-25-in-real-terms/)
+- **[K67]** Çelik Kubbe ve HAKİM — [Habertürk](https://www.haberturk.com/aselsan-dan-1-5-milyar-euroluk-celikkubbe-imzasi-3897618-ekonomi); [NTV – teslimat töreni](https://www.ntv.com.tr/turkiye/cumhurbaskani-erdogan-celik-kubbe-teslimat-toreninde-konusuyor,gk5KcyqEkEChtyfcEc1cJQ); [CNN Türk](https://www.cnnturk.com/turkiye/ozellikleri-say-say-bitmiyor-adan-zye-celik-kubbe-2138359); [Ensonhaber – teslimatta %50 artış](https://www.ensonhaber.com/aselsandan-celik-kubbe-hamlesi-teslimatta-yuzde-50-artisa-gidiliyor-h1532379)
+- **[K68]** LBA Systems ve SAFE — [Anadolu Ajansı](https://aa.com.tr/en/science-technology/leonardo-baykar-joint-venture-lba-systems-becomes-fully-operational/4005115); [TalTech Trialoog](https://trialoog.taltech.ee/en/saban-ibrahim-goksal-how-turkish-defence-companies-are-bypassing-safe-exclusion/); [The Aviationist](https://theaviationist.com/2025/06/24/baykar-leonardo-lba-systems/)
+- **[K69]** Baykar ihracatı — [NTV](https://www.ntv.com.tr/ntvpara/dunya-siha-ihracat-pazarinin-lideri-2025te-de-baykar-oldu-1709886); [Karar](https://www.karar.com/ekonomi-haberleri/baykar-ihracatta-rekor-tazeledi-2025-yilinda-2-2-milyar-dolarlik-dev-2025820); [Daily Sabah](https://www.dailysabah.com/business/defense/turkiyes-baykar-maintains-leadership-in-global-ucav-exports)
+- **[K70]** 2026–2030 Türkiye Yapay Zekâ Eylem Planı — [Webrazzi](https://webrazzi.com/2026/08/18/turkiye-nin-2026-2030-yapay-zek-eylem-plani-yururluge-girdi/); [Erdem & Erdem](https://www.erdem-erdem.av.tr/turkiye-yapay-zeka-eylem-plani-2026-2030-genelgesi-resmi-gazetede-yayimlandi); [QNB Araştırma](https://www.qnbinvest.com.tr/investodak/qnbarastirma/turkiyenin-yapay-zek-eylem-plani-2030a-uzanan-yeni-yol-haritasi)
+- **[K71]** Yerlilik ve Ar-Ge — [Milliyet – kritik teknoloji](https://www.milliyet.com.tr/7643192); [Bengütürk](https://www.benguturk.com/genel/turkiyenin-savunma-sanayii-25-yilda-buyuk-degisim-yasadi-277628h)
+- **[K72]** İHA ihracat pazarı — [War on the Rocks](https://warontherocks.com/the-geopolitics-of-drone-exports/); [Shafaq (SIPRI verisi)](https://shafaq.com/en/World/US-and-Iran-account-for-86-of-military-drone-exports); [Grosswald](https://www.grosswald.org/turkish-defence-exports-10-billion-2025-drones-europe-nato-summit/)
+- **[K73]** Finansman ve sektör projeksiyonları — [Yeni Akit – savunma girişim fonu](https://www.yeniakit.com.tr/haber/savunma-sanayii-girisimlerine-yeni-fon-1573596.html); [Foreks/AA – 2026'da 15 milyar $ yeni iş](https://www.foreks.com/haber/detay/6ad3b077422c786f3f7a4e0c/AA/tr/savunma-ve-havacilik-sanayisi-2026-da-15-milyar-dolarlik-yeni-is-aldi-17-10-26/); [Turdef – Tera/Best Grup](https://turdef.com/article/tera-buys-70-of-best-grup-signalling-defence-finance-shift); [QNB – harcama projeksiyonu](https://www.qnbinvest.com.tr/investodak/qnbarastirma/turkiyenin-savunma-sektoru-harcamalari-2027-yilinda-4-trilyon-tlye-ulasacak); [Bengütürk – Bakan Kacır](https://www.benguturk.com/bilim-teknoloji/bakan-kacir-turkiye-avrupanin-ihtiyac-duydugu-cozum-ortagidir-268396h)
+- **[K74]** ARCA Savunma ve SAHA 2026 — [Dünya](https://www.dunya.com/sirketler/savunma-devleri-ligine-5-turk-sirketi-girdi-haberi-838380); [Yüzde 100 Yerli](https://www.yuzde100yerli.com/en/sadece-3-gunde-8-milyar-dolar-degerinde-yeni-sozlesme-turk-savunma-sanayisi-dunyada-ilk-10u-gozune-kestirdi/); [TRT Haber – SAHA 2026](https://www.trthaber.com/haber/savunma/saha-2026da-3-gunde-8-milyar-dolarlik-ihracat-sozlesmesi-imzalandi-944437.html); [SETA – SAHA EXPO 2026 analizi](https://media.setav.org/tr/dosya/2026/05/saha-expo-2026-ana-egilimler-uretim-ihracat-ve-cok-alanli-harp-mimarisine-gecis.pdf)
+- **[K75]** Endonezya: KAAN ve Kızılelma — [Forbes Türkiye](https://www.forbes.com.tr/ekonomi/turkiye-den-endonezya-ya-48-milli-muharip-ucak-kaan-ihracati); [Medyascope](https://medyascope.tv/2025/07/29/48-adet-kaan-savas-ucaginin-satisi-icin-endonezya-ile-imzalar-atildi/); [EurAsian Times – Kızılelma](https://www.eurasiantimes.com/worlds-first-unmanned-fighter-indonesia-signs-historic-export-deal-for-turkeys-kizilelma-ucav/)
+- **[K76]** Roketsan ve STM — [Defence Turkey – 2025 değerlendirme](https://defenceturkey.com/news/general-assessment-of-the-turkish-defense-and-aerospace-industry-in-2025-and-targets-for-2026); [Ekonomist – Roketsan](https://www.ekonomist.com.tr/sirketler/roketsan-buyume-hedefini-acikladi-59135)
+- **[K77]** BM Libya Uzmanlar Paneli Nihai Raporu (S/2021/229, Mart 2021) — [UN Docs](https://undocs.org/S/2021/229)
 
 ---
 
@@ -751,4 +985,6 @@ ve alıcı şartnameleri fiilî düzenleyici hâline geliyor.
 | **OTA / CSO / SWP / PAE** | ABD hızlı tedarik araçları ve portföy tedarik yöneticileri |
 | **TEVV** | Test, değerlendirme, doğrulama ve geçerleme |
 | **WTA** | Silah-hedef atama problemi |
+| **GSYF** | Girişim sermayesi yatırım fonu |
+| **TOWS** | SWOT bileşenlerini eşleştirerek strateji türeten matris (SO, ST, WO, WT) |
 | **YBBO** | Yıllık bileşik büyüme oranı |

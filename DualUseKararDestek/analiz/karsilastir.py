@@ -6,7 +6,7 @@ dosyasından okunur. Sonuç 0-100 ölçeğine normalize edilir.
 
 Kullanım:
     python3 karsilastir.py                       # tüm senaryolar
-    python3 karsilastir.py --agirlik "K1=10,K2=20,K3=10,K4=20,K5=10,K6=20,K7=5,K8=5"
+    python3 karsilastir.py --agirlik "K1=10,K2=20,K3=10,K4=20,K5=10,K6=20,K7=5,K8=5,K9=5"
     python3 karsilastir.py --duyarlilik K6       # K6 ağırlığını 0-40 arası tarar
 """
 
@@ -23,6 +23,7 @@ KRITERLER = {
     "K6": "Egemenlik uygunlugu (Avrupali alici)",
     "K7": "Finansal saglamlik",
     "K8": "Yonetisim / seffaflik",
+    "K9": "Yazilim hizi ve yenilik",
 }
 MAKS_PUAN = 5
 DIZIN = os.path.dirname(os.path.abspath(__file__))

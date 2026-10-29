@@ -1,33 +1,73 @@
 sirket,kriter,puan,gerekce
 Palantir,K1,5,"2025 geliri 4,475 milyar $; kayitli program (MSS); NATO ve ABD Ordusu kurumsal anlasmasi"
-Palantir,K2,4,"Ukrayna kullanimi; 2026 Iran harekatinda MSS rolu raporlandi; NATO operasyonel karargahlarda"
-Palantir,K3,5,"Ontoloji + AIP; sektorun en derin veri entegrasyon katmani"
-Palantir,K4,3,"Apollo ile kenar dagitimi var; cekirdek odak kenar/EH degil"
-Palantir,K5,2,"Kendi efektoru yok; TITAN ve diger donanimda ortaklara bagli"
-Palantir,K6,2,"Isvicre ve Bundeswehr ornekleri; ABD hukukuna tabi veri erisimi kaygisi"
+Palantir,K2,4,Ukrayna kullanimi; 2026 Iran harekatinda MSS rolu raporlandi; NATO operasyonel karargahlarda
+Palantir,K3,5,Ontoloji + AIP; sektorun en derin veri entegrasyon katmani
+Palantir,K4,3,Apollo ile kenar dagitimi var; cekirdek odak kenar/EH degil
+Palantir,K5,2,Kendi efektoru yok; TITAN ve diger donanimda ortaklara bagli
+Palantir,K6,2,Isvicre ve Bundeswehr ornekleri; ABD hukukuna tabi veri erisimi kaygisi
 Palantir,K7,5,"Karli, 2,3 milyar $ duzeltilmis serbest nakit akisi (2025)"
-Palantir,K8,3,"Halka acik raporlama; ancak etik/kolluk tartismalari ve dava (Republik)"
+Palantir,K8,3,Halka acik raporlama; ancak etik/kolluk tartismalari ve dava (Republik)
+Palantir,K9,5,Apollo ile surekli dagitim; AIP'yi hizla ordu ve ticari kullanima tasidi
 Anduril,K1,4,"~2,2 milyar $ tahmini gelir (2025); Lattice JIATF-401 C2 omurgasi; kurumsal anlasma raporlandi"
-Anduril,K2,3,"Karsi-IHA ve Ukrayna kullanimlari; buyuk olcekli bagimsiz performans verisi sinirli"
-Anduril,K3,4,"Lattice sensor fuzyonu ve C2; kurumsal veri katmani Palantir kadar derin degil"
-Anduril,K4,4,"Otonom platformlar ve kenar odakli tasarim"
+Anduril,K2,3,Karsi-IHA ve Ukrayna kullanimlari; buyuk olcekli bagimsiz performans verisi sinirli
+Anduril,K3,4,Lattice sensor fuzyonu ve C2; kurumsal veri katmani Palantir kadar derin degil
+Anduril,K4,4,Otonom platformlar ve kenar odakli tasarim
 Anduril,K5,5,"Fury, Arsenal-1 fabrikasi; en guclu dikey entegrasyon"
-Anduril,K6,2,"ABD merkezli; Avrupali alici icin Palantir'e benzer egemenlik sorulari"
+Anduril,K6,2,ABD merkezli; Avrupali alici icin Palantir'e benzer egemenlik sorulari
 Anduril,K7,4,"61 milyar $ degerleme, guclu sermaye; ozel sirket, gelir dogrulanmamis"
-Anduril,K8,3,"Ozel sirket; NGC2 guvenlik uyarisi"
+Anduril,K8,3,Ozel sirket; NGC2 guvenlik uyarisi
+Anduril,K9,5,Yazilim + donanim yinelemesi hizli; Lattice cekirdekli urun ailesi
+Thales,K1,5,"Sahada yaygin hava savunma, radar ve C2 sistemleri"
+Thales,K2,3,Sistemler sahada; YZ karar destek katmaninin muharebe dogrulamasi sinirli
+Thales,K3,3,HexaForce C2; kurumsal ontoloji katmani Palantir kadar derin degil
+Thales,K4,4,Radar ve EH mirasi
+Thales,K5,5,Genis sensor ve efektor portfoyu
+Thales,K6,5,"Fransiz/Avrupa merkezli, devlet ortakli"
+Thales,K7,5,"Buyuk, karli halka acik yuklenici"
+Thales,K8,4,Halka acik raporlama; 'YZ karar vericiyi destekler' ilkesi
+Thales,K9,2,Geleneksel program dongusu; cortAIx hizlandirma cabasi
 Helsing,K1,3,"Coklu urun hatti (Altra, HX-2, CA-1, SG-1); olcekli teslimat ve gelir dogrulanmamis"
-Helsing,K2,2,"HX-2 Ukrayna siparis duraklatmasi raporlari (Helsing itiraz ediyor); karisik kanit"
-Helsing,K3,3,"Altra kesif-taarruz koordinasyonu; kurumsal veri/ontoloji katmani sinirli"
-Helsing,K4,4,"EH ortami icin tasarlanmis kenar YZ felsefesi; sahada kanit tartismali"
+Helsing,K2,2,HX-2 Ukrayna siparis duraklatmasi raporlari (Helsing itiraz ediyor); karisik kanit
+Helsing,K3,3,Altra kesif-taarruz koordinasyonu; kurumsal veri/ontoloji katmani sinirli
+Helsing,K4,4,EH ortami icin tasarlanmis kenar YZ felsefesi; sahada kanit tartismali
 Helsing,K5,4,"HX-2, CA-1 (Grob), SG-1; dikey entegrasyon hizla artiyor"
-Helsing,K6,5,"Avrupa merkezli; Avrupa egemenlik anlatisinin merkezinde"
+Helsing,K6,5,Avrupa merkezli; Avrupa egemenlik anlatisinin merkezinde
 Helsing,K7,4,"1,8 milyar $ Seri E, 18 milyar $ degerleme; gelir dusuk/dogrulanmamis"
-Helsing,K8,3,"Ozel sirket; sinirli kamu aciklamasi"
-Shield AI,K1,3,"~300 milyon $ (2025) gelir; Hivemind CCA secimi"
-Shield AI,K2,3,"V-BAT saha kullanimlari; bagimsiz veri sinirli"
-Shield AI,K3,2,"Odak otonomi; veri/karar platformu degil"
-Shield AI,K4,5,"GNSS/iletisim kisitli ortamda platform-bagimsiz otonomi cekirdek urun"
-Shield AI,K5,4,"V-BAT ve ortak platform entegrasyonlari"
-Shield AI,K6,2,"ABD merkezli"
+Helsing,K8,3,Ozel sirket; sinirli kamu aciklamasi
+Helsing,K9,4,"Uc yilda yazilimdan HX-2, CA-1 ve SG-1'e genisleme; saha geri bildirimi tartismali"
+Shield AI,K1,3,~300 milyon $ (2025) gelir; Hivemind CCA secimi
+Shield AI,K2,3,V-BAT saha kullanimlari; bagimsiz veri sinirli
+Shield AI,K3,2,Odak otonomi; veri/karar platformu degil
+Shield AI,K4,5,GNSS/iletisim kisitli ortamda platform-bagimsiz otonomi cekirdek urun
+Shield AI,K5,4,V-BAT ve ortak platform entegrasyonlari
+Shield AI,K6,2,ABD merkezli
 Shield AI,K7,3,"12,7 milyar $ degerleme; ~23x ileri gelir carpani"
-Shield AI,K8,3,"Ozel sirket"
+Shield AI,K8,3,Ozel sirket
+Shield AI,K9,4,Hivemind'in cok sayida platforma hizla entegrasyonu
+Scale AI,K1,3,Thunderforge ve 500 milyon $ sozlesme; urun olgunlugu simule muharebe testine bagli
+Scale AI,K2,2,Mock combat testleri planlanan asamada
+Scale AI,K3,4,Veri etiketleme ve degerlendirme altyapisinda derin uzmanlik
+Scale AI,K4,2,Kenar/EH odagi yok
+Scale AI,K5,1,Donanim yok
+Scale AI,K6,2,ABD merkezli; Meta'nin %49 hissesi
+Scale AI,K7,4,Meta yatirimi ve buyuyen DoD sozlesmeleri
+Scale AI,K8,3,Ozel sirket; veri iscisi ve Meta bagi tartismalari
+Scale AI,K9,5,Ajan tabanli planlamaya hizli gecis
+ChapsVision,K1,3,ArgonOS sahada; olcek Palantir'in cok altinda
+ChapsVision,K2,2,Kamuya acik muharebe kaniti yok
+ChapsVision,K3,4,Veri analitigi cekirdek urun
+ChapsVision,K4,2,Kenar odagi yok
+ChapsVision,K5,1,Donanim yok
+ChapsVision,K6,5,Fransiz; BfV secimi
+ChapsVision,K7,3,Ozel; finansal veri sinirli
+ChapsVision,K8,3,Ozel sirket
+ChapsVision,K9,3,Orta olcekli yazilim sirketi hizi
+HAVELSAN,K1,3,ADVENT sahada; ADVENT-AI yeni
+HAVELSAN,K2,2,YZ katmani tatbikat duzeyinde (EFES-2026)
+HAVELSAN,K3,3,MAIN kurumsal YZ platformu; yatay coklu kurum platformu degil
+HAVELSAN,K4,3,Deniz CMS deneyimi
+HAVELSAN,K5,3,Sinirli donanim; platform entegrasyonu
+HAVELSAN,K6,3,"NATO uyesi, AB disi; Avrupali alici icin orta"
+HAVELSAN,K7,3,TSKGV sirketi; kamuya acik finansal veri sinirli
+HAVELSAN,K8,3,Kamu baglantili; sinirli seffaflik
+HAVELSAN,K9,2,Program bazli gelistirme dongusu

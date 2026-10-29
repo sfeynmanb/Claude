@@ -1,11 +1,60 @@
-sirket,ulke,kurulus,arketip,yigin_katmanlari,donanim,ana_urunler,ana_musteriler,degerleme_veya_piyasa,gelir,gelir_kanit_duzeyi,muharebe_kaniti,egemenlik_notu,ana_risk,kaynak
-Palantir,ABD,2003,Veri isletim sistemi,"L1,L4,L5,L6,L7",Yok,"Gotham; Foundry; AIP; Apollo; Maven Smart System; TITAN","ABD DoD; ABD Ordusu; NATO; Ingiltere; Ukrayna; ticari",Halka acik,"4,475 milyar $ (2025); 2Q2026 ABD kamu 809 milyon $",Dogrulanmis,"Ukrayna; 2026 Iran harekati (raporlanan); NATO operasyonel","ABD hukukuna tabi; Isvicre ve Bundeswehr reddi",Avrupa egemenlik tepkisi ve kilitlenme elestirisi,"K1,K4,K9,K15,K16,K17"
-Helsing,Almanya,2021,YZ oncelikli neo-prime,"L0,L2,L3,L5 + efektor",Var,"Altra; HF-1; HX-2; CA-1 Europa; SG-1 Fathom; Lura","Almanya; Ingiltere; Ukrayna","18 milyar $ (Tem 2026)","~441 milyon EUR (2026 tahmini)",Dusuk guven,"Ukrayna'da sahada; HX-2 performansi tartismali","Avrupa merkezli",Saha performansi ve yurutme riski,"K6,K7,K8,K25"
-Anduril,ABD,2017,YZ oncelikli neo-prime,"L0,L2,L3,L5 + efektor",Var,"Lattice; Fury YFQ-44A; Arsenal-1; karsi-IHA","ABD DoD; ABD Ordusu; muttefikler","61 milyar $ (May 2026)","~2,2 milyar $ (2025 tahmini)",Tahmin,"Karsi-IHA ve Ukrayna kullanimlari","ABD hukukuna tabi",NGC2 siber guvenlik uyarisi; degerleme,"K9,K12,K13"
-Shield AI,ABD,2015,Otonomi cekirdegi,"L0,L3,L5",Var,"Hivemind; V-BAT","ABD Hava Kuvvetleri (CCA); muttefikler","12,7 milyar $ (Mar 2026)","~300 milyon $ (2025) -> >540 milyon $ (2026 hedef)",Sirket projeksiyonu,"V-BAT saha kullanimlari","ABD hukukuna tabi",Ana yuklenicilerin kendi otonomi yiginlari,"K20"
-ChapsVision,Fransa,2019,Veri isletim sistemi,"L1,L4",Yok,ArgonOS,"Fransa; Almanya BfV",Ozel,Acik degil,-,-,"Avrupa merkezli; BfV Palantir yerine secti",Olcek,"K17"
-Comand AI,Fransa,-,Uygulama/planlama yazilimi,"L5,L7",Yok,C2 planlama ve karar destek,Fransa ve Avrupa,"32 milyon EUR Seri A (Haz 2026)",Acik degil,-,-,Avrupa merkezli,Olcek ve rekabet,"K21"
-Quantum Systems,Almanya,2015,Platform + otonomi,"L0,L2",Var,Kesif IHA'lari,"Almanya; Ukrayna","8 milyar $ (Tem 2026)",Acik degil,-,"Ukrayna'da sahada",Avrupa merkezli,Degerleme,"K21"
-DELTA (Ukrayna),Ukrayna,2016-2017,Devlet yapimi acik ekosistem,"L1,L2,L3,L6,L7",Yok (entegre eder),"DELTA; Avengers; Mission Control; YZ asistani",Ukrayna Silahli Kuvvetleri,Kamu,Kamu,-,"Haz 2026: 200.000+ IHA vurusu kaydi; gunde 75.000 video akisi",Devlet sahipligi,Savas kosullarinda surdurulebilirlik,"K18"
-HAVELSAN,Turkiye,1982,Ana yuklenici ic yazilimi,"L1,L3,L5,L6,L7",Sinirli,"ADVENT / ADVENT-AI; MAIN",TSK; ihracat (Azerbaycan vb.),TSKGV sirketi,Acik,-,"Tatbikatlarda (EFES-2026) gosterim",Turk/milli,Yatay platform olcegi,"K26"
-ASELSAN,Turkiye,1975,Ana yuklenici ic yazilimi,"L2,L3,L5",Var,"Sensor ve atis kontrol YZ; Kent Guvenligi Yonetim Sistemleri",TSK; kamu; ihracat,Halka acik,Acik,-,-,Turk/milli,Yazilim-merkezli is modeline gecis,"K26,K31"
+oyuncu,ulke,bolge,grup,katmanlar,ana_urun_veya_konum,olcek_finansman_2025_2026,kanit,kaynak
+OpenAI,ABD,ABD,G1 Hesaplama/model,"L0,L6","GenAI.mil'de ChatGPT (Sub 2026); gizli ag anlasmasi (May 2026); Leidos ve Anduril ortakliklari","CDAO prototip tavani 200 milyon $ (Tem 2025)",Dogrulanmis/Raporlanan,"K42,K55"
+Google,ABD,ABD,G1 Hesaplama/model,"L0,L6","Gemini for Government ile GenAI.mil'in ilk modeli; gizli ag anlasmasi","CDAO prototip tavani 200 milyon $",Raporlanan,K42
+Microsoft,ABD,ABD,G1 Hesaplama/model,"L0,L6","Azure Government; Thunderforge ve NGC2 bileseni; gizli ag anlasmasi",-,Raporlanan,"K28,K42"
+AWS,ABD,ABD,G1 Hesaplama/model,L0,"Gizli bulut bolgeleri; gizli ag YZ anlasmasi",-,Raporlanan,K42
+Oracle,ABD,ABD,G1 Hesaplama/model,L0,"Gizli ag YZ anlasmasi (liste kaynaga gore degisiyor)",-,Raporlanan,K42
+NVIDIA,ABD,ABD,G1 Hesaplama/model,L0,"Hesaplama; gizli ag anlasmasi; Northrop ile otonom uzay araclari",-,Raporlanan,"K42,K46"
+xAI / SpaceX,ABD,ABD,G1 Hesaplama/model,"L0,L6","xAI for Government (GenAI.mil); gizli ag erisimi Senato sorusturmasi","CDAO prototip tavani 200 milyon $",Raporlanan,K42
+Reflection AI,ABD,ABD,G1 Hesaplama/model,"L0,L6","Acik agirlikli model; May 2026 gizli ag anlasmalari listesinde",-,Raporlanan,K42
+Meta,ABD,ABD,G1 Hesaplama/model,"L0,L6","Llama modellerini ABD savunmasina acti; Scale AI'in %49'u","Scale AI hissesi 14,3 milyar $ (2025)",Raporlanan,K28
+Anthropic,ABD,ABD,G1 Hesaplama/model,"L0,L6","Mart 2026'da tedarik zinciri riski ilani; gizli ag anlasmalari disinda; dava suruyor","CDAO prototip tavani 200 milyon $ (Tem 2025)",Dogrulanmis/Raporlanan,"K23,K42"
+Mistral,Fransa,Avrupa,G1 Hesaplama/model,"L0,L6","Helsing ile savunma icin gorsel-dil-eylem modelleri ortakligi (Sub 2025)",-,Dogrulanmis,-
+DeepSeek,Cin,Cin,G1 Hesaplama/model,"L0,L6","PLA tedarik belgelerinde; suru karar patentleri",-,Raporlanan,"K29,K48"
+Palantir,ABD,ABD,G2 Veri/karar platformu,"L1,L4,L5,L6,L7","Gotham, Foundry, AIP, Apollo, Maven Smart System, TITAN","2025 geliri 4,475 milyar $; Ordu anlasmasi tavani 10 milyar $",Dogrulanmis,"K1,K4,K9,K15"
+Scale AI,ABD,ABD,G2 Veri/karar platformu,"L1,L6","Veri etiketleme, degerlendirme, Thunderforge planlama ajanlari","Pentagon 500 milyon $ (May 2026)",Raporlanan,K28
+Vannevar Labs,ABD,ABD,G2 Veri/karar platformu,"L1,L2,L6","Acik kaynak / yabanci dil istihbarati icin ajan tabanli YZ","~90 milyon $ toplam finansman",Raporlanan,K56
+Govini,ABD,ABD,G2 Veri/karar platformu,"L1,L4","Savunma sanayi tabani ve tedarik analitigi",Kamuya acik guncel veri sinirli,-,-
+ChapsVision,Fransa,Avrupa,G2 Veri/karar platformu,"L1,L4","ArgonOS; Alman BfV Palantir yerine secti (May 2026)",Ozel,Dogrulanmis,K17
+Thales,Fransa,Avrupa,G5 Ana yuklenici,"L2,L3,L5,L7","cortAIx hizlandiricisi; HexaForce YZ destekli komuta-kontrol","Buyuk halka acik yuklenici; 2026'da ~9.000 ise alim",Raporlanan,K54
+Hensoldt,Almanya,Avrupa,G5 Ana yuklenici,"L2,L3","MDOcore cok alanli yazilim omurgasi; CA-1 icin Helsing ittifaki (Sub 2026)",Halka acik,Dogrulanmis,K45
+Comand AI,Fransa,Avrupa,G2 Veri/karar platformu,"L5,L7","Komuta-kontrol planlama ve karar destek","32 milyon EUR Seri A (Haz 2026)",Raporlanan,K21
+HAVELSAN,Turkiye,Turkiye,G2 Veri/karar platformu,"L1,L3,L5,L6,L7","ADVENT-AI; MAIN kurumsal YZ platformu","TSKGV sirketi",Raporlanan,K26
+Shield AI,ABD,ABD,G3 Otonomi yazilimi,"L0,L3,L5","Hivemind; V-BAT; CCA gorev otonomisi","12,7 milyar $ (Mar 2026); 2026 hedefi >540 milyon $ gelir",Raporlanan,"K20,K46"
+Applied Intuition,ABD,ABD,G3 Otonomi yazilimi,"L0,L3,L5","Simulasyon ve otonomi yigini; Ordu arac otonomisi","15 milyar $ degerleme",Raporlanan,K43
+Auterion,Isvicre/ABD,Avrupa,G3 Otonomi yazilimi,"L0,L3","IHA otonomi isletim sistemi, suru ve terminal yonlendirme","1,2 milyar $+ degerlemeyle tur gorusmesi",Raporlanan,K21
+Swarmer,Ukrayna/ABD,Ukrayna,G3 Otonomi yazilimi,"L0,L5","IHA suru otonomisi; 100.000+ muharebe gorevi iddiasi","Nasdaq halka arzi Mar 2026 (17,3 milyon $); 1Q2026 geliri ~20 bin $",Dogrulanmis,K57
+Anduril,ABD,ABD,G4 Neo-prime,"L0,L2,L3,L5 + efektor","Lattice; Fury YFQ-44A; Arsenal-1; karsi-IHA","61 milyar $ (May 2026); ~2,2 milyar $ tahmini 2025 geliri",Raporlanan,"K12,K13"
+Helsing,Almanya,Avrupa,G4 Neo-prime,"L0,L2,L3,L5 + efektor","Altra; HX-2; CA-1 Europa; SG-1 Fathom; Lura","18 milyar $ (Tem 2026)",Raporlanan,"K6,K7,K8"
+Saronic,ABD,ABD,G4 Neo-prime,"L0,L3 + efektor","Otonom yuzey gemileri","1,75 milyar $ tur, 9,25 milyar $ (Mar 2026)",Raporlanan,K58
+Castelion,ABD,ABD,G4 Neo-prime,efektor,"Dusuk maliyetli hipersonik fuzeler (Blackbeard)","1 milyar $ Seri C, ~13 milyar $ (Agu 2026)",Raporlanan,K59
+Chaos Industries,ABD,ABD,G4 Neo-prime,"L2,L3 + sensor","Karsi-IHA radar ve sensor aglari; Atropos satin almasi","510 milyon $, 4,5 milyar $ (Kas 2025)",Raporlanan,"K41,K59"
+Epirus,ABD,ABD,G4 Neo-prime,efektor,"Yuksek guclu mikrodalga karsi-IHA (Leonidas)","250 milyon $ Seri D (Mar 2025)",Dogrulanmis,K59
+Quantum Systems,Almanya,Avrupa,G4 Neo-prime,"L0,L2 + platform","Kesif IHA'lari","1,2 milyar $ tur, 8 milyar $ (Tem 2026)",Raporlanan,K21
+Stark,Almanya,Avrupa,G4 Neo-prime,"L0 + efektor","Dolanan muhimmat","500 milyon EUR (Haz 2026)",Raporlanan,K21
+Tekever,Portekiz,Avrupa,G4 Neo-prime,"L0,L2 + platform","IHA + YZ; Ingiltere'de 400 milyon GBP OVERMATCH programi","Unicorn (May 2025); 5,5 milyar EUR degerlemeyle 500 milyon EUR arayisi (Agu 2026)",Raporlanan,K60
+XTEND,Israil,Israil,G4 Neo-prime,"L0,L7 + efektor","YZ destekli moduler saldiri IHA'lari; ABD DoD sozlesmesi","152 milyon $ tur (Sub 2026)",Raporlanan,K51
+Lockheed Martin,ABD,ABD,G5 Ana yuklenici,"L3,L5","DARPA AIR; IBM Granite entegrasyonu; Hivemind entegrasyonu",Halka acik,Raporlanan,K46
+RTX,ABD,ABD,G5 Ana yuklenici,"L3,L5","Shield AI ile kendi finansli Hivemind ortakligi (Tem 2025)",Halka acik,Dogrulanmis,K46
+Northrop Grumman,ABD,ABD,G5 Ana yuklenici,"L0,L5","NVIDIA ile otonom uzay araclari (2025)",Halka acik,Raporlanan,K46
+General Atomics,ABD,ABD,G5 Ana yuklenici,"L3,L5 + platform","CCA YFQ-42A; Hivemind entegrasyonu",Ozel,Raporlanan,"K13,K46"
+Safran,Fransa,Avrupa,G5 Ana yuklenici,"L2,L4","Preligens satin almasi -> Safran.AI","220 milyon EUR sirket degeri (2024)",Dogrulanmis,K44
+Saab,Isvec,Avrupa,G5 Ana yuklenici,"L2,L3","Helsing'de %5 hisse; Eurofighter Arexis EH'ye Cirra entegrasyonu","Uc haneli milyon EUR sozlesme (Kas 2025)",Dogrulanmis,K45
+Rheinmetall,Almanya,Avrupa,G5 Ana yuklenici,"L3,L5 + platform","2022 Helsing isbirligi; bazi IHA otonomisinde Auterion",Halka acik,Raporlanan,K45
+Leonardo,Italya,Avrupa,G5 Ana yuklenici,"L0,L3","Uzay ittifaki; Iveco Defence satin almasi (~1,7 milyar EUR)",Halka acik,Dogrulanmis,"K41,K54"
+BAE Systems,Ingiltere,Avrupa,G5 Ana yuklenici,-,"AUKUS ve GCAP odakli; YZ stratejisine iliskin kamuya acik ayrinti sinirli",Halka acik,-,K54
+Elbit Systems,Israil,Israil,G5 Ana yuklenici,"L2,L3,L5","Platformlar ve muhimmat; girisim bilesenlerinin entegrasyonu",Halka acik,Raporlanan,K51
+Rafael,Israil,Israil,G5 Ana yuklenici,"L3,L5","Lazer hava savunma; hava savunma sistemleri",Devlet,Raporlanan,K51
+IAI,Israil,Israil,G5 Ana yuklenici,"L2,L3","Sinir koruma algoritmalari ve YZ",Devlet,Raporlanan,K51
+Hanwha,Guney Kore,Asya-Pasifik,G5 Ana yuklenici,"L3,L5 + platform","Insanli-insansiz ekip platformlari; Defense News Top 100'de 16.",Halka acik,Raporlanan,K47
+LIG Nex1,Guney Kore,Asya-Pasifik,G5 Ana yuklenici,"L3,L5","Palantir mutabakati (Mar 2026); YZ suru IHA'lari",Halka acik,Raporlanan,K47
+EDGE Group,BAE,Korfez,G5 Ana yuklenici,"L3,L5 + platform","SIRBAI ile YZ suru IHA ortakligi; insansiz deniz araclari",Devlet,Raporlanan,K61
+ASELSAN,Turkiye,Turkiye,G5 Ana yuklenici,"L2,L3,L5","Deniz sensor/atis kontrolune YZ; Kent Guvenligi sistemleri","~470 milyon $ YZ destekli sozlesme",Raporlanan,"K26,K31"
+Baykar,Turkiye,Turkiye,G4 Neo-prime,"L0,L3 + platform","SIHA/IHA, dolanan muhimmat; SAHA 2026'da 6 yeni otonom sistem",Ozel,Raporlanan,K50
+Booz Allen Hamilton,ABD,ABD,G6 Entegrator,"L1,L6","Federal YZ sozlesme yukumluluklerinde 1. (FY22-24); Palantir uygulama ortakligi",Halka acik,Dogrulanmis,K62
+Leidos,ABD,ABD,G6 Entegrator,"L4,L6","YZ ile karar destek ve siber; OpenAI ortakligi (Oca 2026)",Halka acik,Raporlanan,K62
+SAIC,ABD,ABD,G6 Entegrator,"L0,L1","Savunma BT modernizasyonu; JWCC entegrasyonu; 400 milyon $ istihbarat yenilemesi (Agu 2026)",Halka acik,Raporlanan,K62
+DELTA / Brave1,Ukrayna,Ukrayna,G7 Devlet ekosistemi,"L1,L2,L3,L6,L7","DELTA, Avengers, Mission Control, YZ asistani; Brave1 hizlandirici","Haz 2026: 200.000+ vurus kaydi; 2025'te 105 milyon $+ girisim yatirimi",Dogrulanmis,"K18,K52"
+PLA / CETC / CASIC / Norinco,Cin,Cin,G7 Devlet ekosistemi,"L0-L7","Karar destek, sensor iyilestirme, veri fuzyonu talepleri; Atlas surusu; Jiu Tian",Devlet,Raporlanan,"K29,K48"
+iDEX,Hindistan,Asya-Pasifik,G7 Devlet ekosistemi,-,"600+ girisime hibe; iDEX Prime'da 10 crore INR'ye kadar","Hindistan savunma girisimleri ~68 milyon $ (2025)",Raporlanan,K53
+NATO DIANA / NIF,NATO,Ittifak,G7 Devlet ekosistemi,-,"DIANA 2026: 24 ulkeden 150 girisim; NIF 1 milyar EUR",Ittifak,Dogrulanmis,K49

@@ -12,6 +12,31 @@ hidrokod simülasyonları ve fiziksel V50 atış testleri ile doğrulanmalıdır
 
 ## Çalıştırma
 
+### Seçenek 1: Etkileşimli Uygulama (önerilen)
+
+MATLAB içinde (R2016b veya sonrası gerekir — `uifigure`/App Designer
+bileşenleri kullanır; **GNU Octave'de çalışmaz**, Octave bu bileşenleri
+desteklemez):
+
+```matlab
+cd PassiveDefenseOptimizer
+PassiveDefenseOptimizerApp
+```
+
+Açılan pencerede soldan tehdit parametrelerini girin (veya üstteki
+**Hazır STANAG Senaryosu** menüsünden bir mühimmat preseti seçerek
+alanları otomatik doldurun), **HESAPLA / OPTIMIZE ET** düğmesine basın.
+Sağ tarafta üç sekme vardır:
+
+- **Rapor** — `printDesignReport.m` ile aynı metin raporu
+- **Grafikler** — Pareto Front, Kalınlık-Beka ve Mesafe-Hasar Olasılığı grafikleri
+- **Malzeme Veritabanı** — kullanılan tüm zırh malzemelerinin tablosu
+
+Tehdit Tipi'ne göre ilgisiz alanlar otomatik olarak devre dışı bırakılır
+(ör. `HE` seçiliyken kinetik enerji alanları kapanır).
+
+### Seçenek 2: Komut Satırı Betiği
+
 MATLAB veya GNU Octave içinde:
 
 ```matlab
@@ -23,6 +48,10 @@ Tehdit senaryosunu değiştirmek için `main_PassiveDefenseOptimizer.m`
 dosyasının başındaki **KULLANICI GIRDILERI** bölümünü düzenleyin
 (`threat.type = 'KE' | 'HE' | 'HE_FRAG'` ve ilgili parametreler).
 
+Her iki arayüz de **aynı hesaplama çekirdeğini** (`runFullPipeline.m`)
+kullanır; GUI yalnızca ince bir etkileşim katmanıdır, fizik/optimizasyon
+mantığında herhangi bir fark yoktur.
+
 Optimization Toolbox (`fmincon`) mevcutsa otomatik olarak ince ayar için
 kullanılır; mevcut değilse (varsayılan) kaba-ince (coarse-to-fine) ızgara
 taraması sezgisel (heuristic) algoritması ile çalışır — ek kurulum
@@ -32,6 +61,8 @@ gerekmez.
 
 | Dosya | Görev |
 |---|---|
+| `PassiveDefenseOptimizerApp.m` | **Etkileşimli MATLAB uygulaması** (uifigure tabanlı GUI) |
+| `runFullPipeline.m` | Siniflandirma→fizik→optimizasyon hattını tek cağrıda çalıştırır (GUI ve komut satırı ortak çekirdeği) |
 | `main_PassiveDefenseOptimizer.m` | Ana çalıştırma betiği (kullanıcı girdileri burada) |
 | `loadMaterialDatabase.m` | Zırh malzeme mikro-veritabanı (UHPC, Seramik, Kompozit, RHA, Toprak) |
 | `loadExplosiveDatabase.m` | Patlayıcı TNT eşdeğerlik (RE) faktörleri |
@@ -58,3 +89,8 @@ gerekmez.
 - SDOF modeli tek yönlü (basit mesnetli) düzlemsel panel varsayar.
 - Toprak bariyer, blast basınç/impulsunu üstel olarak zayıflatan bir
   "standoff" katmanı olarak modellenir; yapısal (SDOF) eleman değildir.
+- Tüm hesaplama fonksiyonları GNU Octave 8.4 ile uçtan uca doğrulanmıştır
+  (üç tehdit tipi de test edilmiştir). `PassiveDefenseOptimizerApp.m`
+  içindeki GUI katmanı, Octave'in `uifigure`/App Designer bileşenlerini
+  desteklememesi nedeniyle gerçek bir MATLAB kurulumunda test edilmelidir;
+  olası bir arayüz sorunu bildirirseniz hızlıca düzeltilebilir.

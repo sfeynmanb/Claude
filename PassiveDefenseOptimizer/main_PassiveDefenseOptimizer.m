@@ -46,33 +46,14 @@ threat.standoff_R_m     = 5.0;     % Patlama mesafesi (standoff distance) [m]
 panelSpan_m = 1.2;    % Panel acikligi / mesnetler arasi mesafe [m]
 
 %% ============================ HESAPLAMA HAT (PIPELINE) ============================
-materials   = loadMaterialDatabase();
-explosives  = loadExplosiveDatabase();
-scaledTable = loadBlastScaledDistanceTable();
-damageTable = loadDamageThresholdTable();
-
-[stanagLevel, ~, marginNote] = classifyThreatSTANAG(threat);
-
-keMetrics = struct('E_k_J', NaN, 'SD_kg_m2', NaN, 'E_d_J_m2', NaN);
-penInfo   = struct('e_RHA_req_mm', 0, 'K_DM', NaN, 'penetratorClass', '-', 'designMargin', NaN);
-if ~strcmpi(threat.type, 'HE')
-    keMetrics = kineticEnergyMetrics(threat);
-    penInfo   = deMarrePenetration(threat);
-end
-
-blast = struct('Z', NaN, 'Pso_kPa', NaN, 'Pr_kPa', NaN, 'td_ms', NaN, ...
-    'iso_kPa_ms', NaN, 'isExtrapolated', false, 'W_TNT_kg', NaN, 'R_m', NaN);
-if strcmpi(threat.type, 'HE') || strcmpi(threat.type, 'HE_FRAG')
-    W_TNT = computeTNTEquivalent(threat.explosiveMass_kg, threat.explosiveType, explosives);
-    blast = blastLoad(W_TNT, threat.standoff_R_m, scaledTable);
-end
-
+% Tum siniflandirma / fizik / optimizasyon mantigi runFullPipeline.m icinde
+% tutulur; boylece bu komut-satiri betigi ile etkilesimli uygulama
+% (PassiveDefenseOptimizerApp.m) AYNI hesaplama kodunu paylasir.
 fprintf('Optimizasyon calisiyor (izgara taramasi), lutfen bekleyin...\n');
-tic;
-[optimum_design, searchTrace] = optimizePassiveDefense(threat, materials, blast, penInfo, panelSpan_m);
-fprintf('Optimizasyon tamamlandi (%.1f s, %d aday degerlendirildi).\n', toc, numel(searchTrace));
+out = runFullPipeline(threat, panelSpan_m);
+fprintf('Optimizasyon tamamlandi (%.1f s, %d aday degerlendirildi).\n', out.elapsed_s, numel(out.searchTrace));
 
-%% ============================ RAPOR VE GORSELLESTIRME ============================
-printDesignReport(threat, stanagLevel, marginNote, blast, keMetrics, penInfo, optimum_design);
-
-plotResults(threat, searchTrace, optimum_design, scaledTable, damageTable);
+%% ============================ GORSELLESTIRME ============================
+% Rapor zaten runFullPipeline() icinde Command Window'a basildi (out.reportStr
+% metin olarak da mevcuttur). Burada yalnizca grafikleri uretiyoruz.
+plotResults(out.threat, out.searchTrace, out.optimum_design, out.scaledTable, out.damageTable);

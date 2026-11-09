@@ -1,0 +1,20 @@
+========================================================================
+ŞEMA DOĞRULAMA RAPORU — Hava Mühimmatları Veri Seti
+========================================================================
+  data/processed/master_air_munitions_dataset.csv             236 satır
+  TOPLAM (raw)                                                236 satır
+------------------------------------------------------------------------
+Sayısal alan doluluk oranları (NA olmayan):
+  Hizmete_Giris_Yili            137/236  (% 58.1)
+  Toplam_Kutle_kg               191/236  (% 80.9)
+  Harp_Basligi_Kutlesi_kg       166/236  (% 70.3)
+  Uzunluk_m                     168/236  (% 71.2)
+  Cap_mm                        174/236  (% 73.7)
+  Kanat_Acikligi_m              100/236  (% 42.4)
+  Maksimum_Menzil_km            214/236  (% 90.7)
+  Maksimum_Hiz_Mach             150/236  (% 63.6)
+  Birim_Maliyet_USD              13/236  (%  5.5)
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+SONUÇ: 0 hata, 0 uyarı
+DURUM: BAŞARILI ✔ (sıfır hata)

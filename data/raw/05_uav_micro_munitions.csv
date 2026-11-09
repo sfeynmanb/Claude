@@ -1,0 +1,28 @@
+Muhimmat_Adi;Mensei_Ulke;Uretici_Firma;Ana_Kategori;Alt_Kategori;Hizmete_Giris_Yili;Toplam_Kutle_kg;Harp_Basligi_Kutlesi_kg;Harp_Basligi_Tipi;Uzunluk_m;Cap_mm;Kanat_Acikligi_m;Maksimum_Menzil_km;Maksimum_Hiz_Mach;Itki_Sistemi;Gudum_Sistemi_Midcourse;Gudum_Sistemi_Terminal;Birim_Maliyet_USD;Entegre_Platformlar;Veri_Guvenilirlik_Notu
+MAM-C;TUR;ROKETSAN;Gudumlu_Bomba;Micro_PGM;2018;6.5;NA;HE-Frag;0.97;70;NA;8;NA;Glide_Unpowered;NA;SAL;NA;TB2,Akıncı,Aksungur,Anka;Acik_Kaynak_Dogrulanmis
+MAM-L;TUR;ROKETSAN;Gudumlu_Bomba;Micro_PGM;2016;22;NA;HE-Frag;1.0;160;NA;15;NA;Glide_Unpowered;INS/GPS;SAL;NA;TB2,TB3,Akıncı,Aksungur,Anka;Acik_Kaynak_Dogrulanmis
+MAM-L (Termobarik);TUR;ROKETSAN;Gudumlu_Bomba;Micro_PGM;NA;22;NA;Thermobaric;1.0;160;NA;15;NA;Glide_Unpowered;INS/GPS;SAL;NA;TB2,TB3,Akıncı,Aksungur;Tahmini_Acik_Kaynak
+MAM-L (Tandem);TUR;ROKETSAN;Gudumlu_Bomba;Micro_PGM;NA;22;NA;Tandem_HEAT;1.0;160;NA;15;NA;Glide_Unpowered;INS/GPS;SAL;NA;TB2,TB3,Akıncı,Aksungur;Tahmini_Acik_Kaynak
+MAM-L IIR;TUR;ROKETSAN;Gudumlu_Bomba;Micro_PGM;NA;23;NA;HE-Frag;NA;160;NA;25;NA;Glide_Unpowered;INS/GPS;IIR;NA;TB2,TB3,Akıncı;Tahmini_Acik_Kaynak
+MAM-L TV;TUR;ROKETSAN;Gudumlu_Bomba;Micro_PGM;NA;22;10;HE-Frag;NA;160;NA;25;NA;Glide_Unpowered;INS/GPS;EO;NA;Akıncı,TB2;Tahmini_Acik_Kaynak
+MAM-T;TUR;ROKETSAN;Gudumlu_Bomba;Micro_PGM;NA;95;NA;HE-Frag;NA;NA;NA;30;NA;Glide_Unpowered;INS/GPS;SAL;NA;Akıncı,Aksungur,TB3;Tahmini_Acik_Kaynak
+MAM-T IIR;TUR;ROKETSAN;Gudumlu_Bomba;Micro_PGM;NA;96;70;HE-Frag;NA;NA;NA;50;NA;Glide_Unpowered;INS/GPS;IIR;NA;Akıncı;Tahmini_Acik_Kaynak
+Bozok;TUR;TÜBİTAK SAGE;Gudumlu_Bomba;Micro_PGM;NA;16;NA;HE-Frag;0.8;120;NA;15;NA;Glide_Unpowered;INS;SAL;NA;TB2,Akıncı;Tahmini_Acik_Kaynak
+Kuzgun-KY;TUR;TÜBİTAK SAGE;Fuze;TASM;NA;75;10;HE-Frag;NA;NA;NA;40;NA;Solid_Rocket;INS/GPS;NA;NA;Akıncı,F-16;Tahmini_Acik_Kaynak
+Kuzgun-SS;TUR;TÜBİTAK SAGE;Gudumlu_Bomba;PGM_Glide;NA;NA;28;HE-Frag;NA;NA;NA;110;NA;Glide_Unpowered;INS/GPS;NA;NA;F-16,Akıncı;Tahmini_Acik_Kaynak
+Kuzgun-TJ;TUR;TÜBİTAK SAGE;Fuze;ALCM;NA;NA;NA;HE-Frag;NA;NA;NA;250;0.9;Turbojet;INS/GPS;NA;NA;F-16,Akıncı;Tahmini_Acik_Kaynak
+Kayı-30;TUR;TÜBİTAK SAGE;Gudumlu_Bomba;Micro_PGM;NA;30;NA;HE-Frag;1.0;NA;NA;25;NA;Glide_Unpowered;INS/GPS;NA;NA;TB2,Akıncı;Tahmini_Acik_Kaynak
+Kayı-50;TUR;TÜBİTAK SAGE;Gudumlu_Bomba;Micro_PGM;NA;50;NA;HE-Frag;1.3;NA;NA;25;NA;Glide_Unpowered;INS/GPS;NA;NA;TB2,Akıncı;Tahmini_Acik_Kaynak
+GBU-44/B Viper Strike;USA;Northrop Grumman (MBDA Inc.);Gudumlu_Bomba;Micro_PGM;2007;20;NA;HEAT;0.91;130;0.91;10;NA;Glide_Unpowered;INS/GPS;SAL;NA;MQ-5B Hunter,KC-130J,AC-130W;Tahmini_Acik_Kaynak
+GBU-69/B SGM;USA;Dynetics (Leidos);Gudumlu_Bomba;Micro_PGM;NA;27;NA;HE-Frag;NA;NA;NA;NA;NA;Glide_Unpowered;INS/GPS;SAL;NA;AC-130J,MQ-9;Tahmini_Acik_Kaynak
+AGM-176 Griffin B;USA;Raytheon;Fuze;TASM;2010;20;5.9;HE-Frag;1.09;140;NA;15;NA;Solid_Rocket;INS/GPS;SAL;NA;MQ-9,AC-130W,KC-130J;Tahmini_Acik_Kaynak
+FT-9;CHN;CASC;Gudumlu_Bomba;Micro_PGM;NA;50;NA;HE-Frag;NA;NA;NA;NA;NA;Glide_Unpowered;INS/GPS;INS/GPS_Only;NA;CH-4,CH-5;Tahmini_Acik_Kaynak
+FT-10;CHN;CASC;Gudumlu_Bomba;Micro_PGM;NA;NA;NA;HE-Frag;NA;NA;NA;NA;NA;Glide_Unpowered;INS/GPS;INS/GPS_Only;NA;CH-4,CH-5;Tahmini_Acik_Kaynak
+AR-1;CHN;CASC;Fuze;ATGM;NA;45;10;HEAT;1.45;NA;NA;8;NA;Solid_Rocket;INS/GPS;SAL;NA;CH-4,CH-3;Tahmini_Acik_Kaynak
+AR-2;CHN;CASC;Fuze;ATGM;NA;20;5;HEAT;NA;NA;NA;8;NA;Solid_Rocket;NA;SAL;NA;CH-4,CH-3;Tahmini_Acik_Kaynak
+Blue Arrow 7;CHN;NORINCO;Fuze;ATGM;NA;47;NA;Tandem_HEAT;NA;NA;NA;7;NA;Solid_Rocket;NA;SAL;NA;Wing Loong;Tahmini_Acik_Kaynak
+Desert Sting 8;ARE;EDGE (Halcon);Gudumlu_Bomba;Micro_PGM;NA;15;NA;HE-Frag;NA;NA;NA;NA;NA;Glide_Unpowered;INS/GPS;INS/GPS_Only;NA;TB2;Tahmini_Acik_Kaynak
+Desert Sting 16;ARE;EDGE (Halcon);Gudumlu_Bomba;Micro_PGM;NA;23;12;HE-Frag;NA;NA;NA;16;NA;Glide_Unpowered;INS/GPS;INS/GPS_Only;NA;TB2,Wing Loong;Tahmini_Acik_Kaynak
+Desert Sting 25;ARE;EDGE (Halcon);Gudumlu_Bomba;Micro_PGM;NA;47;24;HE-Frag;NA;NA;NA;NA;NA;Glide_Unpowered;INS/GPS;INS/GPS_Only;NA;TB2,Wing Loong;Tahmini_Acik_Kaynak
+ALTIUS-600;USA;Anduril (Area-I);Dolanan_Muhimmat;Loitering;NA;12.2;NA;HE-Frag;1.0;NA;2.54;440;NA;NA;INS/GPS/Data-Link;EO;NA;MQ-1C,UH-60;Tahmini_Acik_Kaynak
+ALTIUS-700M;USA;Anduril (Area-I);Dolanan_Muhimmat;Loitering;NA;NA;NA;HE-Frag;NA;NA;NA;NA;NA;NA;INS/GPS/Data-Link;EO;NA;MQ-1C;Tahmini_Acik_Kaynak

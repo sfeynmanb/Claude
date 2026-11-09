@@ -1,0 +1,64 @@
+Muhimmat_Adi;Mensei_Ulke;Uretici_Firma;Ana_Kategori;Alt_Kategori;Hizmete_Giris_Yili;Toplam_Kutle_kg;Harp_Basligi_Kutlesi_kg;Harp_Basligi_Tipi;Uzunluk_m;Cap_mm;Kanat_Acikligi_m;Maksimum_Menzil_km;Maksimum_Hiz_Mach;Itki_Sistemi;Gudum_Sistemi_Midcourse;Gudum_Sistemi_Terminal;Birim_Maliyet_USD;Entegre_Platformlar;Veri_Guvenilirlik_Notu
+AGM-158A JASSM;USA;Lockheed Martin;Fuze;ALCM;2003;1021;450;Penetrator;4.27;550;2.4;370;0.8;Turbojet;INS/GPS;IIR;NA;B-1B,B-2,B-52H,F-15E,F-16,F/A-18,F-35;Tahmini_Acik_Kaynak
+AGM-158B JASSM-ER;USA;Lockheed Martin;Fuze;ALCM;2014;1021;450;Penetrator;4.27;550;2.4;926;0.8;Turbofan;INS/GPS;IIR;1500000;B-1B,B-52H,F-15E,F-16;Tahmini_Acik_Kaynak
+Storm Shadow (SCALP-EG);EUR;MBDA;Fuze;ALCM;2003;1300;450;BROACH;5.1;480;2.84;560;0.8;Turbojet;INS/GPS/TERCOM;IIR;1000000;Tornado,Eurofighter,Rafale,Mirage 2000,Su-24M;Tahmini_Acik_Kaynak
+Taurus KEPD 350;EUR;Taurus Systems (MBDA Deutschland/Saab);Fuze;ALCM;2005;1400;481;BROACH;5.1;1080;2.064;500;0.95;Turbofan;INS/GPS/TERCOM;IIR;NA;Tornado,Eurofighter,F/A-18;Tahmini_Acik_Kaynak
+SOM-A;TUR;TÜBİTAK SAGE/ROKETSAN;Fuze;ALCM;2012;600;230;HE-Frag;NA;NA;NA;250;NA;Turbojet;INS/GPS/TERCOM;INS/GPS_Only;NA;F-16,F-4E 2020;Tahmini_Acik_Kaynak
+SOM-B1;TUR;TÜBİTAK SAGE/ROKETSAN;Fuze;ALCM;NA;600;230;HE-Frag;NA;NA;NA;250;NA;Turbojet;INS/GPS/TERCOM/Data-Link;IIR;NA;F-16,F-4E 2020;Tahmini_Acik_Kaynak
+SOM-B2;TUR;TÜBİTAK SAGE/ROKETSAN;Fuze;ALCM;NA;660;NA;BROACH;NA;NA;NA;250;NA;Turbojet;INS/GPS/TERCOM/Data-Link;IIR;NA;F-16;Tahmini_Acik_Kaynak
+SOM-J;TUR;TÜBİTAK SAGE/ROKETSAN;Fuze;ALCM;NA;540;140;SAPHE;NA;NA;NA;275;NA;Turbojet;INS/GPS/TERCOM/Data-Link;IIR;NA;F-16,KAAN,F-35;Tahmini_Acik_Kaynak
+Çakır;TUR;ROKETSAN;Fuze;ALCM;NA;NA;NA;NA;NA;NA;NA;150;NA;Turbojet;INS/GPS/TERCOM;IIR;NA;Akıncı,Aksungur,TB3;Tahmini_Acik_Kaynak
+Kemankeş-1;TUR;Baykar;Fuze;ALCM;NA;NA;6;HE-Frag;NA;NA;NA;50;NA;NA;INS/GPS/Data-Link;EO;NA;TB2,TB3,Akıncı;Tahmini_Acik_Kaynak
+Kemankeş-2;TUR;Baykar;Fuze;ALCM;NA;70;20;HE-Frag;NA;NA;NA;200;0.6;Turbojet;INS/GPS/Data-Link;EO;NA;TB2,TB3,Akıncı;Tahmini_Acik_Kaynak
+AGM-88B HARM;USA;Raytheon;Fuze;ARM;1987;355;66;HE-Frag;4.17;254;1.12;150;2.9;Solid_Rocket;INS;Passive_RF;284000;F-16,F/A-18,EA-18G,Tornado;Tahmini_Acik_Kaynak
+AGM-88C HARM;USA;Raytheon;Fuze;ARM;1993;361;66;HE-Frag;4.17;254;1.12;150;2.9;Solid_Rocket;INS;Passive_RF;NA;F-16,F/A-18,EA-18G,Tornado;Tahmini_Acik_Kaynak
+AGM-88E AARGM;USA;Northrop Grumman;Fuze;ARM;2012;361;66;HE-Frag;4.17;254;1.12;150;2.0;Solid_Rocket;INS/GPS/Data-Link;Passive_RF+MMW;870000;F/A-18,EA-18G,Tornado;Tahmini_Acik_Kaynak
+AGM-88G AARGM-ER;USA;Northrop Grumman;Fuze;ARM;NA;NA;NA;HE-Frag;NA;NA;NA;300;NA;Solid_Rocket;INS/GPS/Data-Link;Passive_RF+MMW;NA;F/A-18,EA-18G,F-35;Tahmini_Acik_Kaynak
+ALARM;GBR;BAe Dynamics (MBDA);Fuze;ARM;1990;268;NA;HE-Frag;4.3;224;0.72;93;2.0;Solid_Rocket;INS;Passive_RF;NA;Tornado;Tahmini_Acik_Kaynak
+Akbaba;TUR;NA;Fuze;ARM;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;Passive_RF;NA;F-16;Tahmini_Acik_Kaynak
+Kh-31P;RUS;KTRV (Zvezda-Strela);Fuze;ARM;1988;600;87;HE-Frag;4.7;360;0.914;110;3.5;Ramjet;INS;Passive_RF;NA;Su-24M,Su-30,Su-34,MiG-29;Tahmini_Acik_Kaynak
+Kh-31PD;RUS;KTRV (Zvezda-Strela);Fuze;ARM;NA;715;110;HE-Frag;5.34;360;0.914;250;NA;Ramjet;INS;Passive_RF;NA;Su-30SM,Su-34,Su-35;Tahmini_Acik_Kaynak
+Kh-58U;RUS;KTRV (Raduga);Fuze;ARM;1980;650;149;HE-Frag;4.8;380;1.17;120;3.6;Solid_Rocket;INS;Passive_RF;NA;Su-24M,Su-30;Tahmini_Acik_Kaynak
+Kh-58UShKE;RUS;KTRV (Raduga);Fuze;ARM;NA;650;149;HE-Frag;4.19;380;NA;245;NA;Solid_Rocket;INS/GPS;Passive_RF;NA;Su-57,Su-30;Tahmini_Acik_Kaynak
+MAR-1;BRA;SIATT (Mectron);Fuze;ARM;NA;274;90;HE-Frag;4.0;230;NA;60;NA;Solid_Rocket;INS;Passive_RF;NA;A-1M,Mirage 5;Tahmini_Acik_Kaynak
+Kh-101;RUS;KTRV (Raduga);Fuze;ALCM;2012;2400;400;HE-Frag;7.45;742;3.0;2800;0.78;Turbofan;INS/GPS/TERCOM;EO;NA;Tu-95MS,Tu-160;Tahmini_Acik_Kaynak
+Kh-555;RUS;KTRV (Raduga);Fuze;ALCM;2004;1600;410;HE-Frag;6.04;514;3.1;2500;0.75;Turbofan;INS/GPS/TERCOM;EO;NA;Tu-95MS,Tu-160;Tahmini_Acik_Kaynak
+Kh-59M Ovod-M;RUS;KTRV (Raduga);Fuze;TASM;1990;920;320;HE-Frag;5.69;380;1.3;115;0.88;Turbojet;INS/Data-Link;EO;NA;Su-30,Su-34;Tahmini_Acik_Kaynak
+Kh-59MK2;RUS;KTRV (Raduga);Fuze;ALCM;NA;770;320;Penetrator;4.2;NA;2.45;290;NA;Turbojet;INS/GPS;EO;NA;Su-34,Su-35,Su-57;Tahmini_Acik_Kaynak
+Kh-69;RUS;KTRV;Fuze;ALCM;NA;NA;310;Penetrator;4.2;NA;NA;290;NA;Turbojet;INS/GPS;EO;NA;Su-34,Su-35,Su-57;Tahmini_Acik_Kaynak
+Kh-29L;RUS;KTRV (Vympel);Fuze;TASM;1980;660;317;HE-Frag;3.9;380;1.1;10;1.2;Solid_Rocket;NA;SAL;NA;Su-24M,Su-25,Su-30,MiG-29;Tahmini_Acik_Kaynak
+Kh-29T;RUS;KTRV (Vympel);Fuze;TASM;1980;685;317;HE-Frag;3.875;380;1.1;12;1.2;Solid_Rocket;NA;EO;NA;Su-24M,Su-25,Su-30,Su-34;Tahmini_Acik_Kaynak
+Kh-38ML;RUS;KTRV;Fuze;TASM;NA;520;250;HE-Frag;4.2;310;1.14;40;2.2;Solid_Rocket;INS/GPS;SAL;NA;Su-34,Su-35,Su-57;Tahmini_Acik_Kaynak
+Kh-25ML;RUS;KTRV (Zvezda);Fuze;TASM;1981;300;90;HE-Frag;3.83;275;0.755;11;NA;Solid_Rocket;NA;SAL;NA;MiG-29,Su-24M,Su-25;Tahmini_Acik_Kaynak
+Kh-36 Grom-E1;RUS;KTRV;Fuze;TASM;NA;594;315;HE-Frag;4.2;NA;NA;120;NA;Solid_Rocket;INS/GPS;INS/GPS_Only;NA;Su-34,Su-35,Su-57;Tahmini_Acik_Kaynak
+9K121 Vikhr;RUS;KBP Tula;Fuze;ATGM;1990;45;8;Tandem_HEAT;2.75;130;NA;10;1.8;Solid_Rocket;NA;Laser_Beam_Riding;NA;Ka-52,Su-25T;Tahmini_Acik_Kaynak
+9M120 Ataka;RUS;KBM Kolomna;Fuze;ATGM;1985;49.5;7.4;Tandem_HEAT;1.83;130;NA;6;NA;Solid_Rocket;NA;Command_Guidance;NA;Mi-28,Mi-35;Tahmini_Acik_Kaynak
+AGM-65D Maverick;USA;Raytheon;Fuze;TASM;1986;220;57;HEAT;2.49;305;0.719;22;0.93;Solid_Rocket;NA;IIR;NA;F-16,F-15E,A-10,F-4E 2020;Tahmini_Acik_Kaynak
+AGM-65E Maverick;USA;Raytheon;Fuze;TASM;1985;293;136;Penetrator;2.49;305;0.719;22;0.93;Solid_Rocket;NA;SAL;NA;F/A-18,AV-8B,F-16;Tahmini_Acik_Kaynak
+AGM-65G Maverick;USA;Raytheon;Fuze;TASM;1989;304;136;Penetrator;2.49;305;0.719;27;0.93;Solid_Rocket;NA;IIR;NA;F-16,F-15E,F/A-18,F-4E 2020;Tahmini_Acik_Kaynak
+AGM-114K Hellfire II;USA;Lockheed Martin;Fuze;ATGM;1994;45;9;Tandem_HEAT;1.63;178;0.33;8;1.3;Solid_Rocket;NA;SAL;NA;AH-64,AH-1Z,MH-60R,MQ-1C;Tahmini_Acik_Kaynak
+AGM-114L Longbow Hellfire;USA;Lockheed Martin/Northrop Grumman;Fuze;ATGM;1998;49;9;Tandem_HEAT;1.76;178;0.33;8;1.3;Solid_Rocket;INS;MMW;NA;AH-64D,AH-64E;Tahmini_Acik_Kaynak
+AGM-114N Hellfire;USA;Lockheed Martin;Fuze;ATGM;2003;48;8;Thermobaric;1.63;178;0.33;8;1.3;Solid_Rocket;NA;SAL;NA;AH-64,AH-1Z,MQ-9;Tahmini_Acik_Kaynak
+AGM-114R Hellfire Romeo;USA;Lockheed Martin;Fuze;ATGM;2012;49;9;Tandem_HEAT;1.63;178;0.33;11;1.3;Solid_Rocket;INS;SAL;150000;MQ-9,AH-64,AH-1Z,MH-60R,MQ-1C;Tahmini_Acik_Kaynak
+AGM-179 JAGM;USA;Lockheed Martin;Fuze;ATGM;2021;52;9;Tandem_HEAT;1.8;178;0.33;16;NA;Solid_Rocket;INS;MMW+SAL;NA;AH-64E,AH-1Z,MH-60R;Tahmini_Acik_Kaynak
+Brimstone;GBR;MBDA UK;Fuze;ATGM;2005;48.5;6.3;Tandem_HEAT;1.8;178;0.3;20;1.3;Solid_Rocket;INS;MMW+SAL;NA;Tornado,Eurofighter;Tahmini_Acik_Kaynak
+Brimstone 2;GBR;MBDA UK;Fuze;ATGM;2016;50;6.3;Tandem_HEAT;1.8;178;0.3;60;NA;Solid_Rocket;INS;MMW+SAL;NA;Eurofighter,Tornado,MQ-9B;Tahmini_Acik_Kaynak
+SPEAR 3;GBR;MBDA UK;Fuze;TASM;NA;100;NA;NA;1.8;180;NA;140;NA;Turbojet;INS/GPS/Data-Link;MMW+SAL+IIR;NA;F-35B,Eurofighter;Tahmini_Acik_Kaynak
+UMTAS;TUR;ROKETSAN;Fuze;ATGM;2016;37.5;NA;Tandem_HEAT;1.8;160;NA;8;NA;Solid_Rocket;INS/Data-Link;IIR;NA;T129,Akıncı,Aksungur;Tahmini_Acik_Kaynak
+L-UMTAS;TUR;ROKETSAN;Fuze;ATGM;2016;37.5;NA;Tandem_HEAT;1.8;160;NA;8;NA;Solid_Rocket;INS;SAL;NA;T129,Akıncı,Aksungur;Tahmini_Acik_Kaynak
+Cirit;TUR;ROKETSAN;Fuze;Guided_Rocket;2012;15;NA;HE-Frag;1.9;70;NA;8;NA;Solid_Rocket;INS;SAL;NA;T129,AH-1W,Hürkuş,Akıncı,Aksungur;Tahmini_Acik_Kaynak
+APKWS II;USA;BAE Systems;Fuze;Guided_Rocket;2012;15;4.1;HE-Frag;1.87;70;NA;11;NA;Solid_Rocket;NA;SAL;22000;AH-64,AH-1Z,MQ-9,F-16,F-15E,A-10;Tahmini_Acik_Kaynak
+TRG-230-İHA;TUR;ROKETSAN;Fuze;Guided_Rocket;NA;NA;NA;HE-Frag;NA;230;NA;150;NA;Solid_Rocket;INS/GPS;SAL;NA;Akıncı;Tahmini_Acik_Kaynak
+Spike NLOS;ISR;Rafael;Fuze;ATGM;2011;71;NA;Tandem_HEAT;1.67;170;NA;32;NA;Solid_Rocket;Data-Link;EO+IIR;NA;AH-64E,H225M;Tahmini_Acik_Kaynak
+Spike ER2;ISR;Rafael;Fuze;ATGM;2018;34;NA;Tandem_HEAT;1.67;170;NA;16;NA;Solid_Rocket;Data-Link;EO+IIR;NA;Tiger,H145M,AW159;Tahmini_Acik_Kaynak
+Mokopa;ZAF;Denel Dynamics;Fuze;ATGM;NA;49.8;NA;Tandem_HEAT;2.0;178;NA;10;NA;Solid_Rocket;NA;SAL;NA;Rooivalk;Tahmini_Acik_Kaynak
+AKD-10;CHN;CASC;Fuze;ATGM;NA;45;NA;Tandem_HEAT;1.8;NA;NA;10;NA;Solid_Rocket;INS;SAL;NA;Z-10,Z-19;Tahmini_Acik_Kaynak
+AGM-84H SLAM-ER;USA;Boeing;Fuze;ALCM;2000;675;360;Penetrator;4.37;343;2.43;270;0.85;Turbojet;INS/GPS/Data-Link;IIR;NA;F/A-18,P-3C,F-15K;Tahmini_Acik_Kaynak
+AGM-130;USA;Boeing (Rockwell);Fuze;TASM;1994;1323;907;HE-Frag;3.92;457;1.5;64;NA;Solid_Rocket;INS/GPS/Data-Link;EO+IIR;NA;F-15E;Tahmini_Acik_Kaynak
+Popeye (AGM-142 Have Nap);ISR;Rafael;Fuze;TASM;1989;1360;340;HE-Frag;4.82;533;1.98;78;NA;Solid_Rocket;INS/Data-Link;EO+IIR;NA;F-4E 2020,F-16I,B-52H;Tahmini_Acik_Kaynak
+Delilah;ISR;IMI Systems (Elbit);Fuze;ALCM;NA;230;30;HE-Frag;3.31;330;1.15;250;0.7;Turbojet;INS/GPS/Data-Link;EO+IIR;NA;F-16I,F-15I;Tahmini_Acik_Kaynak
+KD-88;CHN;CASIC;Fuze;ALCM;2005;600;165;HE-Frag;NA;NA;NA;180;0.8;Turbojet;INS/GPS/Data-Link;EO+IIR;NA;JH-7A,J-16;Tahmini_Acik_Kaynak
+KD-63;CHN;CASIC;Fuze;ALCM;2004;2000;500;HE-Frag;7.35;680;2.4;200;0.8;Turbojet;INS/Data-Link;EO;NA;H-6;Tahmini_Acik_Kaynak
+CJ-20;CHN;CASIC;Fuze;ALCM;NA;NA;NA;HE-Frag;NA;NA;NA;2000;0.75;Turbofan;INS/GPS/TERCOM;EO;NA;H-6K;Tahmini_Acik_Kaynak
+Ra'ad (Hatf-VIII);PAK;NESCOM;Fuze;ALCM;NA;1100;450;HE-Frag;4.85;NA;NA;350;NA;Turbojet;INS/GPS/TERCOM;EO;NA;Mirage III,Mirage 5;Tahmini_Acik_Kaynak
+Süper Şimşek;TUR;TUSAŞ;Dolanan_Muhimmat;Loitering;NA;NA;NA;HE-Frag;NA;NA;NA;NA;NA;Turbojet;INS/GPS/Data-Link;EO;NA;Aksungur,Anka;Tahmini_Acik_Kaynak

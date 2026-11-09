@@ -1,0 +1,35 @@
+Muhimmat_Adi;Mensei_Ulke;Uretici_Firma;Ana_Kategori;Alt_Kategori;Hizmete_Giris_Yili;Toplam_Kutle_kg;Harp_Basligi_Kutlesi_kg;Harp_Basligi_Tipi;Uzunluk_m;Cap_mm;Kanat_Acikligi_m;Maksimum_Menzil_km;Maksimum_Hiz_Mach;Itki_Sistemi;Gudum_Sistemi_Midcourse;Gudum_Sistemi_Terminal;Birim_Maliyet_USD;Entegre_Platformlar;Veri_Guvenilirlik_Notu
+AGM-84D Harpoon Block 1C;USA;Boeing;Fuze;AShM;1982;519;221;SAPHE;3.84;343;0.91;220;0.85;Turbojet;INS;ARH;NA;P-3C,F/A-18,S-3B,F-16;Tahmini_Acik_Kaynak
+AGM-84L Harpoon Block II;USA;Boeing;Fuze;AShM;2001;526;221;SAPHE;3.84;343;0.91;220;0.85;Turbojet;INS/GPS;ARH;NA;P-8A,F/A-18,F-16,P-3C;Tahmini_Acik_Kaynak
+AGM-84N Harpoon Block II+;USA;Boeing;Fuze;AShM;2017;526;221;SAPHE;3.84;343;0.91;220;0.85;Turbojet;INS/GPS/Data-Link;ARH;NA;P-8A,F/A-18;Tahmini_Acik_Kaynak
+AGM-158C LRASM;USA;Lockheed Martin;Fuze;AShM;2018;1100;450;Penetrator;4.27;550;2.4;560;0.8;Turbofan;INS/GPS/Data-Link;Passive_RF+IIR;3200000;B-1B,F/A-18;Tahmini_Acik_Kaynak
+Exocet AM39;FRA;MBDA France;Fuze;AShM;1979;670;165;SAPHE;4.69;348;1.1;70;0.93;Solid_Rocket;INS;ARH;NA;Rafale,Mirage 2000,Super Etendard,Atlantique 2;Tahmini_Acik_Kaynak
+JSM;NOR;Kongsberg;Fuze;AShM;NA;416;125;SAPHE;4.0;NA;NA;555;0.95;Turbojet;INS/GPS/TERCOM/Data-Link;IIR+Passive_RF;NA;F-35A,F-16;Tahmini_Acik_Kaynak
+Atmaca (Havadan Atılan);TUR;ROKETSAN;Fuze;AShM;NA;NA;250;HE-Frag;NA;350;NA;250;NA;Turbojet;INS/GPS/TERCOM/Data-Link;ARH;NA;F-16;Tahmini_Acik_Kaynak
+RBS-15F;SWE;Saab;Fuze;AShM;1989;600;200;HE-Frag;4.35;500;1.4;70;0.9;Turbojet;INS;ARH;NA;AJS37 Viggen,Gripen;Tahmini_Acik_Kaynak
+RBS-15F Mk3;SWE;Saab;Fuze;AShM;NA;650;200;HE-Frag;4.35;500;1.4;200;0.9;Turbojet;INS/GPS;ARH;NA;Gripen;Tahmini_Acik_Kaynak
+Kh-31A;RUS;KTRV (Zvezda-Strela);Fuze;AShM;1989;600;94;SAPHE;4.7;360;0.914;70;3.5;Ramjet;INS;ARH;NA;Su-30,Su-34,Su-35,MiG-29K;Tahmini_Acik_Kaynak
+Kh-31AD;RUS;KTRV (Zvezda-Strela);Fuze;AShM;NA;715;110;SAPHE;5.34;360;0.914;160;NA;Ramjet;INS;ARH;NA;Su-30SM,Su-34,Su-35;Tahmini_Acik_Kaynak
+Kh-35U;RUS;KTRV (Zvezda);Fuze;AShM;2015;520;145;SAPHE;3.85;420;1.33;260;0.8;Turbofan;INS/GPS;ARH;NA;Su-30SM,Su-34,Su-35,MiG-29K,Ka-52K;Tahmini_Acik_Kaynak
+Kh-59MK;RUS;KTRV (Raduga);Fuze;AShM;NA;930;320;SAPHE;5.7;380;1.3;285;0.88;Turbojet;INS;ARH;NA;Su-30MK;Tahmini_Acik_Kaynak
+Kh-22;RUS;KTRV (Raduga);Fuze;AShM;1967;5780;960;HE-Frag;11.65;920;3.0;600;4.6;Liquid_Rocket;INS;ARH;NA;Tu-22M3,Tu-95K-22;Tahmini_Acik_Kaynak
+Kh-32;RUS;KTRV (Raduga);Fuze;AShM;2016;5780;500;HE-Frag;11.65;920;3.0;1000;4.2;Liquid_Rocket;INS/GPS;ARH;NA;Tu-22M3M;Tahmini_Acik_Kaynak
+Kh-47M2 Kinzhal;RUS;KTRV;Fuze;ALBM;2017;4300;480;HE-Frag;7.2;1000;NA;2000;10.0;Solid_Rocket;INS/GPS;NA;NA;MiG-31K,Tu-22M3;Tahmini_Acik_Kaynak
+BrahMos-A;IND;BrahMos Aerospace;Fuze;AShM;2019;2500;300;SAPHE;8.4;670;1.7;450;3.0;Ramjet;INS/GPS;ARH;NA;Su-30MKI;Tahmini_Acik_Kaynak
+YJ-12;CHN;CASIC;Fuze;AShM;2015;2500;NA;HE-Frag;NA;NA;NA;400;4.0;Ramjet;INS/GPS/Data-Link;ARH;NA;H-6K,H-6J,JH-7A;Tahmini_Acik_Kaynak
+YJ-83K;CHN;CASIC;Fuze;AShM;2005;715;165;SAPHE;NA;360;1.18;180;0.9;Turbojet;INS/GPS;ARH;NA;JH-7A,H-6G,J-16;Tahmini_Acik_Kaynak
+C-802AK;CHN;CASIC;Fuze;AShM;NA;600;165;SAPHE;NA;360;NA;180;0.9;Turbojet;INS/GPS;ARH;NA;JF-17;Tahmini_Acik_Kaynak
+CM-400AKG;CHN;CASIC;Fuze;ALBM;NA;910;200;SAPHE;NA;400;NA;240;NA;Solid_Rocket;INS/GPS;ARH;NA;JF-17;Tahmini_Acik_Kaynak
+KD-21;CHN;NA;Fuze;ALBM;NA;NA;NA;NA;NA;NA;NA;NA;NA;Solid_Rocket;INS/GPS;NA;NA;H-6K;Tahmini_Acik_Kaynak
+Rampage;ISR;IMI Systems (Elbit)/IAI;Fuze;ALBM;NA;570;150;HE-Frag;4.7;306;NA;150;NA;Solid_Rocket;INS/GPS;INS/GPS_Only;NA;F-16I,F-15I;Tahmini_Acik_Kaynak
+Rocks;ISR;Rafael;Fuze;ALBM;NA;NA;NA;Penetrator;NA;NA;NA;NA;NA;Solid_Rocket;INS/GPS;EO+IIR;NA;F-15I,F-16I;Tahmini_Acik_Kaynak
+Air LORA;ISR;IAI;Fuze;ALBM;NA;NA;NA;HE-Frag;5.2;624;NA;430;NA;Solid_Rocket;INS/GPS;INS/GPS_Only;NA;F-15I,F-16I;Tahmini_Acik_Kaynak
+Ice Breaker;ISR;Rafael;Fuze;ALCM;NA;400;NA;HE-Frag;NA;NA;NA;300;NA;Turbojet;INS/GPS;IIR;NA;F-16,F-15;Tahmini_Acik_Kaynak
+İHA-122;TUR;ROKETSAN;Fuze;Guided_Rocket;NA;NA;NA;HE-Frag;NA;122;NA;55;NA;Solid_Rocket;INS/GPS;SAL;NA;Akıncı;Tahmini_Acik_Kaynak
+Marte ER;ITA;MBDA Italia;Fuze;AShM;NA;NA;NA;HE-Frag;NA;NA;NA;100;NA;Turbojet;INS/GPS/Data-Link;ARH;NA;Eurofighter,NH90,AW101;Tahmini_Acik_Kaynak
+AGM-119B Penguin Mk2 Mod7;NOR;Kongsberg;Fuze;AShM;1994;385;120;SAPHE;3.0;280;NA;34;0.8;Solid_Rocket;INS;IR;NA;SH-60B,MH-60R;Tahmini_Acik_Kaynak
+Sea Venom (ANL);EUR;MBDA;Fuze;AShM;NA;120;30;SAPHE;2.5;NA;NA;20;NA;Solid_Rocket;INS/Data-Link;IIR;NA;AW159,AS565 Panther;Tahmini_Acik_Kaynak
+Sea Skua;GBR;BAe Dynamics (MBDA);Fuze;AShM;1982;145;28;SAPHE;2.5;250;0.72;25;0.8;Solid_Rocket;NA;SARH;NA;Lynx;Tahmini_Acik_Kaynak
+Type 93 (ASM-2);JPN;Mitsubishi Heavy Industries;Fuze;AShM;1993;530;150;SAPHE;4.0;350;1.2;170;0.9;Turbojet;INS;IIR;NA;F-2,F-4EJ;Tahmini_Acik_Kaynak
+ASM-3A;JPN;Mitsubishi Heavy Industries;Fuze;AShM;NA;NA;NA;SAPHE;6.0;350;NA;400;3.0;Ramjet;INS/GPS;Passive_RF+ARH;NA;F-2;Tahmini_Acik_Kaynak
+AGM-183A ARRW;USA;Lockheed Martin;Fuze;HGV;NA;NA;NA;NA;NA;NA;NA;1600;NA;Solid_Rocket;INS/GPS;NA;NA;B-52H;Tahmini_Acik_Kaynak

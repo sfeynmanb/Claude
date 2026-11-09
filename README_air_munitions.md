@@ -22,3 +22,13 @@ python3 src/academic_analysis.py       # EDA raporu ve 3 akademik şekil
 
 Yöntem notları, konvansiyonlar ve sınırlılıklar: `outputs/summary_report.md` §8.
 Gizli veya teyit edilemeyen değerler `NA` olarak bırakılmıştır.
+
+## Simülasyon platformu (Streamlit)
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+Veri sırasıyla `data/master_air_munitions.csv`, `data/processed/master_air_munitions_dataset.csv`
+yollarından okunur; ikisi de yoksa koda gömülü örnek veriyle açılır. Modüller: Envanter Gezgini,
+İstasyon Yükleme (ağırlık/istasyon kısıt kontrolü), Menzil Simülatörü (harita), Karşılaştırma Matrisi.
+Fizik modelleri öğretici sezgisel modellerdir; operasyonel kullanım için değildir.

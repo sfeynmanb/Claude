@@ -1,0 +1,470 @@
+# Weaponeering Motoru - Toplu Sonuç Raporu
+
+*Oluşturulma: 2026-11-11 · Üretici: `src/weaponeering_engine.py --report`*
+
+> Sözde-PK değerleri temsilî katsayılı, kalibre edilmemiş bir sezgisel modelden gelir; JMEM/JAWS verisi değildir ve operasyonel planlama için kullanılamaz.
+
+## T01_HAS - Güçlendirilmiş uçak sığınağı (HAS) - betonarme kemer ve çelik iç kaplama
+
+`Hardened_Structure` · delme 0.9 m · gerekli yarıçap 8 m · Fixed · pasif savunma High · RCS 800 m² · termal Low
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 17 uygun / 198 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | AGM-154C JSOW | Uçak | 71.7 | 0.72 | 2 | IIR | 130 |
+| 2 | SOM-B2 | Uçak | 71.7 | 0.72 | 2 | IIR | 250 |
+| 3 | Storm Shadow (SCALP-EG) | Uçak | 71.7 | 0.72 | 2 | IIR | 560 |
+| 4 | Taurus KEPD 350 | Uçak | 71.7 | 0.72 | 2 | IIR | 500 |
+| 5 | AGM-84H SLAM-ER | Uçak | 67.9 | 0.68 | 3 | IIR | 270 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 10 uygun / 218 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | SOM-B2 | Uçak | 71.7 | 0.72 | 2 | IIR | 250 |
+| 2 | Storm Shadow (SCALP-EG) | Uçak | 71.7 | 0.72 | 2 | IIR | 560 |
+| 3 | Taurus KEPD 350 | Uçak | 71.7 | 0.72 | 2 | IIR | 500 |
+| 4 | AGM-84H SLAM-ER | Uçak | 67.9 | 0.68 | 3 | IIR | 270 |
+| 5 | AGM-158A JASSM | Uçak | 67.9 | 0.68 | 3 | IIR | 370 |
+
+## T02_C2_BUNKER - Yeraltı komuta kontrol sığınağı - kalın betonarme tavan ve toprak örtü
+
+`Hardened_Structure` · delme 3 m · gerekli yarıçap 12 m · Fixed · pasif savunma High · RCS 50 m² · termal Low
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 9 uygun / 206 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | GBU-57A/B MOP | Uçak | 68.7 | 0.75 | 2 | INS/GPS | - |
+| 2 | GBU-28 | Uçak | 67.9 | 0.68 | 3 | SAL | 9 |
+| 3 | GBU-24 Paveway III | Uçak | 36.5 | 0.37 | 6 | SAL | 18.5 |
+| 4 | GBU-31(V)3/B JDAM | Uçak | 33.1 | 0.33 | 6 | INS/GPS | 28 |
+| 5 | Taurus KEPD 350 | Uçak | 26.2 | 0.26 | 8 | IIR | 500 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 5 uygun / 223 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Taurus KEPD 350 | Uçak | 26.2 | 0.26 | 8 | IIR | 500 |
+| 2 | Storm Shadow (SCALP-EG) | Uçak | 13.4 | 0.13 | 16 | IIR | 560 |
+| 3 | SOM-B2 | Uçak | 6.5 | 0.06 | 35 | IIR | 250 |
+| 4 | AGM-154C JSOW | Uçak | 6.3 | 0.08 | 29 | IIR | 130 |
+| 5 | AGM-84H SLAM-ER | Uçak | 5.2 | 0.05 | 43 | IIR | 270 |
+
+## T03_DEEP_FACILITY - Derin yeraltı tesisi - tünel/dağ içi, çok katmanlı koruma
+
+`Hardened_Structure` · delme 5 m · gerekli yarıçap 15 m · Fixed · pasif savunma Extreme · RCS 10 m² · termal Low
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 2 uygun / 213 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | GBU-57A/B MOP | Uçak | 69.1 | 0.69 | 2 | INS/GPS | - |
+| 2 | GBU-28 | Uçak | 26.9 | 0.27 | 8 | SAL | 9 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 0 uygun / 228 elenen / 8 verisi yetersiz
+
+_Bu koşullarda envanterde uygun mühimmat yok._
+
+## T04_PILLBOX - Beton korugan (pillbox) - mazgallı betonarme ateş mevzii
+
+`Hardened_Structure` · delme 0.6 m · gerekli yarıçap 3 m · Fixed · pasif savunma Medium · RCS 5 m² · termal Low
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 33 uygun / 182 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | AGM-65E Maverick | Uçak | 65.8 | 0.76 | 2 | SAL | 22 |
+| 2 | AGM-65G Maverick | Uçak | 65.8 | 0.76 | 2 | IIR | 27 |
+| 3 | AGM-154C JSOW | Uçak | 63.6 | 0.80 | 2 | IIR | 130 |
+| 4 | SOM-B2 | Uçak | 63.4 | 0.80 | 2 | IIR | 250 |
+| 5 | Kh-69 | Uçak | 56.2 | 0.76 | 2 | EO | 290 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 10 uygun / 218 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | SOM-B2 | Uçak | 63.4 | 0.80 | 2 | IIR | 250 |
+| 2 | Kh-69 | Uçak | 56.2 | 0.76 | 2 | EO | 290 |
+| 3 | Kh-59MK2 | Uçak | 55.7 | 0.76 | 2 | EO | 290 |
+| 4 | AGM-84H SLAM-ER | Uçak | 54.1 | 0.76 | 2 | IIR | 270 |
+| 5 | Storm Shadow (SCALP-EG) | Uçak | 53.7 | 0.80 | 2 | IIR | 560 |
+
+## T05_AMMO_IGLOO - Toprak örtülü betonarme mühimmat igloosu
+
+`Hardened_Structure` · delme 0.5 m · gerekli yarıçap 8 m · Fixed · pasif savunma Medium · RCS 100 m² · termal Low
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 17 uygun / 198 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | AGM-154C JSOW | Uçak | 80.4 | 0.80 | 2 | IIR | 130 |
+| 2 | SOM-B2 | Uçak | 80.4 | 0.80 | 2 | IIR | 250 |
+| 3 | Storm Shadow (SCALP-EG) | Uçak | 80.4 | 0.80 | 2 | IIR | 560 |
+| 4 | Taurus KEPD 350 | Uçak | 80.4 | 0.80 | 2 | IIR | 500 |
+| 5 | AGM-65E Maverick | Uçak | 76.2 | 0.76 | 2 | SAL | 22 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 10 uygun / 218 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | SOM-B2 | Uçak | 80.4 | 0.80 | 2 | IIR | 250 |
+| 2 | Storm Shadow (SCALP-EG) | Uçak | 80.4 | 0.80 | 2 | IIR | 560 |
+| 3 | Taurus KEPD 350 | Uçak | 80.4 | 0.80 | 2 | IIR | 500 |
+| 4 | AGM-84H SLAM-ER | Uçak | 76.2 | 0.76 | 2 | IIR | 270 |
+| 5 | Kh-59MK2 | Uçak | 76.2 | 0.76 | 2 | EO | 290 |
+
+## T06_BDE_CP - Zırhlı tugay komuta merkezi (saha TOC) - komuta araçları, çadır/konteyner ve anten parkı
+
+`Soft_Vehicle` · delme 0 m · gerekli yarıçap 40 m · Fixed · pasif savunma High · RCS 30 m² · termal Medium
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 94 uygun / 121 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | FAB-3000 UMPK | Uçak | 79.1 | 0.79 | 2 | INS/GPS | - |
+| 2 | CBU-105 SFW (WCMD) | Uçak | 75.0 | 0.75 | 2 | INS/GPS | - |
+| 3 | AGM-154A JSOW | Uçak | 75.0 | 0.75 | 2 | INS/GPS | 130 |
+| 4 | FAB-1500 UMPK | Uçak | 59.6 | 0.60 | 3 | INS/GPS | 60 |
+| 5 | KAB-1500L | Uçak | 43.0 | 0.43 | 5 | SAL | 20 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 38 uygun / 190 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | AGM-154A JSOW | Uçak | 61.2 | 0.75 | 2 | INS/GPS | 130 |
+| 2 | Kh-47M2 Kinzhal | Uçak | 27.3 | 0.27 | 8 | INS/GPS | 2000 |
+| 3 | Ra'ad (Hatf-VIII) | Uçak | 26.1 | 0.26 | 8 | INS/GPS | 350 |
+| 4 | Kh-555 | Uçak | 24.6 | 0.25 | 9 | INS/GPS | 2500 |
+| 5 | YJ-12 | Uçak | 24.5 | 0.35 | 6 | INS/GPS | 400 |
+
+## T07_MBT - Ana muharebe tankı - tekil, arazide hareket hâlinde
+
+`Armored_Vehicle` · delme 0 m · gerekli yarıçap 3.5 m · Slow_Moving · pasif savunma Medium · RCS 15 m² · termal High
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 92 uygun / 123 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Brimstone | Uçak | 60.4 | 0.60 | 3 | MMW | 20 |
+| 2 | AGM-114L Longbow Hellfire | Helikopter | 60.4 | 0.60 | 3 | MMW | 8 |
+| 3 | Brimstone 2 | Uçak+SİHA | 60.4 | 0.60 | 3 | MMW | 60 |
+| 4 | AGM-179 JAGM | Helikopter | 60.4 | 0.60 | 3 | MMW | 16 |
+| 5 | 9K121 Vikhr | Uçak+Helikopter | 57.2 | 0.57 | 3 | Laser_Beam_Riding | 10 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 30 uygun / 198 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | AGM-84H SLAM-ER | Uçak | 40.8 | 0.41 | 5 | IIR | 270 |
+| 2 | SOM-B1 | Uçak | 40.5 | 0.40 | 5 | IIR | 250 |
+| 3 | KD-88 | Uçak | 35.2 | 0.39 | 5 | IIR | 180 |
+| 4 | KD-63 | Uçak | 33.9 | 0.36 | 6 | EO | 200 |
+| 5 | SOM-B2 | Uçak | 33.7 | 0.34 | 6 | IIR | 250 |
+
+## T08_AFV_FAST - Tekerlekli zırhlı muharebe/keşif aracı - yüksek hızla manevra
+
+`Armored_Vehicle` · delme 0 m · gerekli yarıçap 3 m · Fast_Maneuvering · pasif savunma Low · RCS 10 m² · termal High
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 89 uygun / 126 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Brimstone | Uçak | 71.4 | 0.71 | 2 | MMW | 20 |
+| 2 | AGM-114L Longbow Hellfire | Helikopter | 71.4 | 0.71 | 2 | MMW | 8 |
+| 3 | Brimstone 2 | Uçak+SİHA | 71.4 | 0.71 | 2 | MMW | 60 |
+| 4 | AGM-179 JAGM | Helikopter | 71.4 | 0.71 | 2 | MMW | 16 |
+| 5 | Spike ER2 | Helikopter | 59.5 | 0.60 | 3 | IIR | 16 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 27 uygun / 201 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | SOM-B2 | Uçak | 41.4 | 0.41 | 5 | IIR | 250 |
+| 2 | AGM-84H SLAM-ER | Uçak | 40.1 | 0.40 | 5 | IIR | 270 |
+| 3 | SOM-J | Uçak | 38.7 | 0.39 | 5 | IIR | 275 |
+| 4 | SOM-B1 | Uçak | 37.8 | 0.38 | 5 | IIR | 250 |
+| 5 | KD-88 | Uçak | 33.7 | 0.37 | 5 | IIR | 180 |
+
+## T09_SP_ARTY_BTY - Kundağı motorlu obüs bataryası - ateş mevziinde 6 araç, dağınık
+
+`Armored_Vehicle` · delme 0 m · gerekli yarıçap 70 m · Fixed · pasif savunma Medium · RCS 40 m² · termal High
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 3 uygun / 212 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | CBU-105 SFW (WCMD) | Uçak | 53.7 | 0.54 | 3 | INS/GPS | - |
+| 2 | AGM-154A JSOW | Uçak | 37.1 | 0.37 | 5 | INS/GPS | 130 |
+| 3 | Mk-20 Rockeye II | Uçak | 21.7 | 0.22 | 10 | Unguided | 12 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 1 uygun / 227 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | AGM-154A JSOW | Uçak | 30.3 | 0.37 | 5 | INS/GPS | 130 |
+
+## T10_MOBILE_SAM - Mobil SAM bataryası - angajman radarı ve fırlatıcılar, sık yer değiştirir
+
+`Radar/Air_Defense` · delme 0 m · gerekli yarıçap 15 m · Slow_Moving · pasif savunma High · RCS 40 m² · termal Medium
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 123 uygun / 92 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Paveway IV | Uçak | 64.5 | 0.65 | 3 | SAL | 33 |
+| 2 | GBU-54 Laser JDAM | Uçak | 64.5 | 0.65 | 3 | SAL | 28 |
+| 3 | Teber-82 | Uçak+SİHA | 64.5 | 0.65 | 3 | SAL | - |
+| 4 | GBU-12 Paveway II | Uçak+SİHA | 64.5 | 0.65 | 3 | SAL | 14.8 |
+| 5 | AASM Hammer SBU-64 | Uçak | 64.5 | 0.65 | 3 | SAL | 70 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 50 uygun / 178 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | SOM-B1 | Uçak | 59.3 | 0.59 | 3 | IIR | 250 |
+| 2 | KD-63 | Uçak | 56.9 | 0.61 | 3 | EO | 200 |
+| 3 | KD-88 | Uçak | 54.8 | 0.61 | 3 | EO | 180 |
+| 4 | SOM-J | Uçak | 47.1 | 0.47 | 4 | IIR | 275 |
+| 5 | AGM-88E AARGM | Uçak | 45.7 | 0.54 | 3 | MMW | 150 |
+
+## T11_EW_RADAR - Erken uyarı radarı - sabit mevzi, büyük anten
+
+`Radar/Air_Defense` · delme 0 m · gerekli yarıçap 12 m · Fixed · pasif savunma Low · RCS 300 m² · termal Medium
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 165 uygun / 50 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | MAM-L | SİHA | 87.4 | 0.87 | 2 | SAL | 15 |
+| 2 | MAM-L IIR | SİHA | 87.4 | 0.87 | 2 | IIR | 25 |
+| 3 | GBU-69/B SGM | Uçak+SİHA | 87.4 | 0.87 | 2 | SAL | - |
+| 4 | Kemankeş-2 | SİHA | 87.4 | 0.87 | 2 | EO | 200 |
+| 5 | GBU-53/B StormBreaker (SDB II) | Uçak | 87.4 | 0.87 | 2 | MMW | 110 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 50 uygun / 178 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Delilah | Uçak | 87.4 | 0.87 | 2 | IIR | 250 |
+| 2 | Kh-31PD | Uçak | 85.1 | 0.87 | 2 | Passive_RF | 250 |
+| 3 | Ice Breaker | Uçak | 83.1 | 0.87 | 2 | IIR | 300 |
+| 4 | Kh-58UShKE | Uçak | 82.4 | 0.87 | 2 | Passive_RF | 245 |
+| 5 | Kemankeş-2 | SİHA | 81.6 | 0.87 | 2 | EO | 200 |
+
+## T12_SHORAD - Kundağı motorlu kısa menzilli hava savunma aracı - birliklerle hareketli
+
+`Radar/Air_Defense` · delme 0 m · gerekli yarıçap 4 m · Fast_Maneuvering · pasif savunma Medium · RCS 12 m² · termal High
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 104 uygun / 111 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | AGM-114L Longbow Hellfire | Helikopter | 57.5 | 0.57 | 3 | MMW | 8 |
+| 2 | AGM-179 JAGM | Helikopter | 57.5 | 0.57 | 3 | MMW | 16 |
+| 3 | Brimstone | Uçak | 57.2 | 0.57 | 3 | MMW | 20 |
+| 4 | Brimstone 2 | Uçak+SİHA | 57.2 | 0.57 | 3 | MMW | 60 |
+| 5 | MAM-C | SİHA | 56.3 | 0.56 | 3 | SAL | 8 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 34 uygun / 194 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Delilah | Uçak | 48.9 | 0.60 | 3 | IIR | 250 |
+| 2 | ALTIUS-600 | Helikopter+SİHA | 46.5 | 0.47 | 4 | EO | 440 |
+| 3 | AGM-88E AARGM | Uçak | 39.2 | 0.68 | 3 | MMW | 150 |
+| 4 | Kemankeş-2 | SİHA | 39.1 | 0.48 | 4 | EO | 200 |
+| 5 | SPEAR 3 | Uçak | 38.3 | 0.58 | 3 | MMW | 140 |
+
+## T13_FRIGATE - Fırkateyn (~4000 t) - seyir hâlinde
+
+`Naval` · delme 0 m · gerekli yarıçap 18 m · Slow_Moving · pasif savunma Medium · RCS 5000 m² · termal High
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 93 uygun / 122 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Kh-59MK | Uçak | 61.5 | 0.62 | 3 | ARH | 285 |
+| 2 | BrahMos-A | Uçak | 58.9 | 0.59 | 3 | ARH | 450 |
+| 3 | AGM-158C LRASM | Uçak | 56.8 | 0.57 | 3 | IIR | 560 |
+| 4 | AGM-84H SLAM-ER | Uçak | 48.9 | 0.49 | 4 | IIR | 270 |
+| 5 | Kh-22 | Uçak | 48.2 | 0.48 | 4 | ARH | 600 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 43 uygun / 185 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Kh-59MK | Uçak | 61.5 | 0.62 | 3 | ARH | 285 |
+| 2 | BrahMos-A | Uçak | 58.9 | 0.59 | 3 | ARH | 450 |
+| 3 | AGM-158C LRASM | Uçak | 56.8 | 0.57 | 3 | IIR | 560 |
+| 4 | AGM-84H SLAM-ER | Uçak | 48.9 | 0.49 | 4 | IIR | 270 |
+| 5 | Kh-22 | Uçak | 48.2 | 0.48 | 4 | ARH | 600 |
+
+## T14_FAC - Hücumbot / hızlı devriye botu (~400 t) - yüksek süratle manevra
+
+`Naval` · delme 0 m · gerekli yarıçap 8 m · Fast_Maneuvering · pasif savunma Low · RCS 300 m² · termal High
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 85 uygun / 130 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Kh-35U | Uçak+Helikopter | 71.9 | 0.72 | 2 | ARH | 260 |
+| 2 | Kh-31AD | Uçak | 71.7 | 0.72 | 2 | ARH | 160 |
+| 3 | Kh-31A | Uçak | 71.5 | 0.72 | 2 | ARH | 70 |
+| 4 | C-802AK | Uçak | 71.4 | 0.72 | 2 | ARH | 180 |
+| 5 | Exocet AM39 | Uçak | 71.4 | 0.72 | 2 | ARH | 70 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 34 uygun / 194 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Kh-35U | Uçak+Helikopter | 71.9 | 0.72 | 2 | ARH | 260 |
+| 2 | CM-400AKG | Uçak | 70.1 | 0.72 | 2 | ARH | 240 |
+| 3 | AGM-84D Harpoon Block 1C | Uçak | 67.1 | 0.72 | 2 | ARH | 220 |
+| 4 | AGM-84L Harpoon Block II | Uçak | 67.1 | 0.72 | 2 | ARH | 220 |
+| 5 | AGM-84N Harpoon Block II+ | Uçak | 67.1 | 0.72 | 2 | ARH | 220 |
+
+## T15_PIER_SHIP - Rıhtımda bağlı lojistik destek gemisi
+
+`Naval` · delme 0 m · gerekli yarıçap 22 m · Fixed · pasif savunma Low · RCS 8000 m² · termal Medium
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 117 uygun / 98 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Taurus KEPD 350 | Uçak | 75.0 | 0.75 | 2 | IIR | 500 |
+| 2 | Kh-59MK | Uçak | 73.6 | 0.74 | 2 | ARH | 285 |
+| 3 | AGM-158A JASSM | Uçak | 71.8 | 0.72 | 2 | IIR | 370 |
+| 4 | AGM-158B JASSM-ER | Uçak | 71.8 | 0.72 | 2 | IIR | 926 |
+| 5 | AGM-158C LRASM | Uçak | 71.8 | 0.72 | 2 | IIR | 560 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 48 uygun / 180 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Taurus KEPD 350 | Uçak | 75.0 | 0.75 | 2 | IIR | 500 |
+| 2 | Kh-59MK | Uçak | 73.6 | 0.74 | 2 | ARH | 285 |
+| 3 | AGM-158A JASSM | Uçak | 71.8 | 0.72 | 2 | IIR | 370 |
+| 4 | AGM-158B JASSM-ER | Uçak | 71.8 | 0.72 | 2 | IIR | 926 |
+| 5 | AGM-158C LRASM | Uçak | 71.8 | 0.72 | 2 | IIR | 560 |
+
+## T16_INF_OPEN - Açık arazide piyade takımı - toplanma bölgesinde
+
+`Personnel` · delme 0 m · gerekli yarıçap 40 m · Fixed · pasif savunma Low · RCS 1 m² · termal Medium
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 139 uygun / 76 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Paveway IV | Uçak | 87.4 | 0.87 | 2 | SAL | 33 |
+| 2 | GBU-38 JDAM | Uçak | 87.4 | 0.87 | 2 | INS/GPS | 28 |
+| 3 | GBU-54 Laser JDAM | Uçak | 87.4 | 0.87 | 2 | SAL | 28 |
+| 4 | Teber-82 | Uçak+SİHA | 87.4 | 0.87 | 2 | SAL | - |
+| 5 | GBU-12 Paveway II | Uçak+SİHA | 87.4 | 0.87 | 2 | SAL | 14.8 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 46 uygun / 182 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Ice Breaker | Uçak | 87.4 | 0.87 | 2 | IIR | 300 |
+| 2 | SOM-A | Uçak | 87.4 | 0.87 | 2 | INS/GPS | 250 |
+| 3 | SOM-B1 | Uçak | 87.4 | 0.87 | 2 | IIR | 250 |
+| 4 | Ra'ad (Hatf-VIII) | Uçak | 87.4 | 0.87 | 2 | EO | 350 |
+| 5 | Kh-555 | Uçak | 87.4 | 0.87 | 2 | EO | 2500 |
+
+## T17_INF_DUGIN - Mevzilenmiş piyade - siper ve üstü örtülü mevziler
+
+`Personnel` · delme 0 m · gerekli yarıçap 35 m · Fixed · pasif savunma High · RCS 0.5 m² · termal Low
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 128 uygun / 87 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | CBU-105 SFW (WCMD) | Uçak | 79.1 | 0.79 | 2 | INS/GPS | - |
+| 2 | Spice 1000 | Uçak | 79.1 | 0.79 | 2 | INS/GPS | 100 |
+| 3 | GBU-32 JDAM | Uçak | 79.1 | 0.79 | 2 | INS/GPS | 28 |
+| 4 | AGM-154A JSOW | Uçak | 79.1 | 0.79 | 2 | INS/GPS | 130 |
+| 5 | KAB-500S-E | Uçak | 79.1 | 0.79 | 2 | INS/GPS | 9 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 44 uygun / 184 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Ra'ad (Hatf-VIII) | Uçak | 79.1 | 0.79 | 2 | INS/GPS | 350 |
+| 2 | Kh-555 | Uçak | 79.1 | 0.79 | 2 | INS/GPS | 2500 |
+| 3 | Kh-101 | Uçak | 79.1 | 0.79 | 2 | INS/GPS | 2800 |
+| 4 | Kh-47M2 Kinzhal | Uçak | 79.1 | 0.79 | 2 | INS/GPS | 2000 |
+| 5 | SOM-A | Uçak | 70.7 | 0.71 | 2 | INS/GPS | 250 |
+
+## T18_CONVOY - İkmal konvoyu - tekerlekli araçlar, yolda seyir hâlinde
+
+`Soft_Vehicle` · delme 0 m · gerekli yarıçap 25 m · Fast_Maneuvering · pasif savunma Low · RCS 20 m² · termal Medium
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 73 uygun / 142 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Paveway IV | Uçak | 61.2 | 0.61 | 3 | SAL | 33 |
+| 2 | GBU-54 Laser JDAM | Uçak | 61.2 | 0.61 | 3 | SAL | 28 |
+| 3 | Teber-82 | Uçak+SİHA | 61.2 | 0.61 | 3 | SAL | - |
+| 4 | GBU-12 Paveway II | Uçak+SİHA | 61.2 | 0.61 | 3 | SAL | 14.8 |
+| 5 | AASM Hammer SBU-64 | Uçak | 61.2 | 0.61 | 3 | SAL | 70 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 28 uygun / 200 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | SOM-B1 | Uçak | 60.3 | 0.60 | 3 | IIR | 250 |
+| 2 | KD-88 | Uçak | 54.3 | 0.60 | 3 | IIR | 180 |
+| 3 | KD-63 | Uçak | 48.9 | 0.52 | 4 | EO | 200 |
+| 4 | AGM-84H SLAM-ER | Uçak | 44.1 | 0.44 | 4 | IIR | 270 |
+| 5 | SOM-J | Uçak | 39.6 | 0.40 | 5 | IIR | 275 |
+
+## T19_TEL - Balistik füze fırlatıcısı (TEL) - gizlenmiş atış mevzii, kısa sürede yer değiştirir
+
+`Soft_Vehicle` · delme 0 m · gerekli yarıçap 6 m · Slow_Moving · pasif savunma High · RCS 25 m² · termal Medium
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 139 uygun / 76 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | GBU-53/B StormBreaker (SDB II) | Uçak | 67.8 | 0.68 | 3 | MMW | 110 |
+| 2 | MAM-L | SİHA | 64.5 | 0.64 | 3 | SAL | 15 |
+| 3 | GBU-69/B SGM | Uçak+SİHA | 64.5 | 0.64 | 3 | SAL | - |
+| 4 | MAM-T | SİHA | 64.5 | 0.65 | 3 | SAL | 30 |
+| 5 | Bozok | SİHA | 64.4 | 0.64 | 3 | SAL | 15 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 46 uygun / 182 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Delilah | Uçak | 60.8 | 0.61 | 3 | EO | 250 |
+| 2 | Kemankeş-2 | SİHA | 56.5 | 0.61 | 3 | EO | 200 |
+| 3 | SOM-B1 | Uçak | 50.9 | 0.59 | 3 | IIR | 250 |
+| 4 | KD-88 | Uçak | 49.4 | 0.61 | 3 | EO | 180 |
+| 5 | SOM-J | Uçak | 48.6 | 0.50 | 4 | IIR | 275 |
+
+## T20_POL_DEPOT - Akaryakıt (POL) depolama tesisi - yerüstü tanklar
+
+`Soft_Structure` · delme 0 m · gerekli yarıçap 35 m · Fixed · pasif savunma Low · RCS 2000 m² · termal Medium
+
+**Hava savunma: Yok / bastırılmış** (standoff 0 km) - 124 uygun / 91 elenen / 21 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | GBU-31(V)1/B JDAM | Uçak | 82.8 | 0.83 | 2 | INS/GPS | 28 |
+| 2 | GBU-10 Paveway II | Uçak | 82.8 | 0.83 | 2 | SAL | 14.8 |
+| 3 | HGK-84 | Uçak | 82.8 | 0.83 | 2 | INS/GPS | 28 |
+| 4 | Spice 2000 | Uçak | 82.8 | 0.83 | 2 | EO | 60 |
+| 5 | AGM-130 | Uçak | 82.8 | 0.83 | 2 | EO | 64 |
+
+**Hava savunma: Uzun menzilli SAM** (standoff 120 km) - 44 uygun / 184 elenen / 8 verisi yetersiz
+
+| # | Mühimmat | Taşıyıcı | Skor | PK | Atış (P_D=0.90) | Güdüm modu | Menzil km |
+|---|---|---|---|---|---|---|---|
+| 1 | Kh-47M2 Kinzhal | Uçak | 66.3 | 0.66 | 3 | INS/GPS | 2000 |
+| 2 | KD-63 | Uçak | 63.6 | 0.68 | 3 | EO | 200 |
+| 3 | Ra'ad (Hatf-VIII) | Uçak | 63.5 | 0.64 | 3 | EO | 350 |
+| 4 | Kh-555 | Uçak | 59.7 | 0.60 | 3 | EO | 2500 |
+| 5 | Kh-101 | Uçak | 58.7 | 0.59 | 3 | EO | 2800 |

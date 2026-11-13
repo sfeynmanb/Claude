@@ -8,6 +8,7 @@ Model katsayıları değişse de korunması gereken davranışları sınar: zoru
 kuralları, ölçekleme yasaları, skor aralığı/sıralaması, senaryo kısıtları ve
 duyarlılık analizlerinin monotonluğu. Çıkış kodu: 0 = tüm testler geçti.
 """
+
 import math
 import os
 import sys
@@ -55,9 +56,17 @@ def targets_where(**conditions):
 @test
 def hedef_matrisi_semasi():
     assert list(TGT.columns) == we.TARGET_COLUMNS and we.TARGET_COLUMNS[:10] == [
-        "Target_ID", "Target_Category", "Target_Description", "UFC_Hardness_Rating_psi",
-        "Required_Concrete_Penetration_m", "Target_Mobility_Class", "TST_Status", "Radar_Cross_Section_m2",
-        "Required_Lethal_Radius_m", "Collateral_Damage_Tier"], "istenen 10 sütun aynı sırada olmalı"
+        "Target_ID",
+        "Target_Category",
+        "Target_Description",
+        "UFC_Hardness_Rating_psi",
+        "Required_Concrete_Penetration_m",
+        "Target_Mobility_Class",
+        "TST_Status",
+        "Radar_Cross_Section_m2",
+        "Required_Lethal_Radius_m",
+        "Collateral_Damage_Tier",
+    ], "istenen 10 sütun aynı sırada olmalı"
     assert len(TGT) >= 25 and TGT["Target_ID"].is_unique
     assert set(TGT["Target_Class"]) == set(we.TARGET_CATEGORIES)
     assert set(TGT["Target_Mobility_Class"]) == set(we.MOBILITY_LEVELS)
@@ -126,8 +135,9 @@ def tnt_esdegeri_ve_kilif_duzeltmesi():
     assert 0.2 * fill * we.SURFACE_BURST_FACTOR < w < fill * we.SURFACE_BURST_FACTOR, "kılıf etkin yükü azaltır"
     assert math.isclose(we.tnt_equivalent_kg(925, "HE-Frag", surface_burst=False) * we.SURFACE_BURST_FACTOR, w)
     assert we.tnt_equivalent_kg(925, "HE-Frag") > we.tnt_equivalent_kg(925, "Penetrator")
-    assert math.isclose(we.tnt_equivalent_kg(100, "HE-Frag", relative_effectiveness=1.33),
-                        1.33 * we.tnt_equivalent_kg(100, "HE-Frag"))
+    assert math.isclose(
+        we.tnt_equivalent_kg(100, "HE-Frag", relative_effectiveness=1.33), 1.33 * we.tnt_equivalent_kg(100, "HE-Frag")
+    )
     assert math.isnan(we.tnt_equivalent_kg(float("nan"), "HE-Frag"))
 
 
@@ -141,7 +151,7 @@ def delme_fonksiyonu_young():
     assert we.calculate_penetration_depth(50, 874, 0.368) == 0.0, "61 m/s altında denklem geçersiz"
     assert we.calculate_penetration_depth(300, 874, 0.368, "HE-Frag") < base
     ratio = we.calculate_penetration_depth(300, 2 * 874, 0.368) / base
-    assert math.isclose(ratio, 2 ** 0.7, rel_tol=1e-9), "D ∝ (m/A)^0.7"
+    assert math.isclose(ratio, 2**0.7, rel_tol=1e-9), "D ∝ (m/A)^0.7"
 
 
 @test
@@ -196,6 +206,64 @@ def pk_esittir_ph_carpi_pd_ve_jaws_eslesmesi():
     assert we.AIR_DEFENSE_TIERS["VLRSAM"].standoff_km == 400 and (s400["Maksimum_Menzil_km"] >= 400).all()
 
 
+# --------------------------------------------------------------------------- görev akışı
+@test
+def ozel_hedef_etki_ve_carpma_kosullari():
+    assert math.isclose(we.concrete_equivalent_m([("Reinforced_Concrete", 1.2)]), 1.2)
+    soil = we.concrete_equivalent_m([("Compacted_Soil", 4.0)])
+    assert 0 < soil < 1.0, "toprak örtü betondan çok daha kolay delinir"
+    layered = we.concrete_equivalent_m([("Compacted_Soil", 4.0), ("Reinforced_Concrete", 1.2)])
+    assert math.isclose(layered, soil + 1.2)
+    assert we.concrete_equivalent_m([("High_Strength_Concrete", 1.0)]) > 1.0
+    target = we.build_custom_target("Sığınak", "Hardened_Structure", 20, 12, [("Reinforced_Concrete", 1.2)])
+    assert target["Target_Category"] == "Point/Hard/Fixed" and target["Required_Concrete_Penetration_m"] == 1.2
+    assert math.isclose(target["Required_Lethal_Radius_m"], round(math.sqrt(20 * 12 / math.pi), 1))
+    assert we.build_custom_target("Alan", "Personnel", 200, 100)["Target_Category"].startswith("Area/Soft")
+    moving = we.build_custom_target("Araç", "Soft_Vehicle", 8, 3, [("Reinforced_Concrete", 1.0)], mobility="Fast")
+    assert moving["Required_Concrete_Penetration_m"] == 0 and moving["Target_Category"].endswith("/Mobile")
+    for bad in (dict(target_class="Bina"), dict(length_m=0)):
+        args = dict(description="x", target_class="Personnel", length_m=10, width_m=10)
+        args.update(bad)
+        try:
+            we.build_custom_target(**args)
+        except (KeyError, ValueError):
+            continue
+        raise AssertionError(f"{bad} hata vermeliydi")
+    res = we.calculate_weapon_effectiveness(target, munitions=MUN)
+    assert (
+        len(res) and res["Harp_Basligi_Tipi"].isin(we.HARD_TARGET_WARHEADS).all()
+    ), "sözlük hedef de değerlendirilmeli"
+    assert (res["Tahmini_Delme_m"] >= we.PEN_FAIL_RATIO * 1.2).all()
+    thick = we.build_custom_target("Kalın", "Hardened_Structure", 20, 12, [("Reinforced_Concrete", 4.0)])
+    assert len(we.calculate_weapon_effectiveness(thick, munitions=MUN)) < len(res), "kalınlık arttıkça seçenek azalır"
+    # istenen etki
+    radii, wanted = {}, {}
+    for key in we.DESIRED_EFFECTS:
+        scaled, wanted[key] = we.apply_desired_effect(target, key)
+        radii[key] = scaled["Required_Lethal_Radius_m"]
+        assert scaled["Required_Concrete_Penetration_m"] == 1.2, "etki düzeyi delme gereksinimini değiştirmez"
+    assert radii["SUPPRESS"] < radii["PARTIAL"] < radii["DESTROY"] == target["Required_Lethal_Radius_m"]
+    assert wanted["SUPPRESS"] < wanted["PARTIAL"] < wanted["DESTROY"]
+    assert (
+        target["Required_Lethal_Radius_m"]
+        == we.build_custom_target("Sığınak", "Hardened_Structure", 20, 12, [("Reinforced_Concrete", 1.2)])[
+            "Required_Lethal_Radius_m"
+        ]
+    )
+    # çarpma koşulları
+    low = we.impact_conditions("free_fall", 1500, 0.9, 0.9, False)
+    high = we.impact_conditions("free_fall", 10000, 0.9, 0.9, False)
+    assert high[0] > low[0] and high[1] >= low[1], "güdümsüzde irtifa arttıkça açı dikleşir"
+    assert high[1] <= 0.9 * we.SOUND_SPEED + 1e-6, "çarpma hızı azami Mach ile sınırlı"
+    guided = we.impact_conditions("free_fall", 1500, 0.9, 0.9, True, "Penetration")
+    assert guided[0] == we.DESIRED_IMPACT_ANGLE["Penetration"] > low[0]
+    assert we.impact_conditions("powered", 0, 0.9, 0.85, True, "Penetration", naval=True)[0] == we.SEA_SKIM_ANGLE
+    ref = we.penetration_at_impact(2.0, 1.1, 1.1 * we.SOUND_SPEED, 90)
+    assert math.isclose(ref, 2.0, rel_tol=1e-9), "referans hız ve dik çarpmada değer aynen korunur"
+    assert we.penetration_at_impact(2.0, 1.1, 1.1 * we.SOUND_SPEED, 30) < 0.51 * ref + 1e-9
+    assert we.penetration_at_impact(2.0, 1.1, 250, 90) < ref
+
+
 # --------------------------------------------------------------------------- alt modeller
 @test
 def olumcul_yaricap_kup_kok_olcekleme():
@@ -223,7 +291,7 @@ def delme_modeli_siralama_ve_esikler():
     assert tandem > unitary
     assert we.penetration_factor(2.0, 0.0) == 1.0 and we.penetration_factor(2.0, 1.5) == 1.0
     assert we.penetration_factor(0.4, 1.0) == 0.0
-    assert math.isclose(we.penetration_factor(0.8, 1.0), 0.8 ** 3)
+    assert math.isclose(we.penetration_factor(0.8, 1.0), 0.8**3)
 
 
 @test
@@ -264,8 +332,10 @@ def kural_sertlestirilmis_hedefte_harp_basligi():
         scored = wrong[wrong["PK_Tek_Atis"].notna()]
         assert len(scored) > 50 and (scored["PK_Tek_Atis"] == 0).all(), f"{tid}: HE-Frag PK'si 0 olmalı"
         assert ok_rows(res)["Harp_Basligi_Tipi"].isin(we.HARD_TARGET_WARHEADS).all()
-        assert (ok_rows(res)["Tahmini_Delme_m"] >= we.PEN_FAIL_RATIO * res.attrs["target"][
-            "Required_Concrete_Penetration_m"]).all()
+        assert (
+            ok_rows(res)["Tahmini_Delme_m"]
+            >= we.PEN_FAIL_RATIO * res.attrs["target"]["Required_Concrete_Penetration_m"]
+        ).all()
 
 
 @test
@@ -393,16 +463,24 @@ def belirleyicilik_ve_girdi_bicimleri():
     for col in we.MUNITION_NUMERIC:
         numeric[col] = pd.to_numeric(numeric[col], errors="coerce")
     numeric["Ek_Sutun"] = 1
-    from_numeric = we.calculate_weapon_effectiveness("TGT-SAM-13", munitions=numeric, targets=TGT,
-                                                     include_eliminated=True)
+    from_numeric = we.calculate_weapon_effectiveness(
+        "TGT-SAM-13", munitions=numeric, targets=TGT, include_eliminated=True
+    )
     pd.testing.assert_frame_equal(a, from_numeric)
     assert we.prepare_munitions(MUN) is MUN, "hazır veri yeniden işlenmemeli"
 
 
 @test
 def hatali_girdiler():
-    for bad in (dict(air_defense="S-400"), dict(weather="RAIN"), dict(standoff_km=-1), dict(desired_damage=1.0),
-                dict(carrier_classes=("Tank",)), dict(tst_window_s=0), dict(cde_tier="Extreme")):
+    for bad in (
+        dict(air_defense="S-400"),
+        dict(weather="RAIN"),
+        dict(standoff_km=-1),
+        dict(desired_damage=1.0),
+        dict(carrier_classes=("Tank",)),
+        dict(tst_window_s=0),
+        dict(cde_tier="Extreme"),
+    ):
         try:
             we.Scenario(**bad)
         except ValueError:
@@ -529,8 +607,10 @@ def main() -> int:
         except AssertionError as exc:
             failed += 1
             print(f"[FAIL] {fn.__name__}: {exc}")
-    print(f"\n{len(TESTS) - failed}/{len(TESTS)} test geçti "
-          f"({len(MUN)} mühimmat × {len(TGT)} hedef; veri: {os.path.relpath(SOURCE, we.ROOT)})")
+    print(
+        f"\n{len(TESTS) - failed}/{len(TESTS)} test geçti "
+        f"({len(MUN)} mühimmat × {len(TGT)} hedef; veri: {os.path.relpath(SOURCE, we.ROOT)})"
+    )
     return 1 if failed else 0
 
 

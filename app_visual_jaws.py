@@ -12,6 +12,7 @@ weaponeering karar desteği.
 
 Modüller
 --------
+0. Görev Akışı           : hedef → istenen etki → mühimmat önerisi → platform önerisi → atış irtifası/açısı
 1. Envanter Gezgini      : filtre, akıllı arama, detay kartı, ölçekli profil
 2. İstasyon Yükleme      : uçak seçimi, hardpoint yüklemesi, ağırlık kısıt kontrolü
 3. Menzil Simülatörü     : irtifa/hız/hedef koşullarına göre efektif menzil, harita
@@ -1827,6 +1828,299 @@ def tab_blueprint(df: pd.DataFrame) -> None:
 
 
 # ---------------------------------------------------------------------------
+# GÖREV AKIŞI — hedef → istenen etki → mühimmat → platform → atış profili
+# ---------------------------------------------------------------------------
+FT_PER_M = 3.28084
+FLOW_PRESET, FLOW_CUSTOM = "Hazır hedef (matristen)", "Özel hedef tanımla"
+# Platform zarfı: (servis tavanı ft, tipik atış hızı Mach). Açık kaynak yaklaşık değerler; atış hızı VARSAYIMDIR.
+PLATFORM_ENVELOPE = {
+    "F-16C Block 70": (50000, 0.9), "F-35A Lightning II": (50000, 0.9), "F-15E Strike Eagle": (50000, 0.9),
+    "Eurofighter Typhoon": (55000, 0.9), "Rafale": (50000, 0.9), "Su-35S": (55000, 0.9), "KAAN": (55000, 0.9),
+    "Bayraktar Kızılelma": (35000, 0.6), "Bayraktar Akıncı": (40000, 0.3), "Bayraktar TB2": (25000, 0.2),
+}
+FLOW_MIN_ALT_FT, FLOW_ALT_STEP_FT = 5000, 2500
+
+
+def _flow_step(number: int, title: str, note: str = "") -> None:
+    st.markdown(f'<div style="border-left:4px solid {GREEN};padding:.15rem 0 .15rem .7rem;margin:1.1rem 0 .5rem 0">'
+                f'<span style="font-family:monospace;color:{GREEN};font-size:1.15rem">ADIM {number} — {e(title)}</span>'
+                f'<div class="note">{e(note)}</div></div>', unsafe_allow_html=True)
+
+
+def flow_target_inputs(targets: pd.DataFrame) -> dict | None:
+    """Adım 1: hazır hedef ya da malzeme/kalınlık/derinlik/geometri ile özel hedef."""
+    mode = st.radio("Hedef kaynağı", [FLOW_PRESET, FLOW_CUSTOM], horizontal=True, key="f_mode",
+                    label_visibility="collapsed")
+    if mode == FLOW_PRESET:
+        descriptions = dict(zip(targets["Target_ID"], targets["Target_Description"]))
+        target_id = st.selectbox("Hedef", list(descriptions), key="f_target",
+                                 format_func=lambda t: f"{t} · {descriptions[t].partition(' - ')[0]}")
+        return we.get_target(target_id, targets)
+
+    c = st.columns(3)
+    target_class = c[0].selectbox("Hedef sınıfı", list(we.CLASS_DEFAULTS), key="f_class",
+                                  format_func=lambda k: TARGET_CATEGORY_TR.get(k, k))
+    mobility = c[1].selectbox("Hareketlilik", list(MOBILITY_TR), key="f_mob", format_func=lambda k: MOBILITY_TR[k])
+    passive = c[2].selectbox("Pasif savunma düzeyi", list(LEVEL_TR)[:4], key="f_passive",
+                             format_func=lambda k: LEVEL_TR[k])
+    g = st.columns(4)
+    length = g[0].number_input("Uzunluk (m)", 1.0, 2000.0, 20.0, 1.0, key="f_len")
+    width = g[1].number_input("Genişlik (m)", 1.0, 2000.0, 12.0, 1.0, key="f_wid")
+    cde = g[2].selectbox("Tali hasar hassasiyeti", list(we.CDE_RADIUS_LIMIT_M), key="f_cde0",
+                         format_func=lambda k: LEVEL_TR[k])
+    tst = g[3].checkbox("Zamana duyarlı hedef (TST)", key="f_tst0")
+    layers = []
+    if mobility == "Fixed":
+        materials = list(we.MATERIALS)
+        m = st.columns(4)
+        wall_mat = m[0].selectbox("Yapı malzemesi", materials, key="f_mat", format_func=lambda k: we.MATERIALS[k][0])
+        wall_t = m[1].number_input("Tavan / duvar kalınlığı (m)", 0.0, 20.0, 1.2 if target_class == "Hardened_Structure" else 0.0,
+                                   0.1, key="f_thick", help="Delinmesi gereken yapı elemanının kalınlığı. 0 = delme gerekmez.")
+        cover_mat = m[2].selectbox("Örtü malzemesi", materials, index=materials.index("Compacted_Soil"), key="f_cover",
+                                   format_func=lambda k: we.MATERIALS[k][0])
+        depth = m[3].number_input("Gömülme derinliği / örtü kalınlığı (m)", 0.0, 100.0, 0.0, 0.5, key="f_depth",
+                                  help="Yapının üzerindeki toprak/kaya örtüsü. 0 = yerüstü.")
+        layers = [(cover_mat, depth), (wall_mat, wall_t)]
+    else:
+        st.caption("Hareketli hedefte malzeme ve gömülme tanımlanmaz (beton delme gereksinimi yok).")
+    name = st.text_input("Hedef adı", "Kullanıcı tanımlı hedef", key="f_name")
+    try:
+        target = we.build_custom_target(name, target_class, length, width, layers, mobility, passive, tst, cde)
+    except (ValueError, KeyError) as exc:
+        st.error(f"Hedef tanımı geçersiz: {exc}")
+        return None
+    target["TST_Status"] = bool(tst)
+    if layers:
+        parts = " + ".join(f"{t:g} m {we.MATERIALS[mat][0]}" for mat, t in layers if t > 0) or "katman yok"
+        st.caption(f"Katmanlar (dıştan içe): {parts} → betonarme eşdeğeri **{target['Required_Concrete_Penetration_m']:g} m**. "
+                   "Eşdeğerlik Young delinebilirlik sayılarıyla hesaplanır; katsayılar yaklaşık ve teyit edilmemiştir.")
+    return target
+
+
+def flow_platform_table(spec: pd.Series, needed: float, threat: bool) -> pd.DataFrame:
+    """Adım 4: Modül 2 platformlarının seçilen mühimmat için istasyon uyumu ve gereken sorti."""
+    rows = []
+    for plat in PLATFORMS.values():
+        n_fit, n_max, why = jaws_station_fit(spec, plat)
+        sorties = math.ceil(needed / n_max) if n_max else float("nan")
+        rows.append({"Platform": plat.name, "Tür": plat.kind, "Uygun istasyon": n_fit, "Sorti başına adet": n_max,
+                     "Gereken sorti": sorties, "Düşük gözlenebilir": "Evet" if plat.low_observable else "Hayır",
+                     "Tavan (ft)": PLATFORM_ENVELOPE.get(plat.name, (40000, 0.9))[0], "Not": why or "uygun",
+                     "_lo": plat.low_observable})
+    table = pd.DataFrame(rows)
+    table["_rank"] = table["Gereken sorti"].fillna(1e9) - (0.5 * table["_lo"] if threat else 0.0)
+    table = table.sort_values(["_rank", "Sorti başına adet"], ascending=[True, False]).drop(columns=["_rank", "_lo"])
+    return table.reset_index(drop=True)
+
+
+def flow_release_scan(spec: pd.Series, result: pd.Series, target: dict, standoff: float, ceiling_ft: float,
+                      release_mach: float) -> tuple[pd.DataFrame, pd.Series, list[str]]:
+    """Adım 5: irtifa taraması → her irtifada menzil, çarpma açısı/hızı ve delme; önerilen satır ve gerekçeler."""
+    group = propulsion_group(spec["Itki_Sistemi"])
+    flight = group if group in ("free_fall", "glide") else "powered"
+    guided = result["Secilen_Gudum_Modu"] not in ("Unguided", "-")
+    p_req = float(target["Required_Concrete_Penetration_m"])
+    naval = target["Target_Class"] == "Naval"
+    rows = []
+    for alt_ft in range(FLOW_MIN_ALT_FT, int(ceiling_ft) + 1, FLOW_ALT_STEP_FT):
+        alt_m = alt_ft / FT_PER_M
+        rng = float("nan") if pd.isna(spec["Maksimum_Menzil_km"]) else effective_range(spec, alt_m, release_mach, 0.0)["eff_km"]
+        angle, speed = we.impact_conditions("free_fall" if flight == "glide" else flight, alt_m, release_mach,
+                                            spec["Maksimum_Hiz_Mach"], guided, target["Primary_Damage_Mechanism"], naval)
+        pen = we.penetration_at_impact(result["Tahmini_Delme_m"], spec["Maksimum_Hiz_Mach"], speed, angle)
+        rows.append({"İrtifa (ft)": alt_ft, "Menzil (km)": rng, "Çarpma açısı (°)": angle, "Çarpma hızı (m/s)": speed,
+                     "Delme (m)": pen, "Standoff": standoff <= 0 or (not pd.isna(rng) and rng >= standoff),
+                     "Delme yeterli": p_req <= 0 or pen >= p_req})
+    scan = pd.DataFrame(rows)
+    good = scan[scan["Standoff"] & scan["Delme yeterli"]]
+    why = []
+    if good.empty:
+        scan["_margin"] = scan["Delme (m)"] / max(p_req, 1e-6) + scan["Standoff"].astype(float)
+        pick = scan.sort_values("_margin", ascending=False).iloc[0]
+        scan = scan.drop(columns="_margin")
+        why.append("Hiçbir irtifa hem standoff hem delme koşulunu sağlamıyor; en yakın seçenek gösteriliyor.")
+    elif standoff > 0:
+        pick = good.iloc[-1]
+        why.append(f"Hava savunma tehdidi var: {standoff:.0f} km standoff'u sağlayan en yüksek irtifa seçildi "
+                   "(azami menzil payı).")
+    else:
+        pick = good.iloc[0]
+        why.append("Hava savunma tehdidi yok: koşulları sağlayan en düşük irtifa seçildi (kısa uçuş süresi; "
+                   "güdümsüz atışta dağılım irtifayla büyür).")
+    if flight == "powered":
+        why.append("İtkili mühimmat: çarpma açısı irtifadan bağımsız, terminal profil ile belirlenir "
+                   + ("(deniz yüzeyini yalayan yaklaşma)." if naval else "(terminal dalış)."))
+    elif guided:
+        why.append("Güdümlü mühimmat terminal manevrayla hedefin gerektirdiği açıya çıkar "
+                   f"(hedef mekanizması {MECHANISM_TR[target['Primary_Damage_Mechanism']].lower()}).")
+    else:
+        why.append("Güdümsüz mühimmat: çarpma açısı balistiktir; daha dik açı için daha yüksek irtifa gerekir.")
+    if p_req > 0:
+        why.append(f"Delme, çarpma hızı ve açının sinüsüyle ölçeklenir: {pick['Delme (m)']:.1f} m / gerekli {p_req:g} m.")
+    return scan, pick, why
+
+
+def flow_profile_figure(pick: pd.Series, distance_km: float) -> go.Figure:
+    """Şematik atış profili: atış noktası → hedef (düşey eksen abartılıdır)."""
+    alt_km = pick["İrtifa (ft)"] / FT_PER_M / 1000.0
+    angle = math.radians(max(float(pick["Çarpma açısı (°)"]), 1.0))
+    ctrl_y = 0.55 * alt_km
+    ctrl_x = max(distance_km - ctrl_y / math.tan(angle), 0.35 * distance_km)
+    t = np.linspace(0.0, 1.0, 60)
+    x = 2 * (1 - t) * t * ctrl_x + t ** 2 * distance_km
+    y = (1 - t) ** 2 * alt_km + 2 * (1 - t) * t * ctrl_y
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=x, y=y, mode="lines", line=dict(color=GREEN, width=2.5), hoverinfo="skip"))
+    fig.add_trace(go.Scatter(x=[0], y=[alt_km], mode="markers+text", text=[f"Atış · {pick['İrtifa (ft)']:,.0f} ft"],
+                             textposition="top right", marker=dict(size=11, color=CYAN, symbol="triangle-right"),
+                             textfont=dict(color=TEXT), hoverinfo="skip"))
+    fig.add_trace(go.Scatter(x=[distance_km], y=[0], mode="markers+text", textposition="top left",
+                             text=[f"Hedef · {pick['Çarpma açısı (°)']:.0f}° · {pick['Çarpma hızı (m/s)']:.0f} m/s"],
+                             marker=dict(size=13, color=RED, symbol="diamond"), textfont=dict(color=TEXT),
+                             hoverinfo="skip"))
+    style_fig(fig, 300)
+    fig.update_layout(showlegend=False, margin=dict(l=10, r=10, t=10, b=10),
+                      xaxis=dict(title="Atış noktasından yatay mesafe (km)", range=[-0.06 * distance_km, 1.1 * distance_km]),
+                      yaxis=dict(title="İrtifa (km)", range=[-0.08 * alt_km, 1.35 * alt_km]))
+    return fig
+
+
+def tab_flow(df: pd.DataFrame) -> None:
+    st.caption("GÖREV AKIŞI — hedef → istenen etki → mühimmat → platform → atış profili · tüm öneriler kalibre edilmemiş "
+               "açık kaynak modellerden gelir · eğitim/analiz amaçlıdır, operasyonel planlama için kullanılamaz")
+    if we is None:
+        st.error(f"Weaponeering motoru yüklenemedi (src/weaponeering_engine.py): {ENGINE_ERROR}")
+        return
+    targets, error = jaws_load_targets()
+    if targets is None:
+        st.error(f"Hedef matrisi yüklenemedi: {error}")
+        return
+    munitions = jaws_prepare(df)
+    specs = df.set_index("Muhimmat_Adi")
+
+    # ---------------------------------------------------------------- ADIM 1
+    _flow_step(1, "Hedef", "Hazır bir hedef seçin ya da malzeme, kalınlık, gömülme derinliği ve geometriyle tanımlayın.")
+    base_target = flow_target_inputs(targets)
+    if base_target is None:
+        return
+    st.markdown(jaws_target_card(base_target), unsafe_allow_html=True)
+
+    # ---------------------------------------------------------------- ADIM 2
+    _flow_step(2, "İstenen etki ve ortam", "Etki düzeyi kapsanacak alan oranını ve hedeflenen hasar olasılığını belirler.")
+    e1, e2 = st.columns([1.3, 1], gap="large")
+    with e1:
+        effect = st.radio("İstenen etki", list(we.DESIRED_EFFECTS), key="f_effect", index=2,
+                          format_func=lambda k: f"{we.DESIRED_EFFECTS[k][0]} — {we.DESIRED_EFFECTS[k][3]}")
+    with e2:
+        tier = st.selectbox("Hedef bölgesindeki hava savunma", list(we.AIR_DEFENSE_TIERS), key="f_tier",
+                            format_func=lambda k: f"{we.AIR_DEFENSE_TIERS[k].label} · {we.AIR_DEFENSE_TIERS[k].standoff_km:g} km")
+        weather = st.selectbox("Hava durumu", list(we.WEATHER_LABELS), key="f_weather",
+                               format_func=lambda k: we.WEATHER_LABELS[k])
+        o1, o2 = st.columns(2)
+        gnss = o1.checkbox("GNSS karıştırma", key="f_gnss")
+        laser = o2.checkbox("Lazer işaretleme var", value=True, key="f_laser")
+    target, desired = we.apply_desired_effect(base_target, effect)
+    scenario = we.Scenario(air_defense=tier, weather=weather, gnss_jamming=gnss, laser_designation=laser,
+                           desired_damage=desired)
+    standoff = scenario.required_standoff_km
+    st.caption(f"Kapsanacak yarıçap {base_target['Required_Lethal_Radius_m']:g} m → {target['Required_Lethal_Radius_m']:g} m · "
+               f"hedeflenen hasar olasılığı {desired:.2f} · gerekli standoff {standoff:g} km. Etki düzeyi oranları varsayımdır.")
+
+    # ---------------------------------------------------------------- ADIM 3
+    _flow_step(3, "Mühimmat önerisi", "Motor tüm envanteri değerlendirir; en uygun 5 mühimmat skor sırasıyla listelenir.")
+    full = we.calculate_weapon_effectiveness(target, scenario, munitions, include_eliminated=True)
+    full["Istasyon"] = ""
+    ok = full[full["Durum"] == we.STATUS_OK]
+    if ok.empty:
+        st.markdown('<div class="banner fail">BU HEDEF, ETKİ VE ORTAM İÇİN ENVANTERDE UYGUN MÜHİMMAT YOK</div>',
+                    unsafe_allow_html=True)
+        st.dataframe(we.elimination_summary(full), hide_index=True, width="content")
+        st.caption("Etki düzeyini düşürmeyi, hava savunma kademesini ya da hedef tanımını gözden geçirin.")
+        return
+    top = ok.head(JAWS_TOP_N)
+    st.dataframe(jaws_matrix(top, desired).drop(columns=["İstasyon uyumu"]), width="stretch", hide_index=True,
+                 column_config={"Skor": st.column_config.ProgressColumn("Skor", min_value=0, max_value=100, format="%.1f"),
+                                "PK": st.column_config.NumberColumn("PK", format="%.2f"),
+                                "Ph": st.column_config.NumberColumn("Ph", format="%.2f"),
+                                "Pd": st.column_config.NumberColumn("Pd", format="%.2f")})
+    rank = dict(zip(ok["Muhimmat_Adi"], ok["Sira"].astype(int)))
+    pick_name = st.selectbox("Kullanılacak mühimmat (varsayılan: 1. öneri)", ok["Muhimmat_Adi"].tolist(), key="f_munition",
+                             format_func=lambda n: f"#{rank[n]} · {n}")
+    result = ok[ok["Muhimmat_Adi"] == pick_name].iloc[0]
+    spec = specs.loc[pick_name]
+    needed = float(result["Gerekli_Atis_Sayisi"])
+    k = st.columns(4)
+    k[0].markdown(kpi("Tek atış PK", f"{result['PK_Tek_Atis']:.2f}"), unsafe_allow_html=True)
+    k[1].markdown(kpi(f"Gereken mühimmat (P_D {desired:.2f})", "99+" if needed >= we.MAX_WEAPONS_REPORTED else f"{needed:.0f}"),
+                  unsafe_allow_html=True)
+    k[2].markdown(kpi("Güdüm modu", result["Secilen_Gudum_Modu"]), unsafe_allow_html=True)
+    k[3].markdown(kpi("Beklenen hasar", result["Beklenen_BDA"]), unsafe_allow_html=True)
+
+    # ---------------------------------------------------------------- ADIM 4
+    _flow_step(4, "Platform önerisi", "Seçilen mühimmatı taşıyabilen platformlar; istasyon limitleri Modül 2'den gelir.")
+    table = flow_platform_table(spec.rename(pick_name), needed, standoff > 0)
+    shown = table.copy()
+    shown["Gereken sorti"] = shown["Gereken sorti"].map(lambda v: "-" if pd.isna(v) else f"{v:.0f}")
+    st.dataframe(shown, width="stretch", hide_index=True)
+    fitting = table[table["Sorti başına adet"] > 0]["Platform"].tolist()
+    st.caption(f"Veri setindeki entegrasyon kaydı: {spec['Entegre_Platformlar'].replace(',', ', ')}. Sıralama: en az sorti"
+               + (", hava savunma tehdidinde düşük gözlenebilir platform öncelikli." if standoff > 0 else "."))
+    if fitting:
+        plat_name = st.selectbox("Platform (varsayılan: 1. öneri)", fitting, key="f_platform")
+        ceiling, release_mach = PLATFORM_ENVELOPE.get(plat_name, (40000, 0.9))
+        row_p = table[table["Platform"] == plat_name].iloc[0]
+        plat_note = f"{plat_name} ({row_p['Sorti başına adet']:.0f} adet/sorti, {row_p['Gereken sorti']:.0f} sorti)"
+    else:
+        st.markdown('<div class="warnline">▲ Modül 2 platformlarından hiçbiri bu mühimmatı taşıyamıyor ya da '
+                    'entegrasyon kaydı yok. Atış profili genel bir jet zarfıyla (40.000 ft, Mach 0.9) hesaplanır.</div>',
+                    unsafe_allow_html=True)
+        plat_name, ceiling, release_mach, plat_note = "Genel platform", 40000, 0.9, "no listed platform"
+
+    # ---------------------------------------------------------------- ADIM 5
+    _flow_step(5, "Atış profili önerisi", "Hangi irtifadan, hangi çarpma açısıyla: irtifa taraması ve seçim gerekçesi.")
+    scan, pick, why = flow_release_scan(spec.rename(pick_name), result, target, standoff, ceiling, release_mach)
+    p_req = float(target["Required_Concrete_Penetration_m"])
+    r = st.columns(5)
+    r[0].markdown(kpi("Atış irtifası", f"{pick['İrtifa (ft)']:,.0f} ft"), unsafe_allow_html=True)
+    r[1].markdown(kpi("Atış hızı", f"Mach {release_mach:.1f}"), unsafe_allow_html=True)
+    r[2].markdown(kpi("Çarpma açısı (yataydan)", f"{pick['Çarpma açısı (°)']:.0f}°"), unsafe_allow_html=True)
+    r[3].markdown(kpi("Çarpma hızı", f"{pick['Çarpma hızı (m/s)']:.0f} m/s"), unsafe_allow_html=True)
+    r[4].markdown(kpi("Bu irtifada menzil", fmt(pick["Menzil (km)"], "km")), unsafe_allow_html=True)
+    p1, p2 = st.columns([1.5, 1], gap="large")
+    reach = pick["Menzil (km)"]
+    distance = standoff if standoff > 0 else (we.DEFAULT_ENGAGEMENT_KM if pd.isna(reach) else min(reach, we.DEFAULT_ENGAGEMENT_KM))
+    with p1:
+        st.plotly_chart(flow_profile_figure(pick, max(distance, 0.5)), width="stretch", config={"displayModeBar": False})
+        st.caption("Şematik profil: düşey eksen abartılıdır, eğri gerçek yörünge değildir; açı ve hız değerleri "
+                   "sürüklemesiz yaklaşımdan gelir.")
+    with p2:
+        for line in why:
+            st.markdown(f"- {line}")
+        ok_all = bool(pick["Standoff"] and pick["Delme yeterli"])
+        st.markdown(f'<div class="banner {"ok" if ok_all else "fail"}">'
+                    f'{"PROFİL KOŞULLARI SAĞLIYOR" if ok_all else "PROFİL KOŞULLARI SAĞLAMIYOR"}</div>',
+                    unsafe_allow_html=True)
+    with st.expander("İrtifa taraması (tüm seçenekler)"):
+        view = scan.copy()
+        view["Standoff"] = view["Standoff"].map({True: "✓", False: "✗"})
+        view["Delme yeterli"] = view["Delme yeterli"].map({True: "✓", False: "✗"})
+        st.dataframe(view.style.format({"İrtifa (ft)": "{:,.0f}", "Menzil (km)": "{:.0f}", "Çarpma açısı (°)": "{:.0f}",
+                                        "Çarpma hızı (m/s)": "{:.0f}", "Delme (m)": "{:.2f}"}, na_rep="NA"),
+                     hide_index=True, width="stretch")
+        st.caption(f"Platform tavanı {ceiling:,} ft, atış hızı Mach {release_mach:.1f} (yaklaşık/varsayım). "
+                   f"Gerekli delme {p_req:g} m, gerekli standoff {standoff:g} km.")
+
+    st.markdown("#### Görev özeti")
+    summary = jaws_engagement_summary(target, result, scenario, desired, plat_note)
+    release = (f"RELEASE: {pick['İrtifa (ft)']:,.0f} FT, MACH {release_mach:.1f}.  IMPACT: {pick['Çarpma açısı (°)']:.0f} DEG, "
+               f"{pick['Çarpma hızı (m/s)']:.0f} M/S.  EFFECT: {we.DESIRED_EFFECTS[effect][0].upper()}.")
+    lines = summary.split("\n")
+    st.code("\n".join(lines[:-1] + [release, lines[-1]]), language=None)
+    st.caption("Ayrıntı için: ⑤ Doktriner Weaponeering (eleme nedenleri, duyarlılık), ② İstasyon Yükleme (yükleme planı), "
+               "⑥ Teknik Şematik (çizimler).")
+
+
+# ---------------------------------------------------------------------------
 # Ana akış
 # ---------------------------------------------------------------------------
 def main() -> None:
@@ -1869,9 +2163,11 @@ def main() -> None:
     k[5].markdown(kpi("Hedef tipi", n_targets), unsafe_allow_html=True)
     st.write("")
 
-    t1, t2, t3, t4, t5, t6 = st.tabs(["① Envanter Gezgini", "② İstasyon Yükleme", "③ Menzil Simülatörü",
-                                      "④ Karşılaştırma Matrisi", "⑤ Doktriner Weaponeering ve CDE",
-                                      "⑥ Teknik Şematik ve Profil"])
+    t0, t1, t2, t3, t4, t5, t6 = st.tabs(["◎ Görev Akışı", "① Envanter Gezgini", "② İstasyon Yükleme",
+                                          "③ Menzil Simülatörü", "④ Karşılaştırma Matrisi",
+                                          "⑤ Doktriner Weaponeering ve CDE", "⑥ Teknik Şematik ve Profil"])
+    with t0:
+        tab_flow(df)
     with t1:
         tab_inventory(df)
     with t2:

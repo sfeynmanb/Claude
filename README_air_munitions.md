@@ -78,3 +78,16 @@ yarıçapı. Tüm görünüşler eşit eksen ölçeğindedir. Uzunluk, çap, kan
 yarıçaplar ölçeklidir; burun/kuyruk profili, kanatçık biçimi, uçak silüeti ve istasyonların boyuna konumu
 kategoriye göre seçilen **temsilî** şablonlardır. Hedef sembolleri MIL-STD-2525D / APP-6'dan esinlenen
 sadeleştirilmiş çizimlerdir; standartla birebir uyumlu değildir.
+
+## Görev Akışı (tek akış)
+`app_visual_jaws.py` açılışta **◎ Görev Akışı** sekmesiyle gelir; beş adım sırayla ilerler:
+1. **Hedef:** matristen hazır hedef ya da özel tanım (sınıf, malzeme, tavan/duvar kalınlığı, örtü malzemesi ve
+   gömülme derinliği, uzunluk × genişlik, hareketlilik, pasif savunma).
+2. **İstenen etki ve ortam:** baskılama / kısmi yıkım / tam yıkım / alana taarruz; hava savunma, hava durumu.
+3. **Mühimmat önerisi:** en uygun 5 mühimmat, gereken adet.
+4. **Platform önerisi:** Modül 2 istasyon limitlerine göre sorti başına adet ve gereken sorti.
+5. **Atış profili:** irtifa taraması → önerilen irtifa, çarpma açısı ve hızı, gerekçe.
+
+Motor karşılıkları: `build_custom_target`, `concrete_equivalent_m`, `apply_desired_effect`, `impact_conditions`,
+`penetration_at_impact`. Malzeme delinebilirlik sayıları, etki düzeyi oranları, platform tavanı/atış hızı ve
+sürüklemesiz çarpma hesabı **yaklaşık/varsayımdır**.

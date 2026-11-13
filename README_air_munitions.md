@@ -67,3 +67,14 @@ başındaki "MODEL PARAMETRELERİ" bölümünden ayarlanır.
 değerler ve model katsayıları temsilîdir. Hedefin aktif savunması, fünye/isabet açısı, taşıyıcı bekası ve
 tali hasar modellenmez. Çıktılar göreli sıralama ve pasif savunma duyarlılığı içindir; operasyonel
 planlama veya hedefleme için kullanılamaz.
+
+## Teknik çizim motoru ve görsel sürüm
+```bash
+streamlit run app_visual_jaws.py     # 6 modül: önceki 5 + Blueprint Viewer; Modül 2'de ölçekli yükleme planı
+```
+`src/blueprint_engine.py` fotoğraf kullanmadan, veri setindeki ölçülerden (uzunluk, çap, kanat açıklığı) Plotly
+vektör çizimleri üretir: mühimmatın yan/üst/ön görünüşü, platformun üstten yükleme planı, hedef sembolü ve etki
+yarıçapı. Tüm görünüşler eşit eksen ölçeğindedir. Uzunluk, çap, kanat açıklığı, platform dış ölçüleri ve
+yarıçaplar ölçeklidir; burun/kuyruk profili, kanatçık biçimi, uçak silüeti ve istasyonların boyuna konumu
+kategoriye göre seçilen **temsilî** şablonlardır. Hedef sembolleri MIL-STD-2525D / APP-6'dan esinlenen
+sadeleştirilmiş çizimlerdir; standartla birebir uyumlu değildir.

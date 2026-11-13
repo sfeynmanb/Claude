@@ -24,7 +24,8 @@ REQUIRED_COLUMNS = [
     "Required_Concrete_Penetration_m", "Target_Mobility_Class", "TST_Status",
     "Radar_Cross_Section_m2", "Required_Lethal_Radius_m", "Collateral_Damage_Tier",
 ]
-EXTRA_COLUMNS = ["Passive_Defense_Level", "Thermal_Signature", "Hardness_Basis", "Data_Confidence"]
+EXTRA_COLUMNS = ["Passive_Defense_Level", "Thermal_Signature", "Target_Class", "Primary_Damage_Mechanism",
+                 "Hardness_Basis", "Data_Confidence"]
 COLUMNS = REQUIRED_COLUMNS + EXTRA_COLUMNS
 
 EXTENT = ("Point", "Area")
@@ -35,6 +36,10 @@ CDE_TIERS = ("Low", "Medium", "High")
 PASSIVE_LEVELS = ("Low", "Medium", "High", "Extreme")
 THERMAL_LEVELS = ("Low", "Medium", "High")
 CONFIDENCE_LEVELS = ("Kaynakli", "Turetilmis", "Varsayim")
+# Motorun kural tablolarının anahtarı olan hedef sınıfı ve hangi etki modelinin geçerli olduğunu belirleyen mekanizma
+TARGET_CLASSES = ("Hardened_Structure", "Soft_Structure", "Infrastructure", "Soft_Vehicle", "Armored_Vehicle",
+                  "Radar/Air_Defense", "Naval", "Personnel")
+DAMAGE_MECHANISMS = ("Blast", "Fragment", "Direct_Hit", "Penetration", "Crater")
 ID_PATTERN = re.compile(r"^TGT-[A-Z0-9]{2,4}-\d{2}$")
 NUMERIC_RANGES = {
     "UFC_Hardness_Rating_psi": (0.5, 1000.0),
@@ -50,14 +55,14 @@ def read_matrix(path: str = DEFAULT_PATH) -> pd.DataFrame:
     return pd.read_csv(path, sep=";", dtype=str, keep_default_na=False, encoding="utf-8")
 
 
-def validate(df: pd.DataFrame) -> tuple[list[str], list[str]]:
+def validate(df: pd.DataFrame, min_rows: int = MIN_TARGETS) -> tuple[list[str], list[str]]:
     """(hatalar, uyarılar) döndürür."""
     errors: list[str] = []
     warnings: list[str] = []
     if list(df.columns) != COLUMNS:
         return [f"Sütunlar beklenenle aynı değil.\n  beklenen: {COLUMNS}\n  bulunan : {list(df.columns)}"], warnings
-    if len(df) < MIN_TARGETS:
-        errors.append(f"En az {MIN_TARGETS} hedef gerekli; bulunan {len(df)}")
+    if len(df) < min_rows:
+        errors.append(f"En az {min_rows} hedef gerekli; bulunan {len(df)}")
     duplicated = df["Target_ID"][df["Target_ID"].duplicated()].tolist()
     if duplicated:
         errors.append(f"Mükerrer Target_ID: {duplicated}")
@@ -66,6 +71,7 @@ def validate(df: pd.DataFrame) -> tuple[list[str], list[str]]:
         "Target_Mobility_Class": MOBILITY_CLASSES, "TST_Status": ("True", "False"),
         "Collateral_Damage_Tier": CDE_TIERS, "Passive_Defense_Level": PASSIVE_LEVELS,
         "Thermal_Signature": THERMAL_LEVELS, "Data_Confidence": CONFIDENCE_LEVELS,
+        "Target_Class": TARGET_CLASSES, "Primary_Damage_Mechanism": DAMAGE_MECHANISMS,
     }
     for line, row in enumerate(df.to_dict("records"), start=2):
         tid = row["Target_ID"]
@@ -109,6 +115,8 @@ def validate(df: pd.DataFrame) -> tuple[list[str], list[str]]:
                 errors.append(f"{where}: kategori Mobile iken Target_Mobility_Class Fixed olamaz")
             if penetration and movement != "Fixed":
                 errors.append(f"{where}: beton delme gereksinimi yalnız sabit yapılar için anlamlı")
+            if row["Target_Class"] == "Hardened_Structure" and not penetration:
+                warnings.append(f"{where}: Hardened_Structure sınıfında beton delme gereksinimi 0")
             if row["TST_Status"] == "True" and movement == "Fixed":
                 warnings.append(f"{where}: sabit tesis TST olarak işaretlenmiş - gerekçesini doğrulayın")
             if movement == "Mobile" and mobility == "Fast" and row["TST_Status"] == "False":

@@ -15,9 +15,9 @@ Modüller
 2. İstasyon Yükleme      : uçak seçimi, hardpoint yüklemesi, ağırlık kısıt kontrolü
 3. Menzil Simülatörü     : irtifa/hız/hedef koşullarına göre efektif menzil, harita
 4. Karşılaştırma Matrisi : 2-4 mühimmat için radar grafiği ve tablo
-5. Weaponeering (JAWS)   : hedef tipi + hava savunma/ortam kısıtları → en uygun 5
-                           mühimmat, tavsiye matrisi, patlama etki yarıçapı ve
-                           pasif savunma duyarlılık analizi
+5. Doktriner Weaponeering: hedef + hava savunma şemsiyesi + platform istasyon limitleri →
+   ve CDE                  en uygun 5 mühimmat (Pk = Ph × Pd), ölümcül yarıçap ve tali hasar
+                           halkası, angajman özeti, pasif savunma duyarlılık analizi
 
 Bağımlılıklar (Modül 5)
 -----------------------
@@ -1134,22 +1134,27 @@ def tab_compare(df: pd.DataFrame) -> None:
 
 
 # ---------------------------------------------------------------------------
-# MODÜL 5 — Operasyonel Weaponeering ve Hedef Analizi (JAWS)
+# MODÜL 5 — Doktriner Weaponeering ve CDE (Collateral Damage Estimation)
 # ---------------------------------------------------------------------------
 JAWS_TOP_N = 5
 JAWS_ALL = "Tümü"
 JAWS_IMPACT_SAMPLES = 250
 TARGET_CATEGORY_TR = {
     "Hardened_Structure": "Sertleştirilmiş yapı", "Soft_Structure": "Yumuşak yapı",
-    "Soft_Vehicle": "Zırhsız araç", "Armored_Vehicle": "Zırhlı araç",
+    "Infrastructure": "Altyapı", "Soft_Vehicle": "Zırhsız araç", "Armored_Vehicle": "Zırhlı araç",
     "Radar/Air_Defense": "Radar / hava savunma", "Naval": "Deniz hedefi", "Personnel": "Personel",
 }
-MOBILITY_TR = {"Fixed": "Sabit", "Slow_Moving": "Yavaş hareketli", "Fast_Maneuvering": "Hızlı manevralı"}
+MOBILITY_TR = {"Fixed": "Sabit", "Slow": "Yavaş hareketli", "Fast": "Hızlı manevralı"}
+MECHANISM_TR = {"Blast": "Patlama basıncı", "Fragment": "Parçacık", "Direct_Hit": "Doğrudan isabet",
+                "Penetration": "Delme + iç patlama", "Crater": "Krater"}
+CONFIDENCE_TR = {"Kaynakli": "kaynaklı", "Turetilmis": "türetilmiş", "Varsayim": "varsayım"}
+JAWS_MATRIX_TIER = "Hedef matrisindeki"
 LEVEL_TR = {"Low": "Düşük", "Medium": "Orta", "High": "Yüksek", "Extreme": "Çok yüksek"}
 STATUS_TR = {"UYGUN": "Uygun", "ELENDI": "Elendi", "VERI_YETERSIZ": "Veri yetersiz"}
 FACTOR_LABELS = [
     ("P_CEP", "CEP isabeti"), ("C_Hareketlilik", "Hareketlilik"), ("C_Iz", "İz (RCS / termal)"),
-    ("C_Ortam", "Ortam (hava)"), ("C_Gizleme", "Gizleme / aldatma"), ("Kapsama_Orani", "Alan kapsama"),
+    ("C_Ortam", "Ortam (hava)"), ("C_Gizleme", "Gizleme / aldatma"), ("C_TST", "TST uçuş süresi"),
+    ("Kapsama_Orani", "Alan kapsama"),
     ("Harp_Basligi_Uyumu", "Harp başlığı uyumu"), ("Delme_Yeterliligi", "Delme yeterliliği"),
     ("Guvenilirlik", "Güvenilirlik"),
 ]
@@ -1170,10 +1175,11 @@ def jaws_prepare(df: pd.DataFrame) -> pd.DataFrame:
 
 @st.cache_data(show_spinner=False)
 def jaws_sweeps(munitions: pd.DataFrame, targets: pd.DataFrame, target_id: str,
-                scenario_key: tuple) -> tuple[pd.DataFrame, pd.DataFrame]:
+                scenario_key: tuple) -> tuple[pd.DataFrame, pd.DataFrame | None]:
     scenario = we.Scenario(*scenario_key)
     passive = we.sensitivity_passive_defense(target_id, scenario, munitions, targets)
-    hardening = we.sensitivity_hardening(target_id, None, scenario, munitions, targets)
+    hardened = we.get_target(target_id, targets)["Target_Class"] == "Hardened_Structure"
+    hardening = we.sensitivity_hardening(target_id, None, scenario, munitions, targets) if hardened else None
     return passive, hardening
 
 
@@ -1197,10 +1203,16 @@ def _kv_rows(pairs: list[tuple[str, str]]) -> str:
 
 def jaws_target_card(target: dict) -> str:
     title, _, detail = target["Target_Description"].partition(" - ")
-    pen = target["Required_Penetration_m_Concrete"]
+    pen = target["Required_Concrete_Penetration_m"]
     rows = _kv_rows([
-        ("Kategori", TARGET_CATEGORY_TR.get(target["Target_Category"], target["Target_Category"])),
-        ("Hareketlilik", MOBILITY_TR[target["Mobility_Status"]]),
+        ("Kategori", target["Target_Category"]),
+        ("Sınıf", TARGET_CATEGORY_TR.get(target["Target_Class"], target["Target_Class"])),
+        ("Hasar mekanizması", MECHANISM_TR[target["Primary_Damage_Mechanism"]]),
+        ("Sertlik (aşırı basınç)", f"{target['UFC_Hardness_Rating_psi']:g} psi · "
+                                   f"{CONFIDENCE_TR[target['Data_Confidence']]}"),
+        ("Hareketlilik", MOBILITY_TR[target["Target_Mobility_Class"]]),
+        ("Zamana duyarlı (TST)", "Evet" if target["TST_Status"] else "Hayır"),
+        ("Tali hasar hassasiyeti", LEVEL_TR[target["Collateral_Damage_Tier"]]),
         ("Pasif savunma", LEVEL_TR[target["Passive_Defense_Level"]]),
         ("Gerekli delme", f"{pen:g} m beton" if pen > 0 else "gerekmez"),
         ("Gerekli etki yarıçapı", f"{target['Required_Lethal_Radius_m']:g} m"),
@@ -1209,6 +1221,61 @@ def jaws_target_card(target: dict) -> str:
     ])
     return (f'<div class="card"><h3 style="font-size:1.05rem">{e(title)}</h3>'
             f'<div class="meta">{e(target["Target_ID"])}{" · " + e(detail) if detail else ""}</div>{rows}</div>')
+
+
+def jaws_station_fit(row: pd.Series, plat: Platform) -> tuple[int, int, str]:
+    """Mühimmatın seçili platformun (Modül 2) istasyonlarına uyumu.
+
+    Dönüş: (taşıyabilen istasyon sayısı, azami yük sınırıyla taşınabilecek adet, uyumsuzluk nedeni).
+    """
+    if not integrated(row, plat):
+        return 0, 0, "entegrasyon kaydı yok"
+    mass = row["Toplam_Kutle_kg"]
+    if pd.isna(mass):
+        return 0, 0, "kütle verisi yok"
+    fits = 0
+    for stn in plat.stations:
+        if mass > stn.max_kg:
+            continue
+        if stn.kind == "internal":
+            too_long = stn.max_len_m and not pd.isna(row["Uzunluk_m"]) and row["Uzunluk_m"] > stn.max_len_m
+            too_wide = stn.max_dia_mm and not pd.isna(row["Cap_mm"]) and row["Cap_mm"] > stn.max_dia_mm
+            if too_long or too_wide:
+                continue
+        fits += 1
+    if not fits:
+        return 0, 0, f"hiçbir istasyon {mass:.0f} kg taşıyamıyor"
+    return fits, int(min(fits, plat.max_payload_kg // mass)), ""
+
+
+def jaws_engagement_summary(target: dict, row: pd.Series, scenario, desired: float, plat_note: str) -> str:
+    """STANAG biçimine benzer kısa angajman özeti (resmî bir mesaj formatı değildir)."""
+    standoff = scenario.required_standoff_km
+    weapons = row["Gerekli_Atis_Sayisi"]
+    count = "99+" if weapons >= we.MAX_WEAPONS_REPORTED else f"{weapons:.0f}"
+    tier = scenario.cde_tier or target["Collateral_Damage_Tier"]
+    limit = we.CDE_RADIUS_LIMIT_M[tier]
+    cde = "NO LIMIT" if math.isinf(limit) else ("WITHIN LIMIT" if row["Tali_Hasar_Yaricapi_m"] <= limit else "EXCEEDS LIMIT")
+    if standoff > 0:
+        clearance = f"YES (+{row['Standoff_Payi_km']:.0f} KM MARGIN OVER {standoff:.0f} KM)"
+    else:
+        clearance = "NOT REQUIRED"
+    if target["TST_Status"]:
+        late = row["Ucus_Suresi_s"] > scenario.tst_window_s
+        tst = f"YES - TOF {row['Ucus_Suresi_s']:.0f} S VS WINDOW {scenario.tst_window_s:.0f} S ({'LATE' if late else 'IN TIME'})"
+    else:
+        tst = "NO"
+    name = target["Target_Description"].partition(" - ")[0].upper()
+    return "\n".join([
+        f"TARGET: {target['Target_ID']} {name} ({target['Target_Category'].upper()}).",
+        f"WEAPON: {row['Muhimmat_Adi'].upper()} ({row['Harp_Basligi_Tipi'].upper()}, {row['Harp_Basligi_Etkin_kg']:.0f} KG WARHEAD).",
+        f"TERMINAL: {row['Secilen_Gudum_Modu'].upper()}.  PLATFORM: {plat_note.upper()}.",
+        f"PH {row['Ph']:.2f} x PD {row['Pd']:.2f} -> PK {row['PK_Tek_Atis']:.2f}.  "
+        f"WEAPONS FOR PD {desired:.2f}: {count}.  EXPECTED BDA: {row['Beklenen_BDA']}.",
+        f"STANDOFF CLEARANCE: {clearance}.  TST: {tst}.",
+        f"CDE TIER {tier.upper()}: 1 PSI RADIUS {row['Tali_Hasar_Yaricapi_m']:.0f} M - {cde}.",
+        "CAVEAT: UNCALIBRATED OPEN-SOURCE MODEL. NOT A CDE CALL. NOT FOR OPERATIONAL USE.",
+    ])
 
 
 def _circle(radius: float, n: int = 181) -> tuple[np.ndarray, np.ndarray]:
@@ -1246,7 +1313,10 @@ def jaws_matrix(top: pd.DataFrame, desired: float) -> pd.DataFrame:
         "Ülke": top["Mensei_Ulke"],
         "Taşıyıcı": top["Tasiyici_Sinifi"],
         "Skor": top["Uygunluk_Skoru"],
+        "Ph": top["Ph"],
+        "Pd": top["Pd"],
         "PK": top["PK_Tek_Atis"],
+        "BDA": top["Beklenen_BDA"],
         f"Atış (P_D={desired:.2f})": ["99+" if n >= we.MAX_WEAPONS_REPORTED else f"{n:.0f}"
                                       for n in top["Gerekli_Atis_Sayisi"]],
         "Güdüm modu": top["Secilen_Gudum_Modu"],
@@ -1254,6 +1324,9 @@ def jaws_matrix(top: pd.DataFrame, desired: float) -> pd.DataFrame:
                                        zip(top["Olumcul_Yaricap_m"], top["Gerekli_Yaricap_m"])],
         "Delme / gerekli (m)": [f"{a:.1f} / {b:g}" if b > 0 else "gerekmez" for a, b in
                                 zip(top["Tahmini_Delme_m"], top["Gerekli_Delme_m"])],
+        "Tali hasar (m)": [num(v) for v in top["Tali_Hasar_Yaricapi_m"]],
+        "Uçuş (s)": [num(v) for v in top["Ucus_Suresi_s"]],
+        "İstasyon uyumu": top["Istasyon"].replace("", "-"),
         "Menzil (km)": [num(v) for v in top["Maksimum_Menzil_km"]],
         "Standoff payı (km)": [num(v, "{:+.0f}") for v in top["Standoff_Payi_km"]],
         "Entegre platformlar": top["Entegre_Platformlar"].str.replace(",", ", "),
@@ -1267,13 +1340,23 @@ def jaws_blast_figure(row: pd.Series, target: dict) -> go.Figure:
     r_req = float(target["Required_Lethal_Radius_m"])
     cep = float(row["CEP_Etkin_m"])
     allowed = float(row["Izinli_Iska_m"])
+    collateral = float(row["Tali_Hasar_Yaricapi_m"])
+    blast = float(row["Patlama_Yaricapi_m"])
     big = max(r_w, r_req)
-    span = 1.25 * max(big, min(1.6 * cep, 8.0 * big))
+    span = 1.12 * max(big, collateral, min(1.6 * cep, 8.0 * big))
     rng = np.random.default_rng(7)
     pts = rng.normal(0.0, cep / math.sqrt(2.0 * math.log(2.0)), size=(JAWS_IMPACT_SAMPLES, 2))
     inside = np.hypot(pts[:, 0], pts[:, 1]) <= allowed
 
     fig = go.Figure()
+    x, y = _circle(collateral)
+    fig.add_trace(go.Scatter(x=x, y=y, mode="lines", fill="toself", fillcolor="rgba(77,208,225,.06)",
+                             line=dict(color=CYAN, width=1.5, dash="longdash"),
+                             name=f"Tali hasar halkası (1 psi) · {collateral:.0f} m", hoverinfo="name"))
+    x, y = _circle(blast)
+    fig.add_trace(go.Scatter(x=x, y=y, mode="lines", line=dict(color=PINK, width=1.5),
+                             name=f"Sertlik basıncı ({row['Sertlik_psi']:g} psi) yarıçapı · {blast:.1f} m",
+                             hoverinfo="name"))
     x, y = _circle(r_w)
     fig.add_trace(go.Scatter(x=x, y=y, mode="lines", fill="toself", fillcolor="rgba(255,59,59,.20)",
                              line=dict(color=RED, width=2), name=f"Ölümcül yarıçap · {r_w:.1f} m",
@@ -1337,7 +1420,7 @@ def jaws_passive_figure(sweep: pd.DataFrame) -> go.Figure:
 
 
 def jaws_hardening_figure(sweep: pd.DataFrame, current: float) -> go.Figure:
-    col = "Required_Penetration_m_Concrete"
+    col = "Required_Concrete_Penetration_m"
     fig = go.Figure(go.Scatter(
         x=sweep[col], y=sweep["Etkili_Muhimmat_Sayisi"], mode="lines+markers",
         line=dict(color=GREEN, width=2), marker=dict(size=8, color=GREEN, line=dict(color=BG, width=2)),
@@ -1357,9 +1440,16 @@ def jaws_hardening_figure(sweep: pd.DataFrame, current: float) -> go.Figure:
 
 def jaws_model_notes() -> None:
     st.markdown(
-        "**Bu modül JMEM/JAWS verisi içermez.** Sözde-PK; açık literatürdeki genel ölçekleme yasaları ve "
-        "temsilî katsayılarla hesaplanır, kalibre edilmemiştir. Çıktı, mühimmatları birbirine göre sıralamak "
-        "ve pasif savunma önlemlerinin göreli etkisini görmek içindir.\n\n"
+        "**Bu modül JMEM/JWS verisi ve UFC 3-340-01 (dağıtımı kısıtlı) içermez.** Pk; açık literatürdeki "
+        "bağıntılar ve temsilî katsayılarla hesaplanır, kalibre edilmemiştir. Çıktı, mühimmatları birbirine göre "
+        "sıralamak ve pasif savunma önlemlerinin göreli etkisini görmek içindir.\n\n"
+        "- **Patlama:** Kinney & Graham (1985) tepe aşırı basınç bağıntısı, `Z = R / W^(1/3)`; TNT eşdeğeri = "
+        "harp başlığı × dolgu oranı × Fano kılıf düzeltmesi × 1.8 (yer yüzeyi). Yalnız hasar mekanizması "
+        "\"patlama basıncı\" olan hedeflerde etki yarıçapını belirler; diğerlerinde yalnız raporlanır\n"
+        "- **Pk:** `Ph × Pd × güvenilirlik`; `Pd = kapsama × P(imha|isabet) × delme yeterliliği`\n"
+        "- **TST:** uçuş süresi pencereyi aşarsa `Ph × pencere / uçuş süresi` (veri bağı varsa en az 0.8)\n"
+        "- **Tali hasar:** 1 psi yarıçapı düzey sınırını (Orta 200 m, Yüksek 75 m; varsayım) aşarsa skor düşer\n"
+        "- Hedef sertlik değerlerinin çoğu varsayım ya da türetilmiştir: `data/targets/target_matrix_sources.md`\n"
         "- **Ölümcül yarıçap:** `R = K · k_tip · c_koruma · W^(1/3)` (küp-kök patlama ölçeklemesi)\n"
         "- **Alan kapsama:** `min(1, (R / R_gerekli)²)`\n"
         "- **İsabet:** `1 − 0.5^((d/CEP)²)` × hareketlilik × iz (RCS/termal) × ortam × gizleme; "
@@ -1367,7 +1457,8 @@ def jaws_model_notes() -> None:
         "- **Beton delme:** kinetik deliciler için Young (1997) biçiminde sadeleştirilmiş denklem "
         "`D = C · (W/A)^0.7 · (V − 30.5)`; şekilli imla için `n × imla çapı`\n"
         f"- **PK:** `min({we.PK_CAP}, isabet × kapsama × P(imha|isabet) × delme × güvenilirlik {we.RELIABILITY})`\n"
-        "- **Skor:** `100 × PK × orantılılık × standoff payı × rol uyumu`; eşit skorda daha hafif mühimmat öndedir\n"
+        "- **Skor:** `100 × PK × orantılılık × standoff payı × rol uyumu × tali hasar`; eşit skorda daha hafif "
+        "mühimmat öndedir\n"
         "- **Gerekli atış:** `n = ⌈ln(1 − P_D) / ln(1 − PK)⌉` (bağımsız atış varsayımı)\n\n"
         "**Zorunlu kurallar:** sertleştirilmiş yapıda yalnız "
         f"{' / '.join(we.HARD_TARGET_WARHEADS)} harp başlığı; hızlı manevralı hedefte terminal arayıcı şart; "
@@ -1388,8 +1479,8 @@ def jaws_model_notes() -> None:
 
 
 def tab_jaws(df: pd.DataFrame) -> None:
-    st.caption("MODÜL 5 — Operasyonel Weaponeering ve Hedef Analizi (JAWS benzeri, kural tabanlı karar desteği) · "
-               "sözde-PK kalibre edilmemiştir · operasyonel planlama için kullanılamaz")
+    st.caption("MODÜL 5 — Doktriner Weaponeering ve CDE · açık kaynak alt modeller (Kinney-Graham patlama, Young delme) · "
+               "Pk kalibre edilmemiştir, tali hasar halkası CDE yerine geçmez · operasyonel planlama için kullanılamaz")
     if we is None:
         st.error(f"Weaponeering motoru yüklenemedi (src/weaponeering_engine.py): {ENGINE_ERROR}")
         return
@@ -1420,8 +1511,8 @@ def tab_jaws(df: pd.DataFrame) -> None:
                                  "kaydırıcıyla değiştirebilirsiniz.")
         standoff = st.slider("Gerekli standoff mesafesi (km)", 0, 400, step=5, key="j_standoff",
                              help="Maksimum menzili bu değerin altında kalan mühimmatlar elenir.")
-        defended = target["Target_Category"] == "Radar/Air_Defense" or (
-            target["Target_Category"] == "Naval" and target["Mobility_Status"] != "Fixed")
+        defended = target["Target_Class"] == "Radar/Air_Defense" or (
+            target["Target_Class"] == "Naval" and target["Target_Mobility_Class"] != "Fixed")
         if standoff == 0 and defended:
             st.markdown('<div class="warnline">▲ Bu hedef sınıfı çoğunlukla kendi hava savunmasına sahiptir '
                         'veya bir hava savunma şemsiyesi altındadır; standoff gereksinimini buna göre girin.</div>',
@@ -1433,18 +1524,44 @@ def tab_jaws(df: pd.DataFrame) -> None:
         laser = st.checkbox("Lazer işaretleme imkânı var", value=True, key="j_laser",
                             help="Kapalıysa SAL ve lazer hüzme güdümlü modlar kullanılamaz.")
 
-        st.markdown("#### Taşıyıcı kısıtı")
+        tst_minutes = st.slider("TST penceresi (dk)", 1, 60, int(we.TST_WINDOW_DEFAULT_S // 60), key="j_tst",
+                                help="Zamana duyarlı hedefin yerinde kalacağı varsayılan süre. Uçuş süresi bunu "
+                                     "aşarsa isabet olasılığı düşer. Doktrin sayı vermez; senaryo girdisidir.",
+                                disabled=not target["TST_Status"])
+        cde_choice = st.selectbox("Tali hasar hassasiyeti (CDE düzeyi)", [JAWS_MATRIX_TIER] + list(we.CDE_RADIUS_LIMIT_M),
+                                  key="j_cde", format_func=lambda k: k if k == JAWS_MATRIX_TIER else LEVEL_TR[k],
+                                  help="Tali hasar hedef tipine değil konuma bağlıdır; matristeki değer varsayımdır.")
+
+        st.markdown("#### Platform kısıtı")
         classes = st.multiselect("Taşıyıcı sınıfı", list(we.CARRIER_ORDER), key="j_classes",
                                  placeholder="Tümü (uçak, helikopter, SİHA)")
-        platforms = sorted({p for v in df["Entegre_Platformlar"] for p in v.split(",") if p and p != "NA"})
-        platform = st.selectbox("Belirli platform", [JAWS_ALL] + platforms, key="j_platform")
+        platform = st.selectbox("Platform (Modül 2 istasyon limitleri)", [JAWS_ALL] + list(PLATFORMS), key="j_platform",
+                                help="Seçilirse yalnız bu platforma entegre ve en az bir istasyonunun kütle/boyut "
+                                     "limitine uyan mühimmatlar önerilir.")
         desired = st.slider("Hedeflenen hasar olasılığı (P_D)", 0.50, 0.99, 0.90, 0.01, key="j_pd",
                             help="Gerekli atış sayısı bu olasılığa göre hesaplanır.")
 
     scenario = we.Scenario(air_defense=tier, standoff_km=float(standoff), weather=weather, gnss_jamming=gnss,
-                           laser_designation=laser, carrier_classes=tuple(classes),
-                           platform=None if platform == JAWS_ALL else platform, desired_damage=float(desired))
+                           laser_designation=laser, carrier_classes=tuple(classes), desired_damage=float(desired),
+                           tst_window_s=float(tst_minutes * 60),
+                           cde_tier=None if cde_choice == JAWS_MATRIX_TIER else cde_choice)
     full = we.calculate_weapon_effectiveness(target_id, scenario, munitions, targets, include_eliminated=True)
+    plat = None if platform == JAWS_ALL else PLATFORMS[platform]
+    full["Istasyon"] = ""
+    if plat is not None:
+        specs = df.set_index("Muhimmat_Adi")
+        for idx in full.index[full["Durum"] == we.STATUS_OK]:
+            n_fit, n_max, why = jaws_station_fit(specs.loc[full.at[idx, "Muhimmat_Adi"]], plat)
+            if n_fit:
+                full.at[idx, "Istasyon"] = f"{n_fit} istasyon · azami {n_max} adet"
+            else:
+                full.at[idx, "Durum"] = we.STATUS_ELIMINATED
+                full.at[idx, "Uygunluk_Skoru"] = 0.0
+                full.at[idx, "Eleme_Kodu"] = "PLATFORM"
+                full.at[idx, "Eleme_Nedeni"] = f"{plat.name}: {why}"
+        full.loc[full["Durum"] != we.STATUS_OK, "Sira"] = float("nan")
+        still = full["Durum"] == we.STATUS_OK
+        full.loc[still, "Sira"] = range(1, int(still.sum()) + 1)
     ok = full[full["Durum"] == we.STATUS_OK]
     top = ok.head(JAWS_TOP_N)
     n_eliminated = int((full["Durum"] == we.STATUS_ELIMINATED).sum())
@@ -1476,12 +1593,14 @@ def tab_jaws(df: pd.DataFrame) -> None:
                     "Taşıyıcı": st.column_config.TextColumn("Taşıyıcı", width="medium"),
                     "Skor": st.column_config.ProgressColumn("Skor", min_value=0, max_value=100, format="%.1f"),
                     "PK": st.column_config.NumberColumn("PK", format="%.2f"),
+                    "Ph": st.column_config.NumberColumn("Ph", format="%.2f"),
+                    "Pd": st.column_config.NumberColumn("Pd", format="%.2f"),
                     "Gerekçe": st.column_config.TextColumn("Gerekçe", width="large"),
                 })
             st.caption("Taşıyıcı sütunu mühimmatın entegre olduğu sınıfları gösterir (uçak / helikopter / SİHA). "
                        "Skor farkı ~5 puanın altındaysa seçenekler eşdeğer kabul edilmelidir.")
 
-            st.markdown("#### Etki analizi — patlama etki yarıçapı")
+            st.markdown("#### PK ve CDE görselleştirmesi — ölümcül yarıçap ve tali hasar halkası")
             rank = dict(zip(ok["Muhimmat_Adi"], ok["Sira"].astype(int)))
             score = dict(zip(ok["Muhimmat_Adi"], ok["Uygunluk_Skoru"]))
             pick = st.selectbox("Mühimmat seçin (uygun mühimmatlar, skor sırasıyla)", ok["Muhimmat_Adi"].tolist(),
@@ -1490,7 +1609,9 @@ def tab_jaws(df: pd.DataFrame) -> None:
             b1, b2 = st.columns([1.15, 1], gap="medium")
             with b1:
                 st.plotly_chart(jaws_blast_figure(row, target), width="stretch", config={"displayModeBar": False})
-                st.caption(f"Hedef merkezli üstten görünüm (metre). Noktalar yalnız CEP dağılımını örnekler "
+                st.caption("Tali hasar halkası 1 psi tepe aşırı basınç (cam kırılması düzeyi) yarıçapıdır; parçacık "
+                           "tehlikesini içermez ve CJCSI 3160.01 CDE yönteminin yerini tutmaz. "
+                           f"Hedef merkezli üstten görünüm (metre). Noktalar yalnız CEP dağılımını örnekler "
                            f"(N={JAWS_IMPACT_SAMPLES}); hareketlilik, iz, ortam ve gizleme çarpanları "
                            "ayrıca uygulanır.")
             with b2:
@@ -1498,19 +1619,28 @@ def tab_jaws(df: pd.DataFrame) -> None:
                 pen_req = float(row["Gerekli_Delme_m"])
                 estimated = " (tahmini)" if row["Harp_Basligi_Tahmini"] else ""
                 st.markdown('<div class="grid" style="grid-template-columns:repeat(2,1fr)">' + _cells([
-                    ("Tek atış PK", f"{row['PK_Tek_Atis']:.2f}"),
+                    ("Ph × Pd → PK", f"{row['Ph']:.2f} × {row['Pd']:.2f} → {row['PK_Tek_Atis']:.2f}"),
                     (f"Gerekli atış (P_D={desired:.2f})",
                      "99+" if weapons >= we.MAX_WEAPONS_REPORTED else f"{weapons:.0f}"),
                     ("Ölümcül / gerekli yarıçap", f"{row['Olumcul_Yaricap_m']:.1f} / {row['Gerekli_Yaricap_m']:g} m"),
                     ("Beton delme / gerekli",
                      f"{row['Tahmini_Delme_m']:.1f} / {pen_req:g} m" if pen_req > 0 else "gerekmez"),
                     ("Harp başlığı", f"{row['Harp_Basligi_Tipi']} · {row['Harp_Basligi_Etkin_kg']:.0f} kg{estimated}"),
+                    ("TNT eşdeğeri (etkin)", f"{row['TNT_Esdeger_kg']:.0f} kg"),
+                    ("Hedef kenarında basınç / sertlik",
+                     f"{row['Hedefte_Asiri_Basinc_psi']:.1f} / {row['Sertlik_psi']:g} psi"),
                     ("Skor çarpanları",
-                     f"×{row['K_Orantililik']:.2f} · ×{row['K_Standoff']:.2f} · ×{row['K_Rol']:.2f}"),
+                     f"×{row['K_Orantililik']:.2f} · ×{row['K_Standoff']:.2f} · ×{row['K_Rol']:.2f} · "
+                     f"×{row['K_CDE']:.2f}"),
                 ]) + "</div>", unsafe_allow_html=True)
                 st.plotly_chart(jaws_factor_figure(row), width="stretch", config={"displayModeBar": False})
                 st.caption("PK çarpan zinciri: çubukların çarpımı tek atış PK'yi verir. Skor çarpanları sırasıyla "
-                           "orantılılık (aşırı güç), standoff payı ve rol uyumudur.")
+                           "orantılılık (aşırı güç), standoff payı, rol uyumu ve tali hasardır.")
+
+            st.markdown("#### Angajman kararı özeti")
+            plat_note = "any integrated carrier" if plat is None else f"{plat.name} ({row['Istasyon']})"
+            st.code(jaws_engagement_summary(target, row, scenario, desired, plat_note), language=None)
+            st.caption("STANAG mesaj biçimine benzetilmiş bir özettir; resmî bir format ya da angajman onayı değildir.")
 
         st.markdown("#### Pasif savunma duyarlılık analizi")
         passive, hardening = jaws_sweeps(munitions, targets, target_id, astuple(scenario))
@@ -1520,8 +1650,8 @@ def tab_jaws(df: pd.DataFrame) -> None:
             st.caption("Aynı hedef ve ortamda yalnız pasif savunma düzeyi değiştirilir: gizleme/aldatma isabeti, "
                        "tahkimat/dağılma etki yarıçapını azaltır.")
         with s2:
-            if target["Target_Category"] == "Hardened_Structure":
-                st.plotly_chart(jaws_hardening_figure(hardening, target["Required_Penetration_m_Concrete"]),
+            if target["Target_Class"] == "Hardened_Structure":
+                st.plotly_chart(jaws_hardening_figure(hardening, target["Required_Concrete_Penetration_m"]),
                                 width="stretch", config={"displayModeBar": False})
                 st.caption("Beton kalınlığı arttıkça hedefi etkisiz bırakabilen mühimmat sayısı.")
             else:
@@ -1593,7 +1723,7 @@ def main() -> None:
     st.write("")
 
     t1, t2, t3, t4, t5 = st.tabs(["① Envanter Gezgini", "② İstasyon Yükleme", "③ Menzil Simülatörü",
-                                  "④ Karşılaştırma Matrisi", "⑤ Weaponeering ve Hedef Analizi (JAWS)"])
+                                  "④ Karşılaştırma Matrisi", "⑤ Doktriner Weaponeering ve CDE"])
     with t1:
         tab_inventory(df)
     with t2:

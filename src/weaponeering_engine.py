@@ -29,7 +29,7 @@ Model özeti
             sadeleştirilmiş beton delme tahmini; HEAT için n · imla çapı
     F_del = 1 (D >= gerekli) | (D/gerekli)^3 | 0 (D < gerekli/2)
     PK    = min(0.95, P_isb · F_kap · P(imha|isabet) · F_del · güvenilirlik)
-    Skor  = 100 · PK · K_orantılılık · K_standoff · K_rol
+    Skor  = 100 · PK · K_orantılılık · K_standoff · K_rol · K_CDE
             (K_rol: gemisavar füzenin kara hedefinde, anti-radyasyon füzesinin yayın
              yapmayan hedefte, sığınak delicinin sertleştirilmemiş hedefte kullanımı
              gibi ikincil görevlerde 0.7)
@@ -49,14 +49,40 @@ Zorunlu kurallar (eleme)
     modları 0.3 ile çarpılır; koordinat modu (varsa) sabit kara hedefinde kullanılabilir.
   * Tek atış PK'si 0.05'in altında kalan mühimmat "etkisiz" sayılır ve elenir.
 
+Sürüm 2 - doktriner şema ve açık kaynak alt modelleri
+-----------------------------------------------------
+Hedef matrisi 16 sütunludur (bkz. data/targets/target_matrix_sources.md). Eklenen alt modeller
+ve dayanakları:
+
+  Patlama      Tepe gelen aşırı basınç, Kinney & Graham (1985) kapalı form bağıntısı:
+               P/P0 = 808·[1+(Z/4.5)²] / √[1+(Z/0.048)²] / √[1+(Z/0.32)²] / √[1+(Z/1.35)²],
+               Z = R / W^(1/3)  [m/kg^(1/3)] (Hopkinson-Cranz ölçeklemesi).
+               UFC 3-340-02 aynı büyüklüğü Kingery-Bulmash eğrileriyle verir; o eğrilerin
+               polinom katsayıları burada kullanılmadı (ezbere yazılmaları güvenilir olmazdı).
+  TNT eşdeğeri W_TNT = W_harp · dolgu oranı · RE · Fano kılıf düzeltmesi · 1.8 (yer yüzeyi).
+               Dolgu oranları ve Fano düzeltmesi [0.2 + 0.8/(1+2M/C)] YAKLAŞIKTIR ve işaretlidir.
+  Delme        calculate_penetration_depth: Young (1997, SAND97-2426) beton denklemi biçimi.
+  Hedefleme    Ph = CEP isabeti × hareketlilik × iz × ortam × gizleme × TST uçuş süresi çarpanı.
+               AFDP 3-60 süreç ve tanım verir, denklem vermez; TST penceresi bir senaryo girdisidir.
+  İmha         Pk = Ph × Pd × güvenilirlik;  Pd = kapsama × P(imha|isabet) × delme yeterliliği.
+  Tali hasar   1 psi aşırı basınç yarıçapı (cam kırılması düzeyi) bir GÖSTERGEDİR; CJCSI 3160.01
+               yöntemi ve CER tabloları kamuya açık olmadığından CDE'nin yerini tutmaz.
+
+  KULLANILMAYAN: UFC 3-340-01 (dağıtımı kısıtlı), JMEM/JWS verileri (gizli).
+
+Patlama yarıçapı yalnız birincil hasar mekanizması "Blast" olan hedeflerde etki yarıçapını belirler.
+Parçacık, doğrudan isabet, delme ve krater mekanizmalı hedeflerde ampirik K katsayıları geçerlidir;
+bu hedeflerde hesaplanan aşırı basınç yalnız raporlanır.
+
 Kullanım
 --------
-    from weaponeering_engine import calculate_weapon_effectiveness, Scenario
-    df = calculate_weapon_effectiveness("T01_HAS")
-    df = calculate_weapon_effectiveness("T10_MOBILE_SAM", Scenario(air_defense="LRSAM"), top_n=5)
+    from weaponeering_engine import calculate_weapon_effectiveness, evaluate_jaws_match, Scenario
+    df = calculate_weapon_effectiveness("TGT-HAS-01")
+    df = calculate_weapon_effectiveness("TGT-SAM-13", Scenario(air_defense="LRSAM"), top_n=5)
+    r = evaluate_jaws_match(target_row, munition_row, {"air_defense": "VLRSAM"})
 
     python3 src/weaponeering_engine.py --list-targets
-    python3 src/weaponeering_engine.py T01_HAS --top 5 --air-defense LRSAM
+    python3 src/weaponeering_engine.py TGT-HAS-01 --top 5 --air-defense LRSAM
     python3 src/weaponeering_engine.py --report outputs/weaponeering_report.md
 """
 from __future__ import annotations
@@ -72,6 +98,9 @@ from datetime import date
 import numpy as np
 import pandas as pd
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import validate_target_matrix as vtm  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MUNITION_CANDIDATES = (
     os.path.join(ROOT, "master_air_munitions_dataset_2.csv"),
@@ -80,19 +109,14 @@ MUNITION_CANDIDATES = (
     os.path.join(ROOT, "data", "master_air_munitions.csv"),
     os.path.join(ROOT, "data", "processed", "master_air_munitions_dataset.csv"),
 )
-# Adım 2'de yeni doktriner matrise (target_vulnerability_matrix.csv) geçilecek; o zamana dek v1 şeması.
-TARGET_MATRIX_PATH = os.path.join(ROOT, "data", "targets", "target_vulnerability_matrix_v1.csv")
+TARGET_MATRIX_PATH = vtm.DEFAULT_PATH
 
 # ---------------------------------------------------------------------------
 # Şema sabitleri
 # ---------------------------------------------------------------------------
-TARGET_COLUMNS = [
-    "Target_ID", "Target_Category", "Target_Description", "Required_Penetration_m_Concrete",
-    "Required_Lethal_Radius_m", "Mobility_Status", "Passive_Defense_Level",
-    "Radar_Cross_Section_m2", "Thermal_Signature",
-]
-TARGET_NUMERIC = ["Required_Penetration_m_Concrete", "Required_Lethal_Radius_m", "Radar_Cross_Section_m2"]
-MOBILITY_LEVELS = ("Fixed", "Slow_Moving", "Fast_Maneuvering")
+TARGET_COLUMNS = list(vtm.COLUMNS)
+TARGET_NUMERIC = list(vtm.NUMERIC_RANGES)
+MOBILITY_LEVELS = vtm.MOBILITY_CLASSES     # Fixed, Slow, Fast
 PASSIVE_LEVELS = ("Low", "Medium", "High", "Extreme")
 THERMAL_LEVELS = ("Low", "Medium", "High")
 
@@ -115,7 +139,7 @@ STATUS_ORDER = {STATUS_OK: 0, STATUS_ELIMINATED: 1, STATUS_NO_DATA: 2}
 HARDENED = "Hardened_Structure"
 ARMORED = "Armored_Vehicle"
 NAVAL = "Naval"
-FAST = "Fast_Maneuvering"
+FAST = "Fast"
 FIXED = "Fixed"
 
 # ---------------------------------------------------------------------------
@@ -130,9 +154,11 @@ LETHAL_K = {
     "Soft_Structure": 4.0,
     "Naval": 2.5,
     HARDENED: 2.2,      # delme sonrası kapalı hacimde iç patlama
+    "Infrastructure": 0.9,   # pist/köprü: krater veya yakın ıska
     ARMORED: 0.9,       # yakın ıska / doğrudan isabet gerekir
 }
 TARGET_CATEGORIES = tuple(LETHAL_K)
+assert set(TARGET_CATEGORIES) == set(vtm.TARGET_CLASSES), "hedef sınıfları doğrulayıcıyla uyumsuz"
 
 # Harp başlığı tipi × hedef kategorisi → K çarpanı ("_" = varsayılan)
 WARHEAD_K_MOD = {
@@ -154,23 +180,23 @@ DIRECT_HIT_RADIUS_M = 4.0     # şekilli imla zırhlı araca doğrudan isabetle 
 # (2) P(imha | etkili isabet): harp başlığı tipi × hedef kategorisi
 HARD_TARGET_WARHEADS = ("Penetrator", "BROACH", "Tandem_HEAT")
 KILL_GIVEN_HIT = {
-    "HE-Frag": {"Soft_Structure": 0.90, "Soft_Vehicle": 0.95, ARMORED: 0.55,
+    "HE-Frag": {"Infrastructure": 0.60, "Soft_Structure": 0.90, "Soft_Vehicle": 0.95, ARMORED: 0.55,
                 "Radar/Air_Defense": 0.95, NAVAL: 0.60, "Personnel": 0.95},
-    "Thermobaric": {"Soft_Structure": 0.95, "Soft_Vehicle": 0.90, ARMORED: 0.45,
+    "Thermobaric": {"Infrastructure": 0.40, "Soft_Structure": 0.95, "Soft_Vehicle": 0.90, ARMORED: 0.45,
                     "Radar/Air_Defense": 0.85, NAVAL: 0.45, "Personnel": 0.95},
-    "Penetrator": {HARDENED: 0.90, "Soft_Structure": 0.75, "Soft_Vehicle": 0.70, ARMORED: 0.60,
+    "Penetrator": {"Infrastructure": 0.90, HARDENED: 0.90, "Soft_Structure": 0.75, "Soft_Vehicle": 0.70, ARMORED: 0.60,
                    "Radar/Air_Defense": 0.70, NAVAL: 0.85, "Personnel": 0.60},
-    "BROACH": {HARDENED: 0.95, "Soft_Structure": 0.80, "Soft_Vehicle": 0.70, ARMORED: 0.65,
+    "BROACH": {"Infrastructure": 0.90, HARDENED: 0.95, "Soft_Structure": 0.80, "Soft_Vehicle": 0.70, ARMORED: 0.65,
                "Radar/Air_Defense": 0.70, NAVAL: 0.85, "Personnel": 0.55},
-    "Tandem_HEAT": {HARDENED: 0.70, "Soft_Structure": 0.50, "Soft_Vehicle": 0.85, ARMORED: 0.92,
+    "Tandem_HEAT": {"Infrastructure": 0.25, HARDENED: 0.70, "Soft_Structure": 0.50, "Soft_Vehicle": 0.85, ARMORED: 0.92,
                     "Radar/Air_Defense": 0.80, NAVAL: 0.35, "Personnel": 0.35},
-    "HEAT": {"Soft_Structure": 0.50, "Soft_Vehicle": 0.85, ARMORED: 0.80,
+    "HEAT": {"Infrastructure": 0.25, "Soft_Structure": 0.50, "Soft_Vehicle": 0.85, ARMORED: 0.80,
              "Radar/Air_Defense": 0.80, NAVAL: 0.35, "Personnel": 0.35},
-    "SAPHE": {"Soft_Structure": 0.80, "Soft_Vehicle": 0.80, ARMORED: 0.60,
+    "SAPHE": {"Infrastructure": 0.75, "Soft_Structure": 0.80, "Soft_Vehicle": 0.80, ARMORED: 0.60,
               "Radar/Air_Defense": 0.80, NAVAL: 0.92, "Personnel": 0.70},
-    "Submunition": {"Soft_Structure": 0.70, "Soft_Vehicle": 0.90, ARMORED: 0.75,
+    "Submunition": {"Infrastructure": 0.30, "Soft_Structure": 0.70, "Soft_Vehicle": 0.90, ARMORED: 0.75,
                     "Radar/Air_Defense": 0.90, NAVAL: 0.30, "Personnel": 0.95},
-    "NA": {"Soft_Structure": 0.75, "Soft_Vehicle": 0.80, ARMORED: 0.45,
+    "NA": {"Infrastructure": 0.50, "Soft_Structure": 0.75, "Soft_Vehicle": 0.80, ARMORED: 0.45,
            "Radar/Air_Defense": 0.80, NAVAL: 0.50, "Personnel": 0.80},
 }
 
@@ -257,6 +283,33 @@ JET_CALIBERS = {"Tandem_HEAT": 6.5, "HEAT": 5.0}      # beton içinde jet delme 
 SHAPED_CHARGE_DIA_COEF = 0.085                         # D[m] ≈ 0.085 · W^(1/3)
 PEN_FAIL_RATIO = 0.5
 
+# (5b) Patlama (Kinney & Graham 1985) ve TNT eşdeğeri
+ATM_KPA = 101.325
+PSI_TO_KPA = 6.894757
+SURFACE_BURST_FACTOR = 1.8        # yer yüzeyi patlamasında yarım küre yansıma katsayısı (UFC 3-340-02 yaklaşımı)
+TNT_RE_DEFAULT = 1.0              # veri setinde patlayıcı türü yok → TNT kabul edilir (temkinli)
+# Harp başlığı kütlesi içindeki patlayıcı oranı. HE-Frag ve Penetrator değerleri açık kaynak bomba
+# verilerinden (Mk-82/84 ≈ %38-46, BLU-109 ≈ %27); diğerleri VARSAYIMDIR.
+FILL_FRACTION = {"HE-Frag": 0.40, "Thermobaric": 0.50, "Penetrator": 0.27, "BROACH": 0.25, "SAPHE": 0.30,
+                 "Tandem_HEAT": 0.45, "HEAT": 0.45, "Submunition": 0.15, "NA": 0.35}
+COLLATERAL_PSI = 1.0              # tali hasar göstergesi: cam kırılması düzeyi aşırı basınç
+CDE_RADIUS_LIMIT_M = {"Low": math.inf, "Medium": 200.0, "High": 75.0}   # VARSAYIM; senaryoya göre ayarlanır
+CDE_FACTOR_FLOOR = 0.3
+BLAST_MECHANISM = "Blast"
+
+# (5c) Zamana duyarlı hedef (TST) ve uçuş süresi
+TST_WINDOW_DEFAULT_S = 600.0      # VARSAYIM: hedefin yerinde kalma süresi; doktrin sayı vermez
+TST_DATALINK_FLOOR = 0.8          # uçuşta hedef güncellemesi alan mühimmatta ceza sınırlanır
+DEFAULT_ENGAGEMENT_KM = 15.0      # standoff gerekmediğinde varsayılan atış mesafesi
+CRUISE_SOUND_SPEED = 300.0        # m/s, orta irtifa
+DEFAULT_MACH = {"Solid_Rocket": 1.5, "Dual_Pulse_Rocket": 2.0, "Liquid_Rocket": 3.0, "Ramjet": 3.0,
+                "Turbojet": 0.8, "Turbofan": 0.8, "Electric_Propeller": 0.15, "Free_Fall": 0.9,
+                "Glide_Unpowered": 0.9}
+AVERAGE_SPEED_RATIO = {"Solid_Rocket": 0.7, "Dual_Pulse_Rocket": 0.75, "Liquid_Rocket": 0.8, "Ramjet": 0.9,
+                       "Turbojet": 0.95, "Turbofan": 0.95, "Electric_Propeller": 1.0, "Free_Fall": 0.75,
+                       "Glide_Unpowered": 0.7}
+BDA_LEVELS = ((0.70, "SEVERE"), (0.40, "MODERATE"), (0.15, "LIGHT"), (0.0, "NEGLIGIBLE"))   # VARSAYIM eşikler
+
 # (6) Bütünleştirme
 RELIABILITY = 0.92
 PK_CAP = 0.95
@@ -296,6 +349,7 @@ AIR_DEFENSE_TIERS = {
         AirDefenseTier("SHORAD", "Kısa menzilli (MANPADS / SHORAD / top)", 10.0),
         AirDefenseTier("MRSAM", "Orta menzilli SAM", 40.0),
         AirDefenseTier("LRSAM", "Uzun menzilli SAM", 120.0),
+        AirDefenseTier("VLRSAM", "Çok uzun menzilli SAM (S-400 sınıfı, beyan edilen 400 km)", 400.0),
     )
 }
 
@@ -311,8 +365,14 @@ class Scenario:
     carrier_classes: tuple[str, ...] = ()   # () → tümü; ("Uçak", "Helikopter", "SİHA") alt kümesi
     platform: str | None = None             # belirli bir platforma entegre olanlar
     desired_damage: float = 0.90            # gerekli atış sayısı için hedeflenen hasar olasılığı
+    tst_window_s: float = TST_WINDOW_DEFAULT_S   # TST hedefin yerinde kalma penceresi (s)
+    cde_tier: str | None = None             # None → hedef matrisindeki Collateral_Damage_Tier
 
     def __post_init__(self) -> None:
+        if self.tst_window_s <= 0:
+            raise ValueError("tst_window_s pozitif olmalı")
+        if self.cde_tier is not None and self.cde_tier not in CDE_RADIUS_LIMIT_M:
+            raise ValueError(f"cde_tier '{self.cde_tier}' geçersiz; seçenekler: {list(CDE_RADIUS_LIMIT_M)}")
         if self.air_defense not in AIR_DEFENSE_TIERS:
             raise ValueError(f"air_defense '{self.air_defense}' geçersiz; seçenekler: {list(AIR_DEFENSE_TIERS)}")
         if self.weather not in WEATHER_FACTOR:
@@ -437,54 +497,17 @@ def prepare_munitions(df: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def validate_targets(df: pd.DataFrame) -> list[str]:
-    """Hedef matrisinin şema denetimi; hata mesajları listesi döner (boş = geçerli)."""
-    errors: list[str] = []
-    if list(df.columns) != TARGET_COLUMNS:
-        return [f"Sütunlar beklenenle aynı değil.\n  beklenen: {TARGET_COLUMNS}\n  bulunan : {list(df.columns)}"]
-    if df.empty:
-        return ["Hedef matrisi boş"]
-    dup = df["Target_ID"][df["Target_ID"].duplicated()].tolist()
-    if dup:
-        errors.append(f"Mükerrer Target_ID: {dup}")
-    enums = {
-        "Target_Category": TARGET_CATEGORIES,
-        "Mobility_Status": MOBILITY_LEVELS,
-        "Passive_Defense_Level": PASSIVE_LEVELS,
-        "Thermal_Signature": THERMAL_LEVELS,
-    }
-    for i, row in enumerate(df.to_dict("records"), start=2):
-        tid = row["Target_ID"]
-        if not str(tid).strip() or not str(row["Target_Description"]).strip():
-            errors.append(f"satır {i}: Target_ID / Target_Description boş olamaz")
-        for col, allowed in enums.items():
-            if row[col] not in allowed:
-                errors.append(f"satır {i} ({tid}) [{col}]: '{row[col]}' geçersiz; seçenekler: {list(allowed)}")
-        for col in TARGET_NUMERIC:
-            try:
-                val = float(row[col])
-            except (TypeError, ValueError):
-                errors.append(f"satır {i} ({tid}) [{col}]: '{row[col]}' sayısal değil")
-                continue
-            if math.isnan(val) or val < 0:
-                errors.append(f"satır {i} ({tid}) [{col}]: {val} negatif/NaN olamaz")
-            elif col != "Required_Penetration_m_Concrete" and val <= 0:
-                errors.append(f"satır {i} ({tid}) [{col}]: sıfırdan büyük olmalı")
-    return errors
+def validate_targets(df: pd.DataFrame, min_rows: int = vtm.MIN_TARGETS) -> list[str]:
+    """Hedef matrisinin şema denetimi (validate_target_matrix); hata listesi döner (boş = geçerli)."""
+    return vtm.validate(df, min_rows)[0]
 
 
 def load_targets(path: str | None = None) -> pd.DataFrame:
-    """Hedef kırılganlık matrisini okur, doğrular ve sayısal sütunları float'a çevirir."""
+    """Hedef matrisini okur, doğrular; sayısal sütunlar float, TST_Status bool olur."""
     path = path or TARGET_MATRIX_PATH
     if not os.path.exists(path):
         raise FileNotFoundError(f"Hedef matrisi bulunamadı: {path}")
-    df = _read_csv(path)
-    errors = validate_targets(df)
-    if errors:
-        raise ValueError("Hedef matrisi geçersiz:\n  " + "\n  ".join(errors))
-    for col in TARGET_NUMERIC:
-        df[col] = df[col].astype(float)
-    return df
+    return vtm.load_matrix(path)
 
 
 @functools.lru_cache(maxsize=1)
@@ -530,6 +553,111 @@ def kill_probability_given_hit(warhead_type: str, target_category: str) -> float
     return KILL_GIVEN_HIT[wtype].get(target_category, 0.0)
 
 
+def incident_overpressure_kpa(scaled_distance: float) -> float:
+    """Serbest hava patlamasında tepe gelen aşırı basınç [kPa]; Kinney & Graham (1985).
+
+    scaled_distance: Z = R / W^(1/3)  [m/kg^(1/3)], W = TNT eşdeğeri.
+    """
+    z = max(float(scaled_distance), 1e-6)
+    ratio = (808.0 * (1.0 + (z / 4.5) ** 2) / math.sqrt(1.0 + (z / 0.048) ** 2)
+             / math.sqrt(1.0 + (z / 0.32) ** 2) / math.sqrt(1.0 + (z / 1.35) ** 2))
+    return ratio * ATM_KPA
+
+
+def scaled_distance_for_overpressure(pressure_kpa: float) -> float:
+    """incident_overpressure_kpa'nın tersi (basınç Z ile tekdüze azalır; log-ikiye bölme)."""
+    low, high = 0.02, 2000.0
+    if pressure_kpa >= incident_overpressure_kpa(low):
+        return low
+    if pressure_kpa <= incident_overpressure_kpa(high):
+        return high
+    for _ in range(80):
+        mid = math.sqrt(low * high)
+        if incident_overpressure_kpa(mid) > pressure_kpa:
+            low = mid
+        else:
+            high = mid
+    return math.sqrt(low * high)
+
+
+def tnt_equivalent_kg(warhead_kg: float, warhead_type: str, surface_burst: bool = True,
+                      relative_effectiveness: float = TNT_RE_DEFAULT) -> float:
+    """Harp başlığı kütlesinden etkin TNT eşdeğeri [kg].
+
+    dolgu = W · dolgu oranı;  kılıf M = W - dolgu;
+    Fano kılıf düzeltmesi: 0.2 + 0.8 / (1 + 2·M/C)   (parçacığa giden enerji düşülür; YAKLAŞIK)
+    yer yüzeyi patlamasında × 1.8.
+    """
+    if _isnan(warhead_kg) or warhead_kg <= 0:
+        return float("nan")
+    fill = warhead_kg * FILL_FRACTION[_warhead_key(warhead_type)]
+    casing = warhead_kg - fill
+    bare = fill * relative_effectiveness * (0.2 + 0.8 / (1.0 + 2.0 * casing / fill))
+    return bare * (SURFACE_BURST_FACTOR if surface_burst else 1.0)
+
+
+def blast_radius_m(tnt_kg: float, overpressure_psi: float) -> float:
+    """Tepe aşırı basıncın verilen değere düştüğü mesafe: R = Z(P) · W^(1/3)."""
+    if _isnan(tnt_kg) or tnt_kg <= 0:
+        return float("nan")
+    return scaled_distance_for_overpressure(overpressure_psi * PSI_TO_KPA) * tnt_kg ** (1 / 3)
+
+
+def overpressure_at_psi(tnt_kg: float, distance_m: float) -> float:
+    """Verilen mesafede tepe gelen aşırı basınç [psi]."""
+    if _isnan(tnt_kg) or tnt_kg <= 0:
+        return float("nan")
+    return incident_overpressure_kpa(distance_m / tnt_kg ** (1 / 3)) / PSI_TO_KPA
+
+
+def collateral_factor(collateral_radius_m: float, tier: str) -> float:
+    """Tali hasar göstergesi yarıçapı düzeyin sınırını aşıyorsa skor çarpanı (1.0 → 0.3)."""
+    limit = CDE_RADIUS_LIMIT_M[tier]
+    if _isnan(collateral_radius_m) or collateral_radius_m <= limit:
+        return 1.0
+    return max(CDE_FACTOR_FLOOR, limit / collateral_radius_m)
+
+
+def time_of_flight_s(propulsion: str, mach: float, distance_km: float) -> float:
+    """Yaklaşık uçuş süresi: mesafe / (ortalama hız oranı × Mach × ses hızı)."""
+    top_mach = DEFAULT_MACH.get(propulsion, 0.8) if _isnan(mach) else float(mach)
+    speed = AVERAGE_SPEED_RATIO.get(propulsion, 0.9) * top_mach * CRUISE_SOUND_SPEED
+    return distance_km * 1000.0 / max(speed, 10.0)
+
+
+def tst_factor(is_tst: bool, flight_time_s: float, window_s: float, has_datalink: bool) -> float:
+    """Zamana duyarlı hedefte uçuş süresi pencereyi aşarsa isabet çarpanı = pencere / uçuş süresi."""
+    if not is_tst or flight_time_s <= window_s:
+        return 1.0
+    factor = window_s / flight_time_s
+    return max(factor, TST_DATALINK_FLOOR) if has_datalink else factor
+
+
+def expected_bda(pk: float) -> str:
+    for threshold, label in BDA_LEVELS:
+        if pk >= threshold:
+            return label
+    return BDA_LEVELS[-1][1]
+
+
+def calculate_penetration_depth(velocity: float, mass: float, diameter: float,
+                                warhead_type: str = "Penetrator") -> float:
+    """Betonarme delme derinliği [m]; Young (1997, SAND97-2426) beton denklemi biçimi.
+
+        D = C · (m/A)^0.7 · (V - 30.5) · K,   A = π·d²/4,   K = 0.46·m^0.15 (m < 182 kg), aksi 1
+
+    velocity [m/s] çarpma hızı, mass [kg] delici kütlesi, diameter [m] gövde çapı.
+    C, hedef sertliği (S) ve burun katsayısını (N) içeren toplu sabittir ve TEMSİLÎDİR.
+    Denklem V >= 61 m/s için geçerlidir; warhead_type gövde dayanımı çarpanını seçer.
+    """
+    if min(velocity, mass, diameter) <= 0 or velocity <= 61.0:
+        return 0.0
+    sectional_density = mass / (math.pi / 4.0 * diameter ** 2)
+    k_mass = 0.46 * mass ** 0.15 if mass < YOUNG_LIGHT_MASS_KG else 1.0
+    depth = YOUNG_C * sectional_density ** YOUNG_SD_EXP * (velocity - YOUNG_V0) * k_mass
+    return depth * PEN_TYPE_FACTOR.get(_warhead_key(warhead_type), PEN_TYPE_FACTOR["NA"])
+
+
 def estimate_penetration_m(warhead_type: str, warhead_kg: float, diameter_mm: float, mach: float,
                            is_bomb: bool) -> float:
     """Betonarme delme tahmini [m]. Kinetik deliciler için Young biçimi, HEAT için jet delme."""
@@ -549,12 +677,8 @@ def estimate_penetration_m(warhead_type: str, warhead_kg: float, diameter_mm: fl
         d = dia if dia <= BOMB_DIAMETER_TOLERANCE * d_est else d_est
     else:
         d = min(dia, d_est)
-    sectional_density = warhead_kg / (math.pi / 4 * d ** 2)
     impact_mach = IMPACT_MACH_DEFAULT if _isnan(mach) else float(np.clip(mach, *IMPACT_MACH_RANGE))
-    velocity = impact_mach * SOUND_SPEED
-    k_mass = 0.46 * warhead_kg ** 0.15 if warhead_kg < YOUNG_LIGHT_MASS_KG else 1.0
-    depth = YOUNG_C * sectional_density ** YOUNG_SD_EXP * (velocity - YOUNG_V0) * k_mass
-    return depth * PEN_TYPE_FACTOR.get(wtype, PEN_TYPE_FACTOR["NA"])
+    return calculate_penetration_depth(impact_mach * SOUND_SPEED, warhead_kg, d, wtype)
 
 
 def penetration_factor(estimated_m: float, required_m: float) -> float:
@@ -616,7 +740,7 @@ def required_weapons(pk: float, desired_damage: float) -> float:
 
 
 def _signature_factor(mode: str, target: dict, anti_ship: bool = False) -> float:
-    category = target["Target_Category"]
+    category = target["Target_Class"]
     on_land = category != NAVAL
     if mode in RADAR_MODES:
         rcs = max(float(target["Radar_Cross_Section_m2"]), 1e-3)
@@ -624,7 +748,7 @@ def _signature_factor(mode: str, target: dict, anti_ship: bool = False) -> float
         if mode != "MMW" and on_land:
             return factor * LAND_CLUTTER_FACTOR
     elif mode == "IIR":
-        factor = IIR_FIXED_FACTOR if target["Mobility_Status"] == FIXED else THERMAL_IIR[target["Thermal_Signature"]]
+        factor = IIR_FIXED_FACTOR if target["Target_Mobility_Class"] == FIXED else THERMAL_IIR[target["Thermal_Signature"]]
     elif mode == "IR":
         factor = THERMAL_IR[target["Thermal_Signature"]] * (IR_LAND_FACTOR if on_land else 1.0)
     else:
@@ -637,7 +761,7 @@ def _signature_factor(mode: str, target: dict, anti_ship: bool = False) -> float
 def _concealment_factor(mode: str, target: dict) -> float:
     level = target["Passive_Defense_Level"]
     factor = CCD_FACTOR[level]
-    if mode in COORDINATE_MODES and target["Mobility_Status"] == FIXED:
+    if mode in COORDINATE_MODES and target["Target_Mobility_Class"] == FIXED:
         factor = math.sqrt(factor)      # koordinatı bilinen sabit tesiste aldatmanın etkisi sınırlı
     if mode == "Passive_RF":
         factor *= EMCON_FACTOR[level]
@@ -645,7 +769,7 @@ def _concealment_factor(mode: str, target: dict) -> float:
 
 
 def _mode_unusable_reason(mode: str, target: dict, scenario: Scenario) -> str | None:
-    if mode == "Passive_RF" and target["Target_Category"] not in EMITTER_CATEGORIES:
+    if mode == "Passive_RF" and target["Target_Class"] not in EMITTER_CATEGORIES:
         return "pasif RF arayıcı yalnız yayın yapan hedefe kilitlenir"
     if mode in LASER_MODES and not scenario.laser_designation:
         return "lazer işaretleme imkânı yok"
@@ -661,7 +785,7 @@ def _mode_hit(mode: str, allowed_miss_m: float, target: dict, scenario: Scenario
     # Sahne eşlemeli EO/IIR hareketli hedefi izleyemez → hareketlilikte koordinat modu gibi davranır
     tracks_movers = mode in HOMING_MODES and not (scene_matching and mode in SCENE_MATCHING_MODES)
     mobility_key = mode if tracks_movers or mode not in HOMING_MODES else MODE_COORD
-    f_mob = MOBILITY_FACTOR[mobility_key][MOBILITY_LEVELS.index(target["Mobility_Status"])]
+    f_mob = MOBILITY_FACTOR[mobility_key][MOBILITY_LEVELS.index(target["Target_Mobility_Class"])]
     f_sig = _signature_factor(mode, target, anti_ship)
     f_env = WEATHER_FACTOR[scenario.weather].get(mode, 1.0)
     f_ccd = _concealment_factor(mode, target)
@@ -677,7 +801,9 @@ RESULT_COLUMNS = [
     "Entegre_Platformlar", "Durum", "Uygunluk_Skoru", "PK_Tek_Atis", "Gerekli_Atis_Sayisi",
     "Secilen_Gudum_Modu", "P_Isabet", "Kapsama_Orani", "Harp_Basligi_Uyumu", "Delme_Yeterliligi",
     "Olumcul_Yaricap_m", "Gerekli_Yaricap_m", "Tahmini_Delme_m", "Gerekli_Delme_m",
-    "Maksimum_Menzil_km", "Standoff_Payi_km", "K_Orantililik", "K_Standoff", "K_Rol",
+    "Maksimum_Menzil_km", "Standoff_Payi_km", "K_Orantililik", "K_Standoff", "K_Rol", "K_CDE",
+    "Ph", "Pd", "Beklenen_BDA", "Hasar_Mekanizmasi", "TNT_Esdeger_kg", "Patlama_Yaricapi_m",
+    "Hedefte_Asiri_Basinc_psi", "Sertlik_psi", "Tali_Hasar_Yaricapi_m", "Ucus_Suresi_s", "C_TST",
     "CEP_Etkin_m", "Izinli_Iska_m", "P_CEP", "C_Hareketlilik", "C_Iz", "C_Ortam", "C_Gizleme",
     "Guvenilirlik", "Harp_Basligi_Tipi", "Harp_Basligi_Etkin_kg", "Harp_Basligi_Tahmini",
     "Toplam_Kutle_kg", "Veri_Guvenilirlik_Notu", "Eleme_Kodu", "Eleme_Nedeni", "Gerekce",
@@ -686,21 +812,24 @@ _NUMERIC_RESULT = [
     "Uygunluk_Skoru", "PK_Tek_Atis", "Gerekli_Atis_Sayisi", "P_Isabet", "Kapsama_Orani",
     "Harp_Basligi_Uyumu", "Delme_Yeterliligi", "Olumcul_Yaricap_m", "Tahmini_Delme_m",
     "Standoff_Payi_km", "K_Orantililik", "K_Standoff", "K_Rol", "CEP_Etkin_m", "Izinli_Iska_m", "P_CEP",
-    "C_Hareketlilik", "C_Iz", "C_Ortam", "C_Gizleme",
+    "C_Hareketlilik", "C_Iz", "C_Ortam", "C_Gizleme", "K_CDE", "Ph", "Pd", "TNT_Esdeger_kg",
+    "Patlama_Yaricapi_m", "Hedefte_Asiri_Basinc_psi", "Tali_Hasar_Yaricapi_m", "Ucus_Suresi_s", "C_TST",
 ]
 _ROUNDING = {
     "Uygunluk_Skoru": 1, "PK_Tek_Atis": 4, "P_Isabet": 4, "Kapsama_Orani": 4, "Harp_Basligi_Uyumu": 2,
     "Delme_Yeterliligi": 4, "Olumcul_Yaricap_m": 2, "Tahmini_Delme_m": 2, "Standoff_Payi_km": 1,
     "K_Orantililik": 3, "K_Standoff": 3, "K_Rol": 2, "CEP_Etkin_m": 1, "Izinli_Iska_m": 2, "P_CEP": 4,
     "C_Hareketlilik": 2, "C_Iz": 3, "C_Ortam": 2, "C_Gizleme": 3, "Harp_Basligi_Etkin_kg": 1,
+    "K_CDE": 3, "Ph": 4, "Pd": 4, "TNT_Esdeger_kg": 1, "Patlama_Yaricapi_m": 2, "Hedefte_Asiri_Basinc_psi": 2,
+    "Tali_Hasar_Yaricapi_m": 1, "Ucus_Suresi_s": 0, "C_TST": 3,
 }
 
 
 def _evaluate(m: dict, target: dict, scenario: Scenario) -> dict:
     """Tek mühimmat × tek hedef değerlendirmesi."""
-    category = target["Target_Category"]
+    category = target["Target_Class"]
     r_req = float(target["Required_Lethal_Radius_m"])
-    p_req = float(target["Required_Penetration_m_Concrete"])
+    p_req = float(target["Required_Concrete_Penetration_m"])
     standoff = scenario.required_standoff_km
     wtype = m["Harp_Basligi_Tipi"]
     warhead = m["Harp_Basligi_Etkin_kg"]
@@ -721,7 +850,8 @@ def _evaluate(m: dict, target: dict, scenario: Scenario) -> dict:
         "Maksimum_Menzil_km": rng, "Guvenilirlik": RELIABILITY, "Harp_Basligi_Tipi": wtype,
         "Harp_Basligi_Etkin_kg": warhead, "Harp_Basligi_Tahmini": bool(m["Harp_Basligi_Tahmini"]),
         "Toplam_Kutle_kg": m["Toplam_Kutle_kg"], "Veri_Guvenilirlik_Notu": m["Veri_Guvenilirlik_Notu"],
-        "Gerekce": "",
+        "Gerekce": "", "Beklenen_BDA": "-", "Hasar_Mekanizmasi": target["Primary_Damage_Mechanism"],
+        "Sertlik_psi": float(target["UFC_Hardness_Rating_psi"]),
     })
 
     def finish(status: str) -> dict:
@@ -766,6 +896,17 @@ def _evaluate(m: dict, target: dict, scenario: Scenario) -> dict:
     # 5) Etki yarıçapı ve kapsama
     level = target["Passive_Defense_Level"]
     r_w = lethal_radius_m(warhead, wtype, category, level)
+    # 5b) Patlama: hedef sertliğini aşan aşırı basıncın ulaştığı yarıçap
+    hardness_psi = float(target["UFC_Hardness_Rating_psi"])
+    w_tnt = tnt_equivalent_kg(warhead, wtype)
+    blast_radius = blast_radius_m(w_tnt, hardness_psi)
+    collateral_radius = blast_radius_m(w_tnt, COLLATERAL_PSI)
+    if target["Primary_Damage_Mechanism"] == BLAST_MECHANISM:
+        r_w = blast_radius * PROTECTION_FACTOR[level]
+    k_cde = collateral_factor(collateral_radius, scenario.cde_tier or target["Collateral_Damage_Tier"])
+    out.update({"TNT_Esdeger_kg": w_tnt, "Patlama_Yaricapi_m": blast_radius, "K_CDE": k_cde,
+                "Hedefte_Asiri_Basinc_psi": overpressure_at_psi(w_tnt, r_req),
+                "Tali_Hasar_Yaricapi_m": collateral_radius})
     coverage = min(1.0, (r_w / r_req) ** 2)
     allowed_miss = max(r_w, r_req)
     kill_hit = kill_probability_given_hit(wtype, category)
@@ -796,15 +937,23 @@ def _evaluate(m: dict, target: dict, scenario: Scenario) -> dict:
         drop("GUDUM", "Güdüm bilgisi yok (NA)")
     elif best is None:
         drop("GUDUM_MODU", "Kullanılabilir güdüm modu yok (" + "; ".join(blocked) + ")")
-    elif target["Mobility_Status"] == FAST and not any(h["tracks_movers"] for h in usable):
+    elif target["Target_Mobility_Class"] == FAST and not any(h["tracks_movers"] for h in usable):
         have = "/".join(h["mode"] for h in usable)
         note = " - EO/IIR sahne eşleme, veri bağı yok" if scene_matching else ""
         drop("HAREKETLILIK", "Hızlı manevralı hedef: hareketli hedefi izleyen terminal arayıcı şart "
                              f"(IIR/SAL/ARH/EO/MMW); mevcut mod {have}{note}")
 
     # 8) PK ve skor
-    p_hit = best["p"] if best else 0.0
-    pk = min(PK_CAP, p_hit * coverage * kill_hit * f_pen * RELIABILITY)
+    distance_km = standoff if standoff > 0 else (DEFAULT_ENGAGEMENT_KM if _isnan(rng)
+                                                 else min(rng, DEFAULT_ENGAGEMENT_KM))
+    flight_time = time_of_flight_s(m.get("Itki_Sistemi", "NA"), m["Maksimum_Hiz_Mach"], distance_km)
+    c_tst = tst_factor(bool(target["TST_Status"]), flight_time, scenario.tst_window_s,
+                       "Data-Link" in str(m["Gudum_Sistemi_Midcourse"]).split("/"))
+    p_hit = (best["p"] if best else 0.0) * c_tst                  # Ph
+    p_damage = coverage * kill_hit * f_pen                         # Pd
+    pk = min(PK_CAP, p_hit * p_damage * RELIABILITY)
+    out.update({"Ph": p_hit, "Pd": p_damage, "Ucus_Suresi_s": flight_time, "C_TST": c_tst,
+                "Beklenen_BDA": expected_bda(pk)})
     k_prop = proportionality_factor(r_w, r_req)
     k_role = role_factor(m["Alt_Kategori"], category)
     out.update({
@@ -825,7 +974,7 @@ def _evaluate(m: dict, target: dict, scenario: Scenario) -> dict:
     if codes:
         return finish(STATUS_ELIMINATED)
 
-    out["Uygunluk_Skoru"] = 100.0 * pk * k_prop * out["K_Standoff"] * k_role
+    out["Uygunluk_Skoru"] = 100.0 * pk * k_prop * out["K_Standoff"] * k_role * k_cde
     parts = [f"{best['mode']} güdüm", f"isabet {p_hit:.2f}", f"kapsama %{coverage * 100:.0f}",
              f"{wtype} uyumu {kill_hit:.2f}"]
     if p_req > 0:
@@ -836,10 +985,58 @@ def _evaluate(m: dict, target: dict, scenario: Scenario) -> dict:
         parts.append(f"aşırı güç cezası x{k_prop:.2f}")
     if k_role < 0.999:
         parts.append(f"ikincil görev x{k_role:.2f}")
+    if c_tst < 0.999:
+        parts.append(f"TST uçuş süresi {flight_time:.0f} s x{c_tst:.2f}")
+    if k_cde < 0.999:
+        parts.append(f"tali hasar yarıçapı {collateral_radius:.0f} m x{k_cde:.2f}")
     if m["Harp_Basligi_Tahmini"]:
         parts.append("harp başlığı kütlesi tahmini")
     out["Gerekce"] = " · ".join(parts)
     return finish(STATUS_OK)
+
+
+def evaluate_jaws_match(target_data, munition_data, environment_threats=None) -> dict:
+    """Tek hedef × tek mühimmat eşleşmesi: Pk = Ph × Pd × güvenilirlik.
+
+    target_data         : hedef matrisi satırı (dict / Series) ya da Target_ID
+    munition_data       : mühimmat satırı (dict / Series) ya da Muhimmat_Adi
+    environment_threats : Scenario, Scenario alanlarını içeren dict (ör. {"air_defense": "VLRSAM",
+                          "weather": "OBSCURED", "gnss_jamming": True}) ya da None
+
+    Dönüş: RESULT_COLUMNS anahtarlı sözlük (Ph, Pd, PK_Tek_Atis, Uygunluk_Skoru, Durum, Eleme_Nedeni ...).
+    Mühimmat satırı hazırlanmamışsa (ham veri) harp başlığı kütlesi tahmini için varsayılan veri setinin
+    alt kategori medyanları kullanılır.
+    """
+    if isinstance(environment_threats, Scenario):
+        scenario = environment_threats
+    else:
+        scenario = Scenario(**(environment_threats or {}))
+    target = get_target(target_data) if isinstance(target_data, str) else dict(target_data)
+    missing = [c for c in TARGET_COLUMNS if c not in target]
+    if missing:
+        raise KeyError(f"Hedef verisinde eksik alan(lar): {missing}")
+    for col in TARGET_NUMERIC:
+        target[col] = float(target[col])
+    target["TST_Status"] = str(target["TST_Status"]) == "True"
+
+    if isinstance(munition_data, str):
+        pool = _default_munitions()
+        hit = pool[pool["Muhimmat_Adi"] == munition_data]
+        if hit.empty:
+            raise KeyError(f"Mühimmat bulunamadı: '{munition_data}'")
+        munition = hit.iloc[0].to_dict()
+    else:
+        munition = dict(munition_data)
+        if not all(c in munition for c in PREPARED_MARKERS):
+            pool = _default_munitions()
+            hit = pool[pool["Muhimmat_Adi"] == munition.get("Muhimmat_Adi")]
+            if not hit.empty and _isnan(pd.to_numeric(munition.get("Harp_Basligi_Kutlesi_kg"), errors="coerce")):
+                munition = {**hit.iloc[0].to_dict(), **{k: v for k, v in munition.items() if k not in MUNITION_NUMERIC}}
+            else:
+                munition = prepare_munitions(pd.DataFrame([munition])).iloc[0].to_dict()
+    result = _evaluate(munition, target, scenario)
+    return {k: (round(v, _ROUNDING[k]) if k in _ROUNDING and isinstance(v, float) and not math.isnan(v) else v)
+            for k, v in result.items()}
 
 
 def get_target(target_id: str, targets: pd.DataFrame | None = None, overrides: dict | None = None) -> dict:
@@ -851,13 +1048,14 @@ def get_target(target_id: str, targets: pd.DataFrame | None = None, overrides: d
     target = hit.iloc[0].to_dict()
     for col in TARGET_NUMERIC:
         target[col] = float(target[col])
+    target["TST_Status"] = str(target["TST_Status"]) == "True"
     if overrides:
         unknown = [k for k in overrides if k not in TARGET_COLUMNS]
         if unknown:
             raise KeyError(f"Bilinmeyen hedef özniteliği: {unknown}")
         target.update(overrides)
         check = pd.DataFrame([{c: str(target[c]) for c in TARGET_COLUMNS}], columns=TARGET_COLUMNS)
-        errors = validate_targets(check)
+        errors = validate_targets(check, min_rows=1)
         if errors:
             raise ValueError("Geçersiz hedef özniteliği:\n  " + "\n  ".join(errors))
     return target
@@ -963,16 +1161,16 @@ def sensitivity_hardening(target_id: str, thicknesses=None, scenario: Scenario |
     """Gerekli beton delme kalınlığı değişirken etkili kalan mühimmat sayısı."""
     if thicknesses is None:
         thicknesses = [round(x, 2) for x in np.arange(0.0, 6.01, 0.5)]
-    return _sweep(target_id, "Required_Penetration_m_Concrete", [float(t) for t in thicknesses],
+    return _sweep(target_id, "Required_Concrete_Penetration_m", [float(t) for t in thicknesses],
                   scenario, munitions, targets, pk_threshold)
 
 
 # ---------------------------------------------------------------------------
 # Komut satırı
 # ---------------------------------------------------------------------------
-CLI_COLUMNS = ["Sira", "Muhimmat_Adi", "Mensei_Ulke", "Tasiyici_Sinifi", "Uygunluk_Skoru", "PK_Tek_Atis",
-               "Gerekli_Atis_Sayisi", "Secilen_Gudum_Modu", "Olumcul_Yaricap_m", "Tahmini_Delme_m",
-               "Maksimum_Menzil_km"]
+CLI_COLUMNS = ["Sira", "Muhimmat_Adi", "Tasiyici_Sinifi", "Uygunluk_Skoru", "Ph", "Pd", "PK_Tek_Atis",
+               "Beklenen_BDA", "Secilen_Gudum_Modu", "Olumcul_Yaricap_m", "Patlama_Yaricapi_m",
+               "Tali_Hasar_Yaricapi_m", "Ucus_Suresi_s", "Maksimum_Menzil_km"]
 
 
 def _md_table(df: pd.DataFrame) -> str:
@@ -998,10 +1196,12 @@ def write_report(path: str, top_n: int = 5) -> None:
     ]
     for t in targets.to_dict("records"):
         lines.append(f"## {t['Target_ID']} - {t['Target_Description']}\n")
-        lines.append(f"`{t['Target_Category']}` · delme {t['Required_Penetration_m_Concrete']:g} m · "
-                     f"gerekli yarıçap {t['Required_Lethal_Radius_m']:g} m · {t['Mobility_Status']} · "
+        lines.append(f"`{t['Target_Category']}` · `{t['Target_Class']}` · sertlik {t['UFC_Hardness_Rating_psi']:g} psi "
+                     f"({t['Data_Confidence']}) · delme {t['Required_Concrete_Penetration_m']:g} m · "
+                     f"gerekli yarıçap {t['Required_Lethal_Radius_m']:g} m · {t['Target_Mobility_Class']} · "
                      f"pasif savunma {t['Passive_Defense_Level']} · RCS {t['Radar_Cross_Section_m2']:g} m² · "
-                     f"termal {t['Thermal_Signature']}\n")
+                     f"termal {t['Thermal_Signature']} · TST {t['TST_Status']} · "
+                     f"mekanizma {t['Primary_Damage_Mechanism']} · CDE {t['Collateral_Damage_Tier']}\n")
         for key in ("NONE", "LRSAM"):
             scenario = Scenario(air_defense=key)
             full = calculate_weapon_effectiveness(t["Target_ID"], scenario, include_eliminated=True)
@@ -1028,7 +1228,7 @@ def write_report(path: str, top_n: int = 5) -> None:
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Kural tabanlı weaponeering motoru (öğretici model)")
-    ap.add_argument("target_id", nargs="?", help="Hedef kimliği (ör. T01_HAS)")
+    ap.add_argument("target_id", nargs="?", help="Hedef kimliği (ör. TGT-HAS-01)")
     ap.add_argument("--list-targets", action="store_true", help="Hedef matrisini listele")
     ap.add_argument("--validate", action="store_true", help="Hedef matrisini doğrula")
     ap.add_argument("--top", type=int, default=5, help="Gösterilecek öneri sayısı")
@@ -1039,6 +1239,8 @@ def main(argv=None) -> int:
     ap.add_argument("--no-laser", action="store_true", help="Lazer işaretleme imkânı yok")
     ap.add_argument("--carrier", nargs="*", default=[], choices=list(CARRIER_ORDER))
     ap.add_argument("--platform", default=None)
+    ap.add_argument("--tst-window", type=float, default=TST_WINDOW_DEFAULT_S, help="TST penceresi (s)")
+    ap.add_argument("--cde-tier", choices=list(CDE_RADIUS_LIMIT_M), default=None)
     ap.add_argument("--show-eliminated", action="store_true", help="Eleme nedenlerinin dağılımını göster")
     ap.add_argument("--report", metavar="PATH", help="Tüm hedefler için Markdown raporu yaz")
     args = ap.parse_args(argv)
@@ -1062,7 +1264,8 @@ def main(argv=None) -> int:
 
     scenario = Scenario(air_defense=args.air_defense, standoff_km=args.standoff, weather=args.weather,
                         gnss_jamming=args.gnss_jamming, laser_designation=not args.no_laser,
-                        carrier_classes=tuple(args.carrier), platform=args.platform)
+                        carrier_classes=tuple(args.carrier), platform=args.platform,
+                        tst_window_s=args.tst_window, cde_tier=args.cde_tier)
     try:
         full = calculate_weapon_effectiveness(args.target_id, scenario, include_eliminated=True)
     except KeyError as exc:
@@ -1071,8 +1274,11 @@ def main(argv=None) -> int:
     target = full.attrs["target"]
     ok = full[full["Durum"] == STATUS_OK]
     print(f"\nHEDEF  {target['Target_ID']} - {target['Target_Description']}")
-    print(f"       {target['Target_Category']} | delme {target['Required_Penetration_m_Concrete']:g} m | "
-          f"yarıçap {target['Required_Lethal_Radius_m']:g} m | {target['Mobility_Status']} | "
+    print(f"       {target['Target_Category']} | {target['Target_Class']} | sertlik "
+          f"{target['UFC_Hardness_Rating_psi']:g} psi | mekanizma {target['Primary_Damage_Mechanism']} | "
+          f"TST {target['TST_Status']} | CDE {target['Collateral_Damage_Tier']}")
+    print(f"       delme {target['Required_Concrete_Penetration_m']:g} m | "
+          f"yarıçap {target['Required_Lethal_Radius_m']:g} m | {target['Target_Mobility_Class']} | "
           f"pasif savunma {target['Passive_Defense_Level']}")
     print(f"ORTAM  {AIR_DEFENSE_TIERS[scenario.air_defense].label} | standoff "
           f"{scenario.required_standoff_km:g} km | hava {WEATHER_LABELS[scenario.weather]} | "

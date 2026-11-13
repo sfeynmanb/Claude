@@ -1,8 +1,8 @@
 # Hedef Matrisi — Tanımlar, Kaynaklar ve Güvenilirlik Notları
 
-Dosya: `target_vulnerability_matrix.csv` (`;` ayraçlı, UTF-8, 26 hedef × 14 sütun).
-Doğrulama: `python3 src/validate_target_matrix.py`. Önceki 9 sütunlu sürüm `target_vulnerability_matrix_v1.csv`
-olarak saklanır; mevcut motor Adım 2'ye kadar onu kullanır.
+Dosya: `target_vulnerability_matrix.csv` (`;` ayraçlı, UTF-8, 26 hedef × 16 sütun).
+Doğrulama: `python3 src/validate_target_matrix.py`. Motor (`src/weaponeering_engine.py`) bu dosyayı kullanır.
+Önceki 9 sütunlu sürüm `target_vulnerability_matrix_v1.csv` yalnız arşiv olarak durur.
 
 ## Baştan bilinmesi gerekenler
 
@@ -33,6 +33,8 @@ olarak saklanır; mevcut motor Adım 2'ye kadar onu kullanır.
 | `Collateral_Damage_Tier` | Low / Medium / High | **Senaryo varsayımı.** Tali hasar hedef tipine değil konuma bağlıdır; Adım 3'te arayüzden değiştirilebilir olacak |
 | `Passive_Defense_Level` | Low / Medium / High / Extreme (ek sütun) | Varsayım; v1'den taşındı |
 | `Thermal_Signature` | Low / Medium / High (ek sütun) | Varsayım; v1'den taşındı |
+| `Target_Class` | Motorun kural tablolarının anahtarı: sertleştirilmiş yapı, yumuşak yapı, altyapı, zırhsız/zırhlı araç, radar/hava savunma, deniz, personel (ek sütun) | Tanımsal |
+| `Primary_Damage_Mechanism` | Blast / Fragment / Direct_Hit / Penetration / Crater (ek sütun). Patlama basıncı modeli yalnız `Blast` satırlarında etki yarıçapını belirler | Mühendislik yargısı; varsayım |
 | `Hardness_Basis` | Sertlik değerinin ölçütü ve dayanağı (ek sütun) | — |
 | `Data_Confidence` | Yalnız sertlik değeri için: `Kaynakli` / `Turetilmis` / `Varsayim` (ek sütun) | — |
 
@@ -70,3 +72,16 @@ akciğer hasarı eşiği 10–40 psi, ölümcül düzey darbe süresine göre 80
 - Annex 3-60 Targeting, giriş (2019): https://www.doctrine.af.mil/Portals/61/documents/Annex_3-60/3-60-D01-Target-Intro.pdf
 - NATO hedef raporlama kategorileri (NCAP): https://ncap.org.uk/sites/default/files/NATO_Target_Reporting_Categories_v2.pdf
 - CJCSI 3160.01B (2015): https://www.esd.whs.mil/Portals/54/Documents/FOID/Reading%20Room/Joint_Staff/16-F-0427_Damage_Estimate_Methodology.pdf
+
+## Motorda kullanılan alt modeller (Adım 2)
+
+| Alt model | Dayanak | Güvenilirlik |
+|---|---|---|
+| Tepe gelen aşırı basınç | Kinney & Graham (1985), *Explosive Shocks in Air* kapalı form bağıntısı | Yayımlanmış bağıntı; depodaki Kingery-Bulmash tipi tabloyla 0.8-1.8 kat aralığında uyumlu (testte denetlenir). UFC 3-340-02'nin Kingery-Bulmash polinomları kullanılmadı |
+| Yer yüzeyi katsayısı 1.8 | UFC 3-340-02 yarım küre yüzey patlaması yaklaşımı | Yaygın mühendislik yaklaşımı |
+| Dolgu oranları | Mk-82/84 (%38-46) ve BLU-109 (%27) açık kaynak değerleri | Diğer harp başlığı tipleri **varsayım** |
+| Fano kılıf düzeltmesi `0.2 + 0.8/(1+2M/C)` | Fisher (1953) değiştirilmiş Fano bağıntısı | Hafızadan; birincil kaynaktan teyit edilmedi |
+| TNT eşdeğerlik katsayısı | Veri setinde patlayıcı türü yok → 1.0 (TNT) | Temkinli varsayım |
+| Beton delme | Young (1997), SAND97-2426 beton denklemi biçimi | Toplu sabit C temsilî; açık kaynak delme değerlerine göre ayarlı |
+| TST penceresi (600 s), CDE yarıçap sınırları (200 / 75 m), BDA eşikleri | Yok | **Varsayım**; senaryodan değiştirilebilir |
+| Tali hasar halkası (1 psi) | Cam kırılması düzeyi aşırı basınç | Parçacık tehlikesini içermez; CDE yerine geçmez |

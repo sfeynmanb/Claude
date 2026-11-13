@@ -1255,20 +1255,25 @@ def jaws_engagement_summary(target: dict, row: pd.Series, scenario, desired: flo
     count = "99+" if weapons >= we.MAX_WEAPONS_REPORTED else f"{weapons:.0f}"
     tier = scenario.cde_tier or target["Collateral_Damage_Tier"]
     limit = we.CDE_RADIUS_LIMIT_M[tier]
-    cde = "NO LIMIT" if math.isinf(limit) else ("WITHIN LIMIT" if row["Tali_Hasar_Yaricapi_m"] <= limit else "EXCEEDS LIMIT")
+    if math.isinf(limit):
+        cde = "NO LIMIT"
+    else:
+        cde = "WITHIN LIMIT" if row["Tali_Hasar_Yaricapi_m"] <= limit else "EXCEEDS LIMIT"
     if standoff > 0:
         clearance = f"YES (+{row['Standoff_Payi_km']:.0f} KM MARGIN OVER {standoff:.0f} KM)"
     else:
         clearance = "NOT REQUIRED"
     if target["TST_Status"]:
         late = row["Ucus_Suresi_s"] > scenario.tst_window_s
-        tst = f"YES - TOF {row['Ucus_Suresi_s']:.0f} S VS WINDOW {scenario.tst_window_s:.0f} S ({'LATE' if late else 'IN TIME'})"
+        tst = (f"YES - TOF {row['Ucus_Suresi_s']:.0f} S VS WINDOW {scenario.tst_window_s:.0f} S "
+               f"({'LATE' if late else 'IN TIME'})")
     else:
         tst = "NO"
     name = target["Target_Description"].partition(" - ")[0].upper()
     return "\n".join([
         f"TARGET: {target['Target_ID']} {name} ({target['Target_Category'].upper()}).",
-        f"WEAPON: {row['Muhimmat_Adi'].upper()} ({row['Harp_Basligi_Tipi'].upper()}, {row['Harp_Basligi_Etkin_kg']:.0f} KG WARHEAD).",
+        f"WEAPON: {row['Muhimmat_Adi'].upper()} ({row['Harp_Basligi_Tipi'].upper()}, "
+        f"{row['Harp_Basligi_Etkin_kg']:.0f} KG WARHEAD).",
         f"TERMINAL: {row['Secilen_Gudum_Modu'].upper()}.  PLATFORM: {plat_note.upper()}.",
         f"PH {row['Ph']:.2f} x PD {row['Pd']:.2f} -> PK {row['PK_Tek_Atis']:.2f}.  "
         f"WEAPONS FOR PD {desired:.2f}: {count}.  EXPECTED BDA: {row['Beklenen_BDA']}.",
@@ -1334,8 +1339,11 @@ def jaws_matrix(top: pd.DataFrame, desired: float) -> pd.DataFrame:
     })
 
 
-def jaws_blast_figure(row: pd.Series, target: dict) -> go.Figure:
-    """Hedef üzerinde 2B etki yarıçapı: ölümcül yarıçap, hedef izi, CEP ve örnek isabet dağılımı."""
+def jaws_blast_figure(row: pd.Series, target: dict, zoom_to_target: bool = False) -> go.Figure:
+    """Hedef tahtası: tali hasar halkası, sertlik basıncı yarıçapı, ölümcül yarıçap, hedef izi, CEP.
+
+    zoom_to_target=True ise eksenler hedef izine göre ölçeklenir (tali hasar halkası kadraj dışında kalabilir).
+    """
     r_w = float(row["Olumcul_Yaricap_m"])
     r_req = float(target["Required_Lethal_Radius_m"])
     cep = float(row["CEP_Etkin_m"])
@@ -1343,7 +1351,8 @@ def jaws_blast_figure(row: pd.Series, target: dict) -> go.Figure:
     collateral = float(row["Tali_Hasar_Yaricapi_m"])
     blast = float(row["Patlama_Yaricapi_m"])
     big = max(r_w, r_req)
-    span = 1.12 * max(big, collateral, min(1.6 * cep, 8.0 * big))
+    inner = max(big, min(1.6 * cep, 8.0 * big))
+    span = 1.25 * inner if zoom_to_target else 1.12 * max(inner, collateral)
     rng = np.random.default_rng(7)
     pts = rng.normal(0.0, cep / math.sqrt(2.0 * math.log(2.0)), size=(JAWS_IMPACT_SAMPLES, 2))
     inside = np.hypot(pts[:, 0], pts[:, 1]) <= allowed
@@ -1479,7 +1488,8 @@ def jaws_model_notes() -> None:
 
 
 def tab_jaws(df: pd.DataFrame) -> None:
-    st.caption("MODÜL 5 — Doktriner Weaponeering ve CDE · açık kaynak alt modeller (Kinney-Graham patlama, Young delme) · "
+    st.caption("MODÜL 5 — Doktriner Weaponeering ve CDE · açık kaynak alt modeller (Kinney-Graham patlama, "
+               "Young delme) · "
                "Pk kalibre edilmemiştir, tali hasar halkası CDE yerine geçmez · operasyonel planlama için kullanılamaz")
     if we is None:
         st.error(f"Weaponeering motoru yüklenemedi (src/weaponeering_engine.py): {ENGINE_ERROR}")
@@ -1528,7 +1538,8 @@ def tab_jaws(df: pd.DataFrame) -> None:
                                 help="Zamana duyarlı hedefin yerinde kalacağı varsayılan süre. Uçuş süresi bunu "
                                      "aşarsa isabet olasılığı düşer. Doktrin sayı vermez; senaryo girdisidir.",
                                 disabled=not target["TST_Status"])
-        cde_choice = st.selectbox("Tali hasar hassasiyeti (CDE düzeyi)", [JAWS_MATRIX_TIER] + list(we.CDE_RADIUS_LIMIT_M),
+        cde_choice = st.selectbox("Tali hasar hassasiyeti (CDE düzeyi)",
+                                  [JAWS_MATRIX_TIER] + list(we.CDE_RADIUS_LIMIT_M),
                                   key="j_cde", format_func=lambda k: k if k == JAWS_MATRIX_TIER else LEVEL_TR[k],
                                   help="Tali hasar hedef tipine değil konuma bağlıdır; matristeki değer varsayımdır.")
 
@@ -1608,7 +1619,10 @@ def tab_jaws(df: pd.DataFrame) -> None:
             row = ok[ok["Muhimmat_Adi"] == pick].iloc[0]
             b1, b2 = st.columns([1.15, 1], gap="medium")
             with b1:
-                st.plotly_chart(jaws_blast_figure(row, target), width="stretch", config={"displayModeBar": False})
+                scale = st.radio("Ölçek", ["Tali hasar halkası", "Hedef yakın görünüm"], horizontal=True,
+                                 key="j_scale", label_visibility="collapsed")
+                st.plotly_chart(jaws_blast_figure(row, target, scale == "Hedef yakın görünüm"), width="stretch",
+                                config={"displayModeBar": False})
                 st.caption("Tali hasar halkası 1 psi tepe aşırı basınç (cam kırılması düzeyi) yarıçapıdır; parçacık "
                            "tehlikesini içermez ve CJCSI 3160.01 CDE yönteminin yerini tutmaz. "
                            f"Hedef merkezli üstten görünüm (metre). Noktalar yalnız CEP dağılımını örnekler "
@@ -1648,7 +1662,8 @@ def tab_jaws(df: pd.DataFrame) -> None:
         with s1:
             st.plotly_chart(jaws_passive_figure(passive), width="stretch", config={"displayModeBar": False})
             st.caption("Aynı hedef ve ortamda yalnız pasif savunma düzeyi değiştirilir: gizleme/aldatma isabeti, "
-                       "tahkimat/dağılma etki yarıçapını azaltır.")
+                       "tahkimat/dağılma etki yarıçapını azaltır. Tüm envanter üzerinden hesaplanır; "
+                       "platform istasyon kısıtı bu analize uygulanmaz.")
         with s2:
             if target["Target_Class"] == "Hardened_Structure":
                 st.plotly_chart(jaws_hardening_figure(hardening, target["Required_Concrete_Penetration_m"]),

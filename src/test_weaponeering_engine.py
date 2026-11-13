@@ -165,7 +165,7 @@ def tst_ucus_suresi_ve_cde():
     high = row(run("TGT-HQB-06"), "GBU-31(V)1/B JDAM")
     assert high["K_CDE"] < 1.0 == low["K_CDE"] and high["PK_Tek_Atis"] == low["PK_Tek_Atis"]
     assert high["Uygunluk_Skoru"] < low["Uygunluk_Skoru"], "yüksek CDE hassasiyetinde büyük bomba cezalanır"
-    assert we.expected_bda(0.8) == "SEVERE" and we.expected_bda(0.5) == "MODERATE" and we.expected_bda(0.01) == "NEGLIGIBLE"
+    assert [we.expected_bda(pk) for pk in (0.8, 0.5, 0.2, 0.01)] == ["SEVERE", "MODERATE", "LIGHT", "NEGLIGIBLE"]
 
 
 @test
@@ -177,9 +177,10 @@ def pk_esittir_ph_carpi_pd_ve_jaws_eslesmesi():
     blast = run("TGT-POL-09")
     jdam = row(blast, "GBU-31(V)1/B JDAM")
     assert jdam["Hasar_Mekanizmasi"] == "Blast"
-    assert math.isclose(jdam["Olumcul_Yaricap_m"], jdam["Patlama_Yaricapi_m"], rel_tol=1e-3), "Blast hedefinde yarıçap fizik modelinden"
+    assert math.isclose(jdam["Olumcul_Yaricap_m"], jdam["Patlama_Yaricapi_m"], rel_tol=1e-3), "yarıçap fizik modelinden"
     assert jdam["Tali_Hasar_Yaricapi_m"] > jdam["Patlama_Yaricapi_m"]
-    assert (jdam["Hedefte_Asiri_Basinc_psi"] >= jdam["Sertlik_psi"]) == (jdam["Patlama_Yaricapi_m"] >= jdam["Gerekli_Yaricap_m"])
+    breaks_hardness = jdam["Hedefte_Asiri_Basinc_psi"] >= jdam["Sertlik_psi"]
+    assert breaks_hardness == (jdam["Patlama_Yaricapi_m"] >= jdam["Gerekli_Yaricap_m"])
     tank = row(run("TGT-MBT-16"), "Brimstone")
     assert tank["Hasar_Mekanizmasi"] == "Direct_Hit" and tank["Olumcul_Yaricap_m"] > tank["Patlama_Yaricapi_m"]
     # tekil eşleşme = toplu değerlendirme

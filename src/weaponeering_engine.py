@@ -748,7 +748,8 @@ def _signature_factor(mode: str, target: dict, anti_ship: bool = False) -> float
         if mode != "MMW" and on_land:
             return factor * LAND_CLUTTER_FACTOR
     elif mode == "IIR":
-        factor = IIR_FIXED_FACTOR if target["Target_Mobility_Class"] == FIXED else THERMAL_IIR[target["Thermal_Signature"]]
+        fixed = target["Target_Mobility_Class"] == FIXED
+        factor = IIR_FIXED_FACTOR if fixed else THERMAL_IIR[target["Thermal_Signature"]]
     elif mode == "IR":
         factor = THERMAL_IR[target["Thermal_Signature"]] * (IR_LAND_FACTOR if on_land else 1.0)
     else:

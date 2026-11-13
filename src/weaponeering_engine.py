@@ -80,7 +80,8 @@ MUNITION_CANDIDATES = (
     os.path.join(ROOT, "data", "master_air_munitions.csv"),
     os.path.join(ROOT, "data", "processed", "master_air_munitions_dataset.csv"),
 )
-TARGET_MATRIX_PATH = os.path.join(ROOT, "data", "targets", "target_vulnerability_matrix.csv")
+# Adım 2'de yeni doktriner matrise (target_vulnerability_matrix.csv) geçilecek; o zamana dek v1 şeması.
+TARGET_MATRIX_PATH = os.path.join(ROOT, "data", "targets", "target_vulnerability_matrix_v1.csv")
 
 # ---------------------------------------------------------------------------
 # Şema sabitleri

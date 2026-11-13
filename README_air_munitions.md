@@ -35,7 +35,9 @@ Fizik modelleri öğretici sezgisel modellerdir; operasyonel kullanım için de�
 
 ## Weaponeering karar desteği (JAWS benzeri, kural tabanlı)
 ```
-data/targets/target_vulnerability_matrix.csv   20 hedef tipi × 9 öznitelik (';' ayraçlı)
+data/targets/target_vulnerability_matrix.csv     26 hedef × 14 sütun: doktriner şema (Adım 1; motor henüz kullanmıyor)
+data/targets/target_matrix_sources.md           sütun tanımları, kaynaklar ve güvenilirlik notları
+data/targets/target_vulnerability_matrix_v1.csv 20 hedef × 9 sütun: motorun şu an kullandığı sürüm
 src/weaponeering_engine.py                     hesap motoru (Streamlit'ten bağımsız kütüphane + CLI)
 src/test_weaponeering_engine.py                kural ve değişmez testleri
 app_jaws_integrated.py                         app.py klonu + Modül 5 (Weaponeering ve Hedef Analizi)
